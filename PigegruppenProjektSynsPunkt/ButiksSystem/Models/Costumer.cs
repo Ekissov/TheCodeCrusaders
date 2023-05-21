@@ -17,7 +17,6 @@ namespace ButiksSystem.Models
         public string City { get; set; }
         public string Email { get; set; }
 
-        public int MyProperty { get; set; }
         public Costumer(string firstName, 
             string lastName, string phoneNumber, string adress, int postalCode, string city, string email) 
         { 
