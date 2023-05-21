@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KundeApplication", "KundeApplication\KundeApplication.csproj", "{88AD1DA8-DC33-4C99-924D-B8E886AA7AA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButiksSystem", "ButiksSystem\ButiksSystem.csproj", "{1B9F0D85-85C8-4D7B-8715-FD0473884F68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88AD1DA8-DC33-4C99-924D-B8E886AA7AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88AD1DA8-DC33-4C99-924D-B8E886AA7AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88AD1DA8-DC33-4C99-924D-B8E886AA7AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88AD1DA8-DC33-4C99-924D-B8E886AA7AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B9F0D85-85C8-4D7B-8715-FD0473884F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B9F0D85-85C8-4D7B-8715-FD0473884F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B9F0D85-85C8-4D7B-8715-FD0473884F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B9F0D85-85C8-4D7B-8715-FD0473884F68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F015C4A-6D3F-49CB-A219-CEC6C77AE2EF}
+	EndGlobalSection
+EndGlobal
