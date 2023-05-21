@@ -361,10 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/PigegruppenProjektSynsPunkt/ButiksSystem/bin/
-/PigegruppenProjektSynsPunkt/ButiksSystem/obj/
-/PigegruppenProjektSynsPunkt/KundeApplication/obj/
-/PigegruppenProjektSynsPunkt/KundeApplication/bin/
-/PigegruppenProjektSynsPunkt/.vs/
 /PigegruppenProjektSynsPunkt/ButiksSystem/obj/Debug/ButiksSystem.csproj.AssemblyReference.cache
 /PigegruppenProjektSynsPunkt/KundeApplication/obj/Debug/KundeApplication.csproj.AssemblyReference.cache
