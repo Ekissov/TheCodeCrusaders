@@ -80,11 +80,11 @@
     <Compile Include="UI\EditProductSearch.Designer.cs">
       <DependentUpon>EditProductSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\ProductView.cs">
+    <Compile Include="UI\SalesStatistic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\ProductView.Designer.cs">
-      <DependentUpon>ProductView.cs</DependentUpon>
+    <Compile Include="UI\SalesStatistic.Designer.cs">
+      <DependentUpon>SalesStatistic.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -110,8 +110,8 @@
     <EmbeddedResource Include="UI\EditProductSearch.resx">
       <DependentUpon>EditProductSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\ProductView.resx">
-      <DependentUpon>ProductView.cs</DependentUpon>
+    <EmbeddedResource Include="UI\SalesStatistic.resx">
+      <DependentUpon>SalesStatistic.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
