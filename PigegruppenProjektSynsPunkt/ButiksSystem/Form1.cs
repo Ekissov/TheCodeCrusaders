@@ -46,5 +46,11 @@ namespace ButiksSystem
             EditProductSearchForm editProductSearch = new EditProductSearchForm();
             editProductSearch.ShowDialog();
         }
+
+        private void ordrestatistikToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SalesStatisticForm salesStatisticForm = new SalesStatisticForm();
+            salesStatisticForm.ShowDialog();
+        }
     }
 }
