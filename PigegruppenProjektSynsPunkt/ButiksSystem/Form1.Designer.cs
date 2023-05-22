@@ -362,12 +362,14 @@
             this.opretKundeToolStripMenuItem.Name = "opretKundeToolStripMenuItem";
             this.opretKundeToolStripMenuItem.Size = new System.Drawing.Size(294, 34);
             this.opretKundeToolStripMenuItem.Text = "Opret kunde";
+            this.opretKundeToolStripMenuItem.Click += new System.EventHandler(this.opretKundeToolStripMenuItem_Click);
             // 
             // kundeinformationerToolStripMenuItem
             // 
             this.kundeinformationerToolStripMenuItem.Name = "kundeinformationerToolStripMenuItem";
             this.kundeinformationerToolStripMenuItem.Size = new System.Drawing.Size(294, 34);
             this.kundeinformationerToolStripMenuItem.Text = "Kundeinformationer";
+            this.kundeinformationerToolStripMenuItem.Click += new System.EventHandler(this.kundeinformationerToolStripMenuItem_Click);
             // 
             // varerToolStripMenuItem
             // 
@@ -383,12 +385,14 @@
             this.opretVareToolStripMenuItem.Name = "opretVareToolStripMenuItem";
             this.opretVareToolStripMenuItem.Size = new System.Drawing.Size(275, 34);
             this.opretVareToolStripMenuItem.Text = "Opret vare";
+            this.opretVareToolStripMenuItem.Click += new System.EventHandler(this.opretVareToolStripMenuItem_Click);
             // 
             // vareinformationerToolStripMenuItem
             // 
             this.vareinformationerToolStripMenuItem.Name = "vareinformationerToolStripMenuItem";
             this.vareinformationerToolStripMenuItem.Size = new System.Drawing.Size(275, 34);
             this.vareinformationerToolStripMenuItem.Text = "Vareinformationer";
+            this.vareinformationerToolStripMenuItem.Click += new System.EventHandler(this.vareinformationerToolStripMenuItem_Click);
             // 
             // bookingToolStripMenuItem
             // 
