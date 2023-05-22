@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ButiksSystem.Database
 {
-    internal class DummyDataSales
+    public class DummyDataSales
     {
+        public int MyProperty { get; set; }
     }
 }
