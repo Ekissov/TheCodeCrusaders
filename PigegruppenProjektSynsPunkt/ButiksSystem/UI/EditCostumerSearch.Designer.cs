@@ -33,15 +33,15 @@
             this.dgv_showCustomerInfo = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.btn_showCustomerInDatagrid = new System.Windows.Forms.Button();
+            this.txt_changeCustomerCity = new System.Windows.Forms.TextBox();
+            this.txt_changeCustomerPostalCode = new System.Windows.Forms.TextBox();
+            this.txt_changeCustomerAddress = new System.Windows.Forms.TextBox();
+            this.txt_changeCustomerEmail = new System.Windows.Forms.TextBox();
+            this.txt_changeCustomerPhoneNumber = new System.Windows.Forms.TextBox();
+            this.txt_changeCustomerLastName = new System.Windows.Forms.TextBox();
+            this.txt_changeCustomerFirstName = new System.Windows.Forms.TextBox();
+            this.txt_showCustomerIDInSearch = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,10 +50,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_saveCustomerChanges = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_deleteCustomerInDatabase = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_showCustomerInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,82 +108,82 @@
             this.Column2.ReadOnly = true;
             this.Column2.Width = 275;
             // 
-            // button1
+            // btn_showCustomerInDatagrid
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(292, 349);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 26);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Vis Kundeoplysninger";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_showCustomerInDatagrid.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_showCustomerInDatagrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_showCustomerInDatagrid.Location = new System.Drawing.Point(292, 349);
+            this.btn_showCustomerInDatagrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_showCustomerInDatagrid.Name = "btn_showCustomerInDatagrid";
+            this.btn_showCustomerInDatagrid.Size = new System.Drawing.Size(148, 26);
+            this.btn_showCustomerInDatagrid.TabIndex = 3;
+            this.btn_showCustomerInDatagrid.Text = "Vis Kundeoplysninger";
+            this.btn_showCustomerInDatagrid.UseVisualStyleBackColor = false;
             // 
-            // textBox8
+            // txt_changeCustomerCity
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(604, 313);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(169, 24);
-            this.textBox8.TabIndex = 32;
+            this.txt_changeCustomerCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_changeCustomerCity.Location = new System.Drawing.Point(604, 313);
+            this.txt_changeCustomerCity.Name = "txt_changeCustomerCity";
+            this.txt_changeCustomerCity.Size = new System.Drawing.Size(169, 24);
+            this.txt_changeCustomerCity.TabIndex = 32;
             // 
-            // textBox7
+            // txt_changeCustomerPostalCode
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(604, 284);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 24);
-            this.textBox7.TabIndex = 31;
+            this.txt_changeCustomerPostalCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_changeCustomerPostalCode.Location = new System.Drawing.Point(604, 284);
+            this.txt_changeCustomerPostalCode.Name = "txt_changeCustomerPostalCode";
+            this.txt_changeCustomerPostalCode.Size = new System.Drawing.Size(100, 24);
+            this.txt_changeCustomerPostalCode.TabIndex = 31;
             // 
-            // textBox6
+            // txt_changeCustomerAddress
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(604, 254);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(169, 24);
-            this.textBox6.TabIndex = 30;
+            this.txt_changeCustomerAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_changeCustomerAddress.Location = new System.Drawing.Point(604, 254);
+            this.txt_changeCustomerAddress.Name = "txt_changeCustomerAddress";
+            this.txt_changeCustomerAddress.Size = new System.Drawing.Size(169, 24);
+            this.txt_changeCustomerAddress.TabIndex = 30;
             // 
-            // textBox5
+            // txt_changeCustomerEmail
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(604, 224);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(169, 24);
-            this.textBox5.TabIndex = 29;
+            this.txt_changeCustomerEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_changeCustomerEmail.Location = new System.Drawing.Point(604, 224);
+            this.txt_changeCustomerEmail.Name = "txt_changeCustomerEmail";
+            this.txt_changeCustomerEmail.Size = new System.Drawing.Size(169, 24);
+            this.txt_changeCustomerEmail.TabIndex = 29;
             // 
-            // textBox4
+            // txt_changeCustomerPhoneNumber
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(604, 196);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 24);
-            this.textBox4.TabIndex = 28;
+            this.txt_changeCustomerPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_changeCustomerPhoneNumber.Location = new System.Drawing.Point(604, 196);
+            this.txt_changeCustomerPhoneNumber.Name = "txt_changeCustomerPhoneNumber";
+            this.txt_changeCustomerPhoneNumber.Size = new System.Drawing.Size(100, 24);
+            this.txt_changeCustomerPhoneNumber.TabIndex = 28;
             // 
-            // textBox3
+            // txt_changeCustomerLastName
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(604, 166);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 24);
-            this.textBox3.TabIndex = 27;
+            this.txt_changeCustomerLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_changeCustomerLastName.Location = new System.Drawing.Point(604, 166);
+            this.txt_changeCustomerLastName.Name = "txt_changeCustomerLastName";
+            this.txt_changeCustomerLastName.Size = new System.Drawing.Size(125, 24);
+            this.txt_changeCustomerLastName.TabIndex = 27;
             // 
-            // textBox2
+            // txt_changeCustomerFirstName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(604, 136);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 24);
-            this.textBox2.TabIndex = 26;
+            this.txt_changeCustomerFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_changeCustomerFirstName.Location = new System.Drawing.Point(604, 136);
+            this.txt_changeCustomerFirstName.Name = "txt_changeCustomerFirstName";
+            this.txt_changeCustomerFirstName.Size = new System.Drawing.Size(125, 24);
+            this.txt_changeCustomerFirstName.TabIndex = 26;
             // 
-            // textBox9
+            // txt_showCustomerIDInSearch
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(604, 107);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(100, 24);
-            this.textBox9.TabIndex = 25;
+            this.txt_showCustomerIDInSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_showCustomerIDInSearch.Location = new System.Drawing.Point(604, 107);
+            this.txt_showCustomerIDInSearch.Name = "txt_showCustomerIDInSearch";
+            this.txt_showCustomerIDInSearch.ReadOnly = true;
+            this.txt_showCustomerIDInSearch.Size = new System.Drawing.Size(100, 24);
+            this.txt_showCustomerIDInSearch.TabIndex = 25;
             // 
             // label8
             // 
@@ -265,17 +265,17 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Kunde ID : ";
             // 
-            // button2
+            // btn_saveCustomerChanges
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(652, 349);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 26);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Gem Kundeoplysninger";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_saveCustomerChanges.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_saveCustomerChanges.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_saveCustomerChanges.Location = new System.Drawing.Point(652, 349);
+            this.btn_saveCustomerChanges.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_saveCustomerChanges.Name = "btn_saveCustomerChanges";
+            this.btn_saveCustomerChanges.Size = new System.Drawing.Size(119, 26);
+            this.btn_saveCustomerChanges.TabIndex = 33;
+            this.btn_saveCustomerChanges.Text = "Gem Kundeoplysninger";
+            this.btn_saveCustomerChanges.UseVisualStyleBackColor = false;
             // 
             // label10
             // 
@@ -299,35 +299,35 @@
             this.label11.TabIndex = 35;
             this.label11.Text = "Kundeinformationer";
             // 
-            // button3
+            // btn_deleteCustomerInDatabase
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(508, 349);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 26);
-            this.button3.TabIndex = 36;
-            this.button3.Text = "Slet Kunde";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_deleteCustomerInDatabase.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_deleteCustomerInDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deleteCustomerInDatabase.Location = new System.Drawing.Point(508, 349);
+            this.btn_deleteCustomerInDatabase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_deleteCustomerInDatabase.Name = "btn_deleteCustomerInDatabase";
+            this.btn_deleteCustomerInDatabase.Size = new System.Drawing.Size(119, 26);
+            this.btn_deleteCustomerInDatabase.TabIndex = 36;
+            this.btn_deleteCustomerInDatabase.Text = "Slet Kunde";
+            this.btn_deleteCustomerInDatabase.UseVisualStyleBackColor = false;
             // 
             // EditCostumerSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 396);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn_deleteCustomerInDatabase);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.btn_saveCustomerChanges);
+            this.Controls.Add(this.txt_changeCustomerCity);
+            this.Controls.Add(this.txt_changeCustomerPostalCode);
+            this.Controls.Add(this.txt_changeCustomerAddress);
+            this.Controls.Add(this.txt_changeCustomerEmail);
+            this.Controls.Add(this.txt_changeCustomerPhoneNumber);
+            this.Controls.Add(this.txt_changeCustomerLastName);
+            this.Controls.Add(this.txt_changeCustomerFirstName);
+            this.Controls.Add(this.txt_showCustomerIDInSearch);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -336,7 +336,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_showCustomerInDatagrid);
             this.Controls.Add(this.dgv_showCustomerInfo);
             this.Controls.Add(this.txt_searchCustomerID);
             this.Controls.Add(this.label1);
@@ -354,15 +354,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_searchCustomerID;
         private System.Windows.Forms.DataGridView dgv_showCustomerInfo;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button btn_showCustomerInDatagrid;
+        private System.Windows.Forms.TextBox txt_changeCustomerCity;
+        private System.Windows.Forms.TextBox txt_changeCustomerPostalCode;
+        private System.Windows.Forms.TextBox txt_changeCustomerAddress;
+        private System.Windows.Forms.TextBox txt_changeCustomerEmail;
+        private System.Windows.Forms.TextBox txt_changeCustomerPhoneNumber;
+        private System.Windows.Forms.TextBox txt_changeCustomerLastName;
+        private System.Windows.Forms.TextBox txt_changeCustomerFirstName;
+        private System.Windows.Forms.TextBox txt_showCustomerIDInSearch;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -371,11 +371,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_saveCustomerChanges;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_deleteCustomerInDatabase;
     }
 }
