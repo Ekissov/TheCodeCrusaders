@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_createProduct = new System.Windows.Forms.Button();
+            this.txt_QuantityInStorage = new System.Windows.Forms.TextBox();
+            this.txt_productGroupID = new System.Windows.Forms.TextBox();
+            this.txt_salesPricePerItem = new System.Windows.Forms.TextBox();
+            this.txt_productName = new System.Windows.Forms.TextBox();
+            this.txt_productID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,51 +41,51 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_createProduct
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(174, 138);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 23);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Opret Vare";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_createProduct.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_createProduct.Location = new System.Drawing.Point(174, 138);
+            this.btn_createProduct.Name = "btn_createProduct";
+            this.btn_createProduct.Size = new System.Drawing.Size(80, 23);
+            this.btn_createProduct.TabIndex = 33;
+            this.btn_createProduct.Text = "Opret Vare";
+            this.btn_createProduct.UseVisualStyleBackColor = false;
             // 
-            // textBox5
+            // txt_QuantityInStorage
             // 
-            this.textBox5.Location = new System.Drawing.Point(102, 112);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 29;
+            this.txt_QuantityInStorage.Location = new System.Drawing.Point(102, 112);
+            this.txt_QuantityInStorage.Name = "txt_QuantityInStorage";
+            this.txt_QuantityInStorage.Size = new System.Drawing.Size(100, 20);
+            this.txt_QuantityInStorage.TabIndex = 29;
             // 
-            // textBox4
+            // txt_productGroupID
             // 
-            this.textBox4.Location = new System.Drawing.Point(102, 87);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 28;
+            this.txt_productGroupID.Location = new System.Drawing.Point(102, 87);
+            this.txt_productGroupID.Name = "txt_productGroupID";
+            this.txt_productGroupID.Size = new System.Drawing.Size(100, 20);
+            this.txt_productGroupID.TabIndex = 28;
             // 
-            // textBox3
+            // txt_salesPricePerItem
             // 
-            this.textBox3.Location = new System.Drawing.Point(102, 62);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 27;
+            this.txt_salesPricePerItem.Location = new System.Drawing.Point(102, 62);
+            this.txt_salesPricePerItem.Name = "txt_salesPricePerItem";
+            this.txt_salesPricePerItem.Size = new System.Drawing.Size(100, 20);
+            this.txt_salesPricePerItem.TabIndex = 27;
             // 
-            // textBox2
+            // txt_productName
             // 
-            this.textBox2.Location = new System.Drawing.Point(102, 36);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(152, 20);
-            this.textBox2.TabIndex = 26;
+            this.txt_productName.Location = new System.Drawing.Point(102, 36);
+            this.txt_productName.Name = "txt_productName";
+            this.txt_productName.Size = new System.Drawing.Size(152, 20);
+            this.txt_productName.TabIndex = 26;
             // 
-            // textBox1
+            // txt_productID
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(152, 20);
-            this.textBox1.TabIndex = 25;
+            this.txt_productID.Location = new System.Drawing.Point(102, 11);
+            this.txt_productID.Name = "txt_productID";
+            this.txt_productID.ReadOnly = true;
+            this.txt_productID.Size = new System.Drawing.Size(152, 20);
+            this.txt_productID.TabIndex = 25;
             // 
             // label5
             // 
@@ -137,12 +137,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(266, 168);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_createProduct);
+            this.Controls.Add(this.txt_QuantityInStorage);
+            this.Controls.Add(this.txt_productGroupID);
+            this.Controls.Add(this.txt_salesPricePerItem);
+            this.Controls.Add(this.txt_productName);
+            this.Controls.Add(this.txt_productID);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -157,12 +157,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_createProduct;
+        private System.Windows.Forms.TextBox txt_QuantityInStorage;
+        private System.Windows.Forms.TextBox txt_productGroupID;
+        private System.Windows.Forms.TextBox txt_salesPricePerItem;
+        private System.Windows.Forms.TextBox txt_productName;
+        private System.Windows.Forms.TextBox txt_productID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
