@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ButiksSystem.Models
 {
-    internal class Costumer
+    public class Costumer
     {
         public int MyProperty { get; set; }
         public int CostumerID { get; set; }
