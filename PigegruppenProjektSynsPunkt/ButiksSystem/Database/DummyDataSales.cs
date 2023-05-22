@@ -10,7 +10,7 @@ namespace ButiksSystem.Database
     public class DummyDataSales
     {
 
-        private static List<Sales> CreateDummyDataSales()
+        public static List<Sales> CreateDummyDataSales()
         {
            List<Sales> listOfSales = new List<Sales>();
 
@@ -20,7 +20,7 @@ namespace ButiksSystem.Database
             Sales sale1 = new Sales(1, 12, "1", orderDate, 4534, 4534, 1133.5M, deliveryDate, 1);
 
             orderDate = new DateTime(2023, 01, 25);
-            deliveryDate = new DateTime(2023, 05, 29);
+            deliveryDate = new DateTime(2023, 02, 18);
 
             Sales sale2 = new Sales(2, 15, "12", orderDate, 4534, 4534, 1133.5M, deliveryDate, 1);
 
