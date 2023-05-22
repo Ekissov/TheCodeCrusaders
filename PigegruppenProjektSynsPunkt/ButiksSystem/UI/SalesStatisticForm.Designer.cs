@@ -1,6 +1,6 @@
 ﻿namespace ButiksSystem.UI
 {
-    partial class SalesStatistic
+    partial class SalesStatisticForm
     {
         /// <summary>
         /// Required designer variable.

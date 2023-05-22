@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ButiksSystem.UI
 {
-    public partial class SalesStatistic : Form
+    public partial class SalesStatisticForm : Form
     {
-        public SalesStatistic()
+        public SalesStatisticForm()
         {
             InitializeComponent();
         }
