@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ButiksSystem.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,12 @@ namespace ButiksSystem
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hello World");
+        }
+
+        private void opretKundeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateCostumerForm createCostumerForm = new CreateCostumerForm();
+            createCostumerForm.ShowDialog();
         }
     }
 }

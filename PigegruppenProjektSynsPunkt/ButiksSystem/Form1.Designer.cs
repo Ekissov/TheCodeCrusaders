@@ -356,6 +356,7 @@
             this.opretKundeToolStripMenuItem.Name = "opretKundeToolStripMenuItem";
             this.opretKundeToolStripMenuItem.Size = new System.Drawing.Size(242, 30);
             this.opretKundeToolStripMenuItem.Text = "Opret kunde";
+            this.opretKundeToolStripMenuItem.Click += new System.EventHandler(this.opretKundeToolStripMenuItem_Click);
             // 
             // kundeinformationerToolStripMenuItem
             // 
