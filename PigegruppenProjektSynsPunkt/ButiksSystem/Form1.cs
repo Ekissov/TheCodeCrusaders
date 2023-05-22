@@ -28,5 +28,23 @@ namespace ButiksSystem
             CreateCostumerForm createCostumerForm = new CreateCostumerForm();
             createCostumerForm.ShowDialog();
         }
+
+        private void kundeinformationerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditCostumerSearch editCostumerSearch = new EditCostumerSearch();
+            editCostumerSearch.ShowDialog();
+        }
+
+        private void opretVareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateProductForm createProductForm = new CreateProductForm();
+            createProductForm.ShowDialog();
+        }
+
+        private void vareinformationerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditCostumerSearch editCostumerSearch = new EditCostumerSearch();
+            editCostumerSearch.ShowDialog();
+        }
     }
 }

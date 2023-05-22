@@ -363,6 +363,7 @@
             this.kundeinformationerToolStripMenuItem.Name = "kundeinformationerToolStripMenuItem";
             this.kundeinformationerToolStripMenuItem.Size = new System.Drawing.Size(242, 30);
             this.kundeinformationerToolStripMenuItem.Text = "Kundeinformationer";
+            this.kundeinformationerToolStripMenuItem.Click += new System.EventHandler(this.kundeinformationerToolStripMenuItem_Click);
             // 
             // varerToolStripMenuItem
             // 
@@ -378,12 +379,14 @@
             this.opretVareToolStripMenuItem.Name = "opretVareToolStripMenuItem";
             this.opretVareToolStripMenuItem.Size = new System.Drawing.Size(226, 30);
             this.opretVareToolStripMenuItem.Text = "Opret vare";
+            this.opretVareToolStripMenuItem.Click += new System.EventHandler(this.opretVareToolStripMenuItem_Click);
             // 
             // vareinformationerToolStripMenuItem
             // 
             this.vareinformationerToolStripMenuItem.Name = "vareinformationerToolStripMenuItem";
             this.vareinformationerToolStripMenuItem.Size = new System.Drawing.Size(226, 30);
             this.vareinformationerToolStripMenuItem.Text = "Vareinformationer";
+            this.vareinformationerToolStripMenuItem.Click += new System.EventHandler(this.vareinformationerToolStripMenuItem_Click);
             // 
             // bookingToolStripMenuItem
             // 
