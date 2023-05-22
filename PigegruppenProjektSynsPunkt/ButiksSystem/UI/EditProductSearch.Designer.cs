@@ -44,9 +44,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_saveEditedProductToDatabase = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btn_deleteProductInDatabase = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_showProductInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,10 +55,10 @@
             // 
             this.btn_showProductInfoInDatagrid.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_showProductInfoInDatagrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_showProductInfoInDatagrid.Location = new System.Drawing.Point(244, 318);
+            this.btn_showProductInfoInDatagrid.Location = new System.Drawing.Point(244, 322);
             this.btn_showProductInfoInDatagrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_showProductInfoInDatagrid.Name = "btn_showProductInfoInDatagrid";
-            this.btn_showProductInfoInDatagrid.Size = new System.Drawing.Size(148, 37);
+            this.btn_showProductInfoInDatagrid.Size = new System.Drawing.Size(148, 33);
             this.btn_showProductInfoInDatagrid.TabIndex = 37;
             this.btn_showProductInfoInDatagrid.Text = "Vis Vareoplysninger";
             this.btn_showProductInfoInDatagrid.UseVisualStyleBackColor = false;
@@ -154,6 +155,7 @@
             this.txt_showProductIDFromSearch.ReadOnly = true;
             this.txt_showProductIDFromSearch.Size = new System.Drawing.Size(152, 24);
             this.txt_showProductIDFromSearch.TabIndex = 43;
+            this.txt_showProductIDFromSearch.Text = "ooooooooooooooooooo";
             // 
             // label5
             // 
@@ -205,17 +207,17 @@
             this.label6.TabIndex = 38;
             this.label6.Text = "Vare ID : ";
             // 
-            // button2
+            // btn_saveEditedProductToDatabase
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(547, 318);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 37);
-            this.button2.TabIndex = 48;
-            this.button2.Text = "Gem Vareoplysninger";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_saveEditedProductToDatabase.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_saveEditedProductToDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_saveEditedProductToDatabase.Location = new System.Drawing.Point(548, 324);
+            this.btn_saveEditedProductToDatabase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_saveEditedProductToDatabase.Name = "btn_saveEditedProductToDatabase";
+            this.btn_saveEditedProductToDatabase.Size = new System.Drawing.Size(148, 32);
+            this.btn_saveEditedProductToDatabase.TabIndex = 48;
+            this.btn_saveEditedProductToDatabase.Text = "Gem Vareoplysninger";
+            this.btn_saveEditedProductToDatabase.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
@@ -239,14 +241,26 @@
             this.label8.TabIndex = 50;
             this.label8.Text = "Vareinformationer";
             // 
+            // btn_deleteProductInDatabase
+            // 
+            this.btn_deleteProductInDatabase.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_deleteProductInDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deleteProductInDatabase.Location = new System.Drawing.Point(408, 324);
+            this.btn_deleteProductInDatabase.Name = "btn_deleteProductInDatabase";
+            this.btn_deleteProductInDatabase.Size = new System.Drawing.Size(119, 31);
+            this.btn_deleteProductInDatabase.TabIndex = 51;
+            this.btn_deleteProductInDatabase.Text = "Slet Vare";
+            this.btn_deleteProductInDatabase.UseVisualStyleBackColor = false;
+            // 
             // EditProductSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(706, 361);
+            this.Controls.Add(this.btn_deleteProductInDatabase);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_saveEditedProductToDatabase);
             this.Controls.Add(this.txt_editQuantityInStorage);
             this.Controls.Add(this.txt_editProductGroupID);
             this.Controls.Add(this.txt_editProductPricePerItem);
@@ -286,10 +300,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_saveEditedProductToDatabase;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btn_deleteProductInDatabase;
     }
 }

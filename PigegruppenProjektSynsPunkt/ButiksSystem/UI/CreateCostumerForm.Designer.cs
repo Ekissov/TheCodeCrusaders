@@ -36,14 +36,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_customerID = new System.Windows.Forms.TextBox();
-            this.txt_customerFirstName = new System.Windows.Forms.TextBox();
-            this.txt_customerLastName = new System.Windows.Forms.TextBox();
-            this.txt_cutomerPhoneNumber = new System.Windows.Forms.TextBox();
-            this.txt_customerEmail = new System.Windows.Forms.TextBox();
-            this.txt_customerAddress = new System.Windows.Forms.TextBox();
-            this.txt_customerPostalCode = new System.Windows.Forms.TextBox();
-            this.txt_customerCity = new System.Windows.Forms.TextBox();
+            this.txt_createCustomerID = new System.Windows.Forms.TextBox();
+            this.txt_createCustomerFirstName = new System.Windows.Forms.TextBox();
+            this.txt_createCustomerLastName = new System.Windows.Forms.TextBox();
+            this.txt_createCutomerPhoneNumber = new System.Windows.Forms.TextBox();
+            this.txt_createCustomerEmail = new System.Windows.Forms.TextBox();
+            this.txt_createCustomerAddress = new System.Windows.Forms.TextBox();
+            this.txt_createCustomerPostalCode = new System.Windows.Forms.TextBox();
+            this.txt_createCustomerCity = new System.Windows.Forms.TextBox();
             this.btn_createCustomer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -119,62 +119,62 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "By : ";
             // 
-            // txt_customerID
+            // txt_createCustomerID
             // 
-            this.txt_customerID.Location = new System.Drawing.Point(91, 13);
-            this.txt_customerID.Name = "txt_customerID";
-            this.txt_customerID.ReadOnly = true;
-            this.txt_customerID.Size = new System.Drawing.Size(100, 20);
-            this.txt_customerID.TabIndex = 8;
+            this.txt_createCustomerID.Location = new System.Drawing.Point(91, 13);
+            this.txt_createCustomerID.Name = "txt_createCustomerID";
+            this.txt_createCustomerID.ReadOnly = true;
+            this.txt_createCustomerID.Size = new System.Drawing.Size(100, 20);
+            this.txt_createCustomerID.TabIndex = 8;
             // 
-            // txt_customerFirstName
+            // txt_createCustomerFirstName
             // 
-            this.txt_customerFirstName.Location = new System.Drawing.Point(91, 38);
-            this.txt_customerFirstName.Name = "txt_customerFirstName";
-            this.txt_customerFirstName.Size = new System.Drawing.Size(100, 20);
-            this.txt_customerFirstName.TabIndex = 9;
+            this.txt_createCustomerFirstName.Location = new System.Drawing.Point(91, 38);
+            this.txt_createCustomerFirstName.Name = "txt_createCustomerFirstName";
+            this.txt_createCustomerFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txt_createCustomerFirstName.TabIndex = 9;
             // 
-            // txt_customerLastName
+            // txt_createCustomerLastName
             // 
-            this.txt_customerLastName.Location = new System.Drawing.Point(91, 64);
-            this.txt_customerLastName.Name = "txt_customerLastName";
-            this.txt_customerLastName.Size = new System.Drawing.Size(100, 20);
-            this.txt_customerLastName.TabIndex = 10;
+            this.txt_createCustomerLastName.Location = new System.Drawing.Point(91, 64);
+            this.txt_createCustomerLastName.Name = "txt_createCustomerLastName";
+            this.txt_createCustomerLastName.Size = new System.Drawing.Size(100, 20);
+            this.txt_createCustomerLastName.TabIndex = 10;
             // 
-            // txt_cutomerPhoneNumber
+            // txt_createCutomerPhoneNumber
             // 
-            this.txt_cutomerPhoneNumber.Location = new System.Drawing.Point(91, 89);
-            this.txt_cutomerPhoneNumber.Name = "txt_cutomerPhoneNumber";
-            this.txt_cutomerPhoneNumber.Size = new System.Drawing.Size(100, 20);
-            this.txt_cutomerPhoneNumber.TabIndex = 11;
+            this.txt_createCutomerPhoneNumber.Location = new System.Drawing.Point(91, 89);
+            this.txt_createCutomerPhoneNumber.Name = "txt_createCutomerPhoneNumber";
+            this.txt_createCutomerPhoneNumber.Size = new System.Drawing.Size(100, 20);
+            this.txt_createCutomerPhoneNumber.TabIndex = 11;
             // 
-            // txt_customerEmail
+            // txt_createCustomerEmail
             // 
-            this.txt_customerEmail.Location = new System.Drawing.Point(91, 114);
-            this.txt_customerEmail.Name = "txt_customerEmail";
-            this.txt_customerEmail.Size = new System.Drawing.Size(169, 20);
-            this.txt_customerEmail.TabIndex = 12;
+            this.txt_createCustomerEmail.Location = new System.Drawing.Point(91, 114);
+            this.txt_createCustomerEmail.Name = "txt_createCustomerEmail";
+            this.txt_createCustomerEmail.Size = new System.Drawing.Size(169, 20);
+            this.txt_createCustomerEmail.TabIndex = 12;
             // 
-            // txt_customerAddress
+            // txt_createCustomerAddress
             // 
-            this.txt_customerAddress.Location = new System.Drawing.Point(91, 140);
-            this.txt_customerAddress.Name = "txt_customerAddress";
-            this.txt_customerAddress.Size = new System.Drawing.Size(169, 20);
-            this.txt_customerAddress.TabIndex = 13;
+            this.txt_createCustomerAddress.Location = new System.Drawing.Point(91, 140);
+            this.txt_createCustomerAddress.Name = "txt_createCustomerAddress";
+            this.txt_createCustomerAddress.Size = new System.Drawing.Size(169, 20);
+            this.txt_createCustomerAddress.TabIndex = 13;
             // 
-            // txt_customerPostalCode
+            // txt_createCustomerPostalCode
             // 
-            this.txt_customerPostalCode.Location = new System.Drawing.Point(91, 167);
-            this.txt_customerPostalCode.Name = "txt_customerPostalCode";
-            this.txt_customerPostalCode.Size = new System.Drawing.Size(100, 20);
-            this.txt_customerPostalCode.TabIndex = 14;
+            this.txt_createCustomerPostalCode.Location = new System.Drawing.Point(91, 167);
+            this.txt_createCustomerPostalCode.Name = "txt_createCustomerPostalCode";
+            this.txt_createCustomerPostalCode.Size = new System.Drawing.Size(100, 20);
+            this.txt_createCustomerPostalCode.TabIndex = 14;
             // 
-            // txt_customerCity
+            // txt_createCustomerCity
             // 
-            this.txt_customerCity.Location = new System.Drawing.Point(91, 193);
-            this.txt_customerCity.Name = "txt_customerCity";
-            this.txt_customerCity.Size = new System.Drawing.Size(169, 20);
-            this.txt_customerCity.TabIndex = 15;
+            this.txt_createCustomerCity.Location = new System.Drawing.Point(91, 193);
+            this.txt_createCustomerCity.Name = "txt_createCustomerCity";
+            this.txt_createCustomerCity.Size = new System.Drawing.Size(169, 20);
+            this.txt_createCustomerCity.TabIndex = 15;
             // 
             // btn_createCustomer
             // 
@@ -192,14 +192,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(274, 257);
             this.Controls.Add(this.btn_createCustomer);
-            this.Controls.Add(this.txt_customerCity);
-            this.Controls.Add(this.txt_customerPostalCode);
-            this.Controls.Add(this.txt_customerAddress);
-            this.Controls.Add(this.txt_customerEmail);
-            this.Controls.Add(this.txt_cutomerPhoneNumber);
-            this.Controls.Add(this.txt_customerLastName);
-            this.Controls.Add(this.txt_customerFirstName);
-            this.Controls.Add(this.txt_customerID);
+            this.Controls.Add(this.txt_createCustomerCity);
+            this.Controls.Add(this.txt_createCustomerPostalCode);
+            this.Controls.Add(this.txt_createCustomerAddress);
+            this.Controls.Add(this.txt_createCustomerEmail);
+            this.Controls.Add(this.txt_createCutomerPhoneNumber);
+            this.Controls.Add(this.txt_createCustomerLastName);
+            this.Controls.Add(this.txt_createCustomerFirstName);
+            this.Controls.Add(this.txt_createCustomerID);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -226,14 +226,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_customerID;
-        private System.Windows.Forms.TextBox txt_customerFirstName;
-        private System.Windows.Forms.TextBox txt_customerLastName;
-        private System.Windows.Forms.TextBox txt_cutomerPhoneNumber;
-        private System.Windows.Forms.TextBox txt_customerEmail;
-        private System.Windows.Forms.TextBox txt_customerAddress;
-        private System.Windows.Forms.TextBox txt_customerPostalCode;
-        private System.Windows.Forms.TextBox txt_customerCity;
+        private System.Windows.Forms.TextBox txt_createCustomerID;
+        private System.Windows.Forms.TextBox txt_createCustomerFirstName;
+        private System.Windows.Forms.TextBox txt_createCustomerLastName;
+        private System.Windows.Forms.TextBox txt_createCutomerPhoneNumber;
+        private System.Windows.Forms.TextBox txt_createCustomerEmail;
+        private System.Windows.Forms.TextBox txt_createCustomerAddress;
+        private System.Windows.Forms.TextBox txt_createCustomerPostalCode;
+        private System.Windows.Forms.TextBox txt_createCustomerCity;
         private System.Windows.Forms.Button btn_createCustomer;
     }
 }

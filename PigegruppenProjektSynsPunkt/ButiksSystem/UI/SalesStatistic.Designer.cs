@@ -28,77 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_salesStatisicsShowAllSales = new System.Windows.Forms.Button();
+            this.dgv_showSalesStatisticsInDatagrid = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_salesStatisticsStartDate = new System.Windows.Forms.DateTimePicker();
+            this.dtp_salesStatisticsEndDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btn_salesStatisticsPrintToTxtFile = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_showSalesStatisticsInDatagrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_salesStatisicsShowAllSales
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(813, 332);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(267, 47);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Vis alle Salg";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_salesStatisicsShowAllSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salesStatisicsShowAllSales.Location = new System.Drawing.Point(610, 270);
+            this.btn_salesStatisicsShowAllSales.Name = "btn_salesStatisicsShowAllSales";
+            this.btn_salesStatisicsShowAllSales.Size = new System.Drawing.Size(200, 38);
+            this.btn_salesStatisicsShowAllSales.TabIndex = 0;
+            this.btn_salesStatisicsShowAllSales.Text = "Vis alle Salg";
+            this.btn_salesStatisicsShowAllSales.UseVisualStyleBackColor = true;
+            this.btn_salesStatisicsShowAllSales.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridView1
+            // dgv_showSalesStatisticsInDatagrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 94);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(551, 401);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgv_showSalesStatisticsInDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_showSalesStatisticsInDatagrid.Location = new System.Drawing.Point(31, 76);
+            this.dgv_showSalesStatisticsInDatagrid.Name = "dgv_showSalesStatisticsInDatagrid";
+            this.dgv_showSalesStatisticsInDatagrid.RowHeadersWidth = 51;
+            this.dgv_showSalesStatisticsInDatagrid.Size = new System.Drawing.Size(413, 326);
+            this.dgv_showSalesStatisticsInDatagrid.TabIndex = 1;
+            this.dgv_showSalesStatisticsInDatagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(480, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(360, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 36);
+            this.label1.Size = new System.Drawing.Size(153, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "Salgsstatistik";
             // 
-            // dateTimePicker1
+            // dtp_salesStatisticsStartDate
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(813, 142);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dtp_salesStatisticsStartDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_salesStatisticsStartDate.Location = new System.Drawing.Point(610, 115);
+            this.dtp_salesStatisticsStartDate.Name = "dtp_salesStatisticsStartDate";
+            this.dtp_salesStatisticsStartDate.Size = new System.Drawing.Size(200, 20);
+            this.dtp_salesStatisticsStartDate.TabIndex = 3;
             // 
-            // dateTimePicker2
+            // dtp_salesStatisticsEndDate
             // 
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(813, 209);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(265, 22);
-            this.dateTimePicker2.TabIndex = 4;
+            this.dtp_salesStatisticsEndDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_salesStatisticsEndDate.Location = new System.Drawing.Point(610, 170);
+            this.dtp_salesStatisticsEndDate.Name = "dtp_salesStatisticsEndDate";
+            this.dtp_salesStatisticsEndDate.Size = new System.Drawing.Size(200, 20);
+            this.dtp_salesStatisticsEndDate.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(631, 209);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(473, 170);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 25);
+            this.label2.Size = new System.Drawing.Size(120, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Vælg slut dato :";
             // 
@@ -106,41 +100,38 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(621, 142);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(466, 115);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 25);
+            this.label3.Size = new System.Drawing.Size(127, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Vælg start dato: ";
             // 
-            // button2
+            // btn_salesStatisticsPrintToTxtFile
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(813, 409);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(267, 47);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Print til Tekstfil";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_salesStatisticsPrintToTxtFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salesStatisticsPrintToTxtFile.Location = new System.Drawing.Point(610, 332);
+            this.btn_salesStatisticsPrintToTxtFile.Name = "btn_salesStatisticsPrintToTxtFile";
+            this.btn_salesStatisticsPrintToTxtFile.Size = new System.Drawing.Size(200, 38);
+            this.btn_salesStatisticsPrintToTxtFile.TabIndex = 7;
+            this.btn_salesStatisticsPrintToTxtFile.Text = "Print til Tekstfil";
+            this.btn_salesStatisticsPrintToTxtFile.UseVisualStyleBackColor = true;
             // 
             // SalesStatistic
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1179, 554);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(884, 450);
+            this.Controls.Add(this.btn_salesStatisticsPrintToTxtFile);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_salesStatisticsEndDate);
+            this.Controls.Add(this.dtp_salesStatisticsStartDate);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.dgv_showSalesStatisticsInDatagrid);
+            this.Controls.Add(this.btn_salesStatisicsShowAllSales);
             this.Name = "SalesStatistic";
             this.Text = "ProductView";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_showSalesStatisticsInDatagrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,13 +139,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_salesStatisicsShowAllSales;
+        private System.Windows.Forms.DataGridView dgv_showSalesStatisticsInDatagrid;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtp_salesStatisticsStartDate;
+        private System.Windows.Forms.DateTimePicker dtp_salesStatisticsEndDate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_salesStatisticsPrintToTxtFile;
     }
 }
