@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_searchCustomerID = new System.Windows.Forms.TextBox();
+            this.txt_searchCustomerIDOrName = new System.Windows.Forms.TextBox();
             this.dgv_showCustomerInfo = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +41,7 @@
             this.txt_changeCustomerPhoneNumber = new System.Windows.Forms.TextBox();
             this.txt_changeCustomerLastName = new System.Windows.Forms.TextBox();
             this.txt_changeCustomerFirstName = new System.Windows.Forms.TextBox();
-            this.txt_showCustomerIDInSearch = new System.Windows.Forms.TextBox();
+            this.txt_showCustomerIDFromSearch = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -68,15 +68,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Indtast Kunde Nr. / KundeNavn :";
             // 
-            // txt_searchCustomerID
+            // txt_searchCustomerIDOrName
             // 
-            this.txt_searchCustomerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_searchCustomerID.Location = new System.Drawing.Point(253, 68);
-            this.txt_searchCustomerID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_searchCustomerID.Name = "txt_searchCustomerID";
-            this.txt_searchCustomerID.Size = new System.Drawing.Size(188, 24);
-            this.txt_searchCustomerID.TabIndex = 1;
-            this.txt_searchCustomerID.Text = "IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII" +
+            this.txt_searchCustomerIDOrName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_searchCustomerIDOrName.Location = new System.Drawing.Point(253, 68);
+            this.txt_searchCustomerIDOrName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_searchCustomerIDOrName.Name = "txt_searchCustomerIDOrName";
+            this.txt_searchCustomerIDOrName.Size = new System.Drawing.Size(188, 24);
+            this.txt_searchCustomerIDOrName.TabIndex = 1;
+            this.txt_searchCustomerIDOrName.Text = "IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII" +
     "IIIIIIIIIIIIIIIIIIIIIIIIIIIIIII";
             // 
             // dgv_showCustomerInfo
@@ -176,14 +176,14 @@
             this.txt_changeCustomerFirstName.Size = new System.Drawing.Size(125, 24);
             this.txt_changeCustomerFirstName.TabIndex = 26;
             // 
-            // txt_showCustomerIDInSearch
+            // txt_showCustomerIDFromSearch
             // 
-            this.txt_showCustomerIDInSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_showCustomerIDInSearch.Location = new System.Drawing.Point(604, 107);
-            this.txt_showCustomerIDInSearch.Name = "txt_showCustomerIDInSearch";
-            this.txt_showCustomerIDInSearch.ReadOnly = true;
-            this.txt_showCustomerIDInSearch.Size = new System.Drawing.Size(100, 24);
-            this.txt_showCustomerIDInSearch.TabIndex = 25;
+            this.txt_showCustomerIDFromSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_showCustomerIDFromSearch.Location = new System.Drawing.Point(604, 107);
+            this.txt_showCustomerIDFromSearch.Name = "txt_showCustomerIDFromSearch";
+            this.txt_showCustomerIDFromSearch.ReadOnly = true;
+            this.txt_showCustomerIDFromSearch.Size = new System.Drawing.Size(100, 24);
+            this.txt_showCustomerIDFromSearch.TabIndex = 25;
             // 
             // label8
             // 
@@ -327,7 +327,7 @@
             this.Controls.Add(this.txt_changeCustomerPhoneNumber);
             this.Controls.Add(this.txt_changeCustomerLastName);
             this.Controls.Add(this.txt_changeCustomerFirstName);
-            this.Controls.Add(this.txt_showCustomerIDInSearch);
+            this.Controls.Add(this.txt_showCustomerIDFromSearch);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -338,7 +338,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btn_showCustomerInDatagrid);
             this.Controls.Add(this.dgv_showCustomerInfo);
-            this.Controls.Add(this.txt_searchCustomerID);
+            this.Controls.Add(this.txt_searchCustomerIDOrName);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EditCostumerSearch";
@@ -352,7 +352,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_searchCustomerID;
+        private System.Windows.Forms.TextBox txt_searchCustomerIDOrName;
         private System.Windows.Forms.DataGridView dgv_showCustomerInfo;
         private System.Windows.Forms.Button btn_showCustomerInDatagrid;
         private System.Windows.Forms.TextBox txt_changeCustomerCity;
@@ -362,7 +362,7 @@
         private System.Windows.Forms.TextBox txt_changeCustomerPhoneNumber;
         private System.Windows.Forms.TextBox txt_changeCustomerLastName;
         private System.Windows.Forms.TextBox txt_changeCustomerFirstName;
-        private System.Windows.Forms.TextBox txt_showCustomerIDInSearch;
+        private System.Windows.Forms.TextBox txt_showCustomerIDFromSearch;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
