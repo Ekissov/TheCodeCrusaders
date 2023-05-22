@@ -17,6 +17,9 @@ namespace ButiksSystem.UI
             InitializeComponent();
         }
 
-       
+        private void btn_createCustomer_Click(object sender, EventArgs e)
+        {
+            //controller.opretkunde
+        }
     }
 }
