@@ -17,8 +17,7 @@ namespace ButiksSystem.Models
         public string City { get; set; }
         public string Email { get; set; }
 
-        public Costumer(string firstName, 
-            string lastName, string phoneNumber, string adress, int postalCode, string city, string email) 
+        public Costumer(string firstName, string lastName, string phoneNumber, string adress, int postalCode, string city, string email) 
         { 
             this.FirstName = firstName;
             this.LastName = lastName;
