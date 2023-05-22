@@ -76,7 +76,7 @@
             this.btn_homePageHelp.BackColor = System.Drawing.Color.Silver;
             this.btn_homePageHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_homePageHelp.Location = new System.Drawing.Point(619, 44);
-            this.btn_homePageHelp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_homePageHelp.Margin = new System.Windows.Forms.Padding(2);
             this.btn_homePageHelp.Name = "btn_homePageHelp";
             this.btn_homePageHelp.Size = new System.Drawing.Size(25, 29);
             this.btn_homePageHelp.TabIndex = 20;
@@ -86,7 +86,7 @@
             // btn_homePageEmployeeLogOut
             // 
             this.btn_homePageEmployeeLogOut.Location = new System.Drawing.Point(557, 350);
-            this.btn_homePageEmployeeLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_homePageEmployeeLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btn_homePageEmployeeLogOut.Name = "btn_homePageEmployeeLogOut";
             this.btn_homePageEmployeeLogOut.Size = new System.Drawing.Size(87, 19);
             this.btn_homePageEmployeeLogOut.TabIndex = 19;
@@ -310,7 +310,7 @@
             this.menu_homePageMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.menu_homePageMenuStrip.Name = "menu_homePageMenuStrip";
             this.menu_homePageMenuStrip.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menu_homePageMenuStrip.Size = new System.Drawing.Size(800, 31);
+            this.menu_homePageMenuStrip.Size = new System.Drawing.Size(702, 31);
             this.menu_homePageMenuStrip.TabIndex = 14;
             this.menu_homePageMenuStrip.Text = "menuStrip1";
             // 
@@ -420,7 +420,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(702, 428);
             this.Controls.Add(this.btn_homePageHelp);
             this.Controls.Add(this.btn_homePageEmployeeLogOut);
             this.Controls.Add(this.panel1);
