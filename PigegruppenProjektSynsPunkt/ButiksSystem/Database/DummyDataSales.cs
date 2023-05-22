@@ -10,7 +10,7 @@ namespace ButiksSystem.Database
     public class DummyDataSales
     {
 
-        private static List<Sales> TestMethod()
+        private static List<Sales> CreateDummyDataSales()
         {
            List<Sales> listOfSales = new List<Sales>();
 
