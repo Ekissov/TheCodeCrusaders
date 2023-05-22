@@ -75,20 +75,20 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Silver;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(619, 44);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(825, 54);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 29);
+            this.button2.Size = new System.Drawing.Size(33, 36);
             this.button2.TabIndex = 20;
             this.button2.Text = "?";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(557, 350);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(743, 431);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 19);
+            this.button1.Size = new System.Drawing.Size(116, 23);
             this.button1.TabIndex = 19;
             this.button1.Text = "LOG UD";
             this.button1.UseVisualStyleBackColor = true;
@@ -103,54 +103,53 @@
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Location = new System.Drawing.Point(350, 83);
+            this.panel1.Location = new System.Drawing.Point(467, 102);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(294, 253);
+            this.panel1.Size = new System.Drawing.Size(392, 311);
             this.panel1.TabIndex = 18;
             // 
             // vScrollBar2
             // 
-            this.vScrollBar2.Location = new System.Drawing.Point(277, 46);
+            this.vScrollBar2.Location = new System.Drawing.Point(369, 57);
             this.vScrollBar2.Name = "vScrollBar2";
-            this.vScrollBar2.Size = new System.Drawing.Size(26, 214);
+            this.vScrollBar2.Size = new System.Drawing.Size(26, 263);
             this.vScrollBar2.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(2, 191);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(3, 235);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.Size = new System.Drawing.Size(57, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = "05/02-23";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(2, 112);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(3, 138);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 13);
+            this.label7.Size = new System.Drawing.Size(57, 16);
             this.label7.TabIndex = 8;
             this.label7.Text = "27/03-23";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(2, 46);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(3, 57);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.Size = new System.Drawing.Size(57, 16);
             this.label8.TabIndex = 7;
             this.label8.Text = "06/04-23";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(5, 62);
+            this.textBox2.Location = new System.Drawing.Point(7, 76);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(272, 48);
+            this.textBox2.Size = new System.Drawing.Size(361, 58);
             this.textBox2.TabIndex = 6;
             this.textBox2.Text = "Der er kommet nye vare til solbrille sortimentet.\r\nDer er vedhæftet en liste med " +
     "de nye varer. De skal sælges fra 1. Maj\r\n\r\n\r\n";
@@ -158,10 +157,11 @@
             // textBox6
             // 
             this.textBox6.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox6.Location = new System.Drawing.Point(5, 129);
+            this.textBox6.Location = new System.Drawing.Point(7, 159);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(272, 61);
+            this.textBox6.Size = new System.Drawing.Size(361, 74);
             this.textBox6.TabIndex = 5;
             this.textBox6.Text = "Der er kommet en ny funktion i salgssystemet. \r\nNu kan alle medarbejdere gå ind o" +
     "g oprette bookinger til synstest.\r\nTag gerne det i funktion, hvis kunder ringer " +
@@ -171,18 +171,20 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(108, 21);
+            this.label9.Location = new System.Drawing.Point(144, 26);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 17);
+            this.label9.Size = new System.Drawing.Size(128, 20);
             this.label9.TabIndex = 4;
             this.label9.Text = "Butiks Infotavle:";
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(5, 207);
+            this.textBox7.Location = new System.Drawing.Point(7, 255);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(272, 51);
+            this.textBox7.Size = new System.Drawing.Size(361, 62);
             this.textBox7.TabIndex = 3;
             this.textBox7.Text = resources.GetString("textBox7.Text");
             // 
@@ -196,54 +198,53 @@
             this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Location = new System.Drawing.Point(42, 83);
+            this.panel2.Location = new System.Drawing.Point(56, 102);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(294, 253);
+            this.panel2.Size = new System.Drawing.Size(392, 311);
             this.panel2.TabIndex = 17;
             // 
             // vScrollBar1
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(277, 46);
+            this.vScrollBar1.Location = new System.Drawing.Point(369, 57);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(26, 214);
+            this.vScrollBar1.Size = new System.Drawing.Size(26, 263);
             this.vScrollBar1.TabIndex = 10;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(2, 191);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(3, 235);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 13);
+            this.label6.Size = new System.Drawing.Size(57, 16);
             this.label6.TabIndex = 9;
             this.label6.Text = "15/03-23";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(2, 123);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(3, 151);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 13);
+            this.label5.Size = new System.Drawing.Size(57, 16);
             this.label5.TabIndex = 8;
             this.label5.Text = "01/04-23";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(2, 46);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(3, 57);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
+            this.label4.Size = new System.Drawing.Size(57, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "12/04-23";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(5, 62);
+            this.textBox5.Location = new System.Drawing.Point(7, 76);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(272, 59);
+            this.textBox5.Size = new System.Drawing.Size(361, 72);
             this.textBox5.TabIndex = 6;
             this.textBox5.Text = "Tak for en fed påskefrokost, vi glæder os til at gentage succes\'en næste år.\r\nDer" +
     " er fundet nogle solbriller i festlokalet, ejeren bedes henvende sig til LP.\r\n\r\n" +
@@ -252,10 +253,11 @@
             // textBox4
             // 
             this.textBox4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox4.Location = new System.Drawing.Point(5, 139);
+            this.textBox4.Location = new System.Drawing.Point(7, 171);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(272, 50);
+            this.textBox4.Size = new System.Drawing.Size(361, 61);
             this.textBox4.TabIndex = 5;
             this.textBox4.Text = "d. 30/05-23 er det Ingas 15 års jubilæum.\r\nDer vil være frugt og kage til fejring" +
     " i pauserummet i Fredericia butikken\r\n";
@@ -264,37 +266,41 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(80, 21);
+            this.label3.Location = new System.Drawing.Point(107, 26);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 17);
+            this.label3.Size = new System.Drawing.Size(156, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Personale Infotavle:";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(5, 207);
+            this.textBox3.Location = new System.Drawing.Point(7, 255);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(267, 51);
+            this.textBox3.Size = new System.Drawing.Size(355, 62);
             this.textBox3.TabIndex = 3;
             this.textBox3.Text = "Hej vi afholder påskefrokost i Fredericia d. 6 april.\r\nSU. d. 1 april på mail syn" +
     "slot@gmail.com. \r\n\r\n";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(128, 353);
+            this.textBox1.Location = new System.Drawing.Point(171, 434);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(39, 20);
+            this.textBox1.Size = new System.Drawing.Size(51, 22);
             this.textBox1.TabIndex = 16;
             this.textBox1.Text = "OOOO";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 356);
+            this.label1.Location = new System.Drawing.Point(52, 438);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.Size = new System.Drawing.Size(104, 16);
             this.label1.TabIndex = 15;
             this.label1.Text = "Medarbejder ID:";
             // 
@@ -309,8 +315,8 @@
             this.bookingToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 31);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(1067, 36);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -321,25 +327,25 @@
             this.opretBestillingToolStripMenuItem,
             this.retunerVarerToolStripMenuItem});
             this.salgToolStripMenuItem.Name = "salgToolStripMenuItem";
-            this.salgToolStripMenuItem.Size = new System.Drawing.Size(58, 29);
+            this.salgToolStripMenuItem.Size = new System.Drawing.Size(68, 34);
             this.salgToolStripMenuItem.Text = "Salg";
             // 
             // opretSalgToolStripMenuItem
             // 
             this.opretSalgToolStripMenuItem.Name = "opretSalgToolStripMenuItem";
-            this.opretSalgToolStripMenuItem.Size = new System.Drawing.Size(206, 30);
+            this.opretSalgToolStripMenuItem.Size = new System.Drawing.Size(249, 34);
             this.opretSalgToolStripMenuItem.Text = "Opret salg";
             // 
             // opretBestillingToolStripMenuItem
             // 
             this.opretBestillingToolStripMenuItem.Name = "opretBestillingToolStripMenuItem";
-            this.opretBestillingToolStripMenuItem.Size = new System.Drawing.Size(206, 30);
+            this.opretBestillingToolStripMenuItem.Size = new System.Drawing.Size(249, 34);
             this.opretBestillingToolStripMenuItem.Text = "Opret bestilling";
             // 
             // retunerVarerToolStripMenuItem
             // 
             this.retunerVarerToolStripMenuItem.Name = "retunerVarerToolStripMenuItem";
-            this.retunerVarerToolStripMenuItem.Size = new System.Drawing.Size(206, 30);
+            this.retunerVarerToolStripMenuItem.Size = new System.Drawing.Size(249, 34);
             this.retunerVarerToolStripMenuItem.Text = "Retuner\' varer";
             // 
             // kundeToolStripMenuItem
@@ -348,20 +354,22 @@
             this.opretKundeToolStripMenuItem,
             this.kundeinformationerToolStripMenuItem});
             this.kundeToolStripMenuItem.Name = "kundeToolStripMenuItem";
-            this.kundeToolStripMenuItem.Size = new System.Drawing.Size(74, 29);
+            this.kundeToolStripMenuItem.Size = new System.Drawing.Size(89, 34);
             this.kundeToolStripMenuItem.Text = "Kunde";
             // 
             // opretKundeToolStripMenuItem
             // 
             this.opretKundeToolStripMenuItem.Name = "opretKundeToolStripMenuItem";
-            this.opretKundeToolStripMenuItem.Size = new System.Drawing.Size(242, 30);
+            this.opretKundeToolStripMenuItem.Size = new System.Drawing.Size(294, 34);
             this.opretKundeToolStripMenuItem.Text = "Opret kunde";
+            this.opretKundeToolStripMenuItem.Click += new System.EventHandler(this.opretKundeToolStripMenuItem_Click);
             // 
             // kundeinformationerToolStripMenuItem
             // 
             this.kundeinformationerToolStripMenuItem.Name = "kundeinformationerToolStripMenuItem";
-            this.kundeinformationerToolStripMenuItem.Size = new System.Drawing.Size(242, 30);
+            this.kundeinformationerToolStripMenuItem.Size = new System.Drawing.Size(294, 34);
             this.kundeinformationerToolStripMenuItem.Text = "Kundeinformationer";
+            this.kundeinformationerToolStripMenuItem.Click += new System.EventHandler(this.kundeinformationerToolStripMenuItem_Click);
             // 
             // varerToolStripMenuItem
             // 
@@ -369,20 +377,22 @@
             this.opretVareToolStripMenuItem,
             this.vareinformationerToolStripMenuItem});
             this.varerToolStripMenuItem.Name = "varerToolStripMenuItem";
-            this.varerToolStripMenuItem.Size = new System.Drawing.Size(64, 29);
+            this.varerToolStripMenuItem.Size = new System.Drawing.Size(78, 34);
             this.varerToolStripMenuItem.Text = "Varer";
             // 
             // opretVareToolStripMenuItem
             // 
             this.opretVareToolStripMenuItem.Name = "opretVareToolStripMenuItem";
-            this.opretVareToolStripMenuItem.Size = new System.Drawing.Size(226, 30);
+            this.opretVareToolStripMenuItem.Size = new System.Drawing.Size(275, 34);
             this.opretVareToolStripMenuItem.Text = "Opret vare";
+            this.opretVareToolStripMenuItem.Click += new System.EventHandler(this.opretVareToolStripMenuItem_Click);
             // 
             // vareinformationerToolStripMenuItem
             // 
             this.vareinformationerToolStripMenuItem.Name = "vareinformationerToolStripMenuItem";
-            this.vareinformationerToolStripMenuItem.Size = new System.Drawing.Size(226, 30);
+            this.vareinformationerToolStripMenuItem.Size = new System.Drawing.Size(275, 34);
             this.vareinformationerToolStripMenuItem.Text = "Vareinformationer";
+            this.vareinformationerToolStripMenuItem.Click += new System.EventHandler(this.vareinformationerToolStripMenuItem_Click);
             // 
             // bookingToolStripMenuItem
             // 
@@ -391,32 +401,32 @@
             this.aflysBookingToolStripMenuItem,
             this.seBookingerToolStripMenuItem});
             this.bookingToolStripMenuItem.Name = "bookingToolStripMenuItem";
-            this.bookingToolStripMenuItem.Size = new System.Drawing.Size(90, 29);
+            this.bookingToolStripMenuItem.Size = new System.Drawing.Size(107, 34);
             this.bookingToolStripMenuItem.Text = "Booking";
             // 
             // opretBookingToolStripMenuItem
             // 
             this.opretBookingToolStripMenuItem.Name = "opretBookingToolStripMenuItem";
-            this.opretBookingToolStripMenuItem.Size = new System.Drawing.Size(202, 30);
+            this.opretBookingToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
             this.opretBookingToolStripMenuItem.Text = "Opret booking";
             // 
             // aflysBookingToolStripMenuItem
             // 
             this.aflysBookingToolStripMenuItem.Name = "aflysBookingToolStripMenuItem";
-            this.aflysBookingToolStripMenuItem.Size = new System.Drawing.Size(202, 30);
+            this.aflysBookingToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
             this.aflysBookingToolStripMenuItem.Text = "Aflys booking";
             // 
             // seBookingerToolStripMenuItem
             // 
             this.seBookingerToolStripMenuItem.Name = "seBookingerToolStripMenuItem";
-            this.seBookingerToolStripMenuItem.Size = new System.Drawing.Size(202, 30);
+            this.seBookingerToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
             this.seBookingerToolStripMenuItem.Text = "Se bookinger";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
@@ -424,6 +434,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
