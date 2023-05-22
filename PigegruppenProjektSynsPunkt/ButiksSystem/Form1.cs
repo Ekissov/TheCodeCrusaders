@@ -43,8 +43,8 @@ namespace ButiksSystem
 
         private void vareinformationerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditCostumerSearch editCostumerSearch = new EditCostumerSearch();
-            editCostumerSearch.ShowDialog();
+            EditProductSearch editProductSearch = new EditProductSearch();
+            editProductSearch.ShowDialog();
         }
     }
 }
