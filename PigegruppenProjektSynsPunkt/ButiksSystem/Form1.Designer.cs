@@ -66,6 +66,8 @@
             this.opretBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aflysBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seBookingerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salgsstatestikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.søgOgVisStatistikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menu_homePageMenuStrip.SuspendLayout();
@@ -306,7 +308,8 @@
             this.salgToolStripMenuItem,
             this.kundeToolStripMenuItem,
             this.varerToolStripMenuItem,
-            this.bookingToolStripMenuItem});
+            this.bookingToolStripMenuItem,
+            this.salgsstatestikToolStripMenuItem});
             this.menu_homePageMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.menu_homePageMenuStrip.Name = "menu_homePageMenuStrip";
             this.menu_homePageMenuStrip.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
@@ -416,6 +419,20 @@
             this.seBookingerToolStripMenuItem.Size = new System.Drawing.Size(202, 30);
             this.seBookingerToolStripMenuItem.Text = "Se bookinger";
             // 
+            // salgsstatestikToolStripMenuItem
+            // 
+            this.salgsstatestikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.søgOgVisStatistikToolStripMenuItem});
+            this.salgsstatestikToolStripMenuItem.Name = "salgsstatestikToolStripMenuItem";
+            this.salgsstatestikToolStripMenuItem.Size = new System.Drawing.Size(131, 29);
+            this.salgsstatestikToolStripMenuItem.Text = "Salgsstatestik";
+            // 
+            // søgOgVisStatistikToolStripMenuItem
+            // 
+            this.søgOgVisStatistikToolStripMenuItem.Name = "søgOgVisStatistikToolStripMenuItem";
+            this.søgOgVisStatistikToolStripMenuItem.Size = new System.Drawing.Size(234, 30);
+            this.søgOgVisStatistikToolStripMenuItem.Text = "Søg og vis statistik";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -480,6 +497,8 @@
         private System.Windows.Forms.ToolStripMenuItem opretBookingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aflysBookingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seBookingerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salgsstatestikToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem søgOgVisStatistikToolStripMenuItem;
     }
 }
 
