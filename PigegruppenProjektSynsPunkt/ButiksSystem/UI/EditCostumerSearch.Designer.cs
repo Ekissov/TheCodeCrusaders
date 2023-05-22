@@ -50,7 +50,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btn_saveCustomerChanges = new System.Windows.Forms.Button();
+            this.btn_saveEditedCustomerToDatabase = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btn_deleteCustomerInDatabase = new System.Windows.Forms.Button();
@@ -265,17 +265,17 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Kunde ID : ";
             // 
-            // btn_saveCustomerChanges
+            // btn_saveEditedCustomerToDatabase
             // 
-            this.btn_saveCustomerChanges.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_saveCustomerChanges.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_saveCustomerChanges.Location = new System.Drawing.Point(652, 349);
-            this.btn_saveCustomerChanges.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_saveCustomerChanges.Name = "btn_saveCustomerChanges";
-            this.btn_saveCustomerChanges.Size = new System.Drawing.Size(119, 26);
-            this.btn_saveCustomerChanges.TabIndex = 33;
-            this.btn_saveCustomerChanges.Text = "Gem Kundeoplysninger";
-            this.btn_saveCustomerChanges.UseVisualStyleBackColor = false;
+            this.btn_saveEditedCustomerToDatabase.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_saveEditedCustomerToDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_saveEditedCustomerToDatabase.Location = new System.Drawing.Point(652, 349);
+            this.btn_saveEditedCustomerToDatabase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_saveEditedCustomerToDatabase.Name = "btn_saveEditedCustomerToDatabase";
+            this.btn_saveEditedCustomerToDatabase.Size = new System.Drawing.Size(119, 26);
+            this.btn_saveEditedCustomerToDatabase.TabIndex = 33;
+            this.btn_saveEditedCustomerToDatabase.Text = "Gem Kundeoplysninger";
+            this.btn_saveEditedCustomerToDatabase.UseVisualStyleBackColor = false;
             // 
             // label10
             // 
@@ -319,7 +319,7 @@
             this.Controls.Add(this.btn_deleteCustomerInDatabase);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.btn_saveCustomerChanges);
+            this.Controls.Add(this.btn_saveEditedCustomerToDatabase);
             this.Controls.Add(this.txt_changeCustomerCity);
             this.Controls.Add(this.txt_changeCustomerPostalCode);
             this.Controls.Add(this.txt_changeCustomerAddress);
@@ -371,7 +371,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btn_saveCustomerChanges;
+        private System.Windows.Forms.Button btn_saveEditedCustomerToDatabase;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
