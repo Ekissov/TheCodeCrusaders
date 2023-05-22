@@ -8,7 +8,7 @@ namespace ButiksSystem.Models
 {
     public class Costumer
     {
-        public int CostumerID1 { get; set; }
+        public int CostumerID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
