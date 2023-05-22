@@ -1,4 +1,6 @@
-﻿using ButiksSystem.UI;
+﻿using ButiksSystem.Models;
+using ButiksSystem.Repository;
+using ButiksSystem.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +11,17 @@ namespace ButiksSystem.Services
 {
     public class CostumerServices
     {
-        public static void CreateCostumer()
+        public static void CreateCostumer(Models.Costumer costumer)
         {
-            //Insert businesslogic
+            CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
+            CostumerDatabaseSQL.CreateCustomer(costumer);
+
         }
 
-        public static void UpdateCostumer() 
+        public static void UpdateCostumer(Models.Costumer costumer) 
         {
-            //Insert businesslogic
+            CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
+            CostumerDatabaseSQL.UpdateCustomer(costumer.CostumerID, costumer.FirstName, costumer.LastName, costumer.PhoneNumber, costumer.Email, costumer.PostalCode, costumer.City, costumer.Adress);
         }
 
         public static void DeleteCostumer() 

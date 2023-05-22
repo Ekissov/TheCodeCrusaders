@@ -13,11 +13,11 @@ namespace ButiksSystem.Repository
         private static SqlConnection connection = new SqlConnection("Insert connection string HERE!");
 
         //C
-        public static void CreateCustomer(int CustomerID, string FirstName, string LastName, string PhoneNumber, string Email, int PostalCode, string City, string Address)
+        public static void CreateCustomer(Models.Costumer costumer /*int CustomerID, string FirstName, string LastName, string PhoneNumber, string Email, int PostalCode, string City, string Address*/)
         {
 
             string query = $"INSERT INTO Customer (CustomerID,FirstName,LastName,PhoneNumber,PostalCode,City,Address) " +
-                $"VALUES ({CustomerID.ToString()}, '{FirstName}','{LastName}','{PhoneNumber}','{Email}','{PostalCode.ToString()}','{City}','{Address}')";
+                $"VALUES ({costumer.CostumerID}, '{costumer.FirstName}','{costumer.LastName}','{costumer.PhoneNumber}','{costumer.Email}','{costumer.PostalCode}','{costumer.City}','{costumer.Adress}')";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
