@@ -74,23 +74,23 @@
     <Compile Include="UI\CreateProductForm.Designer.cs">
       <DependentUpon>CreateProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\EditCostumerSearch.cs">
+    <Compile Include="UI\EditCostumerSearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\EditCostumerSearch.Designer.cs">
-      <DependentUpon>EditCostumerSearch.cs</DependentUpon>
+    <Compile Include="UI\EditCostumerSearchForm.Designer.cs">
+      <DependentUpon>EditCostumerSearchForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\EditProductSearch.cs">
+    <Compile Include="UI\EditProductSearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\EditProductSearch.Designer.cs">
-      <DependentUpon>EditProductSearch.cs</DependentUpon>
+    <Compile Include="UI\EditProductSearchForm.Designer.cs">
+      <DependentUpon>EditProductSearchForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\SalesStatistic.cs">
+    <Compile Include="UI\SalesStatisticForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\SalesStatistic.Designer.cs">
-      <DependentUpon>SalesStatistic.cs</DependentUpon>
+    <Compile Include="UI\SalesStatisticForm.Designer.cs">
+      <DependentUpon>SalesStatisticForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -110,14 +110,14 @@
     <EmbeddedResource Include="UI\CreateProductForm.resx">
       <DependentUpon>CreateProductForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\EditCostumerSearch.resx">
-      <DependentUpon>EditCostumerSearch.cs</DependentUpon>
+    <EmbeddedResource Include="UI\EditCostumerSearchForm.resx">
+      <DependentUpon>EditCostumerSearchForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\EditProductSearch.resx">
-      <DependentUpon>EditProductSearch.cs</DependentUpon>
+    <EmbeddedResource Include="UI\EditProductSearchForm.resx">
+      <DependentUpon>EditProductSearchForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\SalesStatistic.resx">
-      <DependentUpon>SalesStatistic.cs</DependentUpon>
+    <EmbeddedResource Include="UI\SalesStatisticForm.resx">
+      <DependentUpon>SalesStatisticForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

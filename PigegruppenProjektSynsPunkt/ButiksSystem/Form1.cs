@@ -31,7 +31,7 @@ namespace ButiksSystem
 
         private void kundeinformationerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditCostumerSearch editCostumerSearch = new EditCostumerSearch();
+            EditCostumerSearchForm editCostumerSearch = new EditCostumerSearchForm();
             editCostumerSearch.ShowDialog();
         }
 
@@ -43,7 +43,7 @@ namespace ButiksSystem
 
         private void vareinformationerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditProductSearch editProductSearch = new EditProductSearch();
+            EditProductSearchForm editProductSearch = new EditProductSearchForm();
             editProductSearch.ShowDialog();
         }
     }
