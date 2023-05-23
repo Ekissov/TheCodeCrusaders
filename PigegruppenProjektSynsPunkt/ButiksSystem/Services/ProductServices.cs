@@ -19,7 +19,7 @@ namespace ButiksSystem.Services
             ProductDatabaseSQL.CreateProduct(product);
         }
 
-        /*
+        
         public static void UpdateProduct(Models.Product product)
         {
             //Insert businesslogic
@@ -33,6 +33,6 @@ namespace ButiksSystem.Services
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             ProductDatabaseSQL.DeleteProduct(product);
         }
-        */
+        
     }
 }

@@ -10,7 +10,7 @@ namespace ButiksSystem.Repository
     internal class ProductDatabaseSQL
     {
         //Vi giver systemet den connection string den skal bruge for at oprette forbindelse til databasen
-        // private static SqlConnection connection = new SqlConnection("Insert connection string HERE!"); //"Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9";
+        private static SqlConnection connection = new SqlConnection("Insert connection string HERE!"); //"Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9";
 
         //C
         public static void CreateProduct(Models.Product product)
@@ -19,10 +19,10 @@ namespace ButiksSystem.Repository
             string query = $"INSERT INTO Product (ProductName, Price, CategoryID, Quantity) " +
                 $"VALUES ('{product.ProductName}', {product.ProductPrice.ToString().Replace(',', '.')}, {product.CategoryID.ToString()}, {product.Quantity.ToString()})";
 
-            Console.WriteLine(query);
-        }
+            //Console.WriteLine(query);
+        
 
-            /*SqlCommand command = new SqlCommand(query, connection);
+            SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
             int count = command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
 
@@ -82,6 +82,6 @@ namespace ButiksSystem.Repository
 
             connection.Close();
         }
-            */
+            
     }
 }
