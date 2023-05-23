@@ -47,11 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\DummyDataSales.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="HomePageForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="HomePageForm.Designer.cs">
+      <DependentUpon>HomePageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Costumer.cs" />
     <Compile Include="Models\Product.cs" />
@@ -122,8 +122,8 @@
     <Compile Include="UI\SeeAllBookingsForm.Designer.cs">
       <DependentUpon>SeeAllBookingsForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="HomePageForm.resx">
+      <DependentUpon>HomePageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -140,6 +140,9 @@
     <EmbeddedResource Include="UI\CreateCostumerForm.resx">
       <DependentUpon>CreateCostumerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\CreateOrderForm.resx">
+      <DependentUpon>CreateOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\CreateProductForm.resx">
       <DependentUpon>CreateProductForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\EditProductSearchForm.resx">
       <DependentUpon>EditProductSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ReturnItemForm.resx">
+      <DependentUpon>ReturnItemForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SalesStatisticForm.resx">
       <DependentUpon>SalesStatisticForm.cs</DependentUpon>
