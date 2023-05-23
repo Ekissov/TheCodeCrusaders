@@ -332,6 +332,7 @@
             this.opretSalgToolStripMenuItem.Name = "opretSalgToolStripMenuItem";
             this.opretSalgToolStripMenuItem.Size = new System.Drawing.Size(206, 30);
             this.opretSalgToolStripMenuItem.Text = "Opret salg";
+            this.opretSalgToolStripMenuItem.Click += new System.EventHandler(this.opretSalgToolStripMenuItem_Click);
             // 
             // opretBestillingToolStripMenuItem
             // 

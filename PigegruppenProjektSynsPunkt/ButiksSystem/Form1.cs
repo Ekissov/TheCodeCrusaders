@@ -66,5 +66,11 @@ namespace ButiksSystem
             createBookingForm2.ShowDialog();
 
         }
+
+        private void opretSalgToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateSaleForm createSaleForm = new CreateSaleForm();
+            createSaleForm.ShowDialog();
+        }
     }
 }
