@@ -13,11 +13,11 @@ namespace ButiksSystem.Repository
         private static SqlConnection connection = new SqlConnection("Insert connection string HERE!"); //"Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9";
 
         //C
-        public static void CreateProduct(int ProductID, string ProductName, double Price, int CategoryID, int Quantity)
+        public static void CreateProduct(Models.Product product /*int ProductID, string ProductName, double Price, int CategoryID, int Quantity*/)
         {
 
-            string query = $"INSERT INTO Product (ProductID,ProductName,Price,CategoryID,Quantity) " +
-                $"VALUES ({ProductID.ToString()}, '{ProductName}', {Price.ToString().Replace(',', '.')}, {CategoryID.ToString()}, {Quantity.ToString()})";
+            string query = $"INSERT INTO Product (ProductID, ProductName, Price, CategoryID, Quantity) " +
+                $"VALUES ({product.ProductID.ToString()}, '{product.ProductName}', {product.ProductPrice.ToString().Replace(',', '.')}, {product.CategoryID.ToString()}, {product.Quantity.ToString()})";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
@@ -53,10 +53,10 @@ namespace ButiksSystem.Repository
         }
 
         //U
-        public static void UpdateProduct(int ProductID, string ProductName, double Price, int CategoryID, int Quantity)
+        public static void UpdateProduct(Models.Product product /*int ProductID, string ProductName, double Price, int CategoryID, int Quantity*/)
         {
             //Update sætningen herunder er muligvis ikke korrekt
-            string query = $"UPDATE Product SET ProductName = '{ProductName}', Price = '{Price}', CategoryID = '{CategoryID}', Quantity = '{Quantity}' WHERE ProductID = '{ProductID}'";
+            string query = $"UPDATE Product SET ProductName = '{product.ProductName}', Price = '{product.ProductPrice}', CategoryID = '{product.CategoryID}', Quantity = '{product.Quantity}' WHERE ProductID = '{product.ProductID}'";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
@@ -68,10 +68,10 @@ namespace ButiksSystem.Repository
 
         //D
 
-        public static void DeleteProduct(int ProductID)
+        public static void DeleteProduct(Models.Product product /*int ProductID*/)
         {
 
-            string query = $"DELETE FROM Product WHERE ProductID = '{ProductID}'";
+            string query = $"DELETE FROM Product WHERE ProductID = '{product.ProductID}'";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
