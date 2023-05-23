@@ -14,13 +14,13 @@ namespace ButiksSystem.Models
         public int Quantity { get; set; }
         public int CategoryID { get; set; }
 
-        public Product (int productID, string productName, decimal productPrice, int quantity, int categoryID)
+        public Product (string productName, decimal productPrice, int quantity, int categoryID)
         {
-            ProductID = productID;
+           
             ProductName = productName;
             ProductPrice = productPrice;
-            Quantity = quantity;
             CategoryID = categoryID;
+            Quantity = quantity;
         }
     }
 }
