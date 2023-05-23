@@ -94,6 +94,7 @@
             this.btn_homePageEmployeeLogOut.TabIndex = 19;
             this.btn_homePageEmployeeLogOut.Text = "LOG UD";
             this.btn_homePageEmployeeLogOut.UseVisualStyleBackColor = true;
+            this.btn_homePageEmployeeLogOut.Click += new System.EventHandler(this.btn_homePageEmployeeLogOut_Click);
             // 
             // panel1
             // 
@@ -346,6 +347,7 @@
             this.retunerVarerToolStripMenuItem.Name = "retunerVarerToolStripMenuItem";
             this.retunerVarerToolStripMenuItem.Size = new System.Drawing.Size(206, 30);
             this.retunerVarerToolStripMenuItem.Text = "Retuner\' varer";
+            this.retunerVarerToolStripMenuItem.Click += new System.EventHandler(this.retunerVarerToolStripMenuItem_Click);
             // 
             // kundeToolStripMenuItem
             // 

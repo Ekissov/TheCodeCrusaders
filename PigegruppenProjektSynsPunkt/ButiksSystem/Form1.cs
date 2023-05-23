@@ -62,9 +62,8 @@ namespace ButiksSystem
 
         private void seBookingerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CreateBookingForm createBookingForm2 = new CreateBookingForm();
-            createBookingForm2.ShowDialog();
-
+           SeeAllBookingsForm seeAllBookingsForm = new SeeAllBookingsForm();
+            seeAllBookingsForm.ShowDialog();
         }
 
         private void opretSalgToolStripMenuItem_Click(object sender, EventArgs e)
