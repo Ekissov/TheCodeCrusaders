@@ -62,6 +62,12 @@
     <Compile Include="Repository\ProductDatabaseSQL.cs" />
     <Compile Include="Services\CostumerServices.cs" />
     <Compile Include="Services\ProductServices.cs" />
+    <Compile Include="UI\CreateBookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CreateBookingForm.Designer.cs">
+      <DependentUpon>CreateBookingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\CreateCostumerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\CreateBookingForm.resx">
+      <DependentUpon>CreateBookingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\CreateCostumerForm.resx">
       <DependentUpon>CreateCostumerForm.cs</DependentUpon>
     </EmbeddedResource>

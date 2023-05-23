@@ -16,5 +16,16 @@ namespace ButiksSystem.UI
         {
             InitializeComponent();
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CreateCostumerForm createCostumerForm = new CreateCostumerForm();
+            createCostumerForm.ShowDialog();
+        }
     }
 }
