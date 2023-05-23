@@ -8,8 +8,8 @@ namespace ButiksSystem.Models
 {
     public class Sales
     {
-        public int OrderID { get; set; }
-        public int EmployeeID { get; set; }
+        private int OrderID { get; set; }
+        private int EmployeeID { get; set; }
         public string OrderLineID { get; set; }
         public DateTime OrderDate { get; set; }
         public decimal TotalPrice { get; set; }
