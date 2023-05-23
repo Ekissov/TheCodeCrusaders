@@ -16,6 +16,13 @@ namespace ButiksSystem.Controllers
             ProductServices.CreateProduct(product);
         }
 
+        public static void PrintAllProducts() 
+        { 
+            
+            ProductServices.PrintAllProducts();
+            
+        
+        }
 
 
     }

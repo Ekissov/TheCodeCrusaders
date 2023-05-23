@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ButiksSystem.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace ButiksSystem.UI
         public ShowAllProductsForm()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            ProductController.PrintAllProducts();
+
         }
     }
 }

@@ -1,7 +1,9 @@
-﻿using ButiksSystem.Repository;
+﻿using ButiksSystem.Models;
+using ButiksSystem.Repository;
 using ButiksSystem.UI;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +34,16 @@ namespace ButiksSystem.Services
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             ProductDatabaseSQL.DeleteProduct(product);
         }
+
+        public static void PrintAllProducts() 
+        {
+
+            List<Product> products = ProductDatabaseSQL.GetAllProducts();
+            List<string> writeLines = products.Select(x => x.ToString()).ToList();
+            File.WriteAllLines("printallproducts.txt", writeLines);
+        
+        }
+
         
     }
 }

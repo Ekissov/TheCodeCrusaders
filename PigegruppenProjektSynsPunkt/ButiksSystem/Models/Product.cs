@@ -14,9 +14,9 @@ namespace ButiksSystem.Models
         public int Quantity { get; set; }
         public int CategoryID { get; set; }
 
-        public Product (string productName, decimal productPrice, int categoryID, int quantity)
+        public Product(string productName, decimal productPrice, int categoryID, int quantity)
         {
-           
+
             this.ProductName = productName;
             this.ProductPrice = productPrice;
             this.CategoryID = categoryID;
@@ -30,6 +30,13 @@ namespace ButiksSystem.Models
             this.ProductPrice = productPrice;
             this.CategoryID = categoryID;
             this.Quantity = quantity;
+        }
+
+        public override string ToString() 
+        {
+
+            return $"{this.ProductName}, {this.ProductPrice}, {this.CategoryID}, {this.Quantity}";
+        
         }
 
     }

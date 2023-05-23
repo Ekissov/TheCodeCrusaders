@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ButiksSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -82,6 +83,32 @@ namespace ButiksSystem.Repository
 
             connection.Close();
         }
-            
+
+        public static List<Product> GetAllProducts()
+        {
+            List<Product> result = new List<Product>();
+            string query = "SELECT ProductID, ProductName, Price, CategoryID, Quantity FROM [Product] ORDER BY ProductName ASC";
+            SqlCommand command = new SqlCommand(query, connection);
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader(); //Åbner readeren 
+
+            while (reader.Read())
+            {
+                int productID = reader.GetInt32(0);
+                string productName = reader.GetString(1);
+                decimal productPrice = reader.GetDecimal(2);
+                int categoryID = reader.GetInt32(3);
+                int quantity = reader.GetInt32(4);
+                Product row = new Product(productID,productName,productPrice,categoryID,quantity);
+   
+                result.Add(row); //tilføjer data til listen
+            }
+
+            reader.Close(); // lukker aflæseren og forbindelsen 
+            connection.Close();
+            return result; // retunerer resultatet som en liste
+
+        }
+
     }
 }
