@@ -55,7 +55,7 @@
     </Compile>
     <Compile Include="Models\Costumer.cs" />
     <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\Sales.cs" />
+    <Compile Include="Models\CostumerOrder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\CostumerDatabaseSQL.cs" />
