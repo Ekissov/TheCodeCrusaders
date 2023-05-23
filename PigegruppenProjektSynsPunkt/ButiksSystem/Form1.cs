@@ -58,5 +58,18 @@ namespace ButiksSystem
             CreateBookingForm createBookingForm = new CreateBookingForm();
             createBookingForm.ShowDialog();
         }
+
+        private void aflysBookingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateBookingForm createBookingForm1 = new CreateBookingForm();
+            createBookingForm1.ShowDialog();
+        }
+
+        private void seBookingerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateBookingForm createBookingForm2 = new CreateBookingForm();
+            createBookingForm2.ShowDialog();
+
+        }
     }
 }
