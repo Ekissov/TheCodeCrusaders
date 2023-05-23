@@ -29,5 +29,9 @@ namespace ButiksSystem.Models
             CostumerName = costumerName;
         }
 
+        public override string ToString()
+        {
+            return $"{CostumerID}                {CostumerName}      {OrderDate}           {TotalPrice}";
+        }
     }
 }

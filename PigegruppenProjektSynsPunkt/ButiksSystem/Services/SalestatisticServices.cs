@@ -30,11 +30,17 @@ namespace ButiksSystem.Services
 
             using (StreamWriter writer = new StreamWriter(FilePath))
             {
+                string salesfileHeadigns = "Kundenummer      Kundenavn        Dato                          Køb";
+                writer.WriteLine(salesfileHeadigns);
+
                 foreach (var item in listOfCostumerOrders)
-                { 
+                {
                     writer.WriteLine(item.ToString());
                 }
+                decimal sumOfPrices = listOfCostumerOrders.Sum(x => x.TotalPrice);
+                writer.WriteLine("                                              I alt kr.         " + sumOfPrices);
             }
+
         }
     }
 }

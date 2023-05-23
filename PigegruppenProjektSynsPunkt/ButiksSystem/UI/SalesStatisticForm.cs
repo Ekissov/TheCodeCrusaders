@@ -46,6 +46,7 @@ namespace ButiksSystem.UI
         {
             UIController uiController = new UIController();
             uiController.CreateSalesFile(ListOfCostumerOrders);
+            this.Close();
         }
     }
 }
