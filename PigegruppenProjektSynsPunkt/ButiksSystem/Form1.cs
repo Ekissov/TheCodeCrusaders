@@ -77,5 +77,16 @@ namespace ButiksSystem
             CreateOrderForm createOrderForm = new CreateOrderForm();
             createOrderForm.ShowDialog();
         }
+
+        private void btn_homePageEmployeeLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void retunerVarerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReturnItemForm returnItemForm = new ReturnItemForm();
+            returnItemForm.ShowDialog();
+        }
     }
 }
