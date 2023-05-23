@@ -13,7 +13,7 @@ namespace ButiksSystem.Repository
         private static SqlConnection connection = new SqlConnection("Insert connection string HERE!"); //"Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9";
 
         //C
-        public static void CreateCustomer(Models.Costumer costumer /*int CustomerID, string FirstName, string LastName, string PhoneNumber, string Email, int PostalCode, string City, string Address*/)
+        public static void CreateCustomer(Models.Costumer costumer)
         {
 
             string query = $"INSERT INTO Customer (CustomerID,FirstName,LastName,PhoneNumber,PostalCode,City,Address) " +
@@ -53,10 +53,10 @@ namespace ButiksSystem.Repository
         }
 
         //U
-        public static void UpdateCustomer(int CustomerID, string FirstName, string LastName, string PhoneNumber, string Email, int PostalCode, string City, string Address)
+        public static void UpdateCustomer(Models.Costumer costumer)
         {
             //Update sætningen herunder er muligvis ikke korrekt
-            string query = $"UPDATE Customer SET FirstName = '{FirstName}', LastName = '{LastName}', PhoneNumber = '{PhoneNumber}', Email = '{Email}', PostalCode = '{PostalCode}', City = '{City}', Address = '{Address}' WHERE CustomerID = '{CustomerID}'";
+            string query = $"UPDATE Customer SET FirstName = '{costumer.FirstName}', LastName = '{costumer.LastName}', PhoneNumber = '{costumer.PhoneNumber}', Email = '{costumer.Email}', PostalCode = '{costumer.PostalCode}', City = '{costumer.City}', Address = '{costumer.Adress}' WHERE CustomerID = '{costumer.CostumerID}'";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
@@ -71,7 +71,7 @@ namespace ButiksSystem.Repository
         public static void DeleteCustomer(Models.Costumer costumer)
         {
 
-            string query = $"DELETE FROM Product WHERE ProductID = '{costumer}'";
+            string query = $"DELETE FROM Product WHERE ProductID = '{costumer.CostumerID}'";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
