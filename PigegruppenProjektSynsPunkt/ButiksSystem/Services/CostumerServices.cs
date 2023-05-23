@@ -28,7 +28,7 @@ namespace ButiksSystem.Services
         public static void UpdateCostumer(Models.Costumer costumer) 
         {
             CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
-            CostumerDatabaseSQL.UpdateCustomer(costumer.CostumerID, costumer.FirstName, costumer.LastName, costumer.PhoneNumber, costumer.Email, costumer.PostalCode, costumer.City, costumer.Adress);
+            CostumerDatabaseSQL.UpdateCustomer(costumer);
         }
 
         /// <summary>
