@@ -1,4 +1,5 @@
 ﻿using ButiksSystem.Models;
+using ButiksSystem.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +21,14 @@ namespace ButiksSystem.Controllers
         /// <returns></returns>
         public List<CostumerOrder> GetCostumerOrdersWithinGivenTime(DateTime StartDate, DateTime EndDate)
         {
-            return Services.SalestatisticServices.GetCostumerOrdersWithinGivenTime(StartDate, EndDate);
+            SalestatisticServices salestatisticServices = new SalestatisticServices();
+            return salestatisticServices.GetCostumerOrdersWithinGivenTime(StartDate, EndDate);
+        }
 
+        public void CreateSalesFile(List<CostumerOrder> listOfCostumerOrders)
+        {
+            SalestatisticServices salestatisticServices = new SalestatisticServices();
+            salestatisticServices.CreateSalesFile(listOfCostumerOrders);
         }
     }
 }
