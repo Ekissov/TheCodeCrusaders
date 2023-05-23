@@ -125,6 +125,7 @@
             this.btn_salesStatisticsPrintToTxtFile.TabIndex = 7;
             this.btn_salesStatisticsPrintToTxtFile.Text = "Print til Tekstfil";
             this.btn_salesStatisticsPrintToTxtFile.UseVisualStyleBackColor = true;
+            this.btn_salesStatisticsPrintToTxtFile.Click += new System.EventHandler(this.btn_salesStatisticsPrintToTxtFile_Click);
             // 
             // SalesStatisticForm
             // 
