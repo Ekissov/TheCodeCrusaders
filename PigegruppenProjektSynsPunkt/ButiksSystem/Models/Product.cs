@@ -8,7 +8,7 @@ namespace ButiksSystem.Models
 {
     public class Product
     {
-        public int ProductID { get; set; }
+        //public int ProductID { get; set; }
         public string ProductName { get; set; }
         public decimal ProductPrice { get; set; }
         public int Quantity { get; set; }
@@ -17,10 +17,10 @@ namespace ButiksSystem.Models
         public Product (string productName, decimal productPrice, int quantity, int categoryID)
         {
            
-            ProductName = productName;
-            ProductPrice = productPrice;
-            CategoryID = categoryID;
-            Quantity = quantity;
+            this.ProductName = productName;
+            this.ProductPrice = productPrice;
+            this.CategoryID = categoryID;
+            this.Quantity = quantity;
         }
     }
 }
