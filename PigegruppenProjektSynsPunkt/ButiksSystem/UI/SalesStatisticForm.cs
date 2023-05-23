@@ -12,24 +12,31 @@ namespace ButiksSystem.UI
 {
     public partial class SalesStatisticForm : Form
     {
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
         public SalesStatisticForm()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void dtp_salesStatisticsStartDate_ValueChanged(object sender, EventArgs e)
         {
-
+            StartDate = dtp_salesStatisticsStartDate.Value;
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void dtp_salesStatisticsEndDate_ValueChanged(object sender, EventArgs e)
         {
-
+           EndDate = dtp_salesStatisticsEndDate.Value;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {         
+            dgv_showSalesStatisticsInDatagrid.DataSource = Services.SalestatisticServices.GetCostumerOrdersWithinGivenTime(StartDate, EndDate);
         }
 
         private void SalesStatistic_Load(object sender, EventArgs e)
         {
             dgv_showSalesStatisticsInDatagrid.DataSource = Database.DummyDataSales.CreateDummyDataSales();
         }
+
+
     }
 }
