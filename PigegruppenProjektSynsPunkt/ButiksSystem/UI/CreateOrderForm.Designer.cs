@@ -35,7 +35,6 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -44,12 +43,10 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.dgv_showCustomerInfo = new System.Windows.Forms.DataGridView();
@@ -66,6 +63,9 @@
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_showCustomerInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,15 +127,6 @@
             this.textBox14.Size = new System.Drawing.Size(37, 20);
             this.textBox14.TabIndex = 45;
             this.textBox14.Text = "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(8, 148);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(130, 20);
-            this.textBox15.TabIndex = 44;
-            this.textBox15.Text = "ooooooooooooooooooooooooooooooooooooooooooooo";
             // 
             // label6
             // 
@@ -209,15 +200,6 @@
             this.textBox5.TabIndex = 36;
             this.textBox5.Text = "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(8, 92);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(130, 20);
-            this.textBox4.TabIndex = 35;
-            this.textBox4.Text = "ooooooooooooooooooooooooooooooooooooooooooooo";
-            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(384, 45);
@@ -253,15 +235,6 @@
             this.textBox2.Size = new System.Drawing.Size(37, 20);
             this.textBox2.TabIndex = 31;
             this.textBox2.Text = "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(8, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(130, 20);
-            this.textBox1.TabIndex = 30;
-            this.textBox1.Text = "ooooooooooooooooooooooooooooooooooooooooooooo";
             // 
             // label1
             // 
@@ -418,11 +391,41 @@
             this.label12.TabIndex = 64;
             this.label12.Text = "__________________________________";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(8, 45);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(130, 20);
+            this.textBox1.TabIndex = 65;
+            this.textBox1.Text = "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(8, 92);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(130, 20);
+            this.textBox4.TabIndex = 66;
+            this.textBox4.Text = "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(8, 148);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.ReadOnly = true;
+            this.textBox15.Size = new System.Drawing.Size(130, 20);
+            this.textBox15.TabIndex = 67;
+            this.textBox15.Text = "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii";
+            // 
             // CreateOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 422);
+            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textBox19);
@@ -443,7 +446,6 @@
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox15);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox10);
@@ -452,12 +454,10 @@
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "CreateOrderForm";
             this.Text = "CreateOrderForm";
@@ -476,7 +476,6 @@
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
@@ -485,12 +484,10 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dgv_showCustomerInfo;
@@ -507,5 +504,8 @@
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox15;
     }
 }
