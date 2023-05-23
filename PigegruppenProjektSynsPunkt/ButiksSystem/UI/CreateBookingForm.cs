@@ -27,5 +27,11 @@ namespace ButiksSystem.UI
             CreateCostumerForm createCostumerForm = new CreateCostumerForm();
             createCostumerForm.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SeeAllBookingsForm seeAllBookingsForm = new SeeAllBookingsForm();
+            seeAllBookingsForm.ShowDialog();
+        }
     }
 }
