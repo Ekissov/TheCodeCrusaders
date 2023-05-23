@@ -34,9 +34,10 @@ namespace ButiksSystem.Services
                 string salesfileHeadigns = "Kundenummer      Kundenavn        Dato                          Køb";
                 writer.WriteLine(salesfileHeadigns);
 
+
                 foreach (var item in listOfCostumerOrders)
                 {
-                    writer.WriteLine(item.ToString());
+                    writer.WriteLine(string.Format("{0}     {1}     {2}          {3}", item.CostumerID, item.CostumerName, item.OrderDate, item.TotalPrice.ToString())); 
                 }
                 decimal sumOfPrices = listOfCostumerOrders.Sum(x => x.TotalPrice);
                 writer.WriteLine("                                              I alt kr.         " + sumOfPrices);

@@ -17,6 +17,7 @@ namespace ButiksSystem.UI
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public List<CostumerOrder> ListOfCostumerOrders { get; set; }
+
         public SalesStatisticForm()
         {
             InitializeComponent();
