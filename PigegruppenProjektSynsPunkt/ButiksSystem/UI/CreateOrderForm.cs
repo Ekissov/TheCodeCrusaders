@@ -19,13 +19,12 @@ namespace ButiksSystem.UI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            CreateCostumerForm createCostumerForm = new CreateCostumerForm();
-            createCostumerForm.ShowDialog();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
     }
 }
