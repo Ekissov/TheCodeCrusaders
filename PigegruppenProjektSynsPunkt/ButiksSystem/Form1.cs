@@ -52,5 +52,11 @@ namespace ButiksSystem
             SalesStatisticForm salesStatisticForm = new SalesStatisticForm();
             salesStatisticForm.ShowDialog();
         }
+
+        private void opretBookingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateBookingForm createBookingForm = new CreateBookingForm();
+            createBookingForm.ShowDialog();
+        }
     }
 }
