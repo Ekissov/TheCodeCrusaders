@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\UIcontroller.cs" />
     <Compile Include="Database\DummyDataSales.cs" />
     <Compile Include="HomePageForm.cs">
       <SubType>Form</SubType>

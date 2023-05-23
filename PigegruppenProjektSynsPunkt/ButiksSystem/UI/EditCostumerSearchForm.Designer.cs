@@ -72,7 +72,7 @@
             // 
             this.txt_searchCustomerIDOrName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_searchCustomerIDOrName.Location = new System.Drawing.Point(253, 68);
-            this.txt_searchCustomerIDOrName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_searchCustomerIDOrName.Margin = new System.Windows.Forms.Padding(2);
             this.txt_searchCustomerIDOrName.Name = "txt_searchCustomerIDOrName";
             this.txt_searchCustomerIDOrName.Size = new System.Drawing.Size(188, 24);
             this.txt_searchCustomerIDOrName.TabIndex = 1;
@@ -86,7 +86,7 @@
             this.Column1,
             this.Column2});
             this.dgv_showCustomerInfo.Location = new System.Drawing.Point(34, 107);
-            this.dgv_showCustomerInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_showCustomerInfo.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_showCustomerInfo.Name = "dgv_showCustomerInfo";
             this.dgv_showCustomerInfo.RowHeadersWidth = 51;
             this.dgv_showCustomerInfo.RowTemplate.Height = 24;
@@ -113,7 +113,7 @@
             this.btn_showCustomerInDatagrid.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_showCustomerInDatagrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_showCustomerInDatagrid.Location = new System.Drawing.Point(292, 349);
-            this.btn_showCustomerInDatagrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_showCustomerInDatagrid.Margin = new System.Windows.Forms.Padding(2);
             this.btn_showCustomerInDatagrid.Name = "btn_showCustomerInDatagrid";
             this.btn_showCustomerInDatagrid.Size = new System.Drawing.Size(148, 26);
             this.btn_showCustomerInDatagrid.TabIndex = 3;
@@ -270,12 +270,13 @@
             this.btn_saveEditedCustomerToDatabase.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_saveEditedCustomerToDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_saveEditedCustomerToDatabase.Location = new System.Drawing.Point(652, 349);
-            this.btn_saveEditedCustomerToDatabase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_saveEditedCustomerToDatabase.Margin = new System.Windows.Forms.Padding(2);
             this.btn_saveEditedCustomerToDatabase.Name = "btn_saveEditedCustomerToDatabase";
             this.btn_saveEditedCustomerToDatabase.Size = new System.Drawing.Size(119, 26);
             this.btn_saveEditedCustomerToDatabase.TabIndex = 33;
             this.btn_saveEditedCustomerToDatabase.Text = "Gem Kundeoplysninger";
             this.btn_saveEditedCustomerToDatabase.UseVisualStyleBackColor = false;
+            this.btn_saveEditedCustomerToDatabase.Click += new System.EventHandler(this.btn_saveEditedCustomerToDatabase_Click);
             // 
             // label10
             // 
@@ -304,14 +305,14 @@
             this.btn_deleteCustomerInDatabase.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_deleteCustomerInDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_deleteCustomerInDatabase.Location = new System.Drawing.Point(508, 349);
-            this.btn_deleteCustomerInDatabase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_deleteCustomerInDatabase.Margin = new System.Windows.Forms.Padding(2);
             this.btn_deleteCustomerInDatabase.Name = "btn_deleteCustomerInDatabase";
             this.btn_deleteCustomerInDatabase.Size = new System.Drawing.Size(119, 26);
             this.btn_deleteCustomerInDatabase.TabIndex = 36;
             this.btn_deleteCustomerInDatabase.Text = "Slet Kunde";
             this.btn_deleteCustomerInDatabase.UseVisualStyleBackColor = false;
             // 
-            // EditCostumerSearch
+            // EditCostumerSearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -340,9 +341,10 @@
             this.Controls.Add(this.dgv_showCustomerInfo);
             this.Controls.Add(this.txt_searchCustomerIDOrName);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "EditCostumerSearch";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "EditCostumerSearchForm";
             this.Text = "Rediger Kunde";
+            this.Load += new System.EventHandler(this.EditCostumerSearchForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_showCustomerInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

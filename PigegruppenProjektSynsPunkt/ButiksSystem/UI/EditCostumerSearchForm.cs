@@ -17,6 +17,22 @@ namespace ButiksSystem.UI
             InitializeComponent();
         }
 
-       
+        private void EditCostumerSearchForm_Load(object sender, EventArgs e)
+        {
+
+        }
+        /// <summary>
+        /// Method to update a current costumer in the database
+        /// </summary>
+        private void UpdateCostumer()
+        {
+            //Insert Logic
+        }
+        private void btn_saveEditedCustomerToDatabase_Click(object sender, EventArgs e)
+        {
+            UpdateCostumer();
+
+            this.Close();
+        }
     }
 }

@@ -71,7 +71,7 @@ namespace ButiksSystem.Repository
         public static void DeleteCustomer(Models.Costumer costumer)
         {
 
-            string query = $"DELETE FROM Product WHERE ProductID = '{costumer.CostumerID}'";
+            string query = $"DELETE FROM Costumer WHERE CostumerID = '{costumer.CostumerID}'";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();

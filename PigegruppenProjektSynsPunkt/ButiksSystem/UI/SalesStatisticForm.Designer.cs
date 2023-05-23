@@ -43,7 +43,7 @@
             // 
             this.btn_salesStatisicsShowAllSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_salesStatisicsShowAllSales.Location = new System.Drawing.Point(587, 106);
-            this.btn_salesStatisicsShowAllSales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_salesStatisicsShowAllSales.Margin = new System.Windows.Forms.Padding(4);
             this.btn_salesStatisicsShowAllSales.Name = "btn_salesStatisicsShowAllSales";
             this.btn_salesStatisicsShowAllSales.Size = new System.Drawing.Size(265, 55);
             this.btn_salesStatisicsShowAllSales.TabIndex = 0;
@@ -56,7 +56,7 @@
             this.dgv_showSalesStatisticsInDatagrid.AllowUserToOrderColumns = true;
             this.dgv_showSalesStatisticsInDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_showSalesStatisticsInDatagrid.Location = new System.Drawing.Point(13, 190);
-            this.dgv_showSalesStatisticsInDatagrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_showSalesStatisticsInDatagrid.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_showSalesStatisticsInDatagrid.Name = "dgv_showSalesStatisticsInDatagrid";
             this.dgv_showSalesStatisticsInDatagrid.RowHeadersWidth = 51;
             this.dgv_showSalesStatisticsInDatagrid.Size = new System.Drawing.Size(914, 242);
@@ -66,7 +66,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(480, 31);
+            this.label1.Location = new System.Drawing.Point(378, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(189, 36);
@@ -77,7 +77,7 @@
             // 
             this.dtp_salesStatisticsStartDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_salesStatisticsStartDate.Location = new System.Drawing.Point(272, 98);
-            this.dtp_salesStatisticsStartDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_salesStatisticsStartDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_salesStatisticsStartDate.Name = "dtp_salesStatisticsStartDate";
             this.dtp_salesStatisticsStartDate.Size = new System.Drawing.Size(265, 22);
             this.dtp_salesStatisticsStartDate.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             this.dtp_salesStatisticsEndDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_salesStatisticsEndDate.Location = new System.Drawing.Point(272, 137);
-            this.dtp_salesStatisticsEndDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_salesStatisticsEndDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_salesStatisticsEndDate.Name = "dtp_salesStatisticsEndDate";
             this.dtp_salesStatisticsEndDate.Size = new System.Drawing.Size(265, 22);
             this.dtp_salesStatisticsEndDate.TabIndex = 4;
@@ -119,12 +119,13 @@
             // 
             this.btn_salesStatisticsPrintToTxtFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_salesStatisticsPrintToTxtFile.Location = new System.Drawing.Point(660, 450);
-            this.btn_salesStatisticsPrintToTxtFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_salesStatisticsPrintToTxtFile.Margin = new System.Windows.Forms.Padding(4);
             this.btn_salesStatisticsPrintToTxtFile.Name = "btn_salesStatisticsPrintToTxtFile";
             this.btn_salesStatisticsPrintToTxtFile.Size = new System.Drawing.Size(267, 47);
             this.btn_salesStatisticsPrintToTxtFile.TabIndex = 7;
             this.btn_salesStatisticsPrintToTxtFile.Text = "Print til Tekstfil";
             this.btn_salesStatisticsPrintToTxtFile.UseVisualStyleBackColor = true;
+            this.btn_salesStatisticsPrintToTxtFile.Click += new System.EventHandler(this.btn_salesStatisticsPrintToTxtFile_Click);
             // 
             // SalesStatisticForm
             // 
@@ -139,7 +140,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_showSalesStatisticsInDatagrid);
             this.Controls.Add(this.btn_salesStatisicsShowAllSales);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SalesStatisticForm";
             this.Text = "Salgsstatitistik";
             this.Load += new System.EventHandler(this.SalesStatistic_Load);

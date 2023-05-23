@@ -56,7 +56,7 @@
             this.btn_showProductInfoInDatagrid.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_showProductInfoInDatagrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_showProductInfoInDatagrid.Location = new System.Drawing.Point(244, 322);
-            this.btn_showProductInfoInDatagrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_showProductInfoInDatagrid.Margin = new System.Windows.Forms.Padding(2);
             this.btn_showProductInfoInDatagrid.Name = "btn_showProductInfoInDatagrid";
             this.btn_showProductInfoInDatagrid.Size = new System.Drawing.Size(148, 33);
             this.btn_showProductInfoInDatagrid.TabIndex = 37;
@@ -70,7 +70,7 @@
             this.Column1,
             this.Column2});
             this.dgv_showProductInfo.Location = new System.Drawing.Point(14, 119);
-            this.dgv_showProductInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_showProductInfo.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_showProductInfo.Name = "dgv_showProductInfo";
             this.dgv_showProductInfo.RowHeadersWidth = 51;
             this.dgv_showProductInfo.RowTemplate.Height = 24;
@@ -97,7 +97,7 @@
             // 
             this.txt_searchProductIDOrName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_searchProductIDOrName.Location = new System.Drawing.Point(215, 80);
-            this.txt_searchProductIDOrName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_searchProductIDOrName.Margin = new System.Windows.Forms.Padding(2);
             this.txt_searchProductIDOrName.Name = "txt_searchProductIDOrName";
             this.txt_searchProductIDOrName.Size = new System.Drawing.Size(177, 24);
             this.txt_searchProductIDOrName.TabIndex = 35;
@@ -212,12 +212,13 @@
             this.btn_saveEditedProductToDatabase.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_saveEditedProductToDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_saveEditedProductToDatabase.Location = new System.Drawing.Point(548, 324);
-            this.btn_saveEditedProductToDatabase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_saveEditedProductToDatabase.Margin = new System.Windows.Forms.Padding(2);
             this.btn_saveEditedProductToDatabase.Name = "btn_saveEditedProductToDatabase";
             this.btn_saveEditedProductToDatabase.Size = new System.Drawing.Size(148, 32);
             this.btn_saveEditedProductToDatabase.TabIndex = 48;
             this.btn_saveEditedProductToDatabase.Text = "Gem Vareoplysninger";
             this.btn_saveEditedProductToDatabase.UseVisualStyleBackColor = false;
+            this.btn_saveEditedProductToDatabase.Click += new System.EventHandler(this.btn_saveEditedProductToDatabase_Click);
             // 
             // label7
             // 
@@ -252,7 +253,7 @@
             this.btn_deleteProductInDatabase.Text = "Slet Vare";
             this.btn_deleteProductInDatabase.UseVisualStyleBackColor = false;
             // 
-            // EditProductSearch
+            // EditProductSearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -275,8 +276,8 @@
             this.Controls.Add(this.dgv_showProductInfo);
             this.Controls.Add(this.txt_searchProductIDOrName);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "EditProductSearch";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "EditProductSearchForm";
             this.Text = "Rediger Produkt";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_showProductInfo)).EndInit();
             this.ResumeLayout(false);

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ButiksSystem.Controllers;
+using ButiksSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +16,7 @@ namespace ButiksSystem.UI
     {
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        public List<CostumerOrder> ListOfCostumerOrders { get; set; }
         public SalesStatisticForm()
         {
             InitializeComponent();
@@ -29,7 +32,9 @@ namespace ButiksSystem.UI
         }
         private void button1_Click(object sender, EventArgs e)
         {         
-            dgv_showSalesStatisticsInDatagrid.DataSource = Services.SalestatisticServices.GetCostumerOrdersWithinGivenTime(StartDate, EndDate);
+            UIController uIController = new UIController();
+            ListOfCostumerOrders = uIController.GetCostumerOrdersWithinGivenTime(StartDate, EndDate);
+            dgv_showSalesStatisticsInDatagrid.DataSource = ListOfCostumerOrders;
         }
 
         private void SalesStatistic_Load(object sender, EventArgs e)
@@ -37,6 +42,11 @@ namespace ButiksSystem.UI
             dgv_showSalesStatisticsInDatagrid.DataSource = Database.DummyDataSales.CreateDummyDataSales();
         }
 
-
+        private void btn_salesStatisticsPrintToTxtFile_Click(object sender, EventArgs e)
+        {
+            UIController uiController = new UIController();
+            uiController.CreateSalesFile(ListOfCostumerOrders);
+            this.Close();
+        }
     }
 }
