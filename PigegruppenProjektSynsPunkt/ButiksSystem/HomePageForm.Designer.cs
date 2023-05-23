@@ -62,13 +62,13 @@
             this.varerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opretVareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vareinformationerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alleVarerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opretBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aflysBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seBookingerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.forretningsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordrestatistikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alleVarerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menu_homePageMenuStrip.SuspendLayout();
@@ -323,7 +323,6 @@
             this.forretningsToolStripMenuItem});
             this.menu_homePageMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.menu_homePageMenuStrip.Name = "menu_homePageMenuStrip";
-            this.menu_homePageMenuStrip.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
             this.menu_homePageMenuStrip.Size = new System.Drawing.Size(1053, 44);
             this.menu_homePageMenuStrip.TabIndex = 14;
             this.menu_homePageMenuStrip.Text = "menuStrip1";
@@ -406,6 +405,13 @@
             this.vareinformationerToolStripMenuItem.Text = "Vareinformationer";
             this.vareinformationerToolStripMenuItem.Click += new System.EventHandler(this.vareinformationerToolStripMenuItem_Click);
             // 
+            // alleVarerToolStripMenuItem
+            // 
+            this.alleVarerToolStripMenuItem.Name = "alleVarerToolStripMenuItem";
+            this.alleVarerToolStripMenuItem.Size = new System.Drawing.Size(326, 44);
+            this.alleVarerToolStripMenuItem.Text = "Alle Varer";
+            this.alleVarerToolStripMenuItem.Click += new System.EventHandler(this.alleVarerToolStripMenuItem_Click);
+            // 
             // bookingToolStripMenuItem
             // 
             this.bookingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -451,12 +457,6 @@
             this.ordrestatistikToolStripMenuItem.Size = new System.Drawing.Size(274, 44);
             this.ordrestatistikToolStripMenuItem.Text = "Ordrestatistik";
             this.ordrestatistikToolStripMenuItem.Click += new System.EventHandler(this.ordrestatistikToolStripMenuItem_Click);
-            // 
-            // alleVarerToolStripMenuItem
-            // 
-            this.alleVarerToolStripMenuItem.Name = "alleVarerToolStripMenuItem";
-            this.alleVarerToolStripMenuItem.Size = new System.Drawing.Size(326, 44);
-            this.alleVarerToolStripMenuItem.Text = "Alle Varer";
             // 
             // HomePageForm
             // 
