@@ -1,6 +1,6 @@
 ﻿namespace ButiksSystem.UI
 {
-    partial class CreateSaleForm
+    partial class ICreateSaleForm
     {
         /// <summary>
         /// Required designer variable.

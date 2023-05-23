@@ -1,6 +1,6 @@
 ﻿namespace ButiksSystem.UI
 {
-    partial class SeeAllBookingsForm
+    partial class ISeeAllBookingsForm
     {
         /// <summary>
         /// Required designer variable.

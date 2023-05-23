@@ -62,11 +62,11 @@
     <Compile Include="Repository\ProductDatabaseSQL.cs" />
     <Compile Include="Services\CostumerServices.cs" />
     <Compile Include="Services\ProductServices.cs" />
-    <Compile Include="UI\CreateBookingForm.cs">
+    <Compile Include="UI\ICreateBookingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\CreateBookingForm.Designer.cs">
-      <DependentUpon>CreateBookingForm.cs</DependentUpon>
+    <Compile Include="UI\ICreateBookingForm.Designer.cs">
+      <DependentUpon>ICreateBookingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\CreateCostumerForm.cs">
       <SubType>Form</SubType>
@@ -86,11 +86,11 @@
     <Compile Include="UI\CreateProductForm.Designer.cs">
       <DependentUpon>CreateProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\CreateSaleForm.cs">
+    <Compile Include="UI\ICreateSaleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\CreateSaleForm.Designer.cs">
-      <DependentUpon>CreateSaleForm.cs</DependentUpon>
+    <Compile Include="UI\ICreateSaleForm.Designer.cs">
+      <DependentUpon>ICreateSaleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\EditCostumerSearchForm.cs">
       <SubType>Form</SubType>
@@ -104,11 +104,11 @@
     <Compile Include="UI\EditProductSearchForm.Designer.cs">
       <DependentUpon>EditProductSearchForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\ReturnItemForm.cs">
+    <Compile Include="UI\IReturnItemForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\ReturnItemForm.Designer.cs">
-      <DependentUpon>ReturnItemForm.cs</DependentUpon>
+    <Compile Include="UI\IReturnItemForm.Designer.cs">
+      <DependentUpon>IReturnItemForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\SalesStatisticForm.cs">
       <SubType>Form</SubType>
@@ -116,11 +116,11 @@
     <Compile Include="UI\SalesStatisticForm.Designer.cs">
       <DependentUpon>SalesStatisticForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\SeeAllBookingsForm.cs">
+    <Compile Include="UI\ISeeAllBookingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\SeeAllBookingsForm.Designer.cs">
-      <DependentUpon>SeeAllBookingsForm.cs</DependentUpon>
+    <Compile Include="UI\ISeeAllBookingsForm.Designer.cs">
+      <DependentUpon>ISeeAllBookingsForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="HomePageForm.resx">
       <DependentUpon>HomePageForm.cs</DependentUpon>
@@ -134,8 +134,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\CreateBookingForm.resx">
-      <DependentUpon>CreateBookingForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\ICreateBookingForm.resx">
+      <DependentUpon>ICreateBookingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CreateCostumerForm.resx">
       <DependentUpon>CreateCostumerForm.cs</DependentUpon>
@@ -146,8 +146,8 @@
     <EmbeddedResource Include="UI\CreateProductForm.resx">
       <DependentUpon>CreateProductForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\CreateSaleForm.resx">
-      <DependentUpon>CreateSaleForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\ICreateSaleForm.resx">
+      <DependentUpon>ICreateSaleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\EditCostumerSearchForm.resx">
       <DependentUpon>EditCostumerSearchForm.cs</DependentUpon>
@@ -155,14 +155,14 @@
     <EmbeddedResource Include="UI\EditProductSearchForm.resx">
       <DependentUpon>EditProductSearchForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\ReturnItemForm.resx">
-      <DependentUpon>ReturnItemForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\IReturnItemForm.resx">
+      <DependentUpon>IReturnItemForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SalesStatisticForm.resx">
       <DependentUpon>SalesStatisticForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\SeeAllBookingsForm.resx">
-      <DependentUpon>SeeAllBookingsForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\ISeeAllBookingsForm.resx">
+      <DependentUpon>ISeeAllBookingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -1,6 +1,6 @@
 ﻿namespace ButiksSystem.UI
 {
-    partial class ReturnItemForm
+    partial class IReturnItemForm
     {
         /// <summary>
         /// Required designer variable.
