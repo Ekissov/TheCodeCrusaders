@@ -10,7 +10,7 @@ namespace ButiksSystem.Repository
     internal class ProductDatabaseSQL
     {
         //Vi giver systemet den connection string den skal bruge for at oprette forbindelse til databasen
-        private static SqlConnection connection = new SqlConnection("Insert connection string HERE!");
+        private static SqlConnection connection = new SqlConnection("Insert connection string HERE!"); //"Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9";
 
         //C
         public static void CreateProduct(int ProductID, string ProductName, double Price, int CategoryID, int Quantity)
