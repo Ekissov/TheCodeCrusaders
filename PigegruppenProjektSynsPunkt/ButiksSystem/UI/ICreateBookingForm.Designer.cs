@@ -1,6 +1,6 @@
 ﻿namespace ButiksSystem.UI
 {
-    partial class CreateBookingForm
+    partial class ICreateBookingForm
     {
         /// <summary>
         /// Required designer variable.

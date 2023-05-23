@@ -50,25 +50,25 @@ namespace ButiksSystem
 
         private void opretBookingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CreateBookingForm createBookingForm = new CreateBookingForm();
+            ICreateBookingForm createBookingForm = new ICreateBookingForm();
             createBookingForm.ShowDialog();
         }
 
         private void aflysBookingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CreateBookingForm createBookingForm1 = new CreateBookingForm();
+            ICreateBookingForm createBookingForm1 = new ICreateBookingForm();
             createBookingForm1.ShowDialog();
         }
 
         private void seBookingerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           SeeAllBookingsForm seeAllBookingsForm = new SeeAllBookingsForm();
+           ISeeAllBookingsForm seeAllBookingsForm = new ISeeAllBookingsForm();
             seeAllBookingsForm.ShowDialog();
         }
 
         private void opretSalgToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CreateSaleForm createSaleForm = new CreateSaleForm();
+            ICreateSaleForm createSaleForm = new ICreateSaleForm();
             createSaleForm.ShowDialog();
         }
 
@@ -85,7 +85,7 @@ namespace ButiksSystem
 
         private void retunerVarerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReturnItemForm returnItemForm = new ReturnItemForm();
+            IReturnItemForm returnItemForm = new IReturnItemForm();
             returnItemForm.ShowDialog();
         }
 

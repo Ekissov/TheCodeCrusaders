@@ -34,5 +34,10 @@ namespace ButiksSystem.UI
             
             this.Close();
         }
+
+        private void CreateProductForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
