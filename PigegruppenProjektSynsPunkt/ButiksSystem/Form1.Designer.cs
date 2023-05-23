@@ -339,6 +339,7 @@
             this.opretBestillingToolStripMenuItem.Name = "opretBestillingToolStripMenuItem";
             this.opretBestillingToolStripMenuItem.Size = new System.Drawing.Size(206, 30);
             this.opretBestillingToolStripMenuItem.Text = "Opret bestilling";
+            this.opretBestillingToolStripMenuItem.Click += new System.EventHandler(this.opretBestillingToolStripMenuItem_Click);
             // 
             // retunerVarerToolStripMenuItem
             // 

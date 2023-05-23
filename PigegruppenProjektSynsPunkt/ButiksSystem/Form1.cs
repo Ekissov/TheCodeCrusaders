@@ -72,5 +72,11 @@ namespace ButiksSystem
             CreateSaleForm createSaleForm = new CreateSaleForm();
             createSaleForm.ShowDialog();
         }
+
+        private void opretBestillingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateOrderForm createOrderForm = new CreateOrderForm();
+            createOrderForm.ShowDialog();
+        }
     }
 }
