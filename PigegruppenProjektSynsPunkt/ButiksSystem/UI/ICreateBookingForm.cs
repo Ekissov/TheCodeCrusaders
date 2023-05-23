@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ButiksSystem.UI
 {
-    public partial class CreateBookingForm : Form
+    public partial class ICreateBookingForm : Form
     {
-        public CreateBookingForm()
+        public ICreateBookingForm()
         {
             InitializeComponent();
         }
@@ -30,7 +30,7 @@ namespace ButiksSystem.UI
 
         private void button5_Click(object sender, EventArgs e)
         {
-            SeeAllBookingsForm seeAllBookingsForm = new SeeAllBookingsForm();
+            ISeeAllBookingsForm seeAllBookingsForm = new ISeeAllBookingsForm();
             seeAllBookingsForm.ShowDialog();
         }
     }
