@@ -77,6 +77,8 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_sendToCreateCustomer = new System.Windows.Forms.Button();
+            this.btn_finishOrder = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -574,11 +576,33 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Indtast Vare Nr. / Vare Navn : ";
             // 
+            // btn_sendToCreateCustomer
+            // 
+            this.btn_sendToCreateCustomer.Location = new System.Drawing.Point(320, 324);
+            this.btn_sendToCreateCustomer.Name = "btn_sendToCreateCustomer";
+            this.btn_sendToCreateCustomer.Size = new System.Drawing.Size(90, 23);
+            this.btn_sendToCreateCustomer.TabIndex = 37;
+            this.btn_sendToCreateCustomer.Text = "Opret Kunde";
+            this.btn_sendToCreateCustomer.UseVisualStyleBackColor = true;
+            this.btn_sendToCreateCustomer.Click += new System.EventHandler(this.btn_sendToCreateCustomer_Click);
+            // 
+            // btn_finishOrder
+            // 
+            this.btn_finishOrder.Location = new System.Drawing.Point(752, 452);
+            this.btn_finishOrder.Name = "btn_finishOrder";
+            this.btn_finishOrder.Size = new System.Drawing.Size(90, 23);
+            this.btn_finishOrder.TabIndex = 38;
+            this.btn_finishOrder.Text = "Afslut Bestilling";
+            this.btn_finishOrder.UseVisualStyleBackColor = true;
+            this.btn_finishOrder.Click += new System.EventHandler(this.btn_finishOrder_Click);
+            // 
             // CreateOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 459);
+            this.ClientSize = new System.Drawing.Size(866, 483);
+            this.Controls.Add(this.btn_finishOrder);
+            this.Controls.Add(this.btn_sendToCreateCustomer);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.label15);
@@ -662,5 +686,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_sendToCreateCustomer;
+        private System.Windows.Forms.Button btn_finishOrder;
     }
 }
