@@ -14,8 +14,6 @@ namespace ButiksSystem.Services
         {
             //Insert businesslogic
 
-
-
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             ProductDatabaseSQL.CreateProduct(product);
         }

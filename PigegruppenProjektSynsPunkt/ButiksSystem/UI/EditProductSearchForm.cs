@@ -16,5 +16,16 @@ namespace ButiksSystem.UI
         {
             InitializeComponent();
         }
+
+        private void UpdateProduct()
+        {
+            //Insert Logic
+        }
+        private void btn_saveEditedProductToDatabase_Click(object sender, EventArgs e)
+        {
+            UpdateProduct();
+
+            this.Close();
+        }
     }
 }

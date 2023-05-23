@@ -30,6 +30,7 @@ namespace ButiksSystem.Services
         /// <param name="costumer"></param>
         public static void UpdateCostumer(Models.Costumer costumer) 
         {
+
             CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
             CostumerDatabaseSQL.UpdateCustomer(costumer);
         }
