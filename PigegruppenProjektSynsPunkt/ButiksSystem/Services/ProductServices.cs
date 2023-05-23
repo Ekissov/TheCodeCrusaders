@@ -20,27 +20,18 @@ namespace ButiksSystem.Services
             ProductDatabaseSQL.CreateProduct(product);
         }
 
-        public static void UpdateProduct(Models.Product product) 
+        public static void UpdateProduct(Models.Product product)
         {
             //Insert businesslogic
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             ProductDatabaseSQL.UpdateProduct(product);
         }
 
-        public static void DeleteProduct(Models.Product product) 
+        public static void DeleteProduct(Models.Product product)
         {
             //Insert businesslogic
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             ProductDatabaseSQL.DeleteProduct(product);
         }
-
     }
-
 }
-
-
-/*        
-               CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
-            CostumerDatabaseSQL.DeleteCustomer(costumer); 
- 
-*/
