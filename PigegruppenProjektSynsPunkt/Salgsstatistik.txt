@@ -1,5 +1,7 @@
+SALGSSTATISTIK 2023              Fra dato: 15-03-2023 22:30:12      Til Dato: 10-05-2023 22:30:12
 Kundenummer      Kundenavn        Dato                          Køb
-1                Eigil Olsen      23-05-2023 00:00:00          4534
-2                Eigil Olsen      10-02-2023 00:00:00          4000
-1                Eigil Olsen      25-03-2023 00:00:00          2500
-                                              I alt kr.        11034
+13                Eigil Olsen      10-04-2023 00:00:00           3990
+21                Eigil Olsen      25-04-2023 00:00:00           6370
+9                Eigil Olsen      24-03-2023 00:00:00           7540
+8                Eigil Olsen      18-03-2023 00:00:00           5020
+                                              I alt kr.         22920

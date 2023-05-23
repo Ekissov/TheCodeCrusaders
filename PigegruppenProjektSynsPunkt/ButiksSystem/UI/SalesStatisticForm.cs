@@ -45,7 +45,7 @@ namespace ButiksSystem.UI
         private void btn_salesStatisticsPrintToTxtFile_Click(object sender, EventArgs e)
         {
             UIController uiController = new UIController();
-            uiController.CreateSalesFile(ListOfCostumerOrders);
+            uiController.CreateSalesFile(ListOfCostumerOrders, StartDate, EndDate);
             this.Close();
         }
     }

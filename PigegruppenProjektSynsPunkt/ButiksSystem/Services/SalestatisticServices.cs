@@ -22,7 +22,7 @@ namespace ButiksSystem.Services
             return ordersWithinTimePeriod;
         }
 
-        public void CreateSalesFile(List<CostumerOrder> listOfCostumerOrders)
+        public void CreateSalesFile(List<CostumerOrder> listOfCostumerOrders, DateTime startDate, DateTime endDate)
         {
             List<CostumerOrder> costumerOrders = listOfCostumerOrders;
 
@@ -30,6 +30,7 @@ namespace ButiksSystem.Services
 
             using (StreamWriter writer = new StreamWriter(FilePath))
             {
+                writer.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate + "      Til Dato: " + endDate);
                 string salesfileHeadigns = "Kundenummer      Kundenavn        Dato                          Køb";
                 writer.WriteLine(salesfileHeadigns);
 
