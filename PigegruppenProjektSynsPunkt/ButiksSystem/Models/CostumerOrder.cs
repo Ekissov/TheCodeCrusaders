@@ -10,13 +10,14 @@ namespace ButiksSystem.Models
     {
         private int OrderID { get; set; }
         private int EmployeeID { get; set; }
-        public string OrderLineID { get; set; }
+        private string OrderLineID { get; set; }
         public DateTime OrderDate { get; set; }
         public decimal TotalPrice { get; set; }
-        public DateTime DeliveryDate { get; set; }
+        private DateTime DeliveryDate { get; set; }
         public int CostumerID { get; set; }
+        public string CostumerName { get; set; }
 
-        public CostumerOrder(int orderID, int employeeID, string orderLineID, DateTime orderDate, decimal totalPrice, DateTime deliveryDate, int costumerID)
+        public CostumerOrder(int orderID, int employeeID, string orderLineID, DateTime orderDate, decimal totalPrice, DateTime deliveryDate, int costumerID, string costumerName)
         {
             OrderID = orderID;
             EmployeeID = employeeID;
@@ -25,6 +26,7 @@ namespace ButiksSystem.Models
             TotalPrice = totalPrice;
             DeliveryDate = deliveryDate;
             CostumerID = costumerID;
+            CostumerName = costumerName;
         }
 
     }
