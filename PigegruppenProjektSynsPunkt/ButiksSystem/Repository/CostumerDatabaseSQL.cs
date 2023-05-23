@@ -68,7 +68,7 @@ namespace ButiksSystem.Repository
 
         //D
 
-        public static void DeleteCustomer(int CustomerID)
+        public static void DeleteCustomer(Models.Costumer costumer)
         {
 
             string query = $"DELETE FROM Product WHERE ProductID = '{CustomerID}'";
