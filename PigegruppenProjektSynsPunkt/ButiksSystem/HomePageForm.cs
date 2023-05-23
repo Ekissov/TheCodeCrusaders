@@ -99,5 +99,11 @@ namespace ButiksSystem
         {
 
         }
+
+        private void alleVarerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowAllProductsForm showAllProductsForm = new ShowAllProductsForm();
+            showAllProductsForm.ShowDialog();
+        }
     }
 }

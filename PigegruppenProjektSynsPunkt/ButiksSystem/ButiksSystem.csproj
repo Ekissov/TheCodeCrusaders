@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\UIcontroller.cs" />
     <Compile Include="Database\DummyDataSales.cs" />
     <Compile Include="HomePageForm.cs">
       <SubType>Form</SubType>
@@ -62,6 +63,7 @@
     <Compile Include="Repository\ProductDatabaseSQL.cs" />
     <Compile Include="Services\CostumerServices.cs" />
     <Compile Include="Services\ProductServices.cs" />
+    <Compile Include="Services\SalestatisticServices.cs" />
     <Compile Include="UI\ICreateBookingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +124,12 @@
     <Compile Include="UI\ISeeAllBookingsForm.Designer.cs">
       <DependentUpon>ISeeAllBookingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ShowAllProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ShowAllProductsForm.Designer.cs">
+      <DependentUpon>ShowAllProductsForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="HomePageForm.resx">
       <DependentUpon>HomePageForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +172,9 @@
     <EmbeddedResource Include="UI\ISeeAllBookingsForm.resx">
       <DependentUpon>ISeeAllBookingsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\ShowAllProductsForm.resx">
+      <DependentUpon>ShowAllProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -177,8 +188,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
