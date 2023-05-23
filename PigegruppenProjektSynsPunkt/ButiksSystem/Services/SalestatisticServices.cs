@@ -14,7 +14,7 @@ namespace ButiksSystem.Services
         {
             var listOfCostumerOrders = DummyDataSales.CreateDummyDataSales();
 
-           var ordersWithinTimePeriod =listOfCostumerOrders.Where(x => x. OrderDate >= startdate && x.OrderDate <= endDate).ToList();
+            var ordersWithinTimePeriod =listOfCostumerOrders.Where(x => x. OrderDate >= startdate && x.OrderDate <= endDate).ToList();
 
             return ordersWithinTimePeriod;
         }

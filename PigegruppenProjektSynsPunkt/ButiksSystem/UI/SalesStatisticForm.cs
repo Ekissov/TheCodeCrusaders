@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ButiksSystem.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +30,8 @@ namespace ButiksSystem.UI
         }
         private void button1_Click(object sender, EventArgs e)
         {         
-            dgv_showSalesStatisticsInDatagrid.DataSource = Services.SalestatisticServices.GetCostumerOrdersWithinGivenTime(StartDate, EndDate);
+            UIController uIController = new UIController();
+            dgv_showSalesStatisticsInDatagrid.DataSource = uIController.GetCostumerOrdersWithinGivenTime(StartDate, EndDate);
         }
 
         private void SalesStatistic_Load(object sender, EventArgs e)
