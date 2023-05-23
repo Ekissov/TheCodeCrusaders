@@ -19,9 +19,12 @@ namespace ButiksSystem.UI
             InitializeComponent();
         }
 
-        private void btn_createProduct_Click(object sender, EventArgs e)
+        public void btn_createProduct_Click(object sender, EventArgs e)
         {
-            Product = new Product(txt_createProductName.Text, decimal.Parse(txt_CreateSalesPricePerItem.Text), int.Parse(txt_createQuantityInStorage.Text), int.Parse(txt_createProductGroupID.Text));
+            Product = new Product(txt_createProductName.Text, 
+                                 decimal.Parse(txt_CreateSalesPricePerItem.Text), 
+                                 int.Parse(txt_createQuantityInStorage.Text), 
+                                 int.Parse(txt_createProductGroupID.Text));
 
             /*Product.ProductID = int.Parse(txt_createProductID.Text);
             Product.ProductName = txt_createProductName.Text;
