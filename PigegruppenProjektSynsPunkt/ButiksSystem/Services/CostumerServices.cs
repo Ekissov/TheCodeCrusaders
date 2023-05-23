@@ -17,8 +17,11 @@ namespace ButiksSystem.Services
         /// <param name="costumer"></param>
         public static void CreateCostumer(Models.Costumer costumer)
         {
-            CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
-            CostumerDatabaseSQL.CreateCustomer(costumer);
+            CreateCostumerForm createCostumerForm = new CreateCostumerForm();
+            createCostumerForm.Costumer = costumer;
+
+           /* CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
+            CostumerDatabaseSQL.CreateCustomer(costumer);*/
 
         }
         /// <summary>
