@@ -1,6 +1,6 @@
 ﻿namespace ButiksSystem.UI
 {
-    partial class EditCostumerSearch
+    partial class EditCostumerSearchForm
     {
         /// <summary>
         /// Required designer variable.

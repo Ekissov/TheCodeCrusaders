@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ButiksSystem.UI
 {
-    public partial class EditCostumerSearch : Form
+    public partial class EditCostumerSearchForm : Form
     {
-        public EditCostumerSearch()
+        public EditCostumerSearchForm()
         {
             InitializeComponent();
         }
