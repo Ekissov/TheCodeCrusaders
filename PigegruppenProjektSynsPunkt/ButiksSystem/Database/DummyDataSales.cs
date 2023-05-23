@@ -17,7 +17,7 @@ namespace ButiksSystem.Database
             var orderDate = DateTime.Now.Date;
             var deliveryDate = new DateTime(2023, 05, 29);
             Costumer costumer = new Costumer("Eigil", "Olsen", "+45 12 34 56 78", "Boulevarden 25", 7100, "Vejle", "Hej22@gmail.com");
-            CostumerOrder sale1 = new CostumerOrder(1, 12, "1", orderDate, 4534, deliveryDate, 1, costumer.FirstName + costumer.LastName);
+            CostumerOrder sale1 = new CostumerOrder(1, 12, "1", orderDate, 4534, deliveryDate, 1, costumer.FirstName + " " + costumer.LastName);
 
             orderDate = new DateTime(2023, 01, 25);
             deliveryDate = new DateTime(2023, 02, 03);
