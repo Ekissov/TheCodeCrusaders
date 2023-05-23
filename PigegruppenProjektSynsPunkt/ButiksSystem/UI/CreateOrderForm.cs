@@ -26,5 +26,16 @@ namespace ButiksSystem.UI
         {
             
         }
+
+        private void btn_sendToCreateCustomer_Click(object sender, EventArgs e)
+        {
+            CreateCostumerForm createCostumerForm = new CreateCostumerForm();
+            createCostumerForm.ShowDialog();
+        }
+
+        private void btn_finishOrder_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
