@@ -315,6 +315,7 @@
             this.btn_deleteCustomerInDatabase.TabIndex = 36;
             this.btn_deleteCustomerInDatabase.Text = "Slet Kunde";
             this.btn_deleteCustomerInDatabase.UseVisualStyleBackColor = false;
+            this.btn_deleteCustomerInDatabase.Click += new System.EventHandler(this.btn_deleteCustomerInDatabase_Click);
             // 
             // btn_OKShowCostumer
             // 
