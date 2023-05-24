@@ -20,17 +20,16 @@ namespace ButiksSystem.Services
             CreateCostumerForm createCostumerForm = new CreateCostumerForm();
             createCostumerForm.Costumer = costumer;
 
-           /* CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
-            CostumerDatabaseSQL.CreateCustomer(costumer);*/
+            /* CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
+             CostumerDatabaseSQL.CreateCustomer(costumer);*/
 
         }
         /// <summary>
         /// Method to update or change a costumer and then save the new information in the database
         /// </summary>
         /// <param name="costumer"></param>
-        public static void UpdateCostumer(Models.Costumer costumer) 
+        public void UpdateCostumer(Models.Costumer costumer)
         {
-
             CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
             costumerDatabaseSQL.UpdateCustomer(costumer);
         }
@@ -39,10 +38,9 @@ namespace ButiksSystem.Services
         /// Method to delete a costumer. 
         /// </summary>
         /// <param name="costumer"></param>
-        public static void DeleteCostumer(Models.Costumer costumer) 
+        public void DeleteCostumer(Models.Costumer costumer)
         {
             //Insert businesslogic
-            //Forsøgt at tilføje denne, samt ændre i CostumerDatabaseSQL delete metoden
             CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
             costumerDatabaseSQL.DeleteCustomer(costumer);
         }

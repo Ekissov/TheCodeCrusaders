@@ -17,7 +17,7 @@ namespace ButiksSystem.Repository
         {
 
             string query = $"INSERT INTO Customer (CustomerID,FirstName,LastName,PhoneNumber,PostalCode,City,Address) " +
-                $"VALUES ({costumer.CostumerID}, '{costumer.FirstName}','{costumer.LastName}','{costumer.PhoneNumber}','{costumer.Email}','{costumer.PostalCode}','{costumer.City}','{costumer.Adress}')";
+                $"VALUES ({costumer.CostumerID}, '{costumer.FirstName}','{costumer.LastName}','{costumer.PhoneNumber}','{costumer.Email}','{costumer.PostalCode}','{costumer.City}','{costumer.Address}')";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
@@ -56,7 +56,7 @@ namespace ButiksSystem.Repository
         public void UpdateCustomer(Models.Costumer costumer)
         {
             //Update sætningen herunder er muligvis ikke korrekt
-            string query = $"UPDATE Customer SET FirstName = '{costumer.FirstName}', LastName = '{costumer.LastName}', PhoneNumber = '{costumer.PhoneNumber}', Email = '{costumer.Email}', PostalCode = '{costumer.PostalCode}', City = '{costumer.City}', Address = '{costumer.Adress}' WHERE CustomerID = '{costumer.CostumerID}'";
+            string query = $"UPDATE Customer SET FirstName = '{costumer.FirstName}', LastName = '{costumer.LastName}', PhoneNumber = '{costumer.PhoneNumber}', Email = '{costumer.Email}', PostalCode = '{costumer.PostalCode}', City = '{costumer.City}', Address = '{costumer.Address}' WHERE CustomerID = '{costumer.CostumerID}'";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
