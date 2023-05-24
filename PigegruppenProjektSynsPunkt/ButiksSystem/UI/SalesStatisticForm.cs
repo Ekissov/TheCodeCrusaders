@@ -48,10 +48,10 @@ namespace ButiksSystem.UI
         {
             UIController uiController = new UIController();
 
-            uiController.CreateSalesFileDataGridview(dgv_showSalesStatisticsInDatagrid);
+            //uiController.CreateSalesFileDataGridview(dgv_showSalesStatisticsInDatagrid);
 
 
-            //uiController.CreateSalesFile(ListOfCostumerOrders, StartDate, EndDate);
+            uiController.CreateSalesFile(ListOfCostumerOrders, StartDate, EndDate);
             this.Close();
         }
 

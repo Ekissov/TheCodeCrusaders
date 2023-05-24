@@ -37,7 +37,7 @@ namespace ButiksSystem.Services
 
                 foreach (var item in listOfCostumerOrders)
                 {
-                    writer.WriteLine(string.Format("{0}     {1}     {2}          {3}", item.CostumerID, item.CostumerName, item.OrderDate, item.TotalPrice.ToString())); 
+                    writer.WriteLine(string.Format("{0           }     {1            }     {2          }          {3          }", item.CostumerID, item.CostumerName, item.OrderDate, item.TotalPrice.ToString())); 
                 }
 
                 decimal sumOfPrices = listOfCostumerOrders.Sum(x => x.TotalPrice);
@@ -45,7 +45,6 @@ namespace ButiksSystem.Services
             }
 
         }
-
 
         public void CreateSalesFileDataGridview(DataGridView dataGridView)
         {
