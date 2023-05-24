@@ -1,9 +1,45 @@
-Alm sort stel, SynsPunkt, 700, 1, 66
-Cartoon Red Brillestel, Gucci, 5999, 1, 11
-Kontaktlinse etui, Valmed, 30, 7, 298
-Leopard Mønsteret Etui, 59, 7, 53
-Linsevæske 360ml, Valmed, 40, 6, 75
-Panaramic Glass, Nomo, 799, 5, 0
-Rayban Diva, 799, 3, 25
-Softlens Kontaktlinser, 129, 2, 314
-Vintage Teater Kikkert, lille, 949, 4, 5
+Produktnavn: Alm sort stel, SynsPunkt
+  - Salgspris: 700
+  - VaregruppeNr: 1
+  - Lagerbeholding: 66
+
+Produktnavn: Cartoon Red Brillestel, Gucci
+  - Salgspris: 5999
+  - VaregruppeNr: 1
+  - Lagerbeholding: 11
+
+Produktnavn: Kontaktlinse etui, Valmed
+  - Salgspris: 30
+  - VaregruppeNr: 7
+  - Lagerbeholding: 298
+
+Produktnavn: Leopard Mønsteret Etui
+  - Salgspris: 59
+  - VaregruppeNr: 7
+  - Lagerbeholding: 53
+
+Produktnavn: Linsevæske 360ml, Valmed
+  - Salgspris: 40
+  - VaregruppeNr: 6
+  - Lagerbeholding: 75
+
+Produktnavn: Panaramic Glass, Nomo
+  - Salgspris: 799
+  - VaregruppeNr: 5
+  - Lagerbeholding: 0
+
+Produktnavn: Rayban Diva
+  - Salgspris: 799
+  - VaregruppeNr: 3
+  - Lagerbeholding: 25
+
+Produktnavn: Softlens Kontaktlinser
+  - Salgspris: 129
+  - VaregruppeNr: 2
+  - Lagerbeholding: 314
+
+Produktnavn: Vintage Teater Kikkert, lille
+  - Salgspris: 949
+  - VaregruppeNr: 4
+  - Lagerbeholding: 5
+

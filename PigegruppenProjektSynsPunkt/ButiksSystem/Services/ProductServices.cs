@@ -39,6 +39,15 @@ namespace ButiksSystem.Services
         {
             List<Product> products = ProductDatabaseSQL.GetAllProducts();
             List<string> writeLines = products.Select(x => x.ToString()).ToList();
+            /*foreach (Product product in products) 
+            {
+                string formattedProduct = $"Produktnavn: {product.ProductName}\n";
+                formattedProduct += $"  - Pris: {product.ProductPrice} \n";
+                formattedProduct += $"  - KategoriID: {product.CategoryID}\n";
+                formattedProduct += $"  - Lagerbeholdning: {product.Quantity}\n";
+            }*/
+
+
             File.WriteAllLines(@"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
 
         }
