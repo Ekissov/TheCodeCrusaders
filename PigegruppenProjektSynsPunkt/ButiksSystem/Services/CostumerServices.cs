@@ -15,14 +15,11 @@ namespace ButiksSystem.Services
         /// Method to create a new costumer and save the information in the database.
         /// </summary>
         /// <param name="costumer"></param>
-        public static void CreateCostumer(Models.Costumer costumer)
-        {
-            CreateCostumerForm createCostumerForm = new CreateCostumerForm();
-            createCostumerForm.Costumer = costumer;
-
-            /* CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
-             CostumerDatabaseSQL.CreateCustomer(costumer);*/
-
+        public void CreateCostumer(Costumer costumer) 
+        { 
+            Models.Costumer costumer1 = new Costumer(costumer.FirstName, costumer.LastName, costumer.PhoneNumber, costumer.Email, costumer.PostalCode, costumer.City, costumer.Address);
+            CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
+            CostumerDatabaseSQL.CreateCustomer(costumer1);
         }
         /// <summary>
         /// Method to update or change a costumer and then save the new information in the database

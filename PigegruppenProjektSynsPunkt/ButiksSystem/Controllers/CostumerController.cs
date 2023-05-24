@@ -13,5 +13,13 @@ namespace ButiksSystem.Controllers
             Services.CostumerServices costumerServices = new Services.CostumerServices();
             costumerServices.UpdateCostumer(costumer);
         }
+
+        public void CreateCostumer(Models.Costumer costumer/*string firstName, string lastName, string phoneNumber, string address, int postalCode, string city, string email*/)
+        {
+            //Models.Costumer costumer = new Models.Costumer(firstName, lastName, phoneNumber, address, postalCode, city, email);
+            Services.CostumerServices costumerServices = new Services.CostumerServices();
+            costumerServices.CreateCostumer(costumer);
+        }
+
     }
 }

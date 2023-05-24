@@ -35,12 +35,13 @@ namespace ButiksSystem.UI
             Costumer.PostalCode = int.Parse(txt_createCustomerPostalCode.Text);
             Costumer.City = txt_createCustomerCity.Text;
             
-            Costumer = new Models.Costumer(Costumer.FirstName, Costumer.LastName, Costumer.PhoneNumber, Costumer.Address, Costumer.PostalCode, Costumer.City, Costumer.Email);
-            
+            //Costumer = new Models.Costumer(Costumer.FirstName, Costumer.LastName, Costumer.PhoneNumber, Costumer.Address, Costumer.PostalCode, Costumer.City, Costumer.Email);
+            Controllers.CostumerController costumerController = new Controllers.CostumerController();
+            costumerController.CreateCostumer(Costumer);
+
             this.Close();
         }
 
-
-
+       
     }
 }
