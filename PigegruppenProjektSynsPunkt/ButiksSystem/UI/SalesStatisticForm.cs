@@ -1,5 +1,6 @@
 ﻿using ButiksSystem.Controllers;
 using ButiksSystem.Models;
+using ButiksSystem.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,8 +47,14 @@ namespace ButiksSystem.UI
         private void btn_salesStatisticsPrintToTxtFile_Click(object sender, EventArgs e)
         {
             UIController uiController = new UIController();
-            uiController.CreateSalesFile(ListOfCostumerOrders, StartDate, EndDate);
+
+            uiController.CreateSalesFileDataGridview(dgv_showSalesStatisticsInDatagrid);
+
+
+            //uiController.CreateSalesFile(ListOfCostumerOrders, StartDate, EndDate);
             this.Close();
         }
+
+
     }
 }

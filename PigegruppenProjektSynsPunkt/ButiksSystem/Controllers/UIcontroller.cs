@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ButiksSystem.Controllers
 {
@@ -29,6 +30,12 @@ namespace ButiksSystem.Controllers
         {
             SalestatisticServices salestatisticServices = new SalestatisticServices();
             salestatisticServices.CreateSalesFile(listOfCostumerOrders, startDate, endDate);
+        }
+
+        public void CreateSalesFileDataGridview(DataGridView dataGridView)
+        {
+            SalestatisticServices salestatisticServices = new SalestatisticServices();
+            salestatisticServices.CreateSalesFileDataGridview(dataGridView);
         }
     }
 }
