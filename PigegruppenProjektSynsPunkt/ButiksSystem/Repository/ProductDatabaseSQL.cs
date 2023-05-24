@@ -57,7 +57,7 @@ namespace ButiksSystem.Repository
         }
 
         //U
-        public static void UpdateProduct(Models.Product product)
+        public void UpdateProduct(Models.Product product)
         {
             //Update sætningen herunder er muligvis ikke korrekt
             string query = $"UPDATE Product SET ProductName = '{product.ProductName}', Price = '{product.ProductPrice}', CategoryID = '{product.CategoryID}', Quantity = '{product.Quantity}' WHERE ProductID = '{product.ProductID}'";
@@ -72,7 +72,7 @@ namespace ButiksSystem.Repository
 
         //D
 
-        public static void DeleteProduct(Models.Product product)
+        public void DeleteProduct(Models.Product product)
         {
 
             string query = $"DELETE FROM Product WHERE ProductID = '{product.ProductID}'";

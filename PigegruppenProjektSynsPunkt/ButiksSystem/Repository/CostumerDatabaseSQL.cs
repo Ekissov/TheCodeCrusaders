@@ -53,7 +53,7 @@ namespace ButiksSystem.Repository
         }
 
         //U
-        public static void UpdateCustomer(Models.Costumer costumer)
+        public void UpdateCustomer(Models.Costumer costumer)
         {
             //Update sætningen herunder er muligvis ikke korrekt
             string query = $"UPDATE Customer SET FirstName = '{costumer.FirstName}', LastName = '{costumer.LastName}', PhoneNumber = '{costumer.PhoneNumber}', Email = '{costumer.Email}', PostalCode = '{costumer.PostalCode}', City = '{costumer.City}', Address = '{costumer.Adress}' WHERE CustomerID = '{costumer.CostumerID}'";
@@ -68,7 +68,7 @@ namespace ButiksSystem.Repository
 
         //D
 
-        public static void DeleteCustomer(Models.Costumer costumer)
+        public void DeleteCustomer(Models.Costumer costumer)
         {
 
             string query = $"DELETE FROM Costumer WHERE CostumerID = '{costumer.CostumerID}'";

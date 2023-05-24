@@ -21,18 +21,18 @@ namespace ButiksSystem.Services
         }
 
         
-        public static void UpdateProduct(Models.Product product)
+        public void UpdateProduct(Models.Product product)
         {
             //Insert businesslogic
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
-            ProductDatabaseSQL.UpdateProduct(product);
+            productDatabaseSQL.UpdateProduct(product);
         }
 
-        public static void DeleteProduct(Models.Product product)
+        public void DeleteProduct(Models.Product product)
         {
             //Insert businesslogic
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
-            ProductDatabaseSQL.DeleteProduct(product);
+            productDatabaseSQL.DeleteProduct(product);
         }
 
         public static void PrintAllProducts() 
