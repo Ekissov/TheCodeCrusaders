@@ -18,7 +18,7 @@ namespace ButiksSystem.Database
             var deliveryDate = new DateTime(2023, 05, 29);
             Costumer costumer = new Costumer("Eigil", "Olsen", "+45 12 34 56 78", "Boulevarden 25", 7100, "Vejle", "Hej22@gmail.com");
             CostumerOrder sale1 = new CostumerOrder(01, costumer.FirstName + " " + costumer.LastName, 1, 12, "1", deliveryDate, orderDate, 4534);
-
+            
             orderDate = new DateTime(2023, 01, 25);
             deliveryDate = new DateTime(2023, 02, 03);
             Costumer costumer1 = new Costumer("Albert", "Hansen", "22448475", "Vestergade 359", 8000, "Århus", "AHansen@gmail.com");
@@ -122,7 +122,7 @@ namespace ButiksSystem.Database
             listOfSales.Add(sale16);
             listOfSales.Add(sale17);
             listOfSales.Add(sale18);
-
+          
             return listOfSales;
         }
     }
