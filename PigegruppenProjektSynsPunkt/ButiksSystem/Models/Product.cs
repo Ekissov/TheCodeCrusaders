@@ -35,7 +35,11 @@ namespace ButiksSystem.Models
         public override string ToString() 
         {
 
-            return $"{this.ProductName}, {this.ProductPrice}, {this.CategoryID}, {this.Quantity}";
+           return $"Produktnavn: " +
+                $"{this.ProductName}\n" +
+                $"  - Salgspris: {this.ProductPrice}\n" +
+                $"  - VaregruppeNr: {this.CategoryID}\n" +
+                $"  - Lagerbeholding: {this.Quantity}\n";
         
         }
 
