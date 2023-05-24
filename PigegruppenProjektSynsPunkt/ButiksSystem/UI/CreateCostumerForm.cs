@@ -21,9 +21,16 @@ namespace ButiksSystem.UI
             InitializeComponent();
         }
 
+        /// <summary>
+        /// When the button is clicked, it saves the information in a Costumer object.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_createCustomer_Click_1(object sender, EventArgs e)
         {
-            Costumer costumer = new Models.Costumer(
+            try
+            {
+               Costumer costumer = new Models.Costumer(
                txt_createCustomerFirstName.Text,
                txt_createCustomerLastName.Text,
                txt_createCutomerPhoneNumber.Text,
@@ -32,10 +39,15 @@ namespace ButiksSystem.UI
                txt_createCustomerCity.Text,
                txt_createCustomerAddress.Text);
 
-            Controllers.CostumerController costumerController = new Controllers.CostumerController();
-            costumerController.CreateCostumer(costumer);
+               Controllers.CostumerController costumerController = new Controllers.CostumerController();
+               costumerController.CreateCostumer(costumer);
 
-            this.Close();
+                this.Close();
+            }
+            catch 
+            {
+                MessageBox.Show("Postnummeret er ikke skrevet korrekt, det kan kun bestå af tal, prøv igen", "Fejlmeddelelse", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
