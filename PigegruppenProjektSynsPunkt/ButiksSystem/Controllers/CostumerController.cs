@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ButiksSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,12 @@ namespace ButiksSystem.Controllers
         {
             Services.CostumerServices costumerServices = new Services.CostumerServices();
             costumerServices.UpdateCostumer(costumer);
+        }
+
+        public List<Costumer> ReadAllCostumers()
+        {
+            var result = new List<Costumer>();
+            return result;
         }
 
         public void CreateCostumer(Models.Costumer costumer/*string firstName, string lastName, string phoneNumber, string address, int postalCode, string city, string email*/)

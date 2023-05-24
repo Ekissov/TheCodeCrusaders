@@ -1,4 +1,5 @@
-﻿using ButiksSystem.Models;
+﻿using ButiksSystem.Controllers;
+using ButiksSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,16 +19,22 @@ namespace ButiksSystem.UI
         public EditCostumerSearchForm()
         {
             InitializeComponent();
-            
+
         }
 
+        /// <summary>
+        /// Method to show all costumers in datagridview when the form is loaded. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EditCostumerSearchForm_Load(object sender, EventArgs e)
         {
-            //dgv_showCustomerInfo.DataSource = READ ALL COSTUMERS
+            CostumerController costumerController = new CostumerController();  //connecting to controller
+            dgv_showCustomerInfo.DataSource = costumerController.ReadAllCostumers();
         }
         private void txt_searchCustomerIDOrName_TextChanged(object sender, EventArgs e)
         {
-            var CostumerIDInput = txt_searchCustomerIDOrName.Text;
+            CostumerIDInput = txt_searchCustomerIDOrName.Text;
         }
         private void btn_OKShowCostumer_Click(object sender, EventArgs e)
         {
@@ -48,6 +55,22 @@ namespace ButiksSystem.UI
             txt_changeCustomerPostalCode.Text = Costumer.PostalCode.ToString();
             txt_changeCustomerCity.Text = Costumer.City;
         }
+        private void btn_deleteCustomerInDatabase_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Er du sikker på at du vil slette kunden?", "Bekræftelse", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (result == DialogResult.Yes)
+            {
+                Controllers.CostumerController costumerController = new Controllers.CostumerController();
+                DeleteCostumer();
+                this.Close();
+            }
+            else if (result == DialogResult.No)
+            {
+                this.Close();
+            }
+        }
+
         private void btn_saveEditedCustomerToDatabase_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Er du sikker på at du vil gemme ændringerne?", "Bekræftelse", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -73,11 +96,16 @@ namespace ButiksSystem.UI
             Costumer.PhoneNumber = txt_changeCustomerPhoneNumber.Text;
             Costumer.Email = txt_changeCustomerEmail.Text;
             Costumer.Address = txt_changeCustomerAddress.Text;
-            Costumer.PostalCode= int.Parse(txt_changeCustomerPostalCode.Text);
+            Costumer.PostalCode = int.Parse(txt_changeCustomerPostalCode.Text);
             Costumer.City = txt_changeCustomerCity.Text;
 
         }
 
+        private void DeleteCostumer()
+        {
 
+        }
     }
+
 }
+
