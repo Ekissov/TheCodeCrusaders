@@ -15,33 +15,27 @@ namespace ButiksSystem.UI
 {
     public partial class CreateCostumerForm : Form
     {
-        public Models.Costumer Costumer { get; set; }
 
         public CreateCostumerForm()
         {
             InitializeComponent();
         }
 
-        public void btn_createCustomer_Click(object sender, EventArgs e)
+        private void btn_createCustomer_Click_1(object sender, EventArgs e)
         {
-            //controller.opretkunde
-           // Costumer = new Models.Costumer(Costumer.FirstName, Costumer.LastName, Costumer.PhoneNumber, Costumer.Adress, Costumer.PostalCode, Costumer.City, Costumer.Email);
+            Costumer costumer = new Models.Costumer(
+               txt_createCustomerFirstName.Text,
+               txt_createCustomerLastName.Text,
+               txt_createCutomerPhoneNumber.Text,
+               txt_createCustomerEmail.Text,
+               int.Parse(txt_createCustomerPostalCode.Text),
+               txt_createCustomerCity.Text,
+               txt_createCustomerAddress.Text);
 
-            Costumer.FirstName = txt_createCustomerFirstName.Text;
-            Costumer.LastName = txt_createCustomerLastName.Text;
-            Costumer.PhoneNumber = txt_createCutomerPhoneNumber.Text;
-            Costumer.Email = txt_createCustomerEmail.Text;
-            Costumer.Address = txt_createCustomerAddress.Text;
-            Costumer.PostalCode = int.Parse(txt_createCustomerPostalCode.Text);
-            Costumer.City = txt_createCustomerCity.Text;
-            
-            //Costumer = new Models.Costumer(Costumer.FirstName, Costumer.LastName, Costumer.PhoneNumber, Costumer.Address, Costumer.PostalCode, Costumer.City, Costumer.Email);
             Controllers.CostumerController costumerController = new Controllers.CostumerController();
-            costumerController.CreateCostumer(Costumer);
+            costumerController.CreateCostumer(costumer);
 
             this.Close();
         }
-
-       
     }
 }

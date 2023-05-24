@@ -16,7 +16,7 @@ namespace ButiksSystem.Repository
         public void CreateCustomer(Models.Costumer costumer)
         {
 
-            string query = $"INSERT INTO Customer (FirstName,LastName,PhoneNumber,PostalCode,City,Address, Email) " +
+            string query = $"INSERT INTO CustomerTable (FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email) " +
                 $"VALUES ('{costumer.FirstName}'" +
                 $",'{costumer.LastName}'," +
                 $"'{costumer.PhoneNumber}'," +

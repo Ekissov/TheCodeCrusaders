@@ -130,7 +130,7 @@
             // txt_createCustomerID
             // 
             this.txt_createCustomerID.Location = new System.Drawing.Point(121, 16);
-            this.txt_createCustomerID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_createCustomerID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_createCustomerID.Name = "txt_createCustomerID";
             this.txt_createCustomerID.ReadOnly = true;
             this.txt_createCustomerID.Size = new System.Drawing.Size(132, 22);
@@ -139,7 +139,7 @@
             // txt_createCustomerFirstName
             // 
             this.txt_createCustomerFirstName.Location = new System.Drawing.Point(121, 47);
-            this.txt_createCustomerFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_createCustomerFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.txt_createCustomerFirstName.Name = "txt_createCustomerFirstName";
             this.txt_createCustomerFirstName.Size = new System.Drawing.Size(132, 22);
             this.txt_createCustomerFirstName.TabIndex = 9;
@@ -147,7 +147,7 @@
             // txt_createCustomerLastName
             // 
             this.txt_createCustomerLastName.Location = new System.Drawing.Point(121, 79);
-            this.txt_createCustomerLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_createCustomerLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txt_createCustomerLastName.Name = "txt_createCustomerLastName";
             this.txt_createCustomerLastName.Size = new System.Drawing.Size(132, 22);
             this.txt_createCustomerLastName.TabIndex = 10;
@@ -155,7 +155,7 @@
             // txt_createCutomerPhoneNumber
             // 
             this.txt_createCutomerPhoneNumber.Location = new System.Drawing.Point(121, 110);
-            this.txt_createCutomerPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_createCutomerPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txt_createCutomerPhoneNumber.Name = "txt_createCutomerPhoneNumber";
             this.txt_createCutomerPhoneNumber.Size = new System.Drawing.Size(132, 22);
             this.txt_createCutomerPhoneNumber.TabIndex = 11;
@@ -163,7 +163,7 @@
             // txt_createCustomerEmail
             // 
             this.txt_createCustomerEmail.Location = new System.Drawing.Point(121, 140);
-            this.txt_createCustomerEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_createCustomerEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txt_createCustomerEmail.Name = "txt_createCustomerEmail";
             this.txt_createCustomerEmail.Size = new System.Drawing.Size(224, 22);
             this.txt_createCustomerEmail.TabIndex = 12;
@@ -171,7 +171,7 @@
             // txt_createCustomerAddress
             // 
             this.txt_createCustomerAddress.Location = new System.Drawing.Point(121, 172);
-            this.txt_createCustomerAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_createCustomerAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txt_createCustomerAddress.Name = "txt_createCustomerAddress";
             this.txt_createCustomerAddress.Size = new System.Drawing.Size(224, 22);
             this.txt_createCustomerAddress.TabIndex = 13;
@@ -179,7 +179,7 @@
             // txt_createCustomerPostalCode
             // 
             this.txt_createCustomerPostalCode.Location = new System.Drawing.Point(121, 206);
-            this.txt_createCustomerPostalCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_createCustomerPostalCode.Margin = new System.Windows.Forms.Padding(4);
             this.txt_createCustomerPostalCode.Name = "txt_createCustomerPostalCode";
             this.txt_createCustomerPostalCode.Size = new System.Drawing.Size(132, 22);
             this.txt_createCustomerPostalCode.TabIndex = 14;
@@ -187,7 +187,7 @@
             // txt_createCustomerCity
             // 
             this.txt_createCustomerCity.Location = new System.Drawing.Point(121, 238);
-            this.txt_createCustomerCity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_createCustomerCity.Margin = new System.Windows.Forms.Padding(4);
             this.txt_createCustomerCity.Name = "txt_createCustomerCity";
             this.txt_createCustomerCity.Size = new System.Drawing.Size(224, 22);
             this.txt_createCustomerCity.TabIndex = 15;
@@ -196,12 +196,13 @@
             // 
             this.btn_createCustomer.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_createCustomer.Location = new System.Drawing.Point(239, 273);
-            this.btn_createCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_createCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.btn_createCustomer.Name = "btn_createCustomer";
             this.btn_createCustomer.Size = new System.Drawing.Size(107, 28);
             this.btn_createCustomer.TabIndex = 16;
             this.btn_createCustomer.Text = "Opret Kunde";
             this.btn_createCustomer.UseVisualStyleBackColor = false;
+            this.btn_createCustomer.Click += new System.EventHandler(this.btn_createCustomer_Click_1);
             // 
             // CreateCostumerForm
             // 
