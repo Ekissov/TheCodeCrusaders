@@ -22,9 +22,17 @@ namespace ButiksSystem.Models
             OrderID = orderID;
             EmployeeID = employeeID;
             OrderLineID = orderLineID;
-            OrderDate = orderDate;
+            OrderDate = orderDate.Date;
             TotalPrice = totalPrice;
-            DeliveryDate = deliveryDate;
+            DeliveryDate = deliveryDate.Date;
+            CostumerID = costumerID;
+            CostumerName = costumerName;
+        }
+
+        public CostumerOrder(int costumerID, string costumerName, DateTime orderDate, decimal totalPrice)
+        {
+            TotalPrice = totalPrice;
+            OrderDate = orderDate.Date;
             CostumerID = costumerID;
             CostumerName = costumerName;
         }
