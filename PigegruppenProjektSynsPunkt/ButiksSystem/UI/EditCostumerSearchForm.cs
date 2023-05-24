@@ -12,6 +12,7 @@ namespace ButiksSystem.UI
 {
     public partial class EditCostumerSearchForm : Form
     {
+        public Models.Costumer costumer { get; set; }
         public EditCostumerSearchForm()
         {
             InitializeComponent();
@@ -27,12 +28,14 @@ namespace ButiksSystem.UI
         private void UpdateCostumer()
         {
             //Insert Logic
+            EditCostumerSearchForm.FirstName = txt_changeCustomerFirstName.Text;
         }
         private void btn_saveEditedCustomerToDatabase_Click(object sender, EventArgs e)
         {
             UpdateCostumer();
 
-            this.Close();
+            MessageBox.Show("Er du sikker på at du vil gemme ændringerne?");
+            //this.Close();
         }
     }
 }
