@@ -37,13 +37,12 @@ namespace ButiksSystem.Services
 
         public static void PrintAllProducts() 
         {
-
             List<Product> products = ProductDatabaseSQL.GetAllProducts();
             List<string> writeLines = products.Select(x => x.ToString()).ToList();
-            File.WriteAllLines("C:\\Pigegruppen - Synspunkt\\NyPigegruppen - synspunkts\\TheCodeCrusaders\\PigegruppenProjektSynsPunkt\\PigegruppenProjektSynsPunkt.sln\\printallproducts.txt", writeLines);
-        
+            File.WriteAllLines(@"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
+
         }
 
-        
+
     }
 }
