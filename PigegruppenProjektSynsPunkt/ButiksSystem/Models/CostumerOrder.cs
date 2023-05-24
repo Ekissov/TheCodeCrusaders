@@ -17,7 +17,7 @@ namespace ButiksSystem.Models
         public int CostumerID { get; set; }
         public string CostumerName { get; set; }
 
-        public CostumerOrder(int orderID, int employeeID, string orderLineID, DateTime orderDate, decimal totalPrice, DateTime deliveryDate, int costumerID, string costumerName)
+        public CostumerOrder(int costumerID, string costumerName, int orderID, int employeeID, string orderLineID, DateTime deliveryDate, DateTime orderDate, decimal totalPrice)
         {
             OrderID = orderID;
             EmployeeID = employeeID;
