@@ -7,6 +7,7 @@ using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace ButiksSystem.Services
 {
@@ -17,9 +18,16 @@ namespace ButiksSystem.Services
         {
             var listOfCostumerOrders = DummyDataSales.CreateDummyDataSales();
 
-            var ordersWithinTimePeriod =listOfCostumerOrders.Where(x => x. OrderDate >= startdate && x.OrderDate <= endDate).ToList();
-
-            return ordersWithinTimePeriod;
+            if (startdate <= endDate)
+            {
+                var ordersWithinTimePeriod = listOfCostumerOrders.Where(x => x.OrderDate >= startdate && x.OrderDate <= endDate).ToList();
+                return ordersWithinTimePeriod;
+            }
+            else
+            {
+                return listOfCostumerOrders.Where(x => x.OrderDate == startdate).ToList();
+            }
+            
         }
 
         public void CreateSalesFile(List<CostumerOrder> listOfCostumerOrders, DateTime startDate, DateTime endDate)
@@ -30,7 +38,7 @@ namespace ButiksSystem.Services
 
             using (StreamWriter writer = new StreamWriter(FilePath))
             {
-                writer.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate + "      Til Dato: " + endDate);
+                writer.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate.Date + "      Til Dato: " + endDate.Date);
                 string salesfileHeadigns = "Kundenummer      Kundenavn        Dato                          Køb";
                 writer.WriteLine(salesfileHeadigns);
 
@@ -47,7 +55,7 @@ namespace ButiksSystem.Services
 
         }
 
-        public void CreateSalesFileDataGridview(DataGridView dataGridView)
+        public void CreateSalesFileDataGridview(DataGridView dataGridView, DateTime startDate, DateTime endDate)
         {
             {
                 //This line of code creates a text file for the data export.
@@ -55,11 +63,16 @@ namespace ButiksSystem.Services
                System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt");
                 try
                 {
+                    file.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate.Date + "      Til Dato: " + endDate.Date);
+                    string salesfileHeadigns = "Kundenummer      Kundenavn        Dato                          Køb";
+                    file.WriteLine(salesfileHeadigns);
+
                     string sLine = "";
+                    
+                    //Tests if there is any data to print to file.
                     if (dataGridView.RowCount == 0 || dataGridView.ColumnCount == 0)
                     {
                         MessageBox.Show("Der er ikke nogle data i Datagridview, Intet overføres til fil", "Fejlmeddelses", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                     }
                     else
                     {
@@ -73,14 +86,11 @@ namespace ButiksSystem.Services
                                 sLine = sLine + dataGridView.Rows[r].Cells[c].Value;
                                 if (c != dataGridView.Columns.Count - 1)
                                 {
-                                    //A comma is added as a text delimiter in order
-                                    //to separate each field in the text file.
-                                    //You can choose another character as a delimiter.
+                                
                                     sLine = sLine + "            ";
                                 }
-
+                               
                             }
-                            //The exported text is written to the text file, one line at a time.
                             file.WriteLine(sLine);
                             sLine = "";
                         }

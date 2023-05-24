@@ -32,10 +32,10 @@ namespace ButiksSystem.Controllers
             salestatisticServices.CreateSalesFile(listOfCostumerOrders, startDate, endDate);
         }
 
-        public void CreateSalesFileDataGridview(DataGridView dataGridView)
+        public void CreateSalesFileDataGridview(DataGridView dataGridView, DateTime startDate, DateTime endDate)
         {
             SalestatisticServices salestatisticServices = new SalestatisticServices();
-            salestatisticServices.CreateSalesFileDataGridview(dataGridView);
+            salestatisticServices.CreateSalesFileDataGridview(dataGridView, startDate, endDate);
         }
     }
 }
