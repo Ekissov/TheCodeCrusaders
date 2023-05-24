@@ -51,7 +51,8 @@ namespace ButiksSystem.Services
         {
             {
                 //This line of code creates a text file for the data export.
-                System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt");
+                System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Sanne\Desktop\EKSAMENSPROJEKT\Code Crusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt");
+               // System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt");
                 try
                 {
                     string sLine = "";

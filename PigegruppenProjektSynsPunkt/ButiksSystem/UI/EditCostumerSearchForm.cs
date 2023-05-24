@@ -28,7 +28,7 @@ namespace ButiksSystem.UI
         private void UpdateCostumer()
         {
             //Insert Logic
-            EditCostumerSearchForm.FirstName = txt_changeCustomerFirstName.Text;
+           // EditCostumerSearchForm.FirstName = txt_changeCustomerFirstName.Text;
         }
         private void btn_saveEditedCustomerToDatabase_Click(object sender, EventArgs e)
         {
