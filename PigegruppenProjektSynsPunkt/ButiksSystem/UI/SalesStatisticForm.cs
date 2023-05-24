@@ -45,18 +45,7 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         public void dtp_salesStatisticsStartDate_ValueChanged(object sender, EventArgs e)
         {
-            /*DateTimePicker dtp = (DateTimePicker)sender;
-
-            if (dtp.Value == dtp.MinDate)
-            {
-                //StartDate = DateTime.Now;
-                MessageBox.Show("Der er ikke valgt en start dato, prøv igen", "Fejlmeddelelse", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                StartDate = dtp.Value.Date;
-            }*/
-            StartDate = dtp_salesStatisticsEndDate.Value.Date;
+            StartDate = dtp_salesStatisticsStartDate.Value.Date;
         }
 
         /// <summary>
@@ -66,17 +55,6 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         public void dtp_salesStatisticsEndDate_ValueChanged(object sender, EventArgs e)
         {
-           /* DateTimePicker dtp = (DateTimePicker)sender;
-
-            if (dtp.Value == dtp.MinDate)
-            {
-                //EndDate = DateTime.Today;
-                MessageBox.Show("Der er ikke valgt en slut dato, prøv igen","Fejlmeddelelse", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                EndDate = dtp.Value.Date;
-            }*/
             EndDate = dtp_salesStatisticsEndDate.Value.Date;
         }
 
@@ -103,10 +81,10 @@ namespace ButiksSystem.UI
         {
             UIController uiController = new UIController();
 
-            uiController.CreateSalesFileDataGridview(dgv_showSalesStatisticsInDatagrid, StartDate, EndDate);
-
-
-            //uiController.CreateSalesFile(ListOfCostumerOrders, StartDate, EndDate);
+           // uiController.CreateSalesFileDataGridview(dgv_showSalesStatisticsInDatagrid, StartDate, EndDate);
+            uiController.CreateSalesFile(ListOfCostumerOrders, StartDate, EndDate);
+           
+            
             this.Close();
         }
 
@@ -114,5 +92,7 @@ namespace ButiksSystem.UI
         {
 
         }
+
+        
     }
 }

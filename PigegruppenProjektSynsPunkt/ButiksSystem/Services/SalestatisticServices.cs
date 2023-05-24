@@ -39,7 +39,7 @@ namespace ButiksSystem.Services
             using (StreamWriter writer = new StreamWriter(FilePath))
             {
                 writer.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate.Date + "      Til Dato: " + endDate.Date);
-                string salesfileHeadigns = "Kundenummer      Kundenavn        Dato                          Køb";
+                string salesfileHeadigns = "Kundenummer      Kundenavn             Dato                          Køb";
                 writer.WriteLine(salesfileHeadigns);
 
 
@@ -97,6 +97,7 @@ namespace ButiksSystem.Services
                         file.Close();
                         MessageBox.Show("Data overført til fil", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }   
+
                 }
                 catch (Exception err)
                 { 
