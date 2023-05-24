@@ -32,7 +32,7 @@ namespace ButiksSystem.Services
         {
 
             CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
-            CostumerDatabaseSQL.UpdateCustomer(costumer);
+            costumerDatabaseSQL.UpdateCustomer(costumer);
         }
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace ButiksSystem.Services
             //Insert businesslogic
             //Forsøgt at tilføje denne, samt ændre i CostumerDatabaseSQL delete metoden
             CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
-            CostumerDatabaseSQL.DeleteCustomer(costumer);
+            costumerDatabaseSQL.DeleteCustomer(costumer);
         }
 
     }

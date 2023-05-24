@@ -55,6 +55,9 @@ namespace ButiksSystem.UI
             this.Close();
         }
 
+        private void dgv_showSalesStatisticsInDatagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }
