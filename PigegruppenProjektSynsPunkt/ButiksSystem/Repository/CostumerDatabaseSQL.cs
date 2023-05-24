@@ -13,6 +13,10 @@ namespace ButiksSystem.Repository
         private static SqlConnection connection = new SqlConnection("Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9");
 
         //C
+        /// <summary>
+        /// Recieves costumer object from Services and creates a new costumer in the database.
+        /// </summary>
+        /// <param name="costumer"></param>
         public void CreateCustomer(Models.Costumer costumer)
         {
 

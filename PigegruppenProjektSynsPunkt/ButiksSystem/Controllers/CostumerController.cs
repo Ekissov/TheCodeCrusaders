@@ -21,9 +21,13 @@ namespace ButiksSystem.Controllers
             return result;
         }
 
-        public void CreateCostumer(Models.Costumer costumer/*string firstName, string lastName, string phoneNumber, string address, int postalCode, string city, string email*/)
-        {
-            //Models.Costumer costumer = new Models.Costumer(firstName, lastName, phoneNumber, address, postalCode, city, email);
+        /// <summary>
+        /// Recieves a costumer object from CreateCostumerUI
+        /// Instantiate new Services.CostumerService and calls CreateCostumer
+        /// </summary>
+        /// <param name="costumer"></param>
+        public void CreateCostumer(Costumer costumer)
+        {         
             Services.CostumerServices costumerServices = new Services.CostumerServices();
             costumerServices.CreateCostumer(costumer);
         }
