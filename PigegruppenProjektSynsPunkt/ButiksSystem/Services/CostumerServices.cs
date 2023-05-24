@@ -17,9 +17,9 @@ namespace ButiksSystem.Services
         /// <param name="costumer"></param>
         public void CreateCostumer(Costumer costumer) 
         { 
-            Models.Costumer costumer1 = new Costumer(costumer.FirstName, costumer.LastName, costumer.PhoneNumber, costumer.Email, costumer.PostalCode, costumer.City, costumer.Address);
+            //Costumer costumer1 = new Costumer(costumer.FirstName, costumer.LastName, costumer.PhoneNumber, costumer.Email, costumer.PostalCode, costumer.City, costumer.Address);
             CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
-            CostumerDatabaseSQL.CreateCustomer(costumer1);
+            costumerDatabaseSQL.CreateCustomer(costumer);
         }
         /// <summary>
         /// Method to update or change a costumer and then save the new information in the database
