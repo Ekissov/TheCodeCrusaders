@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace ButiksSystem.Controllers
 {
-    public ffgrg
     public class CostumerController
     {
         public void UpdateCostumer(Costumer costumer)
