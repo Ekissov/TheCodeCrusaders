@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_showProductInfo = new System.Windows.Forms.DataGridView();
             this.btn_printAllProductsToTxtfile = new System.Windows.Forms.Button();
-            this.btn_showAllProducts = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_showProductInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,24 +62,13 @@
             this.btn_printAllProductsToTxtfile.TabIndex = 38;
             this.btn_printAllProductsToTxtfile.Text = "Print Alle Varer til txtfil.";
             this.btn_printAllProductsToTxtfile.UseVisualStyleBackColor = true;
-            this.btn_printAllProductsToTxtfile.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_showAllProducts
-            // 
-            this.btn_showAllProducts.Location = new System.Drawing.Point(486, 523);
-            this.btn_showAllProducts.Name = "btn_showAllProducts";
-            this.btn_showAllProducts.Size = new System.Drawing.Size(194, 50);
-            this.btn_showAllProducts.TabIndex = 39;
-            this.btn_showAllProducts.Text = "Vis alle varer";
-            this.btn_showAllProducts.UseVisualStyleBackColor = true;
-            this.btn_showAllProducts.Click += new System.EventHandler(this.btn_showAllProducts_Click);
+            this.btn_printAllProductsToTxtfile.Click += new System.EventHandler(this.btn_printAllProductsToTxtfile_Click);
             // 
             // ShowAllProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(972, 585);
-            this.Controls.Add(this.btn_showAllProducts);
             this.Controls.Add(this.btn_printAllProductsToTxtfile);
             this.Controls.Add(this.dgv_showProductInfo);
             this.Controls.Add(this.label1);
@@ -97,6 +85,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv_showProductInfo;
         private System.Windows.Forms.Button btn_printAllProductsToTxtfile;
-        private System.Windows.Forms.Button btn_showAllProducts;
     }
 }

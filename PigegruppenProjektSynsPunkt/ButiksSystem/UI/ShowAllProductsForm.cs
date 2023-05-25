@@ -15,31 +15,29 @@ namespace ButiksSystem.UI
 {
     public partial class ShowAllProductsForm : Form
     {
+
         public ShowAllProductsForm()
         {
             InitializeComponent();
         }
 
-        string lindaFilePath = @"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt";
-        private void button1_Click(object sender, EventArgs e)
+    
+        private void ShowAllProductsForm_Load(object sender, EventArgs e)
         {
 
-            //ProductController.PrintAllProducts();
+            ProductController productController = new ProductController();
+            List<Product> products = productController.GetAllProducts();
+            dgv_showProductInfo.DataSource = products;
+
+        }
+
+        private void btn_printAllProductsToTxtfile_Click(object sender, EventArgs e)
+        {
+            string lindaFilePath = @"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt";
 
             ProductServices productServices = new ProductServices();
             productServices.PrintDataGridViewToFile(dgv_showProductInfo, lindaFilePath);
 
-        }
-
-        private void ShowAllProductsForm_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void btn_showAllProducts_Click(object sender, EventArgs e)
-        {
-            ProductController productController = new ProductController();
-            List<Product> products = productController.GetAllProducts();
-            dgv_showProductInfo.DataSource = products;
         }
     }
 }
