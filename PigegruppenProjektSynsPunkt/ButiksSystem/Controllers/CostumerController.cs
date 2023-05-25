@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace ButiksSystem.Controllers
 {
-    public hej
     public class CostumerController
     {
         public void UpdateCostumer(Costumer costumer)
