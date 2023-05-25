@@ -65,14 +65,16 @@ namespace ButiksSystem.Services
 
                     decimal sumOfPrices = listOfCostumerOrders.Sum(x => x.TotalPrice);
                     writer.WriteLine("                                                 I alt kr.         " + sumOfPrices);
+
+                    MessageBox.Show("Alle kundeordre i tabellen er overført til fil, " +
+                        "da der ikke er indtastet start og slut dato", "Information", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message, "Der er sket en fejl, data kunne ikke overføres til fil", MessageBoxButtons.OK, MessageBoxIcon.Error);                
             }
-
-
         }
 
         public static void CreateSalesFileDataGridview(DataGridView dataGridView, DateTime startDate, DateTime endDate)
@@ -82,9 +84,9 @@ namespace ButiksSystem.Services
                System.IO.StreamWriter file = new StreamWriter(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\AlleSalg.txt");
                 try
                 {
-                    //file.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate.Date + "      Til Dato: " + endDate.Date);
-                    //string salesfileHeadigns = "Kundenummer   Kundenavn                       Dato                           Køb";
-                    //file.WriteLine(salesfileHeadigns);
+                    file.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate.Date + "      Til Dato: " + endDate.Date);
+                    string salesfileHeadigns = "Kundenummer   Kundenavn                       Dato                           Køb";
+                    file.WriteLine(salesfileHeadigns);
 
                     string sLine = "";
                     
@@ -108,9 +110,6 @@ namespace ButiksSystem.Services
                             sLine = "";
                         }
                         file.Close();
-                        MessageBox.Show("Alle kundeordre i tabellen er overført til fil, " +
-                                        "da der ikke er indtastet start og slut dato", "Information", 
-                                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }   
                 }
                 catch (Exception err)
