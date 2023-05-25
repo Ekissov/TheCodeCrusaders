@@ -45,7 +45,7 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         public void dtp_salesStatisticsStartDate_ValueChanged(object sender, EventArgs e)
         {
-            StartDate = dtp_salesStatisticsStartDate.Value.Date;
+            StartDate = dtp_salesStatisticsStartDate.Value;
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         public void dtp_salesStatisticsEndDate_ValueChanged(object sender, EventArgs e)
         {
-            EndDate = dtp_salesStatisticsEndDate.Value.Date;
+            EndDate = dtp_salesStatisticsEndDate.Value;
         }
 
         /// <summary>
