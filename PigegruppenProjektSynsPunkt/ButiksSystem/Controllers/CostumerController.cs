@@ -11,8 +11,6 @@ namespace ButiksSystem.Controllers
     public ffgrg
     public class CostumerController
     {
-
-        public CostumerController() { }
         public void UpdateCostumer(Costumer costumer)
         {
             Services.CostumerServices costumerServices = new Services.CostumerServices();
