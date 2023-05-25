@@ -43,14 +43,15 @@ namespace ButiksSystem.Services
                     writer.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate.Date + "      Til Dato: " + endDate.Date);
                     string salesfileHeadigns = "Kundenummer   Kundenavn                       Dato                           Køb"; ;
                     writer.WriteLine(salesfileHeadigns);
+
                     if (listOfCostumerOrders == null)
                     {
 
                         SalestatisticServices.CreateSalesFileDataGridview(dataGridView, startDate, endDate);
                         
-                        MessageBox.Show(
-                            "Der er ingen kundeordre at printe til filen, husk at søg i et tidsinterval",
-                            "Fejlmeddelse", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //MessageBox.Show(
+                           // "Der er ingen kundeordre at printe til filen, husk at søg i et tidsinterval",
+                            //"Fejlmeddelse", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                         return;
                     }
@@ -77,13 +78,13 @@ namespace ButiksSystem.Services
         public static void CreateSalesFileDataGridview(DataGridView dataGridView, DateTime startDate, DateTime endDate)
         {
             {
-               // System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Sanne\Desktop\EKSAMENSPROJEKT\Code Crusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt");
-               System.IO.StreamWriter file = new StreamWriter(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt");
+                //System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Sanne\Desktop\EKSAMENSPROJEKT\Code Crusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt");
+               System.IO.StreamWriter file = new StreamWriter(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\AlleSalg.txt");
                 try
                 {
-                    file.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate.Date + "      Til Dato: " + endDate.Date);
-                    string salesfileHeadigns = "Kundenummer   Kundenavn                       Dato                           Køb";
-                    file.WriteLine(salesfileHeadigns);
+                    //file.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate.Date + "      Til Dato: " + endDate.Date);
+                    //string salesfileHeadigns = "Kundenummer   Kundenavn                       Dato                           Køb";
+                    //file.WriteLine(salesfileHeadigns);
 
                     string sLine = "";
                     
@@ -107,7 +108,9 @@ namespace ButiksSystem.Services
                             sLine = "";
                         }
                         file.Close();
-                        MessageBox.Show("Data overført til fil", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Alle kundeordre i tabellen er overført til fil, " +
+                                        "da der ikke er indtastet start og slut dato", "Information", 
+                                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }   
                 }
                 catch (Exception err)

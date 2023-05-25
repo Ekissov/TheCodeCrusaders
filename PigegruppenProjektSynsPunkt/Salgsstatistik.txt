@@ -1,2 +1,14 @@
-SALGSSTATISTIK 2023              Fra dato: 01-01-0001 00:00:00      Til Dato: 01-01-0001 00:00:00
+SALGSSTATISTIK 2023              Fra dato: 01-02-2023 00:00:00      Til Dato: 01-05-2023 00:00:00
 Kundenummer   Kundenavn                       Dato                           Køb
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+                                                 I alt kr.         63820
