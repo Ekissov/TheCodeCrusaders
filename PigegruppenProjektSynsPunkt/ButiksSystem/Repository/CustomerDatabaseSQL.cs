@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ButiksSystem.Repository
 {
-    internal class CostumerDatabaseSQL
+    internal class CustomerDatabaseSQL
     {
         //Vi giver systemet den connection string den skal bruge for at oprette forbindelse til databasen
         private static SqlConnection connection = new SqlConnection("Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9");
