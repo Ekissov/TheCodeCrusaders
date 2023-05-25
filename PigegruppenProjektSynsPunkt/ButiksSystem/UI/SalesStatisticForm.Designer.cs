@@ -61,7 +61,6 @@
             this.dgv_showSalesStatisticsInDatagrid.RowHeadersWidth = 51;
             this.dgv_showSalesStatisticsInDatagrid.Size = new System.Drawing.Size(604, 242);
             this.dgv_showSalesStatisticsInDatagrid.TabIndex = 1;
-            this.dgv_showSalesStatisticsInDatagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_showSalesStatisticsInDatagrid_CellContentClick);
             // 
             // label1
             // 

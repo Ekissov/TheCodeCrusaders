@@ -12,14 +12,9 @@ namespace ButiksSystem.Controllers
 {
     internal class UIController
     {
+        //This class only has methods that calls the methods of SalesStatisticServices,
+        //and sends the information to SalesStatisticForm in the UI
 
-        /// <summary>
-        /// This method calls Services for the SalesStatistic UI, 
-        /// So that it can get all costumerOrders within a specific time period
-        /// </summary>
-        /// <param name="StartDate"></param>
-        /// <param name="EndDate"></param>
-        /// <returns></returns>
         public List<CostumerOrder> GetCostumerOrdersWithinGivenTime(DateTime StartDate, DateTime EndDate)
         {
             SalestatisticServices salestatisticServices = new SalestatisticServices();
@@ -31,7 +26,6 @@ namespace ButiksSystem.Controllers
             SalestatisticServices salestatisticServices = new SalestatisticServices();
             salestatisticServices.CreateSalesFile(listOfCostumerOrders, startDate, endDate, dataGridView);
         }
-
        
     }
 }

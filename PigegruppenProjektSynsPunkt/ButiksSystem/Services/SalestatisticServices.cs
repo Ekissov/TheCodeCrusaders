@@ -24,17 +24,20 @@ namespace ButiksSystem.Services
         {
             var listOfCostumerOrders = DummyDataSales.CreateDummyDataSales();
 
-            if (startdate <= endDate)
+            if (startdate == default && endDate == default)            
             {
-                var ordersWithinTimePeriod = listOfCostumerOrders.Where(x => x.OrderDate >= startdate && x.OrderDate <= endDate).ToList();
-                return ordersWithinTimePeriod.OrderBy(x => x.OrderDate).ToList();
+                return listOfCostumerOrders.Where(x => x.OrderDate == DateTime.Today).ToList();
             }
             else
             {
-                return listOfCostumerOrders.Where(x => x.OrderDate == startdate).ToList();
+                var ordersWithinTimePeriod = listOfCostumerOrders.Where(x => x.OrderDate >= startdate && x.OrderDate <= endDate).ToList();
+                return ordersWithinTimePeriod.OrderBy(x => x.OrderDate).ToList();
+            
+               
             }
             
         }
+
         /// <summary>
         /// Takes all costumerorders within a given time, start- endDate, into a list.
         /// If not start or endDate is choosen it will print all costumer orders in the datagridview
