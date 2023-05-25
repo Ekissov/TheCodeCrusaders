@@ -15,32 +15,39 @@ namespace ButiksSystem.UI
 {
     public partial class CreateCostumerForm : Form
     {
-        public Models.Costumer Costumer { get; set; }
 
         public CreateCostumerForm()
         {
             InitializeComponent();
         }
 
-        public void btn_createCustomer_Click(object sender, EventArgs e)
+        /// <summary>
+        /// When the button is clicked, it saves the information in a Costumer object.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_createCustomer_Click_1(object sender, EventArgs e)
         {
-            //controller.opretkunde
-           // Costumer = new Models.Costumer(Costumer.FirstName, Costumer.LastName, Costumer.PhoneNumber, Costumer.Adress, Costumer.PostalCode, Costumer.City, Costumer.Email);
+            try
+            {
+               Costumer costumer = new Models.Costumer(
+               txt_createCustomerFirstName.Text,
+               txt_createCustomerLastName.Text,
+               txt_createCutomerPhoneNumber.Text,
+               txt_createCustomerEmail.Text,
+               int.Parse(txt_createCustomerPostalCode.Text),
+               txt_createCustomerCity.Text,
+               txt_createCustomerAddress.Text);
 
-            Costumer.FirstName = txt_createCustomerFirstName.Text;
-            Costumer.LastName = txt_createCustomerLastName.Text;
-            Costumer.PhoneNumber = txt_createCutomerPhoneNumber.Text;
-            Costumer.Email = txt_createCustomerEmail.Text;
-            Costumer.Adress = txt_createCustomerAddress.Text;
-            Costumer.PostalCode = int.Parse(txt_createCustomerPostalCode.Text);
-            Costumer.City = txt_createCustomerCity.Text;
-            
-            Costumer = new Models.Costumer(Costumer.FirstName, Costumer.LastName, Costumer.PhoneNumber, Costumer.Adress, Costumer.PostalCode, Costumer.City, Costumer.Email);
-            
-            this.Close();
+               Controllers.CostumerController costumerController = new Controllers.CostumerController();
+               costumerController.CreateCostumer(costumer);
+
+                this.Close();
+            }
+            catch 
+            {
+                MessageBox.Show("Postnummeret er ikke skrevet korrekt, det kan kun bestå af tal, prøv igen", "Fejlmeddelelse", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
-
-
     }
 }

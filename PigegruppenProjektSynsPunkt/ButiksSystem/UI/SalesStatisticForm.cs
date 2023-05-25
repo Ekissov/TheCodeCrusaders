@@ -24,6 +24,7 @@ namespace ButiksSystem.UI
         public SalesStatisticForm()
         {
             InitializeComponent();
+            
         }
 
         /// <summary>
@@ -34,7 +35,9 @@ namespace ButiksSystem.UI
         private void SalesStatistic_Load(object sender, EventArgs e)
         {
             dgv_showSalesStatisticsInDatagrid.DataSource = Database.DummyDataSales.CreateDummyDataSales();
+           
         }
+
         /// <summary>
         /// Sends the given enddate to be stored in the property StartDate.
         /// </summary>
@@ -42,8 +45,9 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         public void dtp_salesStatisticsStartDate_ValueChanged(object sender, EventArgs e)
         {
-            StartDate = dtp_salesStatisticsStartDate.Value;
+            StartDate = dtp_salesStatisticsStartDate.Value.Date;
         }
+
         /// <summary>
         /// Sends the given enddate to be stored in the property EndDate.
         /// </summary>
@@ -51,8 +55,15 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         public void dtp_salesStatisticsEndDate_ValueChanged(object sender, EventArgs e)
         {
-           EndDate = dtp_salesStatisticsEndDate.Value;
+            EndDate = dtp_salesStatisticsEndDate.Value.Date;
         }
+
+        /// <summary>
+        /// Displays new list of Orders in datagridview that are within the two given dates. 
+        /// Calls the controller and the method GetCostumerOrdersWithinGivenTime
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {         
             UIController uIController = new UIController();
@@ -60,14 +71,20 @@ namespace ButiksSystem.UI
             dgv_showSalesStatisticsInDatagrid.DataSource = ListOfCostumerOrders;
         }
 
+        /// <summary>
+        /// Prints the datagridview list of sales out in a textfile. 
+        /// Calls method from UIControlled.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_salesStatisticsPrintToTxtFile_Click(object sender, EventArgs e)
         {
             UIController uiController = new UIController();
 
-            uiController.CreateSalesFileDataGridview(dgv_showSalesStatisticsInDatagrid);
-
-
-            //uiController.CreateSalesFile(ListOfCostumerOrders, StartDate, EndDate);
+           // uiController.CreateSalesFileDataGridview(dgv_showSalesStatisticsInDatagrid, StartDate, EndDate);
+            uiController.CreateSalesFile(ListOfCostumerOrders, StartDate, EndDate);
+           
+            
             this.Close();
         }
 
@@ -75,5 +92,7 @@ namespace ButiksSystem.UI
         {
 
         }
+
+        
     }
 }

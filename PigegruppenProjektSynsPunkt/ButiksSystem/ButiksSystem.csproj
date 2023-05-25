@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CostumerController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\UIcontroller.cs" />
     <Compile Include="Database\DummyDataSales.cs" />

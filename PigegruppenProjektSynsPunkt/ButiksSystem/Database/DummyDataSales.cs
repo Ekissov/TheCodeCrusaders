@@ -15,7 +15,7 @@ namespace ButiksSystem.Database
             List<CostumerOrder> listOfSales = new List<CostumerOrder>();
 
             var orderDate = DateTime.Now.Date;
-            var deliveryDate = new DateTime(2023, 05, 29);
+            var deliveryDate = new DateTime(2023, 05, 24);
             Costumer costumer = new Costumer("Eigil", "Olsen", "+45 12 34 56 78", "Boulevarden 25", 7100, "Vejle", "Hej22@gmail.com");
             CostumerOrder sale1 = new CostumerOrder(01, costumer.FirstName + " " + costumer.LastName, 1, 12, "1", deliveryDate, orderDate, 4534);
             
@@ -123,7 +123,7 @@ namespace ButiksSystem.Database
             listOfSales.Add(sale17);
             listOfSales.Add(sale18);
           
-            return listOfSales;
+            return listOfSales.OrderByDescending(x => x.OrderDate).ToList();
         }
     }
 }

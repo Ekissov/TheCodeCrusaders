@@ -1,4 +1,5 @@
-﻿using ButiksSystem.UI;
+﻿using ButiksSystem.Models;
+using ButiksSystem.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -62,7 +63,7 @@ namespace ButiksSystem
 
         private void seBookingerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           ISeeAllBookingsForm seeAllBookingsForm = new ISeeAllBookingsForm();
+            ISeeAllBookingsForm seeAllBookingsForm = new ISeeAllBookingsForm();
             seeAllBookingsForm.ShowDialog();
         }
 
