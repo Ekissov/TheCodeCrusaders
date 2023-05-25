@@ -13,23 +13,39 @@ namespace ButiksSystem.Services
 {
     public class SalestatisticServices
     {
-
+        /// <summary>
+        /// Creates a list of DummyData within specific timeinterval, that contains costumerOrders.
+        /// Sorts the list by orderdate.
+        /// </summary>
+        /// <param name="startdate"></param>
+        /// <param name="endDate"></param>
+        /// <returns></returns>
         public List<Models.CostumerOrder> GetCostumerOrdersWithinGivenTime(DateTime startdate, DateTime endDate)
         {
             var listOfCostumerOrders = DummyDataSales.CreateDummyDataSales();
 
-            if (startdate <= endDate)
+            if (startdate == default && endDate == default)            
             {
-                var ordersWithinTimePeriod = listOfCostumerOrders.Where(x => x.OrderDate >= startdate && x.OrderDate <= endDate).ToList();
-                return ordersWithinTimePeriod.OrderBy(x => x.OrderDate).ToList();
+                return listOfCostumerOrders.Where(x => x.OrderDate == DateTime.Today).ToList();
             }
             else
             {
-                return listOfCostumerOrders.Where(x => x.OrderDate == startdate).ToList();
+                var ordersWithinTimePeriod = listOfCostumerOrders.Where(x => x.OrderDate >= startdate && x.OrderDate <= endDate).ToList();
+                return ordersWithinTimePeriod.OrderBy(x => x.OrderDate).ToList();
+            
+               
             }
             
         }
 
+        /// <summary>
+        /// Takes all costumerorders within a given time, start- endDate, into a list.
+        /// If not start or endDate is choosen it will print all costumer orders in the datagridview
+        /// </summary>
+        /// <param name="listOfCostumerOrders"></param>
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
+        /// <param name="dataGridView"></param>
         public void CreateSalesFile(List<CostumerOrder> listOfCostumerOrders, DateTime startDate, DateTime endDate, DataGridView dataGridView)
         {
             try
@@ -41,34 +57,30 @@ namespace ButiksSystem.Services
                 using (StreamWriter writer = new StreamWriter(FilePath))
                 {
                     writer.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate.Date + "      Til Dato: " + endDate.Date);
-                    string salesfileHeadigns = "Kundenummer   Kundenavn                       Dato                           Køb"; ;
+                    string salesfileHeadigns = "\nKundenummer   Kundenavn                       Dato                           Køb\n"; ;
                     writer.WriteLine(salesfileHeadigns);
 
                     if (listOfCostumerOrders == null)
                     {
 
                         SalestatisticServices.CreateSalesFileDataGridview(dataGridView, startDate, endDate);
-                        
-                        //MessageBox.Show(
-                           // "Der er ingen kundeordre at printe til filen, husk at søg i et tidsinterval",
-                            //"Fejlmeddelse", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        MessageBox.Show("Alle kundeordre i tabellen er overført til fil, " +
+                            "da der ikke er indtastet start og slut dato", "Information",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         return;
                     }
                     foreach (var item in listOfCostumerOrders)
                     {
-                        writer.WriteLine(costumerOrders.ToString());
-                            //string.Format(
-                            //"{0}        {1}       {2}          {3}",
-                            //item.CostumerID, item.CostumerName, item.OrderDate.Date, item.TotalPrice.ToString()));
+                        writer.WriteLine(string.Format("{0}            {1}            {2}            {3}",
+                            item.CostumerID, item.CostumerName, item.OrderDate.Date, item.TotalPrice.ToString()));
                     }
 
                     decimal sumOfPrices = listOfCostumerOrders.Sum(x => x.TotalPrice);
-                    writer.WriteLine("                                                 I alt kr.         " + sumOfPrices);
-
-                    MessageBox.Show("Alle kundeordre i tabellen er overført til fil, " +
-                        "da der ikke er indtastet start og slut dato", "Information", 
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    writer.WriteLine("\n                                                           I alt kr.         " + sumOfPrices);
+                    MessageBox.Show("Kundeordre er overført til fil", "Information",
+                      MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception err)
@@ -77,11 +89,18 @@ namespace ButiksSystem.Services
             }
         }
 
+        /// <summary>
+        /// Prints all costumerOrders visible in datagridview in a file.
+        /// </summary>
+        /// <param name="dataGridView"></param>
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
         public static void CreateSalesFileDataGridview(DataGridView dataGridView, DateTime startDate, DateTime endDate)
         {
             {
-                //System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Sanne\Desktop\EKSAMENSPROJEKT\Code Crusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt");
+               //System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Sanne\Desktop\EKSAMENSPROJEKT\Code Crusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt");
                System.IO.StreamWriter file = new StreamWriter(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\AlleSalg.txt");
+                
                 try
                 {
                     file.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate.Date + "      Til Dato: " + endDate.Date);
