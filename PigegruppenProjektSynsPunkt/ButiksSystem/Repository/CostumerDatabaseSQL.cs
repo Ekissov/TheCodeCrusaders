@@ -38,7 +38,7 @@ namespace ButiksSystem.Repository
 
 
         //R
-        public static List<string> ReadCustomer()
+        public List<string> ReadCustomer()
         {
             List<string> result = new List<string>();
             string query = "SELECT * FROM Customer";
