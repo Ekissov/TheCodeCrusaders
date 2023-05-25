@@ -10,6 +10,8 @@ namespace ButiksSystem.Controllers
 {
     public class CostumerController
     {
+
+        public CostumerController() { }
         public void UpdateCostumer(Costumer costumer)
         {
             Services.CostumerServices costumerServices = new Services.CostumerServices();
