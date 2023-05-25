@@ -17,6 +17,7 @@ namespace ButiksSystem.UI
         public Models.Product Product { get; set; }
         public string ProductIDInput { get; set; }
         public EditProductSearchForm()
+
         {
             InitializeComponent();
         }
@@ -24,7 +25,11 @@ namespace ButiksSystem.UI
         private void EditProductSearchForm_Load(object sender, EventArgs e)
         {
             ProductController productController = new ProductController();
-            dgv_showProductInfo.DataSource = productController.ReadAllProducts();
+            List<Product> products = productController.GetAllProducts();
+            dgv_showProductInfo.DataSource = products; 
+
+           // ProductController productController = new ProductController();
+           // dgv_showProductInfo.DataSource = productController.GetAllProducts();
         }
 
         private void txt_searchProductIDOrName_TextChanged(object sender, EventArgs e)
@@ -44,11 +49,12 @@ namespace ButiksSystem.UI
 
         private void btn_showProductInfo_Click(object sender, EventArgs e)
         {
-            txt_showProductIDFromSearch.Text = Product.ProductID.ToString();
+
+            /*txt_showProductIDFromSearch.Text = Product.ProductID.ToString();
             txt_editProductName.Text = Product.ProductName;
             txt_editProductPricePerItem.Text = Product.ProductPrice.ToString();
             txt_editProductGroupID.Text = Product.CategoryID.ToString();
-            txt_editQuantityInStorage.Text = Product.Quantity.ToString();
+            txt_editQuantityInStorage.Text = Product.Quantity.ToString(); */
         }
 
         private void btn_deleteProductInDatabase_Click(object sender, EventArgs e)
@@ -92,7 +98,7 @@ namespace ButiksSystem.UI
 
         private void DeleteProduct()
         {
-            //Insert Logic 
+            Product.ProductID = int.Parse(txt_showProductIDFromSearch.Text);
         }
 
 

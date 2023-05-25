@@ -35,22 +35,29 @@ namespace ButiksSystem.Services
             productDatabaseSQL.DeleteProduct(product);
         }
 
-        public static void PrintAllProducts() 
+        public List<Product> GetAllProducts() 
         {
+
+            ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
+            productDatabaseSQL.GetAllProducts();
+
+            return productDatabaseSQL.GetAllProducts();
+        }
+
+        /*public static void PrintAllProducts() 
+        {
+            ProductDatabaseSQL productsDatabaseSQL = new ProductDatabaseSQL();
+       
             List<Product> products = ProductDatabaseSQL.GetAllProducts();
             List<string> writeLines = products.Select(x => x.ToString()).ToList();
-            /*foreach (Product product in products) 
-            {
-                string formattedProduct = $"Produktnavn: {product.ProductName}\n";
-                formattedProduct += $"  - Pris: {product.ProductPrice} \n";
-                formattedProduct += $"  - KategoriID: {product.CategoryID}\n";
-                formattedProduct += $"  - Lagerbeholdning: {product.Quantity}\n";
-            }*/
-
 
             //File.WriteAllLines(@"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
-            File.WriteAllLines(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt", writeLines);
-        }
+
+        }*/
+
+            //File.WriteAllLines(@"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
+            //File.WriteAllLines(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt", writeLines);
+        
 
 
     }

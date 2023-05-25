@@ -11,7 +11,7 @@ namespace ButiksSystem.Repository
     internal class ProductDatabaseSQL
     {
         //Vi giver systemet den connection string den skal bruge for at oprette forbindelse til databasen
-        private static SqlConnection connection = new SqlConnection("Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9;"); //"Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9";
+        private static SqlConnection connection = new SqlConnection("Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9"); //"Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9";
 
         //C
         public static void CreateProduct(Models.Product product)
@@ -84,7 +84,7 @@ namespace ButiksSystem.Repository
             connection.Close();
         }
 
-        public static List<Product> GetAllProducts()
+        public List<Product> GetAllProducts()
         {
             List<Product> result = new List<Product>();
             string query = "SELECT ProductID, ProductName, Price, CategoryID, Quantity FROM [Product] ORDER BY ProductName ASC";

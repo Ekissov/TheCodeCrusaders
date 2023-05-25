@@ -103,7 +103,7 @@ namespace ButiksSystem.UI
 
         private void DeleteCostumer()
         {
-
+            Costumer.CostumerID = int.Parse(txt_showCustomerIDFromSearch.Text);
         }
     }
 

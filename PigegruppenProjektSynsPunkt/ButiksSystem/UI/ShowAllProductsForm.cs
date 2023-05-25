@@ -1,4 +1,5 @@
 ﻿using ButiksSystem.Controllers;
+using ButiksSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,8 +22,19 @@ namespace ButiksSystem.UI
         private void button1_Click(object sender, EventArgs e)
         {
 
-            ProductController.PrintAllProducts();
+            //ProductController.PrintAllProducts();
 
+        }
+
+        private void ShowAllProductsForm_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void btn_showAllProducts_Click(object sender, EventArgs e)
+        {
+            ProductController productController = new ProductController();
+            List<Product> products = productController.GetAllProducts();
+            dgv_showProductInfo.DataSource = products;
         }
     }
 }
