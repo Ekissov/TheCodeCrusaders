@@ -1,4 +1,5 @@
 ﻿using ButiksSystem.Models;
+using ButiksSystem.Repository;
 using ButiksSystem.Services;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,18 @@ namespace ButiksSystem.Controllers
         {
             var result = new List<Product>();
             return result;
+        }
+
+        public void UpdateProduct(Product product) 
+        {
+            ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
+            productDatabaseSQL.UpdateProduct(product);
+        }
+
+        public void DeleteProduct(Product product)
+        {
+            ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
+            productDatabaseSQL.DeleteProduct(product);
         }
 
     }

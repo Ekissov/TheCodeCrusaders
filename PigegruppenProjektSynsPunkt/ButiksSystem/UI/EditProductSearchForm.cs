@@ -17,6 +17,7 @@ namespace ButiksSystem.UI
         public Models.Product Product { get; set; }
         public string ProductIDInput { get; set; }
         public EditProductSearchForm()
+
         {
             InitializeComponent();
         }
@@ -92,7 +93,7 @@ namespace ButiksSystem.UI
 
         private void DeleteProduct()
         {
-            //Insert Logic 
+            Product.ProductID = int.Parse(txt_showProductIDFromSearch.Text);
         }
 
 
