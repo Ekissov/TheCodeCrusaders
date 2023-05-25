@@ -41,7 +41,7 @@ namespace ButiksSystem.Repository
         public List<string> ReadCustomer()
         {
             List<string> result = new List<string>();
-            string query = "SELECT * FROM Customer";
+            string query = "SELECT * FROM [CustomerTable]";
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
             SqlDataReader reader = command.ExecuteReader(); //Åbner readeren 

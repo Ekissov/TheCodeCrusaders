@@ -29,8 +29,10 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void EditCostumerSearchForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'saanneeha_dk_db_databaseDataSet.CustomerTable' table. You can move, or remove it, as needed.
+            this.customerTableTableAdapter.Fill(this.saanneeha_dk_db_databaseDataSet.CustomerTable);
             CostumerController costumerController = new CostumerController();  //connecting to controller
-            dgv_showCustomerInfo.DataSource = costumerController.ReadAllCostumers();
+           
         }
         private void txt_searchCustomerIDOrName_TextChanged(object sender, EventArgs e)
         {

@@ -38,5 +38,10 @@ namespace ButiksSystem.Controllers
             costumerServices.DeleteCostumer(costumer);
         }
 
+        public void ReadCustomer()
+        {
+            CostumerServices costumerServices = new CostumerServices();
+            costumerServices.ReadCustomer();
+        }
     }
 }

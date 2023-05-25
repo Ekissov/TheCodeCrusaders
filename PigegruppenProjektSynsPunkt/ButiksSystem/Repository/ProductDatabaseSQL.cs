@@ -45,7 +45,7 @@ namespace ButiksSystem.Repository
                 string row = "";
                 for (int i = 0; i < reader.FieldCount; i++)
                 {
-                    row += reader[i].ToString() + " - "; // Aflæser data og laver det om til string
+                    row += reader[i] + " - "; // Aflæser data og laver det om til string
                 }
                 result.Add(row); //tilføjer data til listen
             }

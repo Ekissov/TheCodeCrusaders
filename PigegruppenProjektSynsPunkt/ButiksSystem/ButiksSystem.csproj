@@ -63,6 +63,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\CustomerDatabaseSQL.cs" />
     <Compile Include="Repository\ProductDatabaseSQL.cs" />
+    <Compile Include="Saanneeha_dk_db_databaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Saanneeha_dk_db_databaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Services\CostumerServices.cs" />
     <Compile Include="Services\ProductServices.cs" />
     <Compile Include="Services\SalestatisticServices.cs" />
@@ -186,6 +191,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Saanneeha_dk_db_databaseDataSet1.xsc">
+      <DependentUpon>Saanneeha_dk_db_databaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Saanneeha_dk_db_databaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Saanneeha_dk_db_databaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Saanneeha_dk_db_databaseDataSet1.xss">
+      <DependentUpon>Saanneeha_dk_db_databaseDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

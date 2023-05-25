@@ -46,8 +46,8 @@ namespace ButiksSystem.Services
 
         public void ReadCustomer()
         {
-            CostumerDatabaseSQL costumerDatabaseSQL= new CostumerDatabaseSQL();
-            costumerDatabaseSQL.ReadCustomer();
+            CustomerDatabaseSQL customerDatabaseSQL= new CustomerDatabaseSQL();
+            customerDatabaseSQL.ReadCustomer();
         }
 
     }
