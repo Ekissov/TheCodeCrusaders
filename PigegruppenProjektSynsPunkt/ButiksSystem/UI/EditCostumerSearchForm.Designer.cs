@@ -55,6 +55,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btn_deleteCustomerInDatabase = new System.Windows.Forms.Button();
             this.btn_OKShowCostumer = new System.Windows.Forms.Button();
+            this.btn_homePageHelp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_showCustomerInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -330,11 +331,25 @@
             this.btn_OKShowCostumer.UseVisualStyleBackColor = false;
             this.btn_OKShowCostumer.Click += new System.EventHandler(this.btn_OKShowCostumer_Click);
             // 
+            // btn_homePageHelp
+            // 
+            this.btn_homePageHelp.BackColor = System.Drawing.Color.Silver;
+            this.btn_homePageHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_homePageHelp.Location = new System.Drawing.Point(748, 20);
+            this.btn_homePageHelp.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btn_homePageHelp.Name = "btn_homePageHelp";
+            this.btn_homePageHelp.Size = new System.Drawing.Size(25, 29);
+            this.btn_homePageHelp.TabIndex = 38;
+            this.btn_homePageHelp.Tag = "";
+            this.btn_homePageHelp.Text = "?";
+            this.btn_homePageHelp.UseVisualStyleBackColor = false;
+            // 
             // EditCostumerSearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 423);
+            this.Controls.Add(this.btn_homePageHelp);
             this.Controls.Add(this.btn_OKShowCostumer);
             this.Controls.Add(this.btn_deleteCustomerInDatabase);
             this.Controls.Add(this.label11);
@@ -399,5 +414,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btn_deleteCustomerInDatabase;
         private System.Windows.Forms.Button btn_OKShowCostumer;
+        private System.Windows.Forms.Button btn_homePageHelp;
     }
 }
