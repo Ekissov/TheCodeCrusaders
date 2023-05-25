@@ -123,7 +123,7 @@ namespace ButiksSystem.Database
             listOfSales.Add(sale17);
             listOfSales.Add(sale18);
           
-            return listOfSales;
+            return listOfSales.OrderByDescending(x => x.OrderDate).ToList();
         }
     }
 }

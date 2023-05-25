@@ -21,7 +21,7 @@ namespace ButiksSystem.Services
             if (startdate <= endDate)
             {
                 var ordersWithinTimePeriod = listOfCostumerOrders.Where(x => x.OrderDate >= startdate && x.OrderDate <= endDate).ToList();
-                return ordersWithinTimePeriod;
+                return ordersWithinTimePeriod.OrderBy(x => x.OrderDate).ToList();
             }
             else
             {
