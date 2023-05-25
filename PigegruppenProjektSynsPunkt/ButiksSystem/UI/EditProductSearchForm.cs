@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -101,6 +102,11 @@ namespace ButiksSystem.UI
             Product.ProductID = int.Parse(txt_showProductIDFromSearch.Text);
         }
 
-
+        public void btn_homePageHelp_Click(object sender, EventArgs e)
+        {
+            /*string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string helpPdfFile = currentDirectory + "PDF_der_forklarer_forsiden_winform.pdf"; 
+            Process.Start(helpPdfFile);*/
+        }
     }
 }

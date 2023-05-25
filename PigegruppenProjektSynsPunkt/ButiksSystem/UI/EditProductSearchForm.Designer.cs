@@ -263,6 +263,7 @@
             this.btn_homePageHelp.Tag = "";
             this.btn_homePageHelp.Text = "?";
             this.btn_homePageHelp.UseVisualStyleBackColor = false;
+            this.btn_homePageHelp.Click += new System.EventHandler(this.btn_homePageHelp_Click);
             // 
             // EditProductSearchForm
             // 
