@@ -19,7 +19,7 @@ namespace ButiksSystem.Services
         public void CreateCostumer(Costumer costumer)
         {
                 //Costumer costumer1 = new Costumer(costumer.FirstName, costumer.LastName, costumer.PhoneNumber, costumer.Email, costumer.PostalCode, costumer.City, costumer.Address);
-                CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
+                CustomerDatabaseSQL costumerDatabaseSQL = new CustomerDatabaseSQL();
                 costumerDatabaseSQL.CreateCustomer(costumer);
 
         }
@@ -29,7 +29,7 @@ namespace ButiksSystem.Services
         /// <param name="costumer"></param>
         public void UpdateCostumer(Models.Costumer costumer)
         {
-            CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
+            CustomerDatabaseSQL costumerDatabaseSQL = new CustomerDatabaseSQL();
             costumerDatabaseSQL.UpdateCustomer(costumer);
         }
 
@@ -40,7 +40,7 @@ namespace ButiksSystem.Services
         public void DeleteCostumer(Models.Costumer costumer)
         {
             //Insert businesslogic
-            CostumerDatabaseSQL costumerDatabaseSQL = new CostumerDatabaseSQL();
+            CustomerDatabaseSQL costumerDatabaseSQL = new CustomerDatabaseSQL();
             costumerDatabaseSQL.DeleteCustomer(costumer);
         }
 

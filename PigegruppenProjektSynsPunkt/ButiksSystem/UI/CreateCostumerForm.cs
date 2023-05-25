@@ -49,5 +49,11 @@ namespace ButiksSystem.UI
                 MessageBox.Show("Postnummeret er ikke skrevet korrekt, det kan kun bestå af tal, prøv igen", "Fejlmeddelelse", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btn_homePageHelp_Click(object sender, EventArgs e)
+        {
+            string helpPageUrl = "\"C:\\Users\\Sanne\\Desktop\\EKSAMENSPROJEKT\\Code Crusaders\\TheCodeCrusaders\\PigegruppenProjektSynsPunkt\\Hjælpesider\\Hjælpeside til Opret Kunde.docx\"";
+            System.Diagnostics.Process.Start(helpPageUrl);
+        }
     }
 }

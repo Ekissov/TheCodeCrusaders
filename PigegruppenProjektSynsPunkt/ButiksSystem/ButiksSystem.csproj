@@ -61,7 +61,7 @@
     <Compile Include="Models\CostumerOrder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\CostumerDatabaseSQL.cs" />
+    <Compile Include="Repository\CustomerDatabaseSQL.cs" />
     <Compile Include="Repository\ProductDatabaseSQL.cs" />
     <Compile Include="Services\CostumerServices.cs" />
     <Compile Include="Services\ProductServices.cs" />
