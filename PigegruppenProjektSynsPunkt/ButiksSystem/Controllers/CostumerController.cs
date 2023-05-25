@@ -1,4 +1,5 @@
 ﻿using ButiksSystem.Models;
+using ButiksSystem.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace ButiksSystem.Controllers
 {
     public class CostumerController
     {
-        public void UpdateCostumer(Models.Costumer costumer)
+        public void UpdateCostumer(Costumer costumer)
         {
             Services.CostumerServices costumerServices = new Services.CostumerServices();
             costumerServices.UpdateCostumer(costumer);
@@ -27,9 +28,14 @@ namespace ButiksSystem.Controllers
         /// </summary>
         /// <param name="costumer"></param>
         public void CreateCostumer(Costumer costumer)
-        {         
+        {
             Services.CostumerServices costumerServices = new Services.CostumerServices();
             costumerServices.CreateCostumer(costumer);
+        }
+        public void DeleteCostumer(Costumer costumer)
+        {
+            Services.CostumerServices costumerServices = new Services.CostumerServices();
+            costumerServices.DeleteCostumer(costumer);
         }
 
     }
