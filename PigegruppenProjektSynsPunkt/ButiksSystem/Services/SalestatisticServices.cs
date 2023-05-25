@@ -56,7 +56,7 @@ namespace ButiksSystem.Services
 
                 using (StreamWriter writer = new StreamWriter(FilePath))
                 {
-                    writer.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate.Date + "      Til Dato: " + endDate.Date);
+                    writer.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate + "      Til Dato: " + endDate);
                     string salesfileHeadigns = "\nKundenummer   Kundenavn                       Dato                           Køb\n"; ;
                     writer.WriteLine(salesfileHeadigns);
 
