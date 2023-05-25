@@ -75,7 +75,7 @@ namespace ButiksSystem
 
         private void opretBestillingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CreateOrderForm createOrderForm = new CreateOrderForm();
+            ICreateOrderForm createOrderForm = new ICreateOrderForm();
             createOrderForm.ShowDialog();
         }
 
