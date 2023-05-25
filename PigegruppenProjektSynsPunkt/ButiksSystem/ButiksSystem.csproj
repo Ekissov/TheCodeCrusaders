@@ -78,11 +78,11 @@
     <Compile Include="UI\CreateCostumerForm.Designer.cs">
       <DependentUpon>CreateCostumerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\CreateOrderForm.cs">
+    <Compile Include="UI\ICreateOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\CreateOrderForm.Designer.cs">
-      <DependentUpon>CreateOrderForm.cs</DependentUpon>
+    <Compile Include="UI\ICreateOrderForm.Designer.cs">
+      <DependentUpon>ICreateOrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\CreateProductForm.cs">
       <SubType>Form</SubType>
@@ -150,8 +150,8 @@
     <EmbeddedResource Include="UI\CreateCostumerForm.resx">
       <DependentUpon>CreateCostumerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\CreateOrderForm.resx">
-      <DependentUpon>CreateOrderForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\ICreateOrderForm.resx">
+      <DependentUpon>ICreateOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CreateProductForm.resx">
       <DependentUpon>CreateProductForm.cs</DependentUpon>

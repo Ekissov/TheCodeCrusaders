@@ -80,10 +80,7 @@ namespace ButiksSystem.UI
         private void btn_salesStatisticsPrintToTxtFile_Click(object sender, EventArgs e)
         {
             UIController uiController = new UIController();
-
-           // uiController.CreateSalesFileDataGridview(dgv_showSalesStatisticsInDatagrid, StartDate, EndDate);
-            uiController.CreateSalesFile(ListOfCostumerOrders, StartDate, EndDate);
-           
+            uiController.CreateSalesFile(ListOfCostumerOrders, StartDate, EndDate, dgv_showSalesStatisticsInDatagrid);
             
             this.Close();
         }

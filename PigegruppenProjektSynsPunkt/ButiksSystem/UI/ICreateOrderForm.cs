@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ButiksSystem.UI
 {
-    public partial class CreateOrderForm : Form
+    public partial class ICreateOrderForm : Form
     {
-        public CreateOrderForm()
+        public ICreateOrderForm()
         {
             InitializeComponent();
         }

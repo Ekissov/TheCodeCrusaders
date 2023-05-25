@@ -26,16 +26,12 @@ namespace ButiksSystem.Controllers
             return salestatisticServices.GetCostumerOrdersWithinGivenTime(StartDate, EndDate);
         }
 
-        public void CreateSalesFile(List<CostumerOrder> listOfCostumerOrders, DateTime startDate, DateTime endDate)
+        public void CreateSalesFile(List<CostumerOrder> listOfCostumerOrders, DateTime startDate, DateTime endDate, DataGridView dataGridView)
         {
             SalestatisticServices salestatisticServices = new SalestatisticServices();
-            salestatisticServices.CreateSalesFile(listOfCostumerOrders, startDate, endDate);
+            salestatisticServices.CreateSalesFile(listOfCostumerOrders, startDate, endDate, dataGridView);
         }
 
-        public void CreateSalesFileDataGridview(DataGridView dataGridView, DateTime startDate, DateTime endDate)
-        {
-            SalestatisticServices salestatisticServices = new SalestatisticServices();
-            salestatisticServices.CreateSalesFileDataGridview(dataGridView, startDate, endDate);
-        }
+       
     }
 }

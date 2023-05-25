@@ -1,14 +1,14 @@
-SALGSSTATISTIK 2023              Fra dato: 09-02-2023 00:00:00      Til Dato: 27-04-2023 00:00:00
-Kundenummer      Kundenavn             Dato                          Køb
-2        Emma Roberts       10-02-2023 00:00:00          4000
-10        Peter Jensen       15-03-2023 00:00:00          8500
-12        Hanne Kjær       13-02-2023 00:00:00          5400
-13        Camilla Ottesen       10-04-2023 00:00:00          3990
-22        Thomas Nielsen       02-03-2023 00:00:00          6050
-21        Maria Petersen       25-04-2023 00:00:00          6370
-41        Daniel Dahl       01-03-2023 00:00:00          5000
-20        Julie Kaspersen       20-02-2023 00:00:00          9450
-9        Henrik Skov       24-03-2023 00:00:00          7540
-5        Mathilde Johnson       25-02-2023 00:00:00          2500
-8        Johs Møller       18-03-2023 00:00:00          5020
-                                              I alt kr.         63820
+SALGSSTATISTIK 2023              Fra dato: 01-02-2023 00:00:00      Til Dato: 01-05-2023 00:00:00
+Kundenummer   Kundenavn                       Dato                           Køb
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+System.Collections.Generic.List`1[ButiksSystem.Models.CostumerOrder]
+                                                 I alt kr.         63820
