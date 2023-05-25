@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ButiksSystem.Controllers
 {
@@ -23,8 +24,8 @@ namespace ButiksSystem.Controllers
         }*/
 
         public List<Product> GetAllProducts()
-        { 
-        
+        {
+
             ProductServices productServices = new ProductServices();
             productServices.GetAllProducts();
 
@@ -38,7 +39,7 @@ namespace ButiksSystem.Controllers
             return result;
         }
 
-        public void UpdateProduct(Product product) 
+        public void UpdateProduct(Product product)
         {
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             productDatabaseSQL.UpdateProduct(product);
@@ -50,7 +51,11 @@ namespace ButiksSystem.Controllers
             productDatabaseSQL.DeleteProduct(product);
         }
 
+        public void PrintDataGridViewToFile(DataGridView dataGridView, string filePath)
+        {
+            ProductServices productServices = new ProductServices();
+            productServices.PrintDataGridViewToFile(dataGridView, filePath);
+        }
+
     }
-
-
 }

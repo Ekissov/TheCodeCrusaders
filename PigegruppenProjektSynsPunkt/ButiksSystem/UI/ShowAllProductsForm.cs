@@ -1,5 +1,6 @@
 ﻿using ButiksSystem.Controllers;
 using ButiksSystem.Models;
+using ButiksSystem.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,10 +20,14 @@ namespace ButiksSystem.UI
             InitializeComponent();
         }
 
+        string lindaFilePath = @"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt";
         private void button1_Click(object sender, EventArgs e)
         {
 
             //ProductController.PrintAllProducts();
+
+            ProductServices productServices = new ProductServices();
+            productServices.PrintDataGridViewToFile(dgv_showProductInfo, lindaFilePath);
 
         }
 

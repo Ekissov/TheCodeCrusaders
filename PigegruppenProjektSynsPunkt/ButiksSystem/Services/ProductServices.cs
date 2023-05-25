@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ButiksSystem.Services
 {
@@ -44,20 +45,36 @@ namespace ButiksSystem.Services
             return productDatabaseSQL.GetAllProducts();
         }
 
-        /*public static void PrintAllProducts() 
+        public void PrintDataGridViewToFile(DataGridView dataGridView, string filePath)
         {
-            ProductDatabaseSQL productsDatabaseSQL = new ProductDatabaseSQL();
-       
-            List<Product> products = ProductDatabaseSQL.GetAllProducts();
-            List<string> writeLines = products.Select(x => x.ToString()).ToList();
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                // Write column headers to the file
+                foreach (DataGridViewColumn column in dataGridView.Columns)
+                {
+                    writer.Write(column.HeaderText + "\t");
+                }
+                writer.WriteLine();
 
-            //File.WriteAllLines(@"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
+                // Write rows to the file
+                foreach (DataGridViewRow row in dataGridView.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        writer.Write(cell.Value.ToString() + "\t");
+                    }
+                    writer.WriteLine();
+                }
+            }
 
-        }*/
+            MessageBox.Show("DataGridView printed to file successfully!");
+        }
 
-            //File.WriteAllLines(@"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
-            //File.WriteAllLines(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt", writeLines);
-        
+        //File.WriteAllLines(@"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
+
+        //File.WriteAllLines(@"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
+        //File.WriteAllLines(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
+
 
 
     }
