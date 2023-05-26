@@ -62,12 +62,7 @@ namespace ButiksSystem.Services
 
                     if (listOfCostumerOrders == null)
                     {
-
                         SalestatisticServices.CreateSalesFileDataGridview(dataGridView, startDate, endDate);
-
-                        MessageBox.Show("Alle kundeordre i tabellen er overført til fil, " +
-                            "da der ikke er indtastet start og slut dato", "Information",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         return;
                     }
@@ -79,8 +74,7 @@ namespace ButiksSystem.Services
 
                     decimal sumOfPrices = listOfCostumerOrders.Sum(x => x.TotalPrice);
                     writer.WriteLine("\n                                                           I alt kr.         " + sumOfPrices);
-                    MessageBox.Show("Kundeordre er overført til fil", "Information",
-                      MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                 }
             }
             catch (Exception err)
@@ -103,9 +97,9 @@ namespace ButiksSystem.Services
                 
                 try
                 {
+                    //The document starts up here, sets up main headings and information.
                     file.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate.Date + "      Til Dato: " + endDate.Date);
-                    string salesfileHeadigns = "Kundenummer   Kundenavn                       Dato                           Køb";
-                    file.WriteLine(salesfileHeadigns);
+                    file.WriteLine("Kundenummer   Kundenavn                       Dato                           Køb");
 
                     string sLine = "";
                     

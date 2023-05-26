@@ -38,10 +38,28 @@ namespace ButiksSystem.Controllers
             costumerServices.DeleteCostumer(costumer);
         }
 
-        public void ReadCustomer()
+        public List<Costumer> ReadCustomer(string customerInput)
         {
             CostumerServices costumerServices = new CostumerServices();
-            costumerServices.ReadCustomer();
+            List<Costumer> allCustomers = costumerServices.ReadCustomer();
+
+            var allcustomersToDgv = allCustomers.Where(
+                x => x.CostumerID == int.Parse(customerInput) || 
+                x.FirstName == customerInput || 
+                x.LastName == customerInput).ToList();
+
+            return allcustomersToDgv;
         }
+
+        public Costumer GetSelectedCustomer()
+        {
+
+            
+
+
+
+            return; 
+        }
+
     }
 }

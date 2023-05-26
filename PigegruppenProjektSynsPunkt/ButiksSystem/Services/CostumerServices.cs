@@ -44,11 +44,14 @@ namespace ButiksSystem.Services
             costumerDatabaseSQL.DeleteCustomer(costumer);
         }
 
-        public void ReadCustomer()
+        public List<Costumer> ReadCustomer()
         {
             CustomerDatabaseSQL customerDatabaseSQL= new CustomerDatabaseSQL();
-            customerDatabaseSQL.ReadCustomer();
+            return customerDatabaseSQL.ReadCustomer();
         }
+
+       
+
 
     }
 }

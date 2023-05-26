@@ -56,5 +56,10 @@ namespace ButiksSystem.UI
             
             Process.Start("Hjælpeside til Opret Kunde.pdf");
         }
+
+        private void CreateCostumerForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ButiksSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -38,32 +39,66 @@ namespace ButiksSystem.Repository
 
 
         //R
-        public List<string> ReadCustomer()
+        public List<Costumer> ReadCustomer()
         {
-            List<string> result = new List<string>();
-            string query = "SELECT * FROM [CustomerTable]";
+            List<Costumer> customerList = new List<Costumer>();
+            string query = "SELECT * FROM CustomerTable";
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
             SqlDataReader reader = command.ExecuteReader(); //Åbner readeren 
 
             while (reader.Read())
             {
-                string row = "";
-                for (int i = 0; i < reader.FieldCount; i++)
-                {
-                    row += reader[i].ToString() + " - "; // Aflæser data og laver det om til string
-                }
-                result.Add(row); //tilføjer data til listen
+                Costumer costumer = new Costumer(
+                 reader["FirstName"].ToString(),
+                 reader["LastName"].ToString(),
+                 reader["PhoneNumber"].ToString(),
+                 reader["email"].ToString(),
+                 (int)reader["PostalCode"],
+                 reader["city"].ToString(),
+                 reader["Address"].ToString(),
+                 (int)reader["CustomerID]"]);
+
+                customerList.Add(costumer);
+            }
+            if (customerList == null)
+            {
+                throw new Exception("Der er ingen kunder i listen");
+            }
+            reader.Close(); // lukker aflæseren og forbindelsen 
+            connection.Close();
+            return customerList; // retunerer resultatet som en liste
+        }
+
+        //R
+       /* public Costumer GetCustomerInfo()
+        {
+            string query = "SELECT FROM CustomerTable (FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email)";
+            SqlCommand command = new SqlCommand(query, connection);
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader(); //Åbner readeren 
+
+            while (reader.Read())
+            {
+                Costumer costumer = new Costumer(
+                    reader["FirstName"].ToString(),
+                    reader["LastName"].ToString(),
+                    reader["PhoneNumber"].ToString(),
+                    reader["email"].ToString(),
+                    (int)reader["PostalCode"],
+                    reader["city"].ToString(),
+                    reader["Address"].ToString());
+
+               
             }
 
             reader.Close(); // lukker aflæseren og forbindelsen 
             connection.Close();
-            return result; // retunerer resultatet som en liste
+            return customer; // retunerer resultatet som en liste
 
-        }
 
-        //U
-        public void UpdateCustomer(Models.Costumer costumer)
+            //U
+            public void UpdateCustomer(Models.Costumer costumer)
         {
             //Update sætningen herunder er muligvis ikke korrekt
             string query = $"UPDATE Customer SET FirstName = '{costumer.FirstName}', LastName = '{costumer.LastName}', PhoneNumber = '{costumer.PhoneNumber}', Email = '{costumer.Email}', PostalCode = '{costumer.PostalCode}', City = '{costumer.City}', Address = '{costumer.Address}' WHERE CustomerID = '{costumer.CostumerID}'";
@@ -74,7 +109,7 @@ namespace ButiksSystem.Repository
 
             connection.Close();
 
-        }
+        }*/
 
         //D
 

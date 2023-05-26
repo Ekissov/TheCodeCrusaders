@@ -38,25 +38,27 @@ namespace ButiksSystem.UI
         private void txt_searchCustomerIDOrName_TextChanged(object sender, EventArgs e)
         {
             CostumerIDInput = txt_searchCustomerIDOrName.Text;
+
         }
         private void btn_OKShowCostumer_Click(object sender, EventArgs e)
         {
-            dgv_showCustomerInfo.DataSource = CostumerIDInput;
+            CostumerController costumerController = new CostumerController();
+            dgv_showCustomerInfo.DataSource = costumerController.ReadCustomer(CostumerIDInput);
         }
         private void dgv_showCustomerInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
         private void btn_showCustomerInfo_Click(object sender, EventArgs e)
         {
-            txt_showCustomerIDFromSearch.Text = Costumer.CostumerID.ToString();
-            txt_changeCustomerFirstName.Text = Costumer.FirstName;
-            txt_changeCustomerLastName.Text = Costumer.LastName;
-            txt_changeCustomerPhoneNumber.Text = Costumer.PhoneNumber;
-            txt_changeCustomerEmail.Text = Costumer.Email;
-            txt_changeCustomerAddress.Text = Costumer.Address;
-            txt_changeCustomerPostalCode.Text = Costumer.PostalCode.ToString();
-            txt_changeCustomerCity.Text = Costumer.City;
+            Costumer costumer = new Costumer(
+            txt_changeCustomerFirstName.Text,
+            txt_changeCustomerLastName.Text,
+            txt_changeCustomerPhoneNumber.Text,
+            txt_changeCustomerEmail.Text,
+            int.Parse(txt_changeCustomerPostalCode.Text),
+            txt_changeCustomerCity.Text,
+            txt_changeCustomerAddress.Text);
         }
         private void btn_deleteCustomerInDatabase_Click(object sender, EventArgs e)
         {
@@ -106,7 +108,7 @@ namespace ButiksSystem.UI
 
         private void DeleteCostumer()
         {
-            Costumer.CostumerID = int.Parse(txt_showCustomerIDFromSearch.Text);
+            Costumer.CostumerID = (int.Parse(txt_showCustomerIDFromSearch.Text));
         }
 
         private void btn_homePageHelp_Click(object sender, EventArgs e)
