@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,10 +27,10 @@ namespace ButiksSystem.UI
         {
             ProductController productController = new ProductController();
             List<Product> products = productController.GetAllProducts();
-            dgv_showProductInfo.DataSource = products; 
+            dgv_showProductInfo.DataSource = products;
 
-           // ProductController productController = new ProductController();
-           // dgv_showProductInfo.DataSource = productController.GetAllProducts();
+            // ProductController productController = new ProductController();
+            // dgv_showProductInfo.DataSource = productController.GetAllProducts();
         }
 
         private void txt_searchProductIDOrName_TextChanged(object sender, EventArgs e)
@@ -101,6 +102,10 @@ namespace ButiksSystem.UI
             Product.ProductID = int.Parse(txt_showProductIDFromSearch.Text);
         }
 
+        public void btn_homePageHelp_Click(object sender, EventArgs e)
+        {
+            Process.Start("Hjælpeside til Redigér Vare.pdf");
 
+        }
     }
 }

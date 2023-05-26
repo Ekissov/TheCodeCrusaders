@@ -5,11 +5,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace ButiksSystem.UI
 {
@@ -20,11 +22,11 @@ namespace ButiksSystem.UI
         public DateTime EndDate { get; set; }
         public List<CostumerOrder> ListOfCostumerOrders { get; set; }
 
-        
+
         public SalesStatisticForm()
         {
             InitializeComponent();
-            
+
         }
 
         /// <summary>
@@ -34,7 +36,8 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void SalesStatistic_Load(object sender, EventArgs e)
         {
-            dgv_showSalesStatisticsInDatagrid.DataSource = Database.DummyDataSales.CreateDummyDataSales();         
+            dgv_showSalesStatisticsInDatagrid.DataSource = Database.DummyDataSales.CreateDummyDataSales();
+
         }
 
         /// <summary>
@@ -64,7 +67,7 @@ namespace ButiksSystem.UI
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
-        {         
+        {
             UIController uIController = new UIController();
             ListOfCostumerOrders = uIController.GetCostumerOrdersWithinGivenTime(StartDate, EndDate);
             dgv_showSalesStatisticsInDatagrid.DataSource = ListOfCostumerOrders;
@@ -80,11 +83,13 @@ namespace ButiksSystem.UI
         {
             UIController uiController = new UIController();
             uiController.CreateSalesFile(ListOfCostumerOrders, StartDate, EndDate, dgv_showSalesStatisticsInDatagrid);
-            
+
             this.Close();
         }
 
-       
-        
+        private void btn_homePageHelp_Click(object sender, EventArgs e)
+        {
+            Process.Start("Hjælpeside til Salgsstatistik.pdf");
+        }
     }
 }

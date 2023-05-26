@@ -50,7 +50,7 @@
             // 
             this.dgv_showProductInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_showProductInfo.Location = new System.Drawing.Point(55, 73);
-            this.dgv_showProductInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_showProductInfo.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_showProductInfo.Name = "dgv_showProductInfo";
             this.dgv_showProductInfo.RowHeadersWidth = 51;
             this.dgv_showProductInfo.RowTemplate.Height = 24;
@@ -60,7 +60,7 @@
             // btn_printAllProductsToTxtfile
             // 
             this.btn_printAllProductsToTxtfile.Location = new System.Drawing.Point(475, 340);
-            this.btn_printAllProductsToTxtfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_printAllProductsToTxtfile.Margin = new System.Windows.Forms.Padding(2);
             this.btn_printAllProductsToTxtfile.Name = "btn_printAllProductsToTxtfile";
             this.btn_printAllProductsToTxtfile.Size = new System.Drawing.Size(129, 32);
             this.btn_printAllProductsToTxtfile.TabIndex = 38;
@@ -80,6 +80,7 @@
             this.btn_homePageHelp.Tag = "";
             this.btn_homePageHelp.Text = "?";
             this.btn_homePageHelp.UseVisualStyleBackColor = false;
+            this.btn_homePageHelp.Click += new System.EventHandler(this.btn_homePageHelp_Click);
             // 
             // ShowAllProductsForm
             // 
@@ -90,7 +91,7 @@
             this.Controls.Add(this.btn_printAllProductsToTxtfile);
             this.Controls.Add(this.dgv_showProductInfo);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ShowAllProductsForm";
             this.Text = "ShowAllProductsForm";
             this.Load += new System.EventHandler(this.ShowAllProductsForm_Load);

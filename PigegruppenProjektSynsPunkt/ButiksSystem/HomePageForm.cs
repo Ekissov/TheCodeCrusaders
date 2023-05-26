@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ButiksSystem
 {
@@ -92,13 +93,8 @@ namespace ButiksSystem
 
         private void btn_homePageHelp_Click(object sender, EventArgs e)
         {
-            string helpPageUrl = "https://docs.google.com/document/d/1yZuCUMqQphQcauJVTRhJnD8xU-OmwZWHTfYSXd2mJE0/edit?usp=sharing";
-            System.Diagnostics.Process.Start(helpPageUrl);
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
+            
+            Process.Start("PDF der forklarer forsiden winform.pdf");
         }
 
         private void alleVarerToolStripMenuItem_Click(object sender, EventArgs e)
