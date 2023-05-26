@@ -14,6 +14,10 @@ namespace ButiksSystem.Repository
         private static SqlConnection connection = new SqlConnection("Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9"); //"Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9";
 
         //C
+        /// <summary>
+        /// En af vores CRUD metoder - denne er "C" da det er Create - den opretter et product i databasen. Den modtager information/product fra service.product
+        /// </summary>
+        /// <param name="product"></param>
         public static void CreateProduct(Models.Product product)
         {
 
@@ -32,6 +36,10 @@ namespace ButiksSystem.Repository
 
 
         //R
+        /// <summary>
+        /// En af vores CRUD metoder - denne er "R", da det er READ. Den opretter en liste med alle elementerne i Product tabellen i databasen. 
+        /// </summary>
+        /// <returns></returns>
         public static List<string> ReadProduct()
         {
             List<string> result = new List<string>();
@@ -57,6 +65,10 @@ namespace ButiksSystem.Repository
         }
 
         //U
+        /// <summary>
+        /// En af vores CRUD metoder - denne er "U", da det er Update. Den opdatere/redigerer et product i databasen. Den modtager information/product fra service.product
+        /// </summary>
+        /// <param name="product"></param>
         public void UpdateProduct(Models.Product product)
         {
             //Update sætningen herunder er muligvis ikke korrekt
@@ -64,14 +76,17 @@ namespace ButiksSystem.Repository
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            int count = command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
+            int count = command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end besked med at databasen er opdateret
 
             connection.Close();
 
         }
 
         //D
-
+        /// <summary>
+        /// En af vores CRUD metoder - denne er "D", da det er Delete. Den sletter et product i databasen. Den modtager information/product fra service.product
+        /// </summary>
+        /// <param name="product"></param>
         public void DeleteProduct(Models.Product product)
         {
 
@@ -84,6 +99,10 @@ namespace ButiksSystem.Repository
             connection.Close();
         }
 
+        /// <summary>
+        /// Denne metode opretter en liste. denne liste består af alle 5 attributter på Product klassen. derudover sortere den listen alfabetisk ud fra ProductName.
+        /// </summary>
+        /// <returns></returns>
         public List<Product> GetAllProducts()
         {
             List<Product> result = new List<Product>();
