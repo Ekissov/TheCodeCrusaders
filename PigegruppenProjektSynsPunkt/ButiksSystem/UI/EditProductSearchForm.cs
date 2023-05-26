@@ -27,10 +27,10 @@ namespace ButiksSystem.UI
         {
             ProductController productController = new ProductController();
             List<Product> products = productController.GetAllProducts();
-            dgv_showProductInfo.DataSource = products; 
+            dgv_showProductInfo.DataSource = products;
 
-           // ProductController productController = new ProductController();
-           // dgv_showProductInfo.DataSource = productController.GetAllProducts();
+            // ProductController productController = new ProductController();
+            // dgv_showProductInfo.DataSource = productController.GetAllProducts();
         }
 
         private void txt_searchProductIDOrName_TextChanged(object sender, EventArgs e)
@@ -104,9 +104,8 @@ namespace ButiksSystem.UI
 
         public void btn_homePageHelp_Click(object sender, EventArgs e)
         {
-            /*string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            string helpPdfFile = currentDirectory + "PDF_der_forklarer_forsiden_winform.pdf"; 
-            Process.Start(helpPdfFile);*/
+            Process.Start("Hjælpeside til Redigér Vare.pdf");
+
         }
     }
 }

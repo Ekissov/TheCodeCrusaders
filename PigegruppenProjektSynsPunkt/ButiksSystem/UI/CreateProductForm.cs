@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using System.Diagnostics;
 
 namespace ButiksSystem.UI
 {
@@ -37,6 +39,9 @@ namespace ButiksSystem.UI
             this.Close();
         }
 
-      
+        private void btn_homePageHelp_Click(object sender, EventArgs e)
+        {
+            Process.Start("Hjælpeside til Opret Vare.pdf");
+        }
     }
 }

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Diagnostics;
 
 namespace ButiksSystem.UI
 {
@@ -52,8 +53,8 @@ namespace ButiksSystem.UI
 
         private void btn_homePageHelp_Click(object sender, EventArgs e)
         {
-            string helpPageUrl = "\"C:\\Users\\Sanne\\Desktop\\EKSAMENSPROJEKT\\Code Crusaders\\TheCodeCrusaders\\PigegruppenProjektSynsPunkt\\Hjælpesider\\Hjælpeside til Opret Kunde.docx\"";
-            System.Diagnostics.Process.Start(helpPageUrl);
+            
+            Process.Start("Hjælpeside til Opret Kunde.pdf");
         }
     }
 }

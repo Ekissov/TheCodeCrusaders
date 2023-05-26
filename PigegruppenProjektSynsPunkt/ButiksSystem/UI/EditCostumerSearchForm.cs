@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ButiksSystem.UI
 {
@@ -106,6 +107,11 @@ namespace ButiksSystem.UI
         private void DeleteCostumer()
         {
             Costumer.CostumerID = int.Parse(txt_showCustomerIDFromSearch.Text);
+        }
+
+        private void btn_homePageHelp_Click(object sender, EventArgs e)
+        {
+            Process.Start("Hjælpeside til Redigér Kunde.pdf");
         }
     }
 

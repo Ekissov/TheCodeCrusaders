@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -38,6 +39,11 @@ namespace ButiksSystem.UI
             ProductServices productServices = new ProductServices();
             productServices.PrintDataGridViewToFile(dgv_showProductInfo, lindaFilePath);
 
+        }
+
+        private void btn_homePageHelp_Click(object sender, EventArgs e)
+        {
+            Process.Start("Hjælpeside til Vis alle Varer.pdf");
         }
     }
 }
