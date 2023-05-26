@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ButiksSystem.Services
 {
@@ -15,16 +16,13 @@ namespace ButiksSystem.Services
     {
         public static void CreateProduct(Models.Product product)
         {
-            //Insert businesslogic
-
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             ProductDatabaseSQL.CreateProduct(product);
         }
 
-        
+
         public void UpdateProduct(Models.Product product)
         {
-            //Insert businesslogic
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             productDatabaseSQL.UpdateProduct(product);
         }
@@ -36,7 +34,7 @@ namespace ButiksSystem.Services
             productDatabaseSQL.DeleteProduct(product);
         }
 
-        public List<Product> GetAllProducts() 
+        public List<Product> GetAllProducts()
         {
 
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
@@ -45,10 +43,10 @@ namespace ButiksSystem.Services
             return productDatabaseSQL.GetAllProducts();
         }
 
-        public void PrintDataGridViewToFile(DataGridView dataGridView, string filePath)
+        public void PrintDataGridViewToFile(DataGridView dataGridView)
         {
 
-            
+            string filePath = ("printallproducts.txt");
             using (StreamWriter writer = new StreamWriter(filePath))
             {
                 // Write column headers to the file
@@ -76,7 +74,7 @@ namespace ButiksSystem.Services
 
         //File.WriteAllLines(@"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
         //File.WriteAllLines(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
-
+       
 
 
     }

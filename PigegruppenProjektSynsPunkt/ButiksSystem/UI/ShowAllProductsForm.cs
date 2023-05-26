@@ -22,7 +22,7 @@ namespace ButiksSystem.UI
             InitializeComponent();
         }
 
-    
+
         private void ShowAllProductsForm_Load(object sender, EventArgs e)
         {
 
@@ -34,10 +34,11 @@ namespace ButiksSystem.UI
 
         private void btn_printAllProductsToTxtfile_Click(object sender, EventArgs e)
         {
-            string lindaFilePath = @"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt";
+            
+            //     lindaFilePath = @"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt";
 
             ProductServices productServices = new ProductServices();
-            productServices.PrintDataGridViewToFile(dgv_showProductInfo, lindaFilePath);
+            productServices.PrintDataGridViewToFile(dgv_showProductInfo);
 
         }
 
