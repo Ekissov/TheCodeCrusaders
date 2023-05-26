@@ -14,26 +14,38 @@ namespace ButiksSystem.Services
 {
     internal class ProductServices
     {
+        /// <summary>
+        /// Metode til at oprette et produkt - den modtager det nye produkt fra models og sender det videre til repository
+        /// </summary>
+        /// <param name="product"></param>
         public static void CreateProduct(Models.Product product)
         {
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             ProductDatabaseSQL.CreateProduct(product);
         }
 
-
+        /// <summary>
+        /// Metode til at opdatere et produkt - dem modtager opdateringen om et produkt fra models og sender det videre til repository
+        /// </summary>
+        /// <param name="product"></param>
         public void UpdateProduct(Models.Product product)
         {
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             productDatabaseSQL.UpdateProduct(product);
         }
-
+        /// <summary>
+        /// Metode til at slette et produkt. den modtager opdatereingen om et produkt fra models og sender det videre til repository
+        /// </summary>
+        /// <param name="product"></param>
         public void DeleteProduct(Models.Product product)
         {
-            //Insert businesslogic
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             productDatabaseSQL.DeleteProduct(product);
         }
-
+        /// <summary>
+        /// Metode der danner en liste af alle produkter - den tager info fra repository. 
+        /// </summary>
+        /// <returns></returns>
         public List<Product> GetAllProducts()
         {
 
@@ -43,10 +55,14 @@ namespace ButiksSystem.Services
             return productDatabaseSQL.GetAllProducts();
         }
 
+        /// <summary>
+        /// Metode til at printe indholdet i et datagridview til en txt fil.
+        /// </summary>
+        /// <param name="dataGridView"></param>
         public void PrintDataGridViewToFile(DataGridView dataGridView)
         {
 
-            string filePath = ("printallproducts.txt");
+            string filePath = ("printallproducts.txt"); //Txt filen kommer til at ligge direkte i denne sti, så det er ens for alle der har hele mappen: ButiksSystem\bin\Debug\printallproducts.txt" 
             using (StreamWriter writer = new StreamWriter(filePath))
             {
                 // Write column headers to the file
