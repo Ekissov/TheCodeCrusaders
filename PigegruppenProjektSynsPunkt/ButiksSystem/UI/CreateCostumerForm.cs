@@ -55,5 +55,10 @@ namespace ButiksSystem.UI
             string helpPageUrl = "\"C:\\Users\\Sanne\\Desktop\\EKSAMENSPROJEKT\\Code Crusaders\\TheCodeCrusaders\\PigegruppenProjektSynsPunkt\\Hjælpesider\\Hjælpeside til Opret Kunde.docx\"";
             System.Diagnostics.Process.Start(helpPageUrl);
         }
+
+        private void CreateCostumerForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
