@@ -61,7 +61,7 @@ namespace ButiksSystem.Controllers
         public void PrintDataGridViewToFile(DataGridView dataGridView, string filePath)
         {
             ProductServices productServices = new ProductServices();
-            productServices.PrintDataGridViewToFile(dataGridView, filePath);
+            productServices.PrintDataGridViewToFile(dataGridView);
         }
 
     }
