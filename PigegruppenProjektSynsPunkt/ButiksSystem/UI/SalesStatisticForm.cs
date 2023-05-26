@@ -37,7 +37,6 @@ namespace ButiksSystem.UI
         private void SalesStatistic_Load(object sender, EventArgs e)
         {
             dgv_showSalesStatisticsInDatagrid.DataSource = Database.DummyDataSales.CreateDummyDataSales();
-
         }
 
         /// <summary>

@@ -17,7 +17,9 @@ namespace ButiksSystem.UI
     {
         public Models.Costumer Costumer { get; set; }
         public string CostumerIDInput { get; set; }
+        public List<Costumer> AllCostumers { get; set; }
         public EditCostumerSearchForm()
+       
         {
             InitializeComponent();
 
@@ -43,7 +45,8 @@ namespace ButiksSystem.UI
         private void btn_OKShowCostumer_Click(object sender, EventArgs e)
         {
             CostumerController costumerController = new CostumerController();
-            dgv_showCustomerInfo.DataSource = costumerController.ReadCustomer(CostumerIDInput);
+            AllCostumers = costumerController.ReadCustomer(CostumerIDInput);
+            dgv_showCustomerInfo.DataSource = AllCostumers;
         }
         private void dgv_showCustomerInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -58,7 +61,8 @@ namespace ButiksSystem.UI
             txt_changeCustomerEmail.Text,
             int.Parse(txt_changeCustomerPostalCode.Text),
             txt_changeCustomerCity.Text,
-            txt_changeCustomerAddress.Text);
+            txt_changeCustomerAddress.Text,
+            int.Parse(txt_showCustomerIDFromSearch.Text));
         }
         private void btn_deleteCustomerInDatabase_Click(object sender, EventArgs e)
         {
@@ -114,6 +118,17 @@ namespace ButiksSystem.UI
         private void btn_homePageHelp_Click(object sender, EventArgs e)
         {
             Process.Start("Hjælpeside til Redigér Kunde.pdf");
+        }
+
+        private void dgv_showCustomerInfo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedRow = dgv_showCustomerInfo.Rows[e.RowIndex];
+                int customerID = (int)selectedRow.Cells[1].Value;
+
+            //Models.Costumer chosenCostumer = 
+            }
         }
     }
 

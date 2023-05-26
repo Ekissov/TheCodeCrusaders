@@ -44,22 +44,26 @@ namespace ButiksSystem.Controllers
             List<Costumer> allCustomers = costumerServices.ReadCustomer();
 
             var allcustomersToDgv = allCustomers.Where(
-                x => x.CostumerID == int.Parse(customerInput) || 
-                x.FirstName == customerInput || 
+                x => x.FirstName == customerInput || 
                 x.LastName == customerInput).ToList();
-
+            //.CostumerID == int.Parse(customerInput) || 
             return allcustomersToDgv;
         }
 
-        public Costumer GetSelectedCustomer()
+        /*public Costumer GetSelectedCustomer()
         {
+            CostumerServices costumerServices = new CostumerServices();
+            var customerList = costumerServices.ReadCustomer();
 
-            
+            foreach ( var customer in customerList )
+            {
+                
+            }
 
 
 
             return; 
-        }
+        }*/
 
     }
 }
