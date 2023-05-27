@@ -19,10 +19,11 @@ namespace ButiksSystem.Controllers
         /// <param name="price"></param>
         /// <param name="categoryId"></param>
         /// <param name="quantity"></param>
-        public static void CreateProduct(string productName, decimal price, int categoryId, int quantity)
+        public void CreateProduct(string productName, decimal price, int categoryId, int quantity)
         {
             Product product = new Product(productName, price, categoryId, quantity);
-            ProductServices.CreateProduct(product);
+            ProductServices productServices = new ProductServices();
+            productServices.CreateProduct(product);
         }
 
         /*public static void PrintAllProducts()

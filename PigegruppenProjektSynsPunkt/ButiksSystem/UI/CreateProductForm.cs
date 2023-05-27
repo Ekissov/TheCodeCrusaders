@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 using System.Diagnostics;
+using ButiksSystem.Services;
 
 namespace ButiksSystem.UI
 {
@@ -28,7 +29,9 @@ namespace ButiksSystem.UI
             decimal salesPricePerItem = decimal.Parse(txt_CreateSalesPricePerItem.Text);
             int categoryID = int.Parse(txt_createProductGroupID.Text);
             int quantityInStorage = int.Parse(txt_createQuantityInStorage.Text);
-            ProductController.CreateProduct(productName, salesPricePerItem, categoryID, quantityInStorage);
+            
+            ProductController productController = new ProductController();
+            productController.CreateProduct(productName, salesPricePerItem, categoryID, quantityInStorage);
 
             /*Product.ProductID = int.Parse(txt_createProductID.Text);
             Product.ProductName = txt_createProductName.Text;

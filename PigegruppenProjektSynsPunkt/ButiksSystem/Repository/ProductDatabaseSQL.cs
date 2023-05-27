@@ -18,15 +18,13 @@ namespace ButiksSystem.Repository
         /// CRUD Method (C) this creates a product in the database. it recieves info from Service.Product
         /// </summary>
         /// <param name="product"></param>
-        public static void CreateProduct(Models.Product product)
+        public void CreateProduct(Models.Product product)
         {
 
             string query = $"INSERT INTO Product (ProductName, Price, CategoryID, Quantity) " +
                 $"VALUES ('{product.ProductName}', {product.ProductPrice.ToString().Replace(',', '.')}, {product.CategoryID.ToString()}, {product.Quantity.ToString()})";
 
-            //Console.WriteLine(query);
-
-
+          
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
             int count = command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
@@ -40,7 +38,7 @@ namespace ButiksSystem.Repository
         /// CRUD Method (R) this reads a product in the database. Then it returns the info in a list. 
         /// </summary>
         /// <returns></returns>
-        public static List<string> ReadProduct()
+        public List<string> ReadProduct()
         {
             List<string> result = new List<string>();
             string query = "SELECT * FROM Product";

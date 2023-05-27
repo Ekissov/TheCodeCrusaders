@@ -12,13 +12,13 @@ using System.Diagnostics;
 
 namespace ButiksSystem.Services
 {
-    internal class ProductServices
+    public class ProductServices
     {
         /// <summary>
         /// Method that links the CreateProduct method between service and UI
         /// </summary>
         /// <param name="product"></param>
-        public static void CreateProduct(Models.Product product)
+        public void CreateProduct(Models.Product product)
         {
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             ProductDatabaseSQL.CreateProduct(product);
