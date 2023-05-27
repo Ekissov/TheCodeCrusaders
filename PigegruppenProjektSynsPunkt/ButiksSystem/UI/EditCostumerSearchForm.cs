@@ -76,7 +76,6 @@ namespace ButiksSystem.UI
         private void btn_showCustomerInfo_Click(object sender, EventArgs e)
         {
             CostumerController costumerController = new CostumerController();
-
             Costumer selectedCustomer = costumerController.GetSelectedCustomer(CustomerID);
 
 
@@ -191,7 +190,6 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void dgv_showCustomerInfo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
 
             DataGridViewRow selectedRow = null;
 

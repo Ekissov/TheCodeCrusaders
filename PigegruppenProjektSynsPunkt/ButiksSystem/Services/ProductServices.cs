@@ -85,5 +85,12 @@ namespace ButiksSystem.Services
 
             MessageBox.Show("DataGridView printed to file successfully!");
         }
+
+        public Product GetSelectedProduct(int productID)
+        {
+            ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
+            Product selectedProduct = productDatabaseSQL.GetSelectedProduct(productID);
+            return selectedProduct;
+        }
     }
 }

@@ -68,6 +68,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Saanneeha_dk_db_databaseDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Saanneeha_dk_db_databaseDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Saanneeha_dk_db_databaseDataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Services\CostumerServices.cs" />
     <Compile Include="Services\ProductServices.cs" />
     <Compile Include="Services\SalestatisticServices.cs" />
@@ -201,6 +206,17 @@
     </None>
     <None Include="Saanneeha_dk_db_databaseDataSet1.xss">
       <DependentUpon>Saanneeha_dk_db_databaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Saanneeha_dk_db_databaseDataSet11.xsc">
+      <DependentUpon>Saanneeha_dk_db_databaseDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Saanneeha_dk_db_databaseDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Saanneeha_dk_db_databaseDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Saanneeha_dk_db_databaseDataSet11.xss">
+      <DependentUpon>Saanneeha_dk_db_databaseDataSet11.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

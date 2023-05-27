@@ -78,5 +78,11 @@ namespace ButiksSystem.Controllers
             productServices.PrintDataGridViewToFile(dataGridView);
         }
 
+       public Product GetSelectedProduct(int productID)
+        {
+            ProductServices productServices = new ProductServices();
+            Product selectedProduct = productServices.GetSelectedProduct(productID);
+            return selectedProduct;
+        }
     }
 }

@@ -57,7 +57,6 @@ namespace ButiksSystem.Controllers
         {
             CostumerServices costumerServices = new CostumerServices();
             Costumer selectedCustomer = costumerServices.GetSelectedCustomer(customerID);
-          
             return selectedCustomer;
         }
 

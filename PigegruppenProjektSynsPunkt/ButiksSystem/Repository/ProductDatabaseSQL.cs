@@ -35,30 +35,31 @@ namespace ButiksSystem.Repository
 
         //R
         /// <summary>
-        /// CRUD Method (R) this reads a product in the database. Then it returns the info in a list. 
+        /// CRUD Method (R) this reads a selects and reads from a specific in the database. Then it returns the info into a new Product. 
         /// </summary>
         /// <returns></returns>
-        public List<string> ReadProduct()
+        public Product GetSelectedProduct (int productID)
         {
-            List<string> result = new List<string>();
-            string query = "SELECT * FROM Product";
+            
+            string query = $"SELECT ProductID, ProductName, Price, CategoryID, Quantity FROM Product WHERE ProductID = {productID}";
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            SqlDataReader reader = command.ExecuteReader(); //Åbner readeren 
-
+            SqlDataReader reader = command.ExecuteReader(); 
+            
+            Product selectedProduct = null;
             while (reader.Read())
             {
-                string row = "";
-                for (int i = 0; i < reader.FieldCount; i++)
-                {
-                    row += reader[i] + " - "; // Aflæser data og laver det om til string
-                }
-                result.Add(row); //tilføjer data til listen
+                selectedProduct = new Product(
+                    (int)reader["ProductID"],
+                    reader["ProductName"].ToString(),
+                    (decimal)reader["Price"],
+                    (int)reader["CategoryID"],
+                    (int)reader["Quantity"]);
             }
 
-            reader.Close(); // lukker aflæseren og forbindelsen 
+            reader.Close(); 
             connection.Close();
-            return result; // retunerer resultatet som en liste
+            return selectedProduct; 
 
         }
 

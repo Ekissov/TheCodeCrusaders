@@ -17,10 +17,12 @@ namespace ButiksSystem.UI
     {
         public Models.Product Product { get; set; }
         public string ProductIDInput { get; set; }
+        public int ProductID { get; set; }
         public EditProductSearchForm()
 
         {
             InitializeComponent();
+            dgv_showProductInfo.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
         /// <summary>
         /// shows all products in the datagridview when form is loaded
@@ -29,9 +31,11 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void EditProductSearchForm_Load(object sender, EventArgs e)
         {
-            ProductController productController = new ProductController();
-            List<Product> products = productController.GetAllProducts();
-            dgv_showProductInfo.DataSource = products;
+            
+            this.productTableAdapter.Fill(this.saanneeha_dk_db_databaseDataSet1.Product);
+            //ProductController productController = new ProductController();
+            //List<Product> products = productController.GetAllProducts();
+            // dgv_showProductInfo.DataSource = products;
 
             // ProductController productController = new ProductController();
             // dgv_showProductInfo.DataSource = productController.GetAllProducts();
@@ -57,7 +61,14 @@ namespace ButiksSystem.UI
 
         private void dgv_showProductInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridViewRow selectedRow = null;
 
+            if (dgv_showProductInfo.SelectedRows.Count > 0)
+            {
+                selectedRow = dgv_showProductInfo.SelectedRows[0];
+            }
+            int productId = Convert.ToInt32(selectedRow.Cells["productIDDataGridViewTextBoxColumn"].Value);
+            ProductID = productId;
         }
         /// <summary>
         /// method that takes the chosen product in the datagridview and shows all data in the textboxes. 
@@ -66,12 +77,15 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void btn_showProductInfo_Click(object sender, EventArgs e)
         {
-
-            /*txt_showProductIDFromSearch.Text = Product.ProductID.ToString();
-            txt_editProductName.Text = Product.ProductName;
-            txt_editProductPricePerItem.Text = Product.ProductPrice.ToString();
-            txt_editProductGroupID.Text = Product.CategoryID.ToString();
-            txt_editQuantityInStorage.Text = Product.Quantity.ToString(); */
+            ProductController productController = new ProductController();
+            Product selectedProduct = productController.GetSelectedProduct(ProductID);
+            
+            
+            txt_showProductIDFromSearch.Text = selectedProduct.ProductID.ToString();
+            txt_editProductName.Text = selectedProduct.ProductName;
+            txt_editProductPricePerItem.Text = selectedProduct.ProductPrice.ToString();
+            txt_editProductGroupID.Text = selectedProduct.CategoryID.ToString();
+            txt_editQuantityInStorage.Text = selectedProduct.Quantity.ToString(); 
         }
         /// <summary>
         /// clickevent that shows a messagebox, if OK is chosen it runs the deletemethod and closes the window, if cancel is chosen, it goes back to the EditProductSearchForm.
