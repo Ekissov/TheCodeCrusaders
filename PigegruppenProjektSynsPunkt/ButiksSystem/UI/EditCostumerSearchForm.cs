@@ -182,9 +182,7 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void dgv_showCustomerInfo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Models.Costumer chosenCostumer = 
-
-
+            
             dgv_showCustomerInfo.SelectionMode = DataGridViewSelectionMode.FullRowSelect; 
             DataGridViewRow selectedRow = null;
 
@@ -194,15 +192,7 @@ namespace ButiksSystem.UI
             }
 
             int customerId = Convert.ToInt32(selectedRow.Cells["customerIDDataGridViewTextBoxColumn"].Value);
-            CustomerID = customerId;
-
-                if (dgv_showCustomerInfo.SelectedRows.Count > 0)
-                {
-                    selectedRow = dgv_showCustomerInfo.SelectedRows[0];
-                }
-  
-                int customerId = Convert.ToInt32(selectedRow.Cells["customerIDDataGridViewTextBoxColumn"].Value);
-                CustomerID = customerId;                       
+            CustomerID = customerId;                
         }
     }
 
