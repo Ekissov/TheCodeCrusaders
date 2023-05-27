@@ -118,17 +118,17 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void btn_saveEditedCustomerToDatabase_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Er du sikker på at du vil gemme ændringerne?", "Bekræftelse", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("Er du sikker på at du vil gemme ændringerne?", "Bekræftelse", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
-            if (result == DialogResult.Yes)
+            if (result == DialogResult.OK)
             {
                 Controllers.CostumerController costumerController = new Controllers.CostumerController();
                 UpdateCostumer();
                 this.Close();
             }
-            else if (result == DialogResult.No)
+            else if (result == DialogResult.Cancel)
             {
-                this.Close();
+                
             }
         }
         /// <summary>
@@ -138,16 +138,16 @@ namespace ButiksSystem.UI
         {
 
             Models.Costumer costumer = new Models.Costumer(
-                
+
                 txt_changeCustomerFirstName.Text,
                 txt_changeCustomerLastName.Text,
                 txt_changeCustomerPhoneNumber.Text,
                 txt_changeCustomerEmail.Text,
                 int.Parse(txt_changeCustomerPostalCode.Text),
                 txt_changeCustomerCity.Text,
-                txt_changeCustomerAddress.Text,             
-                int.Parse(txt_showCustomerIDFromSearch.Text));            
-            
+                txt_changeCustomerAddress.Text,
+                int.Parse(txt_showCustomerIDFromSearch.Text));
+
             CostumerController costumerController = new CostumerController();
             costumerController.UpdateCostumer(costumer);
 
@@ -157,7 +157,21 @@ namespace ButiksSystem.UI
         /// </summary>
         private void DeleteCostumer()
         {
-            Costumer.CostumerID = (int.Parse(txt_showCustomerIDFromSearch.Text));
+            int costumerID = (int.Parse(txt_showCustomerIDFromSearch.Text));
+            Costumer costumer = new Costumer(
+                txt_changeCustomerFirstName.Text,
+                txt_changeCustomerLastName.Text,
+                txt_changeCustomerPhoneNumber.Text,
+                txt_changeCustomerEmail.Text,
+                int.Parse(txt_changeCustomerPostalCode.Text),
+                txt_changeCustomerCity.Text,
+                txt_changeCustomerAddress.Text,
+                int.Parse(txt_showCustomerIDFromSearch.Text));         
+
+            costumer.CostumerID = costumerID;
+
+            CostumerController costumerController = new CostumerController();
+            costumerController.DeleteCostumer(costumer);
         }
 
         /// <summary>
@@ -177,8 +191,8 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void dgv_showCustomerInfo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-           
+
+
             DataGridViewRow selectedRow = null;
 
             if (dgv_showCustomerInfo.SelectedRows.Count > 0)
@@ -187,7 +201,7 @@ namespace ButiksSystem.UI
             }
 
             int customerId = Convert.ToInt32(selectedRow.Cells["customerIDDataGridViewTextBoxColumn"].Value);
-            CustomerID = customerId;                
+            CustomerID = customerId;
         }
     }
 

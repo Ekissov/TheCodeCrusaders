@@ -126,11 +126,11 @@ namespace ButiksSystem.Repository
         public void DeleteCustomer(Models.Costumer costumer)
         {
 
-            string query = $"DELETE FROM CostumerTable WHERE CostumerID = '{costumer.CostumerID}'";
+            string query = $"DELETE FROM CustomerTable WHERE CustomerID = '{costumer.CostumerID}'";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            int count = command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
+            command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
 
             connection.Close();
         }
