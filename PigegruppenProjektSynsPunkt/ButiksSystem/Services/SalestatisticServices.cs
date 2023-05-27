@@ -8,6 +8,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices.ComTypes;
+using System.Diagnostics;
 
 namespace ButiksSystem.Services
 {
@@ -53,7 +54,8 @@ namespace ButiksSystem.Services
                 List<CostumerOrder> costumerOrders = listOfCostumerOrders;
 
                 string FilePath = @"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt";
-
+               // string FilePath = ("Salgsstatistik.txt"); IT DOESN'T WORK AS INTENDED!
+               
                 using (StreamWriter writer = new StreamWriter(FilePath))
                 {
                     writer.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate + "      Til Dato: " + endDate);
@@ -92,7 +94,7 @@ namespace ButiksSystem.Services
         public static void CreateSalesFileDataGridview(DataGridView dataGridView, DateTime startDate, DateTime endDate)
         {
             {
-               //System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Sanne\Desktop\EKSAMENSPROJEKT\Code Crusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt");
+               
                System.IO.StreamWriter file = new StreamWriter(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\AlleSalg.txt");
                 
                 try

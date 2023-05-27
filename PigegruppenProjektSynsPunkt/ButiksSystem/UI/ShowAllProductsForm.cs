@@ -35,7 +35,7 @@ namespace ButiksSystem.UI
             dgv_showProductInfo.DataSource = products;
         }
         /// <summary>
-        /// buttonclick event that opens up a txt file with all products and their info
+        /// buttonclick event that creates a txt file with all products and their info
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
