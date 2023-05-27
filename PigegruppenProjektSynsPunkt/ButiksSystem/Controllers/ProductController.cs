@@ -13,7 +13,7 @@ namespace ButiksSystem.Controllers
     public class ProductController
     {
         /// <summary>
-        /// Method to create a new product in the database. takes info from the the UI and sends to ProductService.
+        /// Method that links the CreateProduct method between service and UI
         /// </summary>
         /// <param name="productName"></param>
         /// <param name="price"></param>
@@ -29,8 +29,9 @@ namespace ButiksSystem.Controllers
         {
             ProductServices.PrintAllProducts();
         }*/
+
         /// <summary>
-        /// Method that creates a list with all products in the database. 
+        /// Method that links the GetAllProducts method between service and UI 
         /// </summary>
         /// <returns></returns>
         public List<Product> GetAllProducts()
@@ -42,25 +43,34 @@ namespace ButiksSystem.Controllers
             return productServices.GetAllProducts();
 
         }
-
+        //Spørg Linda :P
         public List<Product> ReadAllProductsToList()
         {
             var result = new List<Product>();
             return result;
         }
-
+        /// <summary>
+        /// Method that links the UpdateProduct method between service and UI
+        /// </summary>
+        /// <param name="product"></param>
         public void UpdateProduct(Product product)
         {
-            ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
-            productDatabaseSQL.UpdateProduct(product);
+            ProductServices productServices = new ProductServices();
+            productServices.UpdateProduct(product);
         }
-
+        /// <summary>
+        /// Method that links the DeleteProduct method between service and UI
+        /// </summary>
+        /// <param name="product"></param>
         public void DeleteProduct(Product product)
         {
-            ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
-            productDatabaseSQL.DeleteProduct(product);
+            ProductServices productServices = new ProductServices();
+            productServices.DeleteProduct(product);
         }
-
+        /// <summary>
+        /// Method that links the PrintDataGridViewToFile method between service and UI
+        /// </summary>
+        /// <param name="dataGridView"></param>
         public void PrintDataGridViewToFile(DataGridView dataGridView)
         {
             ProductServices productServices = new ProductServices();
