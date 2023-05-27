@@ -103,11 +103,19 @@ namespace ButiksSystem.Repository
         public void UpdateCustomer(Models.Costumer costumer)
         {
             //Update sætningen herunder er muligvis ikke korrekt
-            string query = $"UPDATE Customer SET FirstName = '{costumer.FirstName}', LastName = '{costumer.LastName}', PhoneNumber = '{costumer.PhoneNumber}', Email = '{costumer.Email}', PostalCode = '{costumer.PostalCode}', City = '{costumer.City}', Address = '{costumer.Address}' WHERE CustomerID = '{costumer.CostumerID}'";
+            string query = $"UPDATE CustomerTable SET " +
+                $"FirstName = '{costumer.FirstName}', " +
+                $"LastName = '{costumer.LastName}', " +
+                $"PhoneNumber = '{costumer.PhoneNumber}', " +
+                $"Email = '{costumer.Email}', " +
+                $"PostalCode = '{costumer.PostalCode}', " +
+                $"City = '{costumer.City}', " +
+                $"CustomerAddress = '{costumer.Address}' " +
+                $"WHERE CustomerID = '{costumer.CostumerID}'";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            int count = command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
+            command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
 
             connection.Close();
 
@@ -118,7 +126,7 @@ namespace ButiksSystem.Repository
         public void DeleteCustomer(Models.Costumer costumer)
         {
 
-            string query = $"DELETE FROM Costumer WHERE CostumerID = '{costumer.CostumerID}'";
+            string query = $"DELETE FROM CostumerTable WHERE CostumerID = '{costumer.CostumerID}'";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();

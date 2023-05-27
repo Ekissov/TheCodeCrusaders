@@ -20,7 +20,7 @@ namespace ButiksSystem.UI
         public List<Costumer> AllCostumers { get; set; }
         public int CustomerID { get; set; }
         public EditCostumerSearchForm()
-       
+
         {
             InitializeComponent();
 
@@ -35,7 +35,7 @@ namespace ButiksSystem.UI
         {
             this.customerTableTableAdapter.Fill(this.saanneeha_dk_db_databaseDataSet.CustomerTable); //Connecting datagridview to database
             CostumerController costumerController = new CostumerController();  //connecting to controller
-           
+
         }
         /// <summary>
         /// adding value to the string variable. the value being the userinput. 
@@ -69,7 +69,7 @@ namespace ButiksSystem.UI
         }
         private void dgv_showCustomerInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
         /// <summary>
         /// Buttonclick event that takes the marked customer in the datagridview and shows all info in the textboxes. 
@@ -77,7 +77,7 @@ namespace ButiksSystem.UI
         /// <param name="sender"></param>
         /// <param name="e"></param>
         //private void dgv_showCustomerInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        
+
         private void btn_showCustomerInfo_Click(object sender, EventArgs e)
         {
             CostumerController costumerController = new CostumerController();
@@ -85,7 +85,7 @@ namespace ButiksSystem.UI
             Costumer selectedCustomer = costumerController.GetSelectedCustomer(CustomerID);
 
 
-            txt_changeCustomerFirstName.Text = selectedCustomer.FirstName; 
+            txt_changeCustomerFirstName.Text = selectedCustomer.FirstName;
             txt_changeCustomerLastName.Text = selectedCustomer.LastName;
             txt_changeCustomerPhoneNumber.Text = selectedCustomer.PhoneNumber;
             txt_changeCustomerEmail.Text = selectedCustomer.Email;
@@ -141,14 +141,20 @@ namespace ButiksSystem.UI
         /// </summary>
         private void UpdateCostumer()
         {
-            Costumer.CostumerID = int.Parse(txt_showCustomerIDFromSearch.Text);
-            Costumer.FirstName = txt_changeCustomerFirstName.Text;
-            Costumer.LastName = txt_changeCustomerLastName.Text;
-            Costumer.PhoneNumber = txt_changeCustomerPhoneNumber.Text;
-            Costumer.Email = txt_changeCustomerEmail.Text;
-            Costumer.Address = txt_changeCustomerAddress.Text;
-            Costumer.PostalCode = int.Parse(txt_changeCustomerPostalCode.Text);
-            Costumer.City = txt_changeCustomerCity.Text;
+
+            Models.Costumer costumer = new Models.Costumer(
+                
+                txt_changeCustomerFirstName.Text,
+                txt_changeCustomerLastName.Text,
+                txt_changeCustomerPhoneNumber.Text,
+                txt_changeCustomerEmail.Text,
+                int.Parse(txt_changeCustomerPostalCode.Text),
+                txt_changeCustomerCity.Text,
+                txt_changeCustomerAddress.Text,             
+                int.Parse(txt_showCustomerIDFromSearch.Text));            
+            
+            CostumerController costumerController = new CostumerController();
+            costumerController.UpdateCostumer(costumer);
 
         }
         /// <summary>
@@ -176,8 +182,19 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void dgv_showCustomerInfo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //Models.Costumer chosenCostumer = 
+
+
             dgv_showCustomerInfo.SelectionMode = DataGridViewSelectionMode.FullRowSelect; 
             DataGridViewRow selectedRow = null;
+
+            if (dgv_showCustomerInfo.SelectedRows.Count > 0)
+            {
+                selectedRow = dgv_showCustomerInfo.SelectedRows[0];
+            }
+
+            int customerId = Convert.ToInt32(selectedRow.Cells["customerIDDataGridViewTextBoxColumn"].Value);
+            CustomerID = customerId;
 
                 if (dgv_showCustomerInfo.SelectedRows.Count > 0)
                 {
