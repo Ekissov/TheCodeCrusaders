@@ -23,7 +23,7 @@ namespace ButiksSystem.UI
 
         {
             InitializeComponent();
-
+            dgv_showCustomerInfo.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         /// <summary>
@@ -178,7 +178,7 @@ namespace ButiksSystem.UI
         private void dgv_showCustomerInfo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
-            dgv_showCustomerInfo.SelectionMode = DataGridViewSelectionMode.FullRowSelect; 
+           
             DataGridViewRow selectedRow = null;
 
             if (dgv_showCustomerInfo.SelectedRows.Count > 0)
