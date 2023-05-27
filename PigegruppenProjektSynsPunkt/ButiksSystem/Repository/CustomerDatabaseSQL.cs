@@ -73,7 +73,7 @@ namespace ButiksSystem.Repository
         //R
         public Costumer GetSelectedCustomer(int customerID)
         {
-            string query = $"SELECT FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email FROM CustomerTable WHERE CustomerID = {customerID}";
+            string query = $"SELECT FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email, CustomerID FROM CustomerTable WHERE CustomerID = {customerID}";
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
             SqlDataReader reader = command.ExecuteReader(); //Åbner readeren 

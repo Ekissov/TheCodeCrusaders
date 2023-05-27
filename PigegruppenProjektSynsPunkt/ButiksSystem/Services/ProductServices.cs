@@ -21,7 +21,7 @@ namespace ButiksSystem.Services
         public void CreateProduct(Models.Product product)
         {
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
-            ProductDatabaseSQL.CreateProduct(product);
+            productDatabaseSQL.CreateProduct(product);
         }
 
         /// <summary>
