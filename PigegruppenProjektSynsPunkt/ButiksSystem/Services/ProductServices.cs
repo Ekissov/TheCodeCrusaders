@@ -85,13 +85,5 @@ namespace ButiksSystem.Services
 
             MessageBox.Show("DataGridView printed to file successfully!");
         }
-
-        //File.WriteAllLines(@"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
-
-        //File.WriteAllLines(@"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
-        //File.WriteAllLines(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
-       
-
-
     }
 }
