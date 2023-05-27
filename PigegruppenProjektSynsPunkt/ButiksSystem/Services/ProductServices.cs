@@ -12,20 +12,20 @@ using System.Diagnostics;
 
 namespace ButiksSystem.Services
 {
-    internal class ProductServices
+    public class ProductServices
     {
         /// <summary>
-        /// Metode til at oprette et produkt - den modtager det nye produkt fra models og sender det videre til repository
+        /// Method that links the CreateProduct method between service and UI
         /// </summary>
         /// <param name="product"></param>
-        public static void CreateProduct(Models.Product product)
+        public void CreateProduct(Models.Product product)
         {
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             ProductDatabaseSQL.CreateProduct(product);
         }
 
         /// <summary>
-        /// Metode til at opdatere et produkt - dem modtager opdateringen om et produkt fra models og sender det videre til repository
+        /// Method that links the UpdateProduct method between service and UI
         /// </summary>
         /// <param name="product"></param>
         public void UpdateProduct(Models.Product product)
@@ -34,7 +34,7 @@ namespace ButiksSystem.Services
             productDatabaseSQL.UpdateProduct(product);
         }
         /// <summary>
-        /// Metode til at slette et produkt. den modtager opdatereingen om et produkt fra models og sender det videre til repository
+        /// Method that links the DeleteProduct method between service and UI
         /// </summary>
         /// <param name="product"></param>
         public void DeleteProduct(Models.Product product)
@@ -43,7 +43,7 @@ namespace ButiksSystem.Services
             productDatabaseSQL.DeleteProduct(product);
         }
         /// <summary>
-        /// Metode der danner en liste af alle produkter - den tager info fra repository. 
+        /// Method that links the GetAllProducts method between service and UI and returns a list, up to the controller, based on the method in the repository
         /// </summary>
         /// <returns></returns>
         public List<Product> GetAllProducts()
@@ -56,7 +56,7 @@ namespace ButiksSystem.Services
         }
 
         /// <summary>
-        /// Metode til at printe indholdet i et datagridview til en txt fil.
+        /// MEthod to print the contents in a datagridview to a txt file.
         /// </summary>
         /// <param name="dataGridView"></param>
         public void PrintDataGridViewToFile(DataGridView dataGridView)
@@ -85,13 +85,5 @@ namespace ButiksSystem.Services
 
             MessageBox.Show("DataGridView printed to file successfully!");
         }
-
-        //File.WriteAllLines(@"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
-
-        //File.WriteAllLines(@"C:\Pigegruppen - Synspunkt\NyPigegruppen - synspunkts\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
-        //File.WriteAllLines(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\printallproducts.txt", writeLines);
-       
-
-
     }
 }

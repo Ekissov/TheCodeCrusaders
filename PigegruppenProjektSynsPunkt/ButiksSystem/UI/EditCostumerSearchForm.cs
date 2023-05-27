@@ -33,11 +33,15 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void EditCostumerSearchForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'saanneeha_dk_db_databaseDataSet.CustomerTable' table. You can move, or remove it, as needed.
-            this.customerTableTableAdapter.Fill(this.saanneeha_dk_db_databaseDataSet.CustomerTable);
+            this.customerTableTableAdapter.Fill(this.saanneeha_dk_db_databaseDataSet.CustomerTable); //Connecting datagridview to database
             CostumerController costumerController = new CostumerController();  //connecting to controller
            
         }
+        /// <summary>
+        /// adding value to the string variable. the value being the userinput. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txt_searchCustomerIDOrName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) || !char.IsControl(e.KeyChar))
@@ -50,6 +54,11 @@ namespace ButiksSystem.UI
             CostumerInput = txt_searchCustomerIDOrName.Text;
 
         }
+        /// <summary>
+        /// buttonclick event that show the result in the database that matches the úserinput. this i shown in the datagridview 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
 
         private void btn_OKShowCostumer_Click(object sender, EventArgs e)
@@ -58,6 +67,15 @@ namespace ButiksSystem.UI
             AllCostumers = costumerController.ReadCustomer(CostumerInput);
             dgv_showCustomerInfo.DataSource = AllCostumers;
         }
+        private void dgv_showCustomerInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+        /// <summary>
+        /// Buttonclick event that takes the marked customer in the datagridview and shows all info in the textboxes. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         //private void dgv_showCustomerInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         
         private void btn_showCustomerInfo_Click(object sender, EventArgs e)
@@ -86,6 +104,12 @@ namespace ButiksSystem.UI
             txt_changeCustomerAddress.Text,
             int.Parse(txt_showCustomerIDFromSearch.Text));*/
         }
+
+        /// <summary>
+        /// buttonclick event that shows a messagebox, asking the user, if they wants to delete the customer and if so, runs the deletemethod, if not closes the window.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_deleteCustomerInDatabase_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Er du sikker på at du vil slette kunden?", "Bekræftelse", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -101,7 +125,11 @@ namespace ButiksSystem.UI
                 this.Close();
             }
         }
-
+        /// <summary>
+        ///  buttonclick event that shows a messagebox, asking the user, if their changes are correct and if so, runs the updatemethod, if not closes the window.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_saveEditedCustomerToDatabase_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Er du sikker på at du vil gemme ændringerne?", "Bekræftelse", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -117,10 +145,11 @@ namespace ButiksSystem.UI
                 this.Close();
             }
         }
-
+        /// <summary>
+        /// Method that updates a customer. this is connected all the way to our repository where the CRUD logic lies and there it updates the customer in the database. 
+        /// </summary>
         private void UpdateCostumer()
         {
-            //Insert Logic
             Costumer.CostumerID = int.Parse(txt_showCustomerIDFromSearch.Text);
             Costumer.FirstName = txt_changeCustomerFirstName.Text;
             Costumer.LastName = txt_changeCustomerLastName.Text;
@@ -131,12 +160,19 @@ namespace ButiksSystem.UI
             Costumer.City = txt_changeCustomerCity.Text;
 
         }
-
+        /// <summary>
+        /// Method that deletes a customer. this is connected all the way to our repository where the CRUD logic lies and there it deletes the customer from the database. 
+        /// </summary>
         private void DeleteCostumer()
         {
             Costumer.CostumerID = (int.Parse(txt_showCustomerIDFromSearch.Text));
         }
 
+        /// <summary>
+        /// buttonclick event that opens up a PDF file that explains the current window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_homePageHelp_Click(object sender, EventArgs e)
         {
             Process.Start("Hjælpeside til Redigér Kunde.pdf");

@@ -85,7 +85,11 @@ namespace ButiksSystem.UI
 
             this.Close();
         }
-
+        /// <summary>
+        /// clickevent that opens a PDF that explains the form. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_homePageHelp_Click(object sender, EventArgs e)
         {
             Process.Start("Hjælpeside til Salgsstatistik.pdf");

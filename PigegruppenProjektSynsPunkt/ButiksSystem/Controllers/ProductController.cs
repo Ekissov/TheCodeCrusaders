@@ -13,16 +13,17 @@ namespace ButiksSystem.Controllers
     public class ProductController
     {
         /// <summary>
-        /// 
+        /// Method that links the CreateProduct method between service and UI
         /// </summary>
         /// <param name="productName"></param>
         /// <param name="price"></param>
         /// <param name="categoryId"></param>
         /// <param name="quantity"></param>
-        public static void CreateProduct(string productName, decimal price, int categoryId, int quantity)
+        public void CreateProduct(string productName, decimal price, int categoryId, int quantity)
         {
             Product product = new Product(productName, price, categoryId, quantity);
-            ProductServices.CreateProduct(product);
+            ProductServices productServices = new ProductServices();
+            productServices.CreateProduct(product);
         }
 
         /*public static void PrintAllProducts()
@@ -30,6 +31,10 @@ namespace ButiksSystem.Controllers
             ProductServices.PrintAllProducts();
         }*/
 
+        /// <summary>
+        /// Method that links the GetAllProducts method between service and UI 
+        /// </summary>
+        /// <returns></returns>
         public List<Product> GetAllProducts()
         {
 
@@ -39,26 +44,35 @@ namespace ButiksSystem.Controllers
             return productServices.GetAllProducts();
 
         }
-
+        //Spørg Linda :P
         public List<Product> ReadAllProductsToList()
         {
             var result = new List<Product>();
             return result;
         }
-
+        /// <summary>
+        /// Method that links the UpdateProduct method between service and UI
+        /// </summary>
+        /// <param name="product"></param>
         public void UpdateProduct(Product product)
         {
-            ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
-            productDatabaseSQL.UpdateProduct(product);
+            ProductServices productServices = new ProductServices();
+            productServices.UpdateProduct(product);
         }
-
+        /// <summary>
+        /// Method that links the DeleteProduct method between service and UI
+        /// </summary>
+        /// <param name="product"></param>
         public void DeleteProduct(Product product)
         {
-            ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
-            productDatabaseSQL.DeleteProduct(product);
+            ProductServices productServices = new ProductServices();
+            productServices.DeleteProduct(product);
         }
-
-        public void PrintDataGridViewToFile(DataGridView dataGridView, string filePath)
+        /// <summary>
+        /// Method that links the PrintDataGridViewToFile method between service and UI
+        /// </summary>
+        /// <param name="dataGridView"></param>
+        public void PrintDataGridViewToFile(DataGridView dataGridView)
         {
             ProductServices productServices = new ProductServices();
             productServices.PrintDataGridViewToFile(dataGridView);

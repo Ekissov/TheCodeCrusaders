@@ -90,7 +90,11 @@ namespace ButiksSystem
             IReturnItemForm returnItemForm = new IReturnItemForm();
             returnItemForm.ShowDialog();
         }
-
+        /// <summary>
+        /// clickevent that opens a PDF that explain the form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_homePageHelp_Click(object sender, EventArgs e)
         {
             

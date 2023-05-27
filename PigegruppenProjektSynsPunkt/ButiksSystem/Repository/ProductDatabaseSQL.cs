@@ -10,37 +10,35 @@ namespace ButiksSystem.Repository
 {
     internal class ProductDatabaseSQL
     {
-        //Vi giver systemet den connection string den skal bruge for at oprette forbindelse til databasen
+        // Connectionstring to connect to the databse
         private static SqlConnection connection = new SqlConnection("Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9"); //"Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9";
 
         //C
         /// <summary>
-        /// En af vores CRUD metoder - denne er "C" da det er Create - den opretter et product i databasen. Den modtager information/product fra service.product
+        /// CRUD Method (C) this creates a product in the database. it recieves info from Service.Product
         /// </summary>
         /// <param name="product"></param>
-        public static void CreateProduct(Models.Product product)
+        public void CreateProduct(Models.Product product)
         {
 
             string query = $"INSERT INTO Product (ProductName, Price, CategoryID, Quantity) " +
                 $"VALUES ('{product.ProductName}', {product.ProductPrice.ToString().Replace(',', '.')}, {product.CategoryID.ToString()}, {product.Quantity.ToString()})";
 
-            //Console.WriteLine(query);
-        
-
+          
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
             int count = command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
 
-            connection.Close(); 
+            connection.Close();
         }
 
 
         //R
         /// <summary>
-        /// En af vores CRUD metoder - denne er "R", da det er READ. Den opretter en liste med alle elementerne i Product tabellen i databasen. 
+        /// CRUD Method (R) this reads a product in the database. Then it returns the info in a list. 
         /// </summary>
         /// <returns></returns>
-        public static List<string> ReadProduct()
+        public List<string> ReadProduct()
         {
             List<string> result = new List<string>();
             string query = "SELECT * FROM Product";
@@ -66,7 +64,7 @@ namespace ButiksSystem.Repository
 
         //U
         /// <summary>
-        /// En af vores CRUD metoder - denne er "U", da det er Update. Den opdatere/redigerer et product i databasen. Den modtager information/product fra service.product
+        /// CRUD Method (U) this updates a product in the database. It recieves info from Service.Product
         /// </summary>
         /// <param name="product"></param>
         public void UpdateProduct(Models.Product product)
@@ -84,7 +82,7 @@ namespace ButiksSystem.Repository
 
         //D
         /// <summary>
-        /// En af vores CRUD metoder - denne er "D", da det er Delete. Den sletter et product i databasen. Den modtager information/product fra service.product
+        /// CRUD Method (D) this deletes a product in the database. It recieves info from Service.Product
         /// </summary>
         /// <param name="product"></param>
         public void DeleteProduct(Models.Product product)
@@ -100,7 +98,7 @@ namespace ButiksSystem.Repository
         }
 
         /// <summary>
-        /// Denne metode opretter en liste. denne liste består af alle 5 attributter på Product klassen. derudover sortere den listen alfabetisk ud fra ProductName.
+        /// This method creates a list. This list contains all 5 attributes from the ProductClass. It then sorts them alphabetically.
         /// </summary>
         /// <returns></returns>
         public List<Product> GetAllProducts()
@@ -118,8 +116,8 @@ namespace ButiksSystem.Repository
                 decimal productPrice = reader.GetDecimal(2);
                 int categoryID = reader.GetInt32(3);
                 int quantity = reader.GetInt32(4);
-                Product row = new Product(productID,productName,productPrice,categoryID,quantity);
-   
+                Product row = new Product(productID, productName, productPrice, categoryID, quantity);
+
                 result.Add(row); //tilføjer data til listen
             }
 
