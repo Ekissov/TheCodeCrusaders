@@ -56,8 +56,8 @@ namespace ButiksSystem.Repository
                  reader["email"].ToString(),
                  (int)reader["PostalCode"],
                  reader["city"].ToString(),
-                 reader["Address"].ToString(),
-                 (int)reader["CustomerID]"]);
+                 reader["CustomerAddress"].ToString(),
+                 (int)reader["CustomerID"]);
 
                 customerList.Add(costumer);
             }
@@ -71,7 +71,7 @@ namespace ButiksSystem.Repository
         }
 
         //R
-       /* public Costumer GetCustomerInfo()
+        /*public Costumer GetCustomerInfo()
         {
             string query = "SELECT FROM CustomerTable (FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email)";
             SqlCommand command = new SqlCommand(query, connection);
@@ -95,7 +95,7 @@ namespace ButiksSystem.Repository
             reader.Close(); // lukker aflæseren og forbindelsen 
             connection.Close();
             return customer; // retunerer resultatet som en liste
-
+            */
 
             //U
             public void UpdateCustomer(Models.Costumer costumer)
@@ -109,7 +109,7 @@ namespace ButiksSystem.Repository
 
             connection.Close();
 
-        }*/
+        }
 
         //D
 

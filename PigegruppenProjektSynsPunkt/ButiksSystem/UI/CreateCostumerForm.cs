@@ -38,7 +38,8 @@ namespace ButiksSystem.UI
                txt_createCustomerEmail.Text,
                int.Parse(txt_createCustomerPostalCode.Text),
                txt_createCustomerCity.Text,
-               txt_createCustomerAddress.Text);
+               txt_createCustomerAddress.Text,
+               int.Parse(txt_createCustomerID.Text));
 
                Controllers.CostumerController costumerController = new Controllers.CostumerController();
                costumerController.CreateCostumer(costumer);
