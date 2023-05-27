@@ -39,16 +39,18 @@ namespace ButiksSystem.Repository
 
 
         //R
-        public List<Costumer> ReadCustomer()
+        public List<Costumer> GetAllCustomers()
         {
             List<Costumer> customerList = new List<Costumer>();
-            string query = "SELECT * FROM CustomerTable";
+            string query = "SELECT FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email, CustomerID FROM CustomerTable";
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
             SqlDataReader reader = command.ExecuteReader(); //Åbner readeren 
 
             while (reader.Read())
             {
+                int customerID = (int)reader["CustomerID"];
+
                 Costumer costumer = new Costumer(
                  reader["FirstName"].ToString(),
                  reader["LastName"].ToString(),
@@ -57,17 +59,14 @@ namespace ButiksSystem.Repository
                  (int)reader["PostalCode"],
                  reader["city"].ToString(),
                  reader["CustomerAddress"].ToString(),
-                 (int)reader["CustomerID"]);
+                 customerID);
 
                 customerList.Add(costumer);
             }
-            if (customerList == null)
-            {
-                throw new Exception("Der er ingen kunder i listen");
-            }
-            reader.Close(); // lukker aflæseren og forbindelsen 
+            
+            reader.Close(); 
             connection.Close();
-            return customerList; // retunerer resultatet som en liste
+            return customerList; 
         }
 
         //R

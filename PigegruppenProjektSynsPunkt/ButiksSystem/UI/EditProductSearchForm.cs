@@ -56,7 +56,9 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void btn_OKShowProducts_Click(object sender, EventArgs e)
         {
-            dgv_showProductInfo.DataSource = ProductIDInput;
+            ProductController productController = new ProductController();
+            dgv_showProductInfo.DataSource = productController.ProductListBySearch(ProductIDInput);
+            
         }
 
         private void dgv_showProductInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)

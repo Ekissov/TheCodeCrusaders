@@ -1,4 +1,5 @@
 ﻿using ButiksSystem.Models;
+using ButiksSystem.Repository;
 using ButiksSystem.Services;
 using ButiksSystem.UI;
 using System;
@@ -41,23 +42,16 @@ namespace ButiksSystem.Controllers
             costumerServices.DeleteCostumer(costumer);
         }
 
-        public List<Costumer> ReadCustomer(string customerInput)
+      
+        public List<Costumer> CostumerBySearch(string input)
         {
             CostumerServices costumerServices = new CostumerServices();
-            List<Costumer> allCustomers = costumerServices.ReadCustomer();
-
-            var allcustomersToDgv = allCustomers.Where(
-                x => x.FirstName == customerInput || 
-                x.LastName == customerInput).ToList();
-           
-            return allcustomersToDgv;
+            return costumerServices.CustomerBySearch(input);
         }
-
         public Costumer GetSelectedCustomer(int customerID)
         {
             CostumerServices costumerServices = new CostumerServices();
-            Costumer selectedCustomer = costumerServices.GetSelectedCustomer(customerID);
-            return selectedCustomer;
+            return costumerServices.GetSelectedCustomer(customerID);
         }
 
     }

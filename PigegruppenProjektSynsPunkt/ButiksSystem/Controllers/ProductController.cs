@@ -44,6 +44,13 @@ namespace ButiksSystem.Controllers
             return productServices.GetAllProducts();
 
         }
+
+        public List<Product> ProductListBySearch(string input) 
+        { 
+            ProductServices productServices = new ProductServices();
+            return productServices.ProductListBySearch(input);
+        }
+        
         //Spørg Linda :P
         public List<Product> ReadAllProductsToList()
         {

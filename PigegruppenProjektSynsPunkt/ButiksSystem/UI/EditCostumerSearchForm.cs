@@ -64,8 +64,8 @@ namespace ButiksSystem.UI
         private void btn_OKShowCostumer_Click(object sender, EventArgs e)
         {
             CostumerController costumerController = new CostumerController();
-            AllCostumers = costumerController.ReadCustomer(CostumerInput);
-            dgv_showCustomerInfo.DataSource = AllCostumers;
+            dgv_showCustomerInfo.DataSource = costumerController.CostumerBySearch(CostumerInput);
+          
         }
 
         /// <summary>

@@ -94,5 +94,7 @@ namespace ButiksSystem.UI
         {
             Process.Start("Hjælpeside til Salgsstatistik.pdf");
         }
+
+    
     }
 }

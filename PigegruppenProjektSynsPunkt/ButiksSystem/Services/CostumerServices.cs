@@ -44,17 +44,26 @@ namespace ButiksSystem.Services
             costumerDatabaseSQL.DeleteCustomer(costumer);
         }
 
-        public List<Costumer> ReadCustomer()
+        public List<Costumer> CustomerBySearch(string customerInput)
         {
-            CustomerDatabaseSQL customerDatabaseSQL= new CustomerDatabaseSQL();
-            return customerDatabaseSQL.ReadCustomer();
+            CustomerDatabaseSQL costumerDatabaseSQL = new CustomerDatabaseSQL();
+            List<Costumer> allCustomers = costumerDatabaseSQL.GetAllCustomers();
+
+            int searchCustomerId;
+            bool isNumeric = int.TryParse(customerInput, out searchCustomerId);
+
+            var allCustomersSearch = allCustomers.Where(
+        x => x.FirstName.IndexOf(customerInput, StringComparison.OrdinalIgnoreCase) >= 0 ||
+             x.LastName.IndexOf(customerInput, StringComparison.OrdinalIgnoreCase) >= 0 ||
+             (isNumeric && x.CostumerID == searchCustomerId)).ToList();
+
+            return allCustomersSearch;
         }
-        
+
         public Costumer GetSelectedCustomer(int customerID)
         {
             CustomerDatabaseSQL customerDatabaseSQL = new CustomerDatabaseSQL();
-            Costumer selectedCustomer = customerDatabaseSQL.GetSelectedCustomer(customerID);
-            return selectedCustomer;
+            return customerDatabaseSQL.GetSelectedCustomer(customerID);
         }
        
 

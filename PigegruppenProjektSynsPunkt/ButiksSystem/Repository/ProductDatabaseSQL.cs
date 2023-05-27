@@ -68,7 +68,7 @@ namespace ButiksSystem.Repository
         /// CRUD Method (U) this updates a product in the database. It recieves info from Service.Product
         /// </summary>
         /// <param name="product"></param>
-        public void UpdateProduct(Models.Product product)
+        public void UpdateProduct(Product product)
         {
             //Update sætningen herunder er muligvis ikke korrekt
             string query = $"UPDATE Product SET ProductName = '{product.ProductName}', Price = '{product.ProductPrice}', CategoryID = '{product.CategoryID}', Quantity = '{product.Quantity}' WHERE ProductID = '{product.ProductID}'";
@@ -117,9 +117,10 @@ namespace ButiksSystem.Repository
                 decimal productPrice = reader.GetDecimal(2);
                 int categoryID = reader.GetInt32(3);
                 int quantity = reader.GetInt32(4);
-                Product row = new Product(productID, productName, productPrice, categoryID, quantity);
+                Product product = new Product(productID, productName, productPrice, categoryID, quantity);
 
-                result.Add(row); //tilføjer data til listen
+                result.Add(product); //tilføjer data til listen
+
             }
 
             reader.Close(); // lukker aflæseren og forbindelsen 

@@ -55,7 +55,7 @@
             // 
             this.dgv_showSalesStatisticsInDatagrid.AllowUserToOrderColumns = true;
             this.dgv_showSalesStatisticsInDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_showSalesStatisticsInDatagrid.Location = new System.Drawing.Point(10, 198);
+            this.dgv_showSalesStatisticsInDatagrid.Location = new System.Drawing.Point(12, 197);
             this.dgv_showSalesStatisticsInDatagrid.Name = "dgv_showSalesStatisticsInDatagrid";
             this.dgv_showSalesStatisticsInDatagrid.RowHeadersWidth = 51;
             this.dgv_showSalesStatisticsInDatagrid.Size = new System.Drawing.Size(453, 197);

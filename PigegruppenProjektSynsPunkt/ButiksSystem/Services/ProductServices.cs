@@ -55,6 +55,21 @@ namespace ButiksSystem.Services
             return productDatabaseSQL.GetAllProducts();
         }
 
+        public List<Product> ProductListBySearch(string customerInput)
+        {
+            ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
+            List<Product> allProducts = productDatabaseSQL.GetAllProducts();
+
+            int searchProductId;
+            bool isNumeric = int.TryParse(customerInput, out searchProductId);
+
+            var allProductsSearch = allProducts.Where(
+        x => x.ProductName.IndexOf(customerInput, StringComparison.OrdinalIgnoreCase) >= 0 ||
+             (isNumeric && x.ProductID == searchProductId)).ToList();
+
+            return allProductsSearch;
+        }
+
         /// <summary>
         /// MEthod to print the contents in a datagridview to a txt file.
         /// </summary>
