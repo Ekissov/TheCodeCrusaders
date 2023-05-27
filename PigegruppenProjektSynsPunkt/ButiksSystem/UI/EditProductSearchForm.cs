@@ -74,7 +74,7 @@ namespace ButiksSystem.UI
             txt_editQuantityInStorage.Text = Product.Quantity.ToString(); */
         }
         /// <summary>
-        /// clickevent that shows a messagebox, if yes is chosen it runs the deletemethod and closes the window, if cancel is chosen, it goes back to the EditProductSearchForm.
+        /// clickevent that shows a messagebox, if OK is chosen it runs the deletemethod and closes the window, if cancel is chosen, it goes back to the EditProductSearchForm.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -93,6 +93,11 @@ namespace ButiksSystem.UI
                
             }
         }
+        /// <summary>
+        /// clickevent that shows a messagebox, if OK is chosen it runs the UpdateMethod and closes the window, if cancel is chosen, it goes back to the EditProductSearchForm.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_saveEditedProductToDatabase_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Er du sikker på at du vil gemme ændringerne?", "Bekræftelse", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
@@ -108,6 +113,10 @@ namespace ButiksSystem.UI
                 this.Close();
             }
         }
+        /// <summary>
+        /// Method that updates the pruduct, it saves the new input in Product, and the method is connected all the way to our repository where the CRUD method updates our database.
+        /// </summary>
+        /// <param name="product"></param>
         private void UpdateProduct(Product product)
         {
             ProductController productController = new ProductController();
@@ -120,6 +129,10 @@ namespace ButiksSystem.UI
             Product.Quantity = int.Parse(txt_editQuantityInStorage.Text);
         }
 
+        /// <summary>
+        /// Method that deletes the pruduct, it saves the new input in Product, and the method is connected all the way to our repository where the CRUD method deletes the product from our database.
+        /// </summary>
+        /// <param name="product"></param>
         private void DeleteProduct(Product product)
         {
             ProductController productController = new ProductController();
@@ -128,6 +141,11 @@ namespace ButiksSystem.UI
             Product.ProductID = int.Parse(txt_showProductIDFromSearch.Text);
         }
 
+        /// <summary>
+        /// clickevent that opens a PDF file that explains the form - it is saved directly in the debugger folder that follows our program. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void btn_homePageHelp_Click(object sender, EventArgs e)
         {
             Process.Start("Hjælpeside til Redigér Vare.pdf");
