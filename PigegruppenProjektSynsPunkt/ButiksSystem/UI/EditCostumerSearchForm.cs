@@ -67,17 +67,12 @@ namespace ButiksSystem.UI
             AllCostumers = costumerController.ReadCustomer(CostumerInput);
             dgv_showCustomerInfo.DataSource = AllCostumers;
         }
-        private void dgv_showCustomerInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
         /// <summary>
         /// Buttonclick event that takes the marked customer in the datagridview and shows all info in the textboxes. 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        //private void dgv_showCustomerInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-
         private void btn_showCustomerInfo_Click(object sender, EventArgs e)
         {
             CostumerController costumerController = new CostumerController();
