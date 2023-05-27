@@ -13,7 +13,7 @@ namespace ButiksSystem.Controllers
     public class ProductController
     {
         /// <summary>
-        /// 
+        /// Method to create a new product in the database. takes info from the the UI and sends to ProductService.
         /// </summary>
         /// <param name="productName"></param>
         /// <param name="price"></param>
@@ -29,7 +29,10 @@ namespace ButiksSystem.Controllers
         {
             ProductServices.PrintAllProducts();
         }*/
-
+        /// <summary>
+        /// Method that creates a list with all products in the database. 
+        /// </summary>
+        /// <returns></returns>
         public List<Product> GetAllProducts()
         {
 

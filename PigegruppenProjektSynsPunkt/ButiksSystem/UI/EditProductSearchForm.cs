@@ -22,7 +22,11 @@ namespace ButiksSystem.UI
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// shows all products in the datagridview when form is loaded
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EditProductSearchForm_Load(object sender, EventArgs e)
         {
             ProductController productController = new ProductController();
@@ -32,12 +36,20 @@ namespace ButiksSystem.UI
             // ProductController productController = new ProductController();
             // dgv_showProductInfo.DataSource = productController.GetAllProducts();
         }
-
+        /// <summary>
+        /// method that saves the userinput in the textbox in a varaiable
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txt_searchProductIDOrName_TextChanged(object sender, EventArgs e)
         {
             ProductIDInput = txt_searchProductIDOrName.Text;
         }
-
+        /// <summary>
+        /// clickevent that filter the datagridview info, so it only shows the info that matches the input
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_OKShowProducts_Click(object sender, EventArgs e)
         {
             dgv_showProductInfo.DataSource = ProductIDInput;
@@ -47,7 +59,11 @@ namespace ButiksSystem.UI
         {
 
         }
-
+        /// <summary>
+        /// method that takes the chosen product in the datagridview and shows all data in the textboxes. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_showProductInfo_Click(object sender, EventArgs e)
         {
 
@@ -57,39 +73,46 @@ namespace ButiksSystem.UI
             txt_editProductGroupID.Text = Product.CategoryID.ToString();
             txt_editQuantityInStorage.Text = Product.Quantity.ToString(); */
         }
-
+        /// <summary>
+        /// clickevent that shows a messagebox, if yes is chosen it runs the deletemethod and closes the window, if cancel is chosen, it goes back to the EditProductSearchForm.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_deleteProductInDatabase_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Er du sikker på at du vil Slette varen?", "Bekræftelse", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("Er du sikker på at du vil Slette varen?", "Bekræftelse", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
-            if (result == DialogResult.Yes)
+            if (result == DialogResult.OK)
             {
                 Controllers.ProductController productController = new Controllers.ProductController();
-                DeleteProduct();
+                DeleteProduct(Product);
                 this.Close();
             }
-            else if (result == DialogResult.No)
+            else if (result == DialogResult.Cancel)
             {
-                this.Close();
+               
             }
         }
         private void btn_saveEditedProductToDatabase_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Er du sikker på at du vil gemme ændringerne?", "Bekræftelse", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("Er du sikker på at du vil gemme ændringerne?", "Bekræftelse", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
-            if (result == DialogResult.Yes)
+            if (result == DialogResult.OK)
             {
                 Controllers.ProductController productController = new Controllers.ProductController();
-                UpdateProduct();
+                UpdateProduct(Product);
                 this.Close();
             }
-            else if (result == DialogResult.No)
+            else if (result == DialogResult.Cancel)
             {
                 this.Close();
             }
         }
-        private void UpdateProduct()
+        private void UpdateProduct(Product product)
         {
+            ProductController productController = new ProductController();
+            productController.UpdateProduct(product);
+
             Product.ProductID = int.Parse(txt_showProductIDFromSearch.Text);
             Product.ProductName = txt_editProductName.Text;
             Product.ProductPrice = int.Parse(txt_editProductPricePerItem.Text);
@@ -97,8 +120,11 @@ namespace ButiksSystem.UI
             Product.Quantity = int.Parse(txt_editQuantityInStorage.Text);
         }
 
-        private void DeleteProduct()
+        private void DeleteProduct(Product product)
         {
+            ProductController productController = new ProductController();
+            productController.DeleteProduct(product);
+
             Product.ProductID = int.Parse(txt_showProductIDFromSearch.Text);
         }
 
