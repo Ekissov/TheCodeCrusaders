@@ -97,17 +97,17 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void btn_deleteCustomerInDatabase_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Er du sikker på at du vil slette kunden?", "Bekræftelse", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("Er du sikker på at du vil slette kunden?", "Bekræftelse", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
-            if (result == DialogResult.Yes)
+            if (result == DialogResult.OK)
             {
                 Controllers.CostumerController costumerController = new Controllers.CostumerController();
                 DeleteCostumer();
                 this.Close();
             }
-            else if (result == DialogResult.No)
+            else if (result == DialogResult.Cancel)
             {
-                this.Close();
+               
             }
         }
         /// <summary>
