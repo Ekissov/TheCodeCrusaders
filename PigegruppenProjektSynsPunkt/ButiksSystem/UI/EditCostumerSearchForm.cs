@@ -94,15 +94,6 @@ namespace ButiksSystem.UI
             txt_changeCustomerAddress.Text = selectedCustomer.Address.ToString();
             txt_showCustomerIDFromSearch.Text = selectedCustomer.CostumerID.ToString();
 
-            /*Costumer costumer = new Costumer(
-            txt_changeCustomerFirstName.Text,
-            txt_changeCustomerLastName.Text,
-            txt_changeCustomerPhoneNumber.Text,
-            txt_changeCustomerEmail.Text,
-            int.Parse(txt_changeCustomerPostalCode.Text),
-            txt_changeCustomerCity.Text,
-            txt_changeCustomerAddress.Text,
-            int.Parse(txt_showCustomerIDFromSearch.Text));*/
         }
 
         /// <summary>
@@ -178,21 +169,23 @@ namespace ButiksSystem.UI
             Process.Start("Hjælpeside til Redigér Kunde.pdf");
         }
 
+        /// <summary>
+        /// Makes it possible to select a row in the datagridview saves the customer ID in the property CustomerID
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgv_showCustomerInfo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Models.Costumer chosenCostumer = 
-            
-
+            dgv_showCustomerInfo.SelectionMode = DataGridViewSelectionMode.FullRowSelect; 
             DataGridViewRow selectedRow = null;
 
-            if (dgv_showCustomerInfo.SelectedRows.Count > 0)
-            {
-                selectedRow = dgv_showCustomerInfo.SelectedRows[0];
-            }
-
-            int customerId = Convert.ToInt32(selectedRow.Cells["customerIDDataGridViewTextBoxColumn"].Value);
-            CustomerID = customerId;
-           
+                if (dgv_showCustomerInfo.SelectedRows.Count > 0)
+                {
+                    selectedRow = dgv_showCustomerInfo.SelectedRows[0];
+                }
+  
+                int customerId = Convert.ToInt32(selectedRow.Cells["customerIDDataGridViewTextBoxColumn"].Value);
+                CustomerID = customerId;                       
         }
     }
 

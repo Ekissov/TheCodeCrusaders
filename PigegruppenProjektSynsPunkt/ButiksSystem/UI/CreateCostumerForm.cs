@@ -29,8 +29,7 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void btn_createCustomer_Click_1(object sender, EventArgs e)
         {
-            try
-            {
+            
                Costumer costumer = new Models.Costumer(
                txt_createCustomerFirstName.Text,
                txt_createCustomerLastName.Text,
@@ -38,18 +37,13 @@ namespace ButiksSystem.UI
                txt_createCustomerEmail.Text,
                int.Parse(txt_createCustomerPostalCode.Text),
                txt_createCustomerCity.Text,
-               txt_createCustomerAddress.Text,
-               int.Parse(txt_createCustomerID.Text));
+               txt_createCustomerAddress.Text);
 
                Controllers.CostumerController costumerController = new Controllers.CostumerController();
                costumerController.CreateCostumer(costumer);
 
                 this.Close();
-            }
-            catch 
-            {
-                MessageBox.Show("Postnummeret er ikke skrevet korrekt, det kan kun bestå af tal, prøv igen", "Fejlmeddelelse", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
         }
 
         private void btn_homePageHelp_Click(object sender, EventArgs e)
@@ -58,9 +52,6 @@ namespace ButiksSystem.UI
             Process.Start("Hjælpeside til Opret Kunde.pdf");
         }
 
-        private void CreateCostumerForm_Load(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 }

@@ -29,6 +29,17 @@ namespace ButiksSystem.Models
             this.CostumerID = costumerID;
         }
 
+        public Costumer(string firstName, string lastName, string phoneNumber, string email, int postalCode, string city, string address)
+        {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.PhoneNumber = phoneNumber;
+            this.Address = address;
+            this.PostalCode = postalCode;
+            this.City = city;
+            this.Email = email;
+        }
+
         public Costumer(int costumerID) 
         {
         this.CostumerID = costumerID;
