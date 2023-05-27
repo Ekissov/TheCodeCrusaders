@@ -33,7 +33,6 @@ namespace ButiksSystem.UI
             ProductController productController = new ProductController();
             List<Product> products = productController.GetAllProducts();
             dgv_showProductInfo.DataSource = products;
-
         }
         /// <summary>
         /// buttonclick event that opens up a txt file with all products and their info
@@ -42,8 +41,9 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void btn_printAllProductsToTxtfile_Click(object sender, EventArgs e)
         {
-            ProductServices productServices = new ProductServices();
-            productServices.PrintDataGridViewToFile(dgv_showProductInfo);
+            ProductController productController = new ProductController();
+            productController.PrintDataGridViewToFile(dgv_showProductInfo);
+              
 
         }
         /// <summary>

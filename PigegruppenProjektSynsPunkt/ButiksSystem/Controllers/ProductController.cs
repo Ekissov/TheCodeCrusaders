@@ -61,7 +61,7 @@ namespace ButiksSystem.Controllers
             productDatabaseSQL.DeleteProduct(product);
         }
 
-        public void PrintDataGridViewToFile(DataGridView dataGridView, string filePath)
+        public void PrintDataGridViewToFile(DataGridView dataGridView)
         {
             ProductServices productServices = new ProductServices();
             productServices.PrintDataGridViewToFile(dataGridView);
