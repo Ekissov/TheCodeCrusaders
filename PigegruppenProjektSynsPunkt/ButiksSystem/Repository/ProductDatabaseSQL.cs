@@ -24,7 +24,7 @@ namespace ButiksSystem.Repository
             string query = $"INSERT INTO Product (ProductName, Price, CategoryID, Quantity) " +
                 $"VALUES ('{product.ProductName}', {product.ProductPrice.ToString().Replace(',', '.')}, {product.CategoryID.ToString()}, {product.Quantity.ToString()})";
 
-          
+
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
             int count = command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
@@ -38,14 +38,14 @@ namespace ButiksSystem.Repository
         /// CRUD Method (R) this reads a selects and reads from a specific in the database. Then it returns the info into a new Product. 
         /// </summary>
         /// <returns></returns>
-        public Product GetSelectedProduct (int productID)
+        public Product GetSelectedProduct(int productID)
         {
-            
+
             string query = $"SELECT ProductID, ProductName, Price, CategoryID, Quantity FROM Product WHERE ProductID = {productID}";
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            SqlDataReader reader = command.ExecuteReader(); 
-            
+            SqlDataReader reader = command.ExecuteReader();
+
             Product selectedProduct = null;
             while (reader.Read())
             {
@@ -57,9 +57,9 @@ namespace ButiksSystem.Repository
                     (int)reader["Quantity"]);
             }
 
-            reader.Close(); 
+            reader.Close();
             connection.Close();
-            return selectedProduct; 
+            return selectedProduct;
 
         }
 
@@ -68,17 +68,21 @@ namespace ButiksSystem.Repository
         /// CRUD Method (U) this updates a product in the database. It recieves info from Service.Product
         /// </summary>
         /// <param name="product"></param>
-        public void UpdateProduct(Product product)
+        public void UpdateProduct(Models.Product product)
         {
             //Update sætningen herunder er muligvis ikke korrekt
-            string query = $"UPDATE Product SET ProductName = '{product.ProductName}', Price = '{product.ProductPrice}', CategoryID = '{product.CategoryID}', Quantity = '{product.Quantity}' WHERE ProductID = '{product.ProductID}'";
+            string query = $"UPDATE Product SET " +
+                $"ProductName = '{product.ProductName}', " +
+                $"Price = '{product.ProductPrice}', " +
+                $"CategoryID = '{product.CategoryID}', " +
+                $"Quantity = '{product.Quantity}' " +
+                $"WHERE ProductID = '{product.ProductID}'";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            int count = command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end besked med at databasen er opdateret
+            command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end besked med at databasen er opdateret
 
             connection.Close();
-
         }
 
         //D
@@ -93,7 +97,7 @@ namespace ButiksSystem.Repository
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            int count = command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
+            command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
 
             connection.Close();
         }

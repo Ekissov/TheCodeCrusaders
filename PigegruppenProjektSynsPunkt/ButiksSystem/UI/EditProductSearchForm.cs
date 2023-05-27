@@ -31,7 +31,7 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void EditProductSearchForm_Load(object sender, EventArgs e)
         {
-            
+
             this.productTableAdapter.Fill(this.saanneeha_dk_db_databaseDataSet1.Product);
             //ProductController productController = new ProductController();
             //List<Product> products = productController.GetAllProducts();
@@ -58,7 +58,7 @@ namespace ButiksSystem.UI
         {
             ProductController productController = new ProductController();
             dgv_showProductInfo.DataSource = productController.ProductListBySearch(ProductIDInput);
-            
+
         }
 
         private void dgv_showProductInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -81,13 +81,13 @@ namespace ButiksSystem.UI
         {
             ProductController productController = new ProductController();
             Product selectedProduct = productController.GetSelectedProduct(ProductID);
-            
-            
+
+
             txt_showProductIDFromSearch.Text = selectedProduct.ProductID.ToString();
             txt_editProductName.Text = selectedProduct.ProductName;
             txt_editProductPricePerItem.Text = selectedProduct.ProductPrice.ToString();
             txt_editProductGroupID.Text = selectedProduct.CategoryID.ToString();
-            txt_editQuantityInStorage.Text = selectedProduct.Quantity.ToString(); 
+            txt_editQuantityInStorage.Text = selectedProduct.Quantity.ToString();
         }
         /// <summary>
         /// clickevent that shows a messagebox, if OK is chosen it runs the deletemethod and closes the window, if cancel is chosen, it goes back to the EditProductSearchForm.
@@ -101,12 +101,12 @@ namespace ButiksSystem.UI
             if (result == DialogResult.OK)
             {
                 Controllers.ProductController productController = new Controllers.ProductController();
-                DeleteProduct(Product);
+                DeleteProduct();
                 this.Close();
             }
             else if (result == DialogResult.Cancel)
             {
-               
+
             }
         }
         /// <summary>
@@ -121,7 +121,7 @@ namespace ButiksSystem.UI
             if (result == DialogResult.OK)
             {
                 Controllers.ProductController productController = new Controllers.ProductController();
-                UpdateProduct(Product);
+                UpdateProduct();
                 this.Close();
             }
             else if (result == DialogResult.Cancel)
@@ -133,28 +133,39 @@ namespace ButiksSystem.UI
         /// Method that updates the pruduct, it saves the new input in Product, and the method is connected all the way to our repository where the CRUD method updates our database.
         /// </summary>
         /// <param name="product"></param>
-        private void UpdateProduct(Product product)
+        private void UpdateProduct()
         {
+            Models.Product product = new Models.Product(
+
+            int.Parse(txt_showProductIDFromSearch.Text),
+            txt_editProductName.Text,
+            decimal.Parse(txt_editProductPricePerItem.Text),
+            int.Parse(txt_editProductGroupID.Text),
+            int.Parse(txt_editQuantityInStorage.Text));
+
             ProductController productController = new ProductController();
             productController.UpdateProduct(product);
-
-            Product.ProductID = int.Parse(txt_showProductIDFromSearch.Text);
-            Product.ProductName = txt_editProductName.Text;
-            Product.ProductPrice = int.Parse(txt_editProductPricePerItem.Text);
-            Product.CategoryID = int.Parse(txt_editProductGroupID.Text);
-            Product.Quantity = int.Parse(txt_editQuantityInStorage.Text);
         }
 
         /// <summary>
         /// Method that deletes the pruduct, it saves the new input in Product, and the method is connected all the way to our repository where the CRUD method deletes the product from our database.
         /// </summary>
         /// <param name="product"></param>
-        private void DeleteProduct(Product product)
+        private void DeleteProduct()
         {
+            int ProductID = int.Parse(txt_showProductIDFromSearch.Text);
+
+            Product product = new Product(
+             int.Parse(txt_showProductIDFromSearch.Text),
+             txt_editProductName.Text,
+             decimal.Parse(txt_editProductPricePerItem.Text),
+             int.Parse(txt_editProductGroupID.Text),
+             int.Parse(txt_editQuantityInStorage.Text));
+           
+            product.ProductID = ProductID;
+
             ProductController productController = new ProductController();
             productController.DeleteProduct(product);
-
-            Product.ProductID = int.Parse(txt_showProductIDFromSearch.Text);
         }
 
         /// <summary>

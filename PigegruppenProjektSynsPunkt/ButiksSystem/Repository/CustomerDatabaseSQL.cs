@@ -101,7 +101,6 @@ namespace ButiksSystem.Repository
             //U
         public void UpdateCustomer(Models.Costumer costumer)
         {
-            //Update sætningen herunder er muligvis ikke korrekt
             string query = $"UPDATE CustomerTable SET " +
                 $"FirstName = '{costumer.FirstName}', " +
                 $"LastName = '{costumer.LastName}', " +
