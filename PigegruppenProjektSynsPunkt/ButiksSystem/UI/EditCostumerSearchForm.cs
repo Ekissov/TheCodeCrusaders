@@ -16,8 +16,9 @@ namespace ButiksSystem.UI
     public partial class EditCostumerSearchForm : Form
     {
         public Models.Costumer Costumer { get; set; }
-        public string CostumerIDInput { get; set; }
+        public string CostumerInput { get; set; }
         public List<Costumer> AllCostumers { get; set; }
+        public int CustomerID { get; set; }
         public EditCostumerSearchForm()
        
         {
@@ -37,24 +38,45 @@ namespace ButiksSystem.UI
             CostumerController costumerController = new CostumerController();  //connecting to controller
            
         }
+        private void txt_searchCustomerIDOrName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) || !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
         private void txt_searchCustomerIDOrName_TextChanged(object sender, EventArgs e)
         {
-            CostumerIDInput = txt_searchCustomerIDOrName.Text;
+            CostumerInput = txt_searchCustomerIDOrName.Text;
 
         }
+
+
         private void btn_OKShowCostumer_Click(object sender, EventArgs e)
         {
             CostumerController costumerController = new CostumerController();
-            AllCostumers = costumerController.ReadCustomer(CostumerIDInput);
+            AllCostumers = costumerController.ReadCustomer(CostumerInput);
             dgv_showCustomerInfo.DataSource = AllCostumers;
         }
-        private void dgv_showCustomerInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
+        //private void dgv_showCustomerInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
         private void btn_showCustomerInfo_Click(object sender, EventArgs e)
         {
-            Costumer costumer = new Costumer(
+            CostumerController costumerController = new CostumerController();
+
+            Costumer selectedCustomer = costumerController.GetSelectedCustomer(CustomerID);
+
+
+            txt_changeCustomerFirstName.Text = selectedCustomer.FirstName; 
+            txt_changeCustomerLastName.Text = selectedCustomer.LastName;
+            txt_changeCustomerPhoneNumber.Text = selectedCustomer.PhoneNumber;
+            txt_changeCustomerEmail.Text = selectedCustomer.Email;
+            txt_changeCustomerPostalCode.Text = selectedCustomer.PostalCode.ToString();
+            txt_changeCustomerCity.Text = selectedCustomer.City.ToString();
+            txt_changeCustomerAddress.Text = selectedCustomer.Address.ToString();
+            txt_showCustomerIDFromSearch.Text = selectedCustomer.CostumerID.ToString();
+
+            /*Costumer costumer = new Costumer(
             txt_changeCustomerFirstName.Text,
             txt_changeCustomerLastName.Text,
             txt_changeCustomerPhoneNumber.Text,
@@ -62,7 +84,7 @@ namespace ButiksSystem.UI
             int.Parse(txt_changeCustomerPostalCode.Text),
             txt_changeCustomerCity.Text,
             txt_changeCustomerAddress.Text,
-            int.Parse(txt_showCustomerIDFromSearch.Text));
+            int.Parse(txt_showCustomerIDFromSearch.Text));*/
         }
         private void btn_deleteCustomerInDatabase_Click(object sender, EventArgs e)
         {
@@ -122,13 +144,19 @@ namespace ButiksSystem.UI
 
         private void dgv_showCustomerInfo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow selectedRow = dgv_showCustomerInfo.Rows[e.RowIndex];
-                int customerID = (int)selectedRow.Cells[1].Value;
-
             //Models.Costumer chosenCostumer = 
+            
+
+            DataGridViewRow selectedRow = null;
+
+            if (dgv_showCustomerInfo.SelectedRows.Count > 0)
+            {
+                selectedRow = dgv_showCustomerInfo.SelectedRows[0];
             }
+
+            int customerId = Convert.ToInt32(selectedRow.Cells["customerIDDataGridViewTextBoxColumn"].Value);
+            CustomerID = customerId;
+           
         }
     }
 

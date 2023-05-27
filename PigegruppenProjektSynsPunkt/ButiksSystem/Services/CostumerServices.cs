@@ -49,7 +49,14 @@ namespace ButiksSystem.Services
             CustomerDatabaseSQL customerDatabaseSQL= new CustomerDatabaseSQL();
             return customerDatabaseSQL.ReadCustomer();
         }
+        
+        public Costumer GetSelectedCustomer(int customerID)
+        {
+            CustomerDatabaseSQL customerDatabaseSQL = new CustomerDatabaseSQL();
+            Costumer selectedCustomer = customerDatabaseSQL.GetSelectedCustomer(customerID);
 
+            return selectedCustomer;
+        }
        
 
 

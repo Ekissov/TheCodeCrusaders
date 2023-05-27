@@ -28,6 +28,12 @@ namespace ButiksSystem.Models
             this.Email = email;
             this.CostumerID = costumerID;
         }
+
+        public Costumer(int costumerID) 
+        {
+        this.CostumerID = costumerID;
+        }
+
      
     }
 }

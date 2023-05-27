@@ -71,34 +71,36 @@ namespace ButiksSystem.Repository
         }
 
         //R
-        /*public Costumer GetCustomerInfo()
+        public Costumer GetSelectedCustomer(int customerID)
         {
-            string query = "SELECT FROM CustomerTable (FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email)";
+            string query = $"SELECT FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email FROM CustomerTable WHERE CustomerID = {customerID}";
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
             SqlDataReader reader = command.ExecuteReader(); //Åbner readeren 
 
+            Costumer selectedCustomer = null;
             while (reader.Read())
             {
-                Costumer costumer = new Costumer(
+                selectedCustomer = new Costumer(
                     reader["FirstName"].ToString(),
                     reader["LastName"].ToString(),
                     reader["PhoneNumber"].ToString(),
                     reader["email"].ToString(),
                     (int)reader["PostalCode"],
                     reader["city"].ToString(),
-                    reader["Address"].ToString());
-
-               
+                    reader["CustomerAddress"].ToString(),
+                    (int)reader["CustomerID"]);
             }
 
+         
             reader.Close(); // lukker aflæseren og forbindelsen 
             connection.Close();
-            return customer; // retunerer resultatet som en liste
-            */
+            return selectedCustomer;
+        }   
+            
 
             //U
-            public void UpdateCustomer(Models.Costumer costumer)
+        public void UpdateCustomer(Models.Costumer costumer)
         {
             //Update sætningen herunder er muligvis ikke korrekt
             string query = $"UPDATE Customer SET FirstName = '{costumer.FirstName}', LastName = '{costumer.LastName}', PhoneNumber = '{costumer.PhoneNumber}', Email = '{costumer.Email}', PostalCode = '{costumer.PostalCode}', City = '{costumer.City}', Address = '{costumer.Address}' WHERE CustomerID = '{costumer.CostumerID}'";

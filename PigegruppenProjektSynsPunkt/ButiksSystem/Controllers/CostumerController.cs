@@ -1,10 +1,13 @@
 ﻿using ButiksSystem.Models;
 using ButiksSystem.Services;
+using ButiksSystem.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ButiksSystem.Controllers
 {
@@ -46,24 +49,17 @@ namespace ButiksSystem.Controllers
             var allcustomersToDgv = allCustomers.Where(
                 x => x.FirstName == customerInput || 
                 x.LastName == customerInput).ToList();
-            //.CostumerID == int.Parse(customerInput) || 
+           
             return allcustomersToDgv;
         }
 
-        /*public Costumer GetSelectedCustomer()
+        public Costumer GetSelectedCustomer(int customerID)
         {
             CostumerServices costumerServices = new CostumerServices();
-            var customerList = costumerServices.ReadCustomer();
-
-            foreach ( var customer in customerList )
-            {
-                
-            }
-
-
-
-            return; 
-        }*/
+            Costumer selectedCustomer = costumerServices.GetSelectedCustomer(customerID);
+          
+            return selectedCustomer;
+        }
 
     }
 }
