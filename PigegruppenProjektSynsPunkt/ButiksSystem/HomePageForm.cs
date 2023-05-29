@@ -79,7 +79,11 @@ namespace ButiksSystem
             ICreateOrderForm createOrderForm = new ICreateOrderForm();
             createOrderForm.ShowDialog();
         }
-
+        /// <summary>
+        /// Clickevnet that closes the form when clicked - the idea is that it will return the user to the logon site. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_homePageEmployeeLogOut_Click(object sender, EventArgs e)
         {
             this.Close();
