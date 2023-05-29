@@ -54,7 +54,7 @@ namespace ButiksSystem.Services
                 List<CostumerOrder> costumerOrders = listOfCostumerOrders;
 
                 //string FilePath = @"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt";
-                string FilePath = ("Salgsstatistik.txt");
+                string FilePath = ("Salgsstatistik.txt"); //Prints the file directly in the debugger folder - so all can acces it. 
 
                 using (StreamWriter writer = new StreamWriter(FilePath))
                 {
@@ -95,8 +95,8 @@ namespace ButiksSystem.Services
         {
             {
 
-                System.IO.StreamWriter file = new StreamWriter(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\AlleSalg.txt");
-
+               // System.IO.StreamWriter file = new StreamWriter(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\AlleSalg.txt");
+                System.IO.StreamWriter file = new StreamWriter("AlleSalg.txt");
                 try
                 {
                     //The document starts up here, sets up main headings and information.
