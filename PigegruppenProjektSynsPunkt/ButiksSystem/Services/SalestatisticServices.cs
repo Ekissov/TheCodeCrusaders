@@ -25,7 +25,7 @@ namespace ButiksSystem.Services
         {
             var listOfCostumerOrders = DummyDataSales.CreateDummyDataSales();
 
-            if (startdate == default && endDate == default)            
+            if (startdate == default && endDate == default)
             {
                 return listOfCostumerOrders.Where(x => x.OrderDate == DateTime.Today).ToList();
             }
@@ -33,10 +33,10 @@ namespace ButiksSystem.Services
             {
                 var ordersWithinTimePeriod = listOfCostumerOrders.Where(x => x.OrderDate >= startdate && x.OrderDate <= endDate).ToList();
                 return ordersWithinTimePeriod.OrderBy(x => x.OrderDate).ToList();
-            
-               
+
+
             }
-            
+
         }
 
         /// <summary>
@@ -54,10 +54,8 @@ namespace ButiksSystem.Services
                 List<CostumerOrder> costumerOrders = listOfCostumerOrders;
 
                 //string FilePath = @"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt";
-                 string FilePath = ("Salgsstatistik.txt"); //IT DOESN'T WORK AS INTENDED!
+                string FilePath = ("Salgsstatistik.txt");
 
-               // string filePath = ("printallproducts.txt"); //Txt filen kommer til at ligge direkte i denne sti, så det er ens for alle der har hele mappen: ButiksSystem\bin\Debug\printallproducts.txt" 
-                
                 using (StreamWriter writer = new StreamWriter(FilePath))
                 {
                     writer.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate + "      Til Dato: " + endDate);
@@ -78,12 +76,12 @@ namespace ButiksSystem.Services
 
                     decimal sumOfPrices = listOfCostumerOrders.Sum(x => x.TotalPrice);
                     writer.WriteLine("\n                                                           I alt kr.         " + sumOfPrices);
-                    
+
                 }
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Der er sket en fejl, data kunne ikke overføres til fil", MessageBoxButtons.OK, MessageBoxIcon.Error);                
+                MessageBox.Show(err.Message, "Der er sket en fejl, data kunne ikke overføres til fil", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -96,9 +94,9 @@ namespace ButiksSystem.Services
         public static void CreateSalesFileDataGridview(DataGridView dataGridView, DateTime startDate, DateTime endDate)
         {
             {
-               
-               System.IO.StreamWriter file = new StreamWriter(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\AlleSalg.txt");
-                
+
+                System.IO.StreamWriter file = new StreamWriter(@"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\AlleSalg.txt");
+
                 try
                 {
                     //The document starts up here, sets up main headings and information.
@@ -106,7 +104,7 @@ namespace ButiksSystem.Services
                     file.WriteLine("Kundenummer   Kundenavn                       Dato                           Køb");
 
                     string sLine = "";
-                    
+
                     if (dataGridView.RowCount == 0 || dataGridView.ColumnCount == 0)
                     {
                         MessageBox.Show("Der er ikke nogle data i Datagridview, Intet overføres til fil", "Fejlmeddelses", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -121,16 +119,16 @@ namespace ButiksSystem.Services
                                 if (c != dataGridView.Columns.Count - 1)
                                 {
                                     sLine = sLine + "            ";
-                                }                              
+                                }
                             }
                             file.WriteLine(sLine);
                             sLine = "";
                         }
                         file.Close();
-                    }   
+                    }
                 }
                 catch (Exception err)
-                { 
+                {
                     MessageBox.Show(err.Message, "Der er sket en fejl, data kunne ikke overføres til fil", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     file.Close();
                 }
