@@ -82,7 +82,7 @@ namespace ButiksSystem.Database
             orderDate = new DateTime(2023, 01, 31);
             deliveryDate = new DateTime(2023, 02, 08);
             Costumer costumer13 = new Costumer("Mikkel   ", "Laursen   ", "+4531923874", "P.C. Hansens Gade 85", 6580, "Vamdrup", "LaursenMik@gmail.com", 15);
-            CostumerOrder sale14 = new CostumerOrder(costumer13.FirstName + " " + costumer13.LastName, 24, orderDate, 10500);
+            CostumerOrder sale14 = new CostumerOrder(costumer13.FirstName + " " + costumer13.LastName, 24, orderDate, 8500);
 
             orderDate = new DateTime(2023, 02, 20);
             deliveryDate = new DateTime(2023, 02, 28);

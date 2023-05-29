@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ButiksSystem.Models
 {
+    /// <summary>
+    /// Properties for the class Product. and 2 different constructors for the class. 
+    /// </summary>
     public class Product
     {
         public int ProductID { get; set; }
@@ -32,15 +35,15 @@ namespace ButiksSystem.Models
             this.Quantity = quantity;
         }
 
-        public override string ToString() 
+        public override string ToString()
         {
 
-           return $"Produktnavn: " +
-                $"{this.ProductName}\n" +
-                $"  - Salgspris: {this.ProductPrice}\n" +
-                $"  - VaregruppeNr: {this.CategoryID}\n" +
-                $"  - Lagerbeholding: {this.Quantity}\n";
-        
+            return $"Produktnavn: " +
+                 $"{this.ProductName}\n" +
+                 $"  - Salgspris: {this.ProductPrice}\n" +
+                 $"  - VaregruppeNr: {this.CategoryID}\n" +
+                 $"  - Lagerbeholding: {this.Quantity}\n";
+
         }
 
     }

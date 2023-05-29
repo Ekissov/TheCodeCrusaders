@@ -60,7 +60,11 @@ namespace ButiksSystem.UI
             dgv_showProductInfo.DataSource = productController.ProductListBySearch(ProductIDInput);
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgv_showProductInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow selectedRow = null;

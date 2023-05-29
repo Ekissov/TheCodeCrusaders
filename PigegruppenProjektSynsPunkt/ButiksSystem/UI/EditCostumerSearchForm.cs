@@ -55,7 +55,7 @@ namespace ButiksSystem.UI
 
         }
         /// <summary>
-        /// buttonclick event that show the result in the database that matches the úserinput. this i shown in the datagridview 
+        /// buttonclick event that show the result in the database that matches the userinput. this i shown in the datagridview 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

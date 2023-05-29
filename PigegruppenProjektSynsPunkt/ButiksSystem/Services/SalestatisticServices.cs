@@ -53,9 +53,11 @@ namespace ButiksSystem.Services
             {
                 List<CostumerOrder> costumerOrders = listOfCostumerOrders;
 
-                string FilePath = @"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt";
-               // string FilePath = ("Salgsstatistik.txt"); IT DOESN'T WORK AS INTENDED!
-               
+                //string FilePath = @"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt";
+                 string FilePath = ("Salgsstatistik.txt"); //IT DOESN'T WORK AS INTENDED!
+
+               // string filePath = ("printallproducts.txt"); //Txt filen kommer til at ligge direkte i denne sti, så det er ens for alle der har hele mappen: ButiksSystem\bin\Debug\printallproducts.txt" 
+                
                 using (StreamWriter writer = new StreamWriter(FilePath))
                 {
                     writer.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate + "      Til Dato: " + endDate);

@@ -54,7 +54,11 @@ namespace ButiksSystem.Services
 
             return productDatabaseSQL.GetAllProducts();
         }
-
+        /// <summary>
+        /// Method that creates a list, based on what the user has put in the searchbar. 
+        /// </summary>
+        /// <param name="customerInput"></param>
+        /// <returns></returns>
         public List<Product> ProductListBySearch(string customerInput)
         {
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
@@ -64,14 +68,14 @@ namespace ButiksSystem.Services
             bool isNumeric = int.TryParse(customerInput, out searchProductId);
 
             var allProductsSearch = allProducts.Where(
-        x => x.ProductName.IndexOf(customerInput, StringComparison.OrdinalIgnoreCase) >= 0 ||
+            x => x.ProductName.IndexOf(customerInput, StringComparison.OrdinalIgnoreCase) >= 0 ||
              (isNumeric && x.ProductID == searchProductId)).ToList();
 
             return allProductsSearch;
         }
 
         /// <summary>
-        /// MEthod to print the contents in a datagridview to a txt file.
+        /// Method to print the contents in a datagridview to a txt file.
         /// </summary>
         /// <param name="dataGridView"></param>
         public void PrintDataGridViewToFile(DataGridView dataGridView)

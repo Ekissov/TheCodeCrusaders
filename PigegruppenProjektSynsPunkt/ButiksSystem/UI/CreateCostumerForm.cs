@@ -29,26 +29,29 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void btn_createCustomer_Click_1(object sender, EventArgs e)
         {
-            
-               Costumer costumer = new Models.Costumer(
-               txt_createCustomerFirstName.Text,
-               txt_createCustomerLastName.Text,
-               txt_createCutomerPhoneNumber.Text,
-               txt_createCustomerEmail.Text,
-               int.Parse(txt_createCustomerPostalCode.Text),
-               txt_createCustomerCity.Text,
-               txt_createCustomerAddress.Text);
 
-               Controllers.CostumerController costumerController = new Controllers.CostumerController();
-               costumerController.CreateCostumer(costumer);
+            Costumer costumer = new Models.Costumer(
+            txt_createCustomerFirstName.Text,
+            txt_createCustomerLastName.Text,
+            txt_createCutomerPhoneNumber.Text,
+            txt_createCustomerEmail.Text,
+            int.Parse(txt_createCustomerPostalCode.Text),
+            txt_createCustomerCity.Text,
+            txt_createCustomerAddress.Text);
 
-                this.Close();
+            Controllers.CostumerController costumerController = new Controllers.CostumerController();
+            costumerController.CreateCostumer(costumer);
 
+            this.Close();
         }
-
+        /// <summary>
+        /// Clickevent that opens up a PDF file, that explains the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_homePageHelp_Click(object sender, EventArgs e)
         {
-            
+
             Process.Start("Hjælpeside til Opret Kunde.pdf");
         }
 
