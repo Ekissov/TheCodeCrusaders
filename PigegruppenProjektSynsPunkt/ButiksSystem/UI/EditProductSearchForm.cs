@@ -81,7 +81,6 @@ namespace ButiksSystem.UI
             ProductController productController = new ProductController();
             Product selectedProduct = productController.GetSelectedProduct(ProductID);
 
-
             txt_showProductIDFromSearch.Text = selectedProduct.ProductID.ToString();
             txt_editProductName.Text = selectedProduct.ProductName;
             txt_editProductPricePerItem.Text = selectedProduct.ProductPrice.ToString();
