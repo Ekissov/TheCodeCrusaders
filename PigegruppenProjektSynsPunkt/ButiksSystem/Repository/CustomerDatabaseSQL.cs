@@ -10,7 +10,7 @@ namespace ButiksSystem.Repository
 {
     internal class CustomerDatabaseSQL
     {
-        //Vi giver systemet den connection string den skal bruge for at oprette forbindelse til databasen
+
         private static SqlConnection connection = new SqlConnection("Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9");
 
         //C
@@ -32,20 +32,24 @@ namespace ButiksSystem.Repository
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            int count = command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
+            int count = command.ExecuteNonQuery(); 
 
             connection.Close();
         }
 
-
         //R
+        /// <summary>
+        /// CRUD Method (R) Reads all Customers in the database and puts them in a list.
+        /// </summary>
+        /// <returns></returns>
         public List<Costumer> GetAllCustomers()
         {
             List<Costumer> customerList = new List<Costumer>();
             string query = "SELECT FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email, CustomerID FROM CustomerTable";
+            
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            SqlDataReader reader = command.ExecuteReader(); //Åbner readeren 
+            SqlDataReader reader = command.ExecuteReader();  
 
             while (reader.Read())
             {
@@ -70,12 +74,17 @@ namespace ButiksSystem.Repository
         }
 
         //R
+        /// <summary>
+        /// CRUD Method (R)  reads and selects a specific customer from the database. Then it returns the customer information in a modelcustomer to store the info.
+        /// </summary>
+        /// <param name="customerID"></param>
+        /// <returns></returns>
         public Costumer GetSelectedCustomer(int customerID)
         {
             string query = $"SELECT FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email, CustomerID FROM CustomerTable WHERE CustomerID = {customerID}";
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            SqlDataReader reader = command.ExecuteReader(); //Åbner readeren 
+            SqlDataReader reader = command.ExecuteReader();  
 
             Costumer selectedCustomer = null;
             while (reader.Read())
@@ -90,15 +99,18 @@ namespace ButiksSystem.Repository
                     reader["CustomerAddress"].ToString(),
                     (int)reader["CustomerID"]);
             }
-
          
-            reader.Close(); // lukker aflæseren og forbindelsen 
+            reader.Close();  
             connection.Close();
             return selectedCustomer;
-        }   
-            
+        }
 
-            //U
+
+        //U
+        /// <summary>
+        /// CRUD Method (U) this updates a Customer in the database. It recieves info from Service.CostumerService
+        /// </summary>
+        /// <param name="costumer"></param>
         public void UpdateCustomer(Models.Costumer costumer)
         {
             string query = $"UPDATE CustomerTable SET " +
@@ -113,14 +125,17 @@ namespace ButiksSystem.Repository
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
+            command.ExecuteNonQuery(); 
 
             connection.Close();
 
         }
 
         //D
-
+        /// <summary>
+        /// CRUD Method (D) this deletes a customer from the database. It recieves info from Service.CostumerService
+        /// </summary>
+        /// <param name="costumer"></param>
         public void DeleteCustomer(Models.Costumer costumer)
         {
 
@@ -128,7 +143,7 @@ namespace ButiksSystem.Repository
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
+            command.ExecuteNonQuery(); 
 
             connection.Close();
         }

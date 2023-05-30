@@ -11,7 +11,7 @@ namespace ButiksSystem.Repository
     internal class ProductDatabaseSQL
     {
         // Connectionstring to connect to the databse
-        private static SqlConnection connection = new SqlConnection("Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9"); //"Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9";
+        private static SqlConnection connection = new SqlConnection("Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9"); 
 
         //C
         /// <summary>
@@ -31,15 +31,14 @@ namespace ButiksSystem.Repository
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
+            command.ExecuteNonQuery();
 
             connection.Close();
         }
 
-
         //R
         /// <summary>
-        /// CRUD Method (R) this reads a selects and reads from a specific in the database. Then it returns the info into a new Product. 
+        /// CRUD Method (R)  reads and selects a specific product from the database. Then it returns the productinformation in a modelproduct to store the info.
         /// </summary>
         /// <returns></returns>
         public Product GetSelectedProduct(int productID)
@@ -60,21 +59,18 @@ namespace ButiksSystem.Repository
                     (int)reader["CategoryID"],
                     (int)reader["Quantity"]);
             }
-
             reader.Close();
             connection.Close();
             return selectedProduct;
-
         }
 
         //U
         /// <summary>
-        /// CRUD Method (U) this updates a product in the database. It recieves info from Service.Product
+        /// CRUD Method (U) this updates a product in the database. It recieves info from Service.ProductService
         /// </summary>
         /// <param name="product"></param>
         public void UpdateProduct(Product product)
         {
-            //Update sætningen herunder er muligvis ikke korrekt
             string query = $"UPDATE Product SET " +
                 $"ProductName = '{product.ProductName}', " +
                 $"Price = '{product.ProductPrice}', " +
@@ -84,24 +80,23 @@ namespace ButiksSystem.Repository
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end besked med at databasen er opdateret
+            command.ExecuteNonQuery();
 
             connection.Close();
         }
 
         //D
         /// <summary>
-        /// CRUD Method (D) this deletes a product in the database. It recieves info from Service.Product
+        /// CRUD Method (D) this deletes a product in the database. It recieves info from Service.ProductService
         /// </summary>
         /// <param name="product"></param>
         public void DeleteProduct(Product product)
         {
-
             string query = $"DELETE FROM Product WHERE ProductID = '{product.ProductID}'";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
+            command.ExecuteNonQuery();
 
             connection.Close();
         }
@@ -116,7 +111,7 @@ namespace ButiksSystem.Repository
             string query = "SELECT ProductID, ProductName, Price, CategoryID, Quantity FROM [Product] ORDER BY ProductName ASC";
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            SqlDataReader reader = command.ExecuteReader(); //Åbner readeren 
+            SqlDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
             {
@@ -127,13 +122,11 @@ namespace ButiksSystem.Repository
                 int quantity = reader.GetInt32(4);
                 Product product = new Product(productID, productName, productPrice, categoryID, quantity);
 
-                result.Add(product); //tilføjer data til listen
-
+                result.Add(product);
             }
-
-            reader.Close(); // lukker aflæseren og forbindelsen 
+            reader.Close();
             connection.Close();
-            return result; // retunerer resultatet som en liste
+            return result;
 
         }
 
