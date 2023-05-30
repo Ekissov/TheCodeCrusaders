@@ -87,7 +87,7 @@ namespace ButiksSystem.Services
                 // Write column headers to the file
                 foreach (DataGridViewColumn column in dataGridView.Columns)
                 {
-                    writer.Write(column.HeaderText + "\t");
+                    writer.Write(column.HeaderText.PadRight(32));
                 }
                 writer.WriteLine();
 
@@ -96,13 +96,11 @@ namespace ButiksSystem.Services
                 {
                     foreach (DataGridViewCell cell in row.Cells)
                     {
-                        writer.Write(cell.Value.ToString() + "\t");
+                        writer.Write(cell.Value.ToString().PadRight(32));
                     }
                     writer.WriteLine();
                 }
             }
-
-            MessageBox.Show("DataGridView printed to file successfully!");
         }
 
         public Product GetSelectedProduct(int productID)

@@ -29,7 +29,6 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void ShowAllProductsForm_Load(object sender, EventArgs e)
         {
-
             ProductController productController = new ProductController();
             List<Product> products = productController.GetAllProducts();
             dgv_showProductInfo.DataSource = products;
@@ -43,8 +42,8 @@ namespace ButiksSystem.UI
         {
             ProductController productController = new ProductController();
             productController.PrintDataGridViewToFile(dgv_showProductInfo);
-              
 
+            this.Close();
         }
         /// <summary>
         /// buttonclick event that opens up a PDF file that explains the current window

@@ -184,7 +184,7 @@ namespace ButiksSystem.UI
         }
 
         /// <summary>
-        /// Makes it possible to select a row in the datagridview saves the customer ID in the property CustomerID 
+        /// Makes it possible to select a row in the datagridview and saves the customer ID in the property CustomerID 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
