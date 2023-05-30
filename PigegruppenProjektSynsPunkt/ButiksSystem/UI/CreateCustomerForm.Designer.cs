@@ -51,7 +51,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 20);
+            this.label1.Location = new System.Drawing.Point(13, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 0;
@@ -60,7 +60,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 45);
+            this.label2.Location = new System.Drawing.Point(13, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 1;
@@ -69,7 +69,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 71);
+            this.label3.Location = new System.Drawing.Point(13, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 2;
@@ -78,7 +78,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 96);
+            this.label4.Location = new System.Drawing.Point(13, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 3;
@@ -87,7 +87,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 121);
+            this.label5.Location = new System.Drawing.Point(13, 117);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 13);
             this.label5.TabIndex = 4;
@@ -96,7 +96,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 147);
+            this.label6.Location = new System.Drawing.Point(13, 143);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 5;
@@ -105,7 +105,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 170);
+            this.label7.Location = new System.Drawing.Point(13, 170);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 13);
             this.label7.TabIndex = 6;
@@ -125,28 +125,29 @@
             this.txt_createCustomerID.Location = new System.Drawing.Point(91, 13);
             this.txt_createCustomerID.Name = "txt_createCustomerID";
             this.txt_createCustomerID.ReadOnly = true;
-            this.txt_createCustomerID.Size = new System.Drawing.Size(100, 20);
+            this.txt_createCustomerID.Size = new System.Drawing.Size(110, 20);
             this.txt_createCustomerID.TabIndex = 8;
+            this.txt_createCustomerID.Text = "Udfyldes Automatisk";
             // 
             // txt_createCustomerFirstName
             // 
             this.txt_createCustomerFirstName.Location = new System.Drawing.Point(91, 38);
             this.txt_createCustomerFirstName.Name = "txt_createCustomerFirstName";
-            this.txt_createCustomerFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txt_createCustomerFirstName.Size = new System.Drawing.Size(110, 20);
             this.txt_createCustomerFirstName.TabIndex = 9;
             // 
             // txt_createCustomerLastName
             // 
             this.txt_createCustomerLastName.Location = new System.Drawing.Point(91, 64);
             this.txt_createCustomerLastName.Name = "txt_createCustomerLastName";
-            this.txt_createCustomerLastName.Size = new System.Drawing.Size(100, 20);
+            this.txt_createCustomerLastName.Size = new System.Drawing.Size(110, 20);
             this.txt_createCustomerLastName.TabIndex = 10;
             // 
             // txt_createCutomerPhoneNumber
             // 
             this.txt_createCutomerPhoneNumber.Location = new System.Drawing.Point(91, 89);
             this.txt_createCutomerPhoneNumber.Name = "txt_createCutomerPhoneNumber";
-            this.txt_createCutomerPhoneNumber.Size = new System.Drawing.Size(100, 20);
+            this.txt_createCutomerPhoneNumber.Size = new System.Drawing.Size(110, 20);
             this.txt_createCutomerPhoneNumber.TabIndex = 11;
             // 
             // txt_createCustomerEmail
@@ -167,7 +168,7 @@
             // 
             this.txt_createCustomerPostalCode.Location = new System.Drawing.Point(91, 167);
             this.txt_createCustomerPostalCode.Name = "txt_createCustomerPostalCode";
-            this.txt_createCustomerPostalCode.Size = new System.Drawing.Size(100, 20);
+            this.txt_createCustomerPostalCode.Size = new System.Drawing.Size(110, 20);
             this.txt_createCustomerPostalCode.TabIndex = 14;
             // 
             // txt_createCustomerCity
@@ -202,7 +203,7 @@
             this.btn_homePageHelp.UseVisualStyleBackColor = false;
             this.btn_homePageHelp.Click += new System.EventHandler(this.btn_homePageHelp_Click);
             // 
-            // CreateCostumerForm
+            // CreateCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -225,8 +226,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "CreateCostumerForm";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "CreateCustomerForm";
             this.Text = "Opret Kunde";
             this.ResumeLayout(false);
             this.PerformLayout();
