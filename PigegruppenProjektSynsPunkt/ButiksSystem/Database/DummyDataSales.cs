@@ -22,87 +22,87 @@ namespace ButiksSystem.Database
             orderDate = new DateTime(2023, 01, 25);
             deliveryDate = new DateTime(2023, 02, 03);
             Customer customer1 = new Customer("Albert   ", "Hansen    ", "22448475", "Vestergade 359", 8000, "Århus", "AHansen@gmail.com",3);
-            CustomerOrder sale2 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 11, orderDate, 4534);
+            CustomerOrder sale2 = new CustomerOrder(customer1.FirstName + " " + customer1.LastName, 11, orderDate, 4534);
 
             orderDate = new DateTime(2023, 02, 10);
             deliveryDate = new DateTime(2023, 02, 20);
             Customer customer2 = new Customer("Emma     ", "Roberts   ", "+4559483264", "Søndrealle 3", 8700, "Horsens", "EmRob@mail.dk",4);
-            CustomerOrder sale3 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 12, orderDate, 4000);
+            CustomerOrder sale3 = new CustomerOrder(customer2.FirstName + " " + customer2.LastName, 12, orderDate, 4000);
 
             orderDate = new DateTime(2023, 01, 10);
             deliveryDate = new DateTime(2023, 01, 19);
             Customer customer3 = new Customer("Maja     ", "Sørensen  ", "49389503", "Parkvej 34", 8660, "Skanderborg", "MajaS@hotmail.com", 5);
-            CustomerOrder sale4 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 13, orderDate, 8000);
+            CustomerOrder sale4 = new CustomerOrder(customer3.FirstName + " " + customer3.LastName, 13, orderDate, 8000);
 
             orderDate = new DateTime(2023, 01, 03);
             deliveryDate = new DateTime(2023, 01, 13);
             Customer customer4 = new Customer("Jacob    ", "Lassen    ", "39367429", "Skolegade 1", 7100, "Vejle", "LassenJ@live.dk", 6);
-            CustomerOrder sale5 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 14, orderDate, 2500);
+            CustomerOrder sale5 = new CustomerOrder(customer4.FirstName + " " + customer4.LastName, 14, orderDate, 2500);
 
             orderDate = new DateTime(2023, 01, 25);
             deliveryDate = new DateTime(2023, 02, 03);
             Customer customer5 = new Customer("René     ", "Jørgensen ", "44862061", "Pallesvej 1", 6064, "Jordrup", "ReneGensen@hotmail.com",7);
-            CustomerOrder sale6 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 15, orderDate, 4500);
+            CustomerOrder sale6 = new CustomerOrder(customer5.FirstName + " " + customer5.LastName, 15, orderDate, 4500);
 
             orderDate = new DateTime(2023, 03, 15);
             deliveryDate = new DateTime(2023, 03, 21);
             Customer customer6 = new Customer("Peter    ", "Jensen    ", "43619480", "Villavej 35", 6094, "Hejls", "pjensen@gmail.com",8);
-            CustomerOrder sale7 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 16, orderDate, 8500);
+            CustomerOrder sale7 = new CustomerOrder(customer6.FirstName + " " + customer6.LastName, 16, orderDate, 8500);
 
             orderDate = new DateTime(2023, 02, 13);
             deliveryDate = new DateTime(2023, 02, 21);
             Customer customer7 = new Customer("Hanne    ", "Kjær      ", "43659246", "Lysevej 35", 6092, "Sønder Stenderup", "HanneKJ@Live.dk", 9);
-            CustomerOrder sale8 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 17, orderDate, 5400);
+            CustomerOrder sale8 = new CustomerOrder(customer7.FirstName + " " + customer7.LastName, 17, orderDate, 5400);
 
             orderDate = new DateTime(2023, 04, 10);
             deliveryDate = new DateTime(2023, 04, 19);
             Customer customer8 = new Customer("Camilla  ", "Ottesen   ", "+4526814082", "Rosevej 23", 6051, "Almind", "Cottesen@mail.dk", 10);
-            CustomerOrder sale9 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 18, orderDate, 3990);
+            CustomerOrder sale9 = new CustomerOrder(customer8.FirstName + " " + customer8.LastName, 18, orderDate, 3990);
 
             orderDate = new DateTime(2023, 03, 02);
             deliveryDate = new DateTime(2023, 03, 10);
             Customer customer9 = new Customer("Thomas   ", "Nielsen   ", "+4572904831", "Dagnæsalle 43", 6623, "Vorbasse", "tni89@hotmail.com", 11);
-            CustomerOrder sale10 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 22, orderDate, 6050);
+            CustomerOrder sale10 = new CustomerOrder(customer9.FirstName + " " + customer9.LastName, 22, orderDate, 6050);
 
             orderDate = new DateTime(2023, 04, 25);
             deliveryDate = new DateTime(2023, 05, 03);
             Customer customer10 = new Customer("Maria    ", "Petersen  ", "43882506", "Baggade 40", 6560, "Sommersted", "Maria224@hotmail.com", 12);
-            CustomerOrder sale11 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 21, orderDate, 6370);
+            CustomerOrder sale11 = new CustomerOrder(customer10.FirstName + " " + customer10.LastName, 21, orderDate, 6370);
 
             orderDate = new DateTime(2023, 03, 01);
             deliveryDate = new DateTime(2023, 03, 11);
             Customer customer11 = new Customer("Daniel   ", "Dahl      ", "+4523954071", "Dyrealle", 6621, "Gesten", "Danicool@mail.dk", 13);
-            CustomerOrder sale12 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 23, orderDate, 5000);
+            CustomerOrder sale12 = new CustomerOrder(customer11.FirstName + " " + customer11.LastName, 23, orderDate, 5000);
 
             orderDate = new DateTime(2023, 01, 16);
             deliveryDate = new DateTime(2023, 01, 24);
             Customer customer12 = new Customer("Leila    ", "Dyrmose   ", "+4524258301", "Grejsdahlsvejl 39", 7100, "Vejle", "DyrmosenL@gmail.com", 14);
-            CustomerOrder sale13 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 30, orderDate, 6400);
+            CustomerOrder sale13 = new CustomerOrder(customer12.FirstName + " " + customer12.LastName, 30, orderDate, 6400);
 
             orderDate = new DateTime(2023, 01, 31);
             deliveryDate = new DateTime(2023, 02, 08);
             Customer customer13 = new Customer("Mikkel   ", "Laursen   ", "+4531923874", "P.C. Hansens Gade 85", 6580, "Vamdrup", "LaursenMik@gmail.com", 15);
-            CustomerOrder sale14 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 24, orderDate, 8500);
+            CustomerOrder sale14 = new CustomerOrder(customer13.FirstName + " " + customer13.LastName, 24, orderDate, 8500);
 
             orderDate = new DateTime(2023, 02, 20);
             deliveryDate = new DateTime(2023, 02, 28);
             Customer customer14 = new Customer("Julie    ", "Kaspersen ", "+4584028475", "Spurvevej 2", 6640, "Lunderskov", "LegolasFrodo@gmail.com", 16);
-            CustomerOrder sale15 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 41, orderDate, 9450);
+            CustomerOrder sale15 = new CustomerOrder(customer14.FirstName + " " + customer14.LastName, 41, orderDate, 9450);
 
             orderDate = new DateTime(2023, 03, 24);
             deliveryDate = new DateTime(2023, 04, 02);
             Customer customer15 = new Customer("Henrik   ", "Skov      ", "+4593827450", "Løvvej 32", 6670, "Holsted", "DMalfoy@live.dk", 17);
-            CustomerOrder sale16 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 69, orderDate, 7540);
+            CustomerOrder sale16 = new CustomerOrder(customer15.FirstName + " " + customer15.LastName, 69, orderDate, 7540);
 
             orderDate = new DateTime(2023, 02, 25);
             deliveryDate = new DateTime(2023, 03, 07);
             Customer customer16 = new Customer("Mathilde ", "Johnson   ", "44291790", "Majsalle 40", 6683, "Føvling", "HGranger@gmail.com", 18);
-            CustomerOrder sale17 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 35, orderDate, 2500);
+            CustomerOrder sale17 = new CustomerOrder(customer16.FirstName + " " + customer16.LastName, 35, orderDate, 2500);
 
             orderDate = new DateTime(2023, 03, 18);
             deliveryDate = new DateTime(2023, 03, 27);
             Customer customer17 = new Customer("Johs     ", "Møller    ", "+4524839450", "Kirkevej 16", 7100, "Vejle", "RWeasley@live.dk", 19);
-            CustomerOrder sale18 = new CustomerOrder(customer.FirstName + " " + customer.LastName, 47, orderDate, 5020);
+            CustomerOrder sale18 = new CustomerOrder(customer17.FirstName + " " + customer17.LastName, 47, orderDate, 5020);
 
             listOfSales.Add(sale1);
             listOfSales.Add(sale2);
