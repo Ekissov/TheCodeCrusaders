@@ -62,7 +62,7 @@ namespace ButiksSystem.Services
             return allCustomersSearch;
         }
         /// <summary>
-        /// call GetSelectedCustomer from our repository.
+        /// Calls GetSelectedCustomer from our repository.
         /// </summary>
         /// <param name="customerID"></param>
         /// <returns></returns>

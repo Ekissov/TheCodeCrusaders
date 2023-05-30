@@ -18,7 +18,7 @@ namespace ButiksSystem.Services
         /// Method that links the CreateProduct method between service and UI 
         /// </summary>
         /// <param name="product"></param>
-        public void CreateProduct(Models.Product product)
+        public void CreateProduct(Product product)
         {
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             productDatabaseSQL.CreateProduct(product);
@@ -28,7 +28,7 @@ namespace ButiksSystem.Services
         /// Method that links the UpdateProduct method between service and UI
         /// </summary>
         /// <param name="product"></param>
-        public void UpdateProduct(Models.Product product)
+        public void UpdateProduct(Product product)
         {
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             productDatabaseSQL.UpdateProduct(product);
@@ -37,7 +37,7 @@ namespace ButiksSystem.Services
         /// Method that links the DeleteProduct method between service and UI
         /// </summary>
         /// <param name="product"></param>
-        public void DeleteProduct(Models.Product product)
+        public void DeleteProduct(Product product)
         {
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             productDatabaseSQL.DeleteProduct(product);
