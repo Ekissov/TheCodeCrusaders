@@ -24,6 +24,7 @@ namespace ButiksSystem.UI
             InitializeComponent();
             dgv_showProductInfo.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+
         /// <summary>
         /// shows all products in the datagridview when form is loaded
         /// </summary>
@@ -53,8 +54,8 @@ namespace ButiksSystem.UI
         {
             ProductController productController = new ProductController();
             dgv_showProductInfo.DataSource = productController.ProductListBySearch(ProductIDInput);
-
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -71,6 +72,7 @@ namespace ButiksSystem.UI
             int productId = Convert.ToInt32(selectedRow.Cells["productIDDataGridViewTextBoxColumn"].Value);
             ProductID = productId;
         }
+
         /// <summary>
         /// method that takes the chosen product in the datagridview and shows all data in the textboxes. 
         /// </summary>
@@ -87,6 +89,7 @@ namespace ButiksSystem.UI
             txt_editProductGroupID.Text = selectedProduct.CategoryID.ToString();
             txt_editQuantityInStorage.Text = selectedProduct.Quantity.ToString();
         }
+
         /// <summary>
         /// clickevent that shows a messagebox, if OK is chosen it runs the deletemethod and closes the window, if cancel is chosen, it goes back to the EditProductSearchForm.
         /// </summary>
@@ -107,6 +110,7 @@ namespace ButiksSystem.UI
 
             }
         }
+
         /// <summary>
         /// clickevent that shows a messagebox, if OK is chosen it runs the UpdateMethod and closes the window, if cancel is chosen, it goes back to the EditProductSearchForm.
         /// </summary>
@@ -127,6 +131,7 @@ namespace ButiksSystem.UI
                 this.Close();
             }
         }
+
         /// <summary>
         /// Method that updates the pruduct, it saves the new input in Product, and the method is connected all the way to our repository where the CRUD method updates our database.
         /// </summary>
@@ -174,7 +179,6 @@ namespace ButiksSystem.UI
         public void btn_homePageHelp_Click(object sender, EventArgs e)
         {
             Process.Start("Hjælpeside til Redigér Vare.pdf");
-
         }
     }
 }
