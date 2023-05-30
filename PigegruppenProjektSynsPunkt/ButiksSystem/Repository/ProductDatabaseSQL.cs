@@ -18,7 +18,7 @@ namespace ButiksSystem.Repository
         /// CRUD Method (C) this creates a product in the database. it recieves info from Service.Product
         /// </summary>
         /// <param name="product"></param>
-        public void CreateProduct(Models.Product product)
+        public void CreateProduct(Product product)
         {
 
             string query = $"INSERT INTO Product (ProductName, Price, CategoryID, Quantity) " +
@@ -72,7 +72,7 @@ namespace ButiksSystem.Repository
         /// CRUD Method (U) this updates a product in the database. It recieves info from Service.Product
         /// </summary>
         /// <param name="product"></param>
-        public void UpdateProduct(Models.Product product)
+        public void UpdateProduct(Product product)
         {
             //Update sætningen herunder er muligvis ikke korrekt
             string query = $"UPDATE Product SET " +
@@ -94,7 +94,7 @@ namespace ButiksSystem.Repository
         /// CRUD Method (D) this deletes a product in the database. It recieves info from Service.Product
         /// </summary>
         /// <param name="product"></param>
-        public void DeleteProduct(Models.Product product)
+        public void DeleteProduct(Product product)
         {
 
             string query = $"DELETE FROM Product WHERE ProductID = '{product.ProductID}'";
