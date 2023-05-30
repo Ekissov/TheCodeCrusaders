@@ -71,8 +71,5 @@ namespace ButiksSystem.Services
             CustomerDatabaseSQL customerDatabaseSQL = new CustomerDatabaseSQL();
             return customerDatabaseSQL.GetSelectedCustomer(customerID);
         }
-
-
-
     }
 }
