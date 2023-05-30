@@ -22,12 +22,16 @@ namespace ButiksSystem.Repository
         {
 
             string query = $"INSERT INTO Product (ProductName, Price, CategoryID, Quantity) " +
-                $"VALUES ('{product.ProductName}', {product.ProductPrice.ToString().Replace(',', '.')}, {product.CategoryID.ToString()}, {product.Quantity.ToString()})";
+                $"VALUES ('" +
+                $"{product.ProductName}', " +
+                $"{product.ProductPrice.ToString().Replace(',', '.')}, " +
+                $"{product.CategoryID.ToString()}, " +
+                $"{product.Quantity.ToString()})";
 
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
-            int count = command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
+            command.ExecuteNonQuery(); //NonQuery betyder at vi ikke retunerer noget andet end i besked med at databasen er opdateret
 
             connection.Close();
         }
