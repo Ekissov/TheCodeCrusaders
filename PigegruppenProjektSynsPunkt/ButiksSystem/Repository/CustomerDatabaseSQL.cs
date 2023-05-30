@@ -15,20 +15,20 @@ namespace ButiksSystem.Repository
 
         //C
         /// <summary>
-        /// Recieves costumer object from Services and creates a new costumer in the database.
+        /// Recieves customer object from Services and creates a new costumer in the database.
         /// </summary>
         /// <param name="costumer"></param>
-        public void CreateCustomer(Models.Costumer costumer)
+        public void CreateCustomer(Models.Customer customer)
         {
 
             string query = $"INSERT INTO CustomerTable (FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email) " +
-                $"VALUES ('{costumer.FirstName}'" +
-                $",'{costumer.LastName}'," +
-                $"'{costumer.PhoneNumber}'," +
-                $"'{costumer.PostalCode}'," +
-                $"'{costumer.City}'," +
-                $"'{costumer.Address}'," +
-                $"'{costumer.Email}')";
+                $"VALUES ('{customer.FirstName}'" +
+                $",'{customer.LastName}'," +
+                $"'{customer.PhoneNumber}'," +
+                $"'{customer.PostalCode}'," +
+                $"'{customer.City}'," +
+                $"'{customer.Address}'," +
+                $"'{customer.Email}')";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
@@ -42,9 +42,9 @@ namespace ButiksSystem.Repository
         /// CRUD Method (R) Reads all Customers in the database and puts them in a list.
         /// </summary>
         /// <returns></returns>
-        public List<Costumer> GetAllCustomers()
+        public List<Customer> GetAllCustomers()
         {
-            List<Costumer> customerList = new List<Costumer>();
+            List<Customer> customerList = new List<Customer>();
             string query = "SELECT FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email, CustomerID FROM CustomerTable";
             
             SqlCommand command = new SqlCommand(query, connection);
@@ -55,7 +55,7 @@ namespace ButiksSystem.Repository
             {
                 int customerID = (int)reader["CustomerID"];
 
-                Costumer costumer = new Costumer(
+                Customer customer = new Customer(
                  reader["FirstName"].ToString(),
                  reader["LastName"].ToString(),
                  reader["PhoneNumber"].ToString(),
@@ -65,7 +65,7 @@ namespace ButiksSystem.Repository
                  reader["CustomerAddress"].ToString(),
                  customerID);
 
-                customerList.Add(costumer);
+                customerList.Add(customer);
             }
             
             reader.Close(); 
@@ -79,17 +79,17 @@ namespace ButiksSystem.Repository
         /// </summary>
         /// <param name="customerID"></param>
         /// <returns></returns>
-        public Costumer GetSelectedCustomer(int customerID)
+        public Customer GetSelectedCustomer(int customerID)
         {
             string query = $"SELECT FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email, CustomerID FROM CustomerTable WHERE CustomerID = {customerID}";
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
             SqlDataReader reader = command.ExecuteReader();  
 
-            Costumer selectedCustomer = null;
+            Customer selectedCustomer = null;
             while (reader.Read())
             {
-                selectedCustomer = new Costumer(
+                selectedCustomer = new Customer(
                     reader["FirstName"].ToString(),
                     reader["LastName"].ToString(),
                     reader["PhoneNumber"].ToString(),
@@ -108,20 +108,20 @@ namespace ButiksSystem.Repository
 
         //U
         /// <summary>
-        /// CRUD Method (U) this updates a Customer in the database. It recieves info from Service.CostumerService
+        /// CRUD Method (U) this updates a Customer in the database. It recieves info from Service.CUstomerService
         /// </summary>
-        /// <param name="costumer"></param>
-        public void UpdateCustomer(Models.Costumer costumer)
+        /// <param name="customer"></param>
+        public void UpdateCustomer(Models.Customer customer)
         {
             string query = $"UPDATE CustomerTable SET " +
-                $"FirstName = '{costumer.FirstName}', " +
-                $"LastName = '{costumer.LastName}', " +
-                $"PhoneNumber = '{costumer.PhoneNumber}', " +
-                $"Email = '{costumer.Email}', " +
-                $"PostalCode = '{costumer.PostalCode}', " +
-                $"City = '{costumer.City}', " +
-                $"CustomerAddress = '{costumer.Address}' " +
-                $"WHERE CustomerID = '{costumer.CostumerID}'";
+                $"FirstName = '{customer.FirstName}', " +
+                $"LastName = '{customer.LastName}', " +
+                $"PhoneNumber = '{customer.PhoneNumber}', " +
+                $"Email = '{customer.Email}', " +
+                $"PostalCode = '{customer.PostalCode}', " +
+                $"City = '{customer.City}', " +
+                $"CustomerAddress = '{customer.Address}' " +
+                $"WHERE CustomerID = '{customer.CustomerID}'";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
@@ -133,13 +133,13 @@ namespace ButiksSystem.Repository
 
         //D
         /// <summary>
-        /// CRUD Method (D) this deletes a customer from the database. It recieves info from Service.CostumerService
+        /// CRUD Method (D) this deletes a customer from the database. It recieves info from Service.CustomerService
         /// </summary>
-        /// <param name="costumer"></param>
-        public void DeleteCustomer(Models.Costumer costumer)
+        /// <param name="customer"></param>
+        public void DeleteCustomer(Models.Customer customer)
         {
 
-            string query = $"DELETE FROM CustomerTable WHERE CustomerID = '{costumer.CostumerID}'";
+            string query = $"DELETE FROM CustomerTable WHERE CustomerID = '{customer.CustomerID}'";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();

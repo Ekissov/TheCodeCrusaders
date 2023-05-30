@@ -15,23 +15,23 @@ namespace ButiksSystem.Services
     public class SalestatisticServices
     {
         /// <summary>
-        /// Creates a list of DummyData within specific timeinterval, that contains costumerOrders.
+        /// Creates a list of DummyData within specific timeinterval, that contains customerOrders. 
         /// Sorts the list by orderdate.
         /// </summary>
         /// <param name="startdate"></param>
         /// <param name="endDate"></param>
         /// <returns></returns>
-        public List<Models.CostumerOrder> GetCostumerOrdersWithinGivenTime(DateTime startdate, DateTime endDate)
+        public List<Models.CustomerOrder> GetCustomerOrdersWithinGivenTime(DateTime startdate, DateTime endDate)
         {
-            var listOfCostumerOrders = DummyDataSales.CreateDummyDataSales();
+            var listOfCustomerOrders = DummyDataSales.CreateDummyDataSales();
 
             if (startdate == default && endDate == default)
             {
-                return listOfCostumerOrders.Where(x => x.OrderDate == DateTime.Today).ToList();
+                return listOfCustomerOrders.Where(x => x.OrderDate == DateTime.Today).ToList();
             }
             else
             {
-                var ordersWithinTimePeriod = listOfCostumerOrders.Where(x => x.OrderDate >= startdate && x.OrderDate <= endDate).ToList();
+                var ordersWithinTimePeriod = listOfCustomerOrders.Where(x => x.OrderDate >= startdate && x.OrderDate <= endDate).ToList();
                 return ordersWithinTimePeriod.OrderBy(x => x.OrderDate).ToList();
 
 
@@ -40,18 +40,18 @@ namespace ButiksSystem.Services
         }
 
         /// <summary>
-        /// Takes all costumerorders within a given time, start- endDate, into a list.
-        /// If not start or endDate is choosen it will print all costumer orders in the datagridview
+        /// Takes all customerorders within a given time, start- endDate, into a list.
+        /// If not start or endDate is choosen it will print all customer orders in the datagridview
         /// </summary>
-        /// <param name="listOfCostumerOrders"></param>
+        /// <param name="listOfCustomerOrders"></param>
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="dataGridView"></param>
-        public void CreateSalesFile(List<CostumerOrder> listOfCostumerOrders, DateTime startDate, DateTime endDate, DataGridView dataGridView)
+        public void CreateSalesFile(List<CustomerOrder> listOfCustomerOrders, DateTime startDate, DateTime endDate, DataGridView dataGridView)
         {
             try
             {
-                List<CostumerOrder> costumerOrders = listOfCostumerOrders;
+                List<CustomerOrder> customerOrders = listOfCustomerOrders;
 
                 //string FilePath = @"C:\Datamatiker\1 semester projekt Codecrusaders\TheCodeCrusaders\PigegruppenProjektSynsPunkt\Salgsstatistik.txt";
                 string FilePath = ("Salgsstatistik.txt"); //Prints the file directly in the debugger folder - so all can acces it. 
@@ -62,19 +62,19 @@ namespace ButiksSystem.Services
                     string salesfileHeadigns = "\nKundenummer   Kundenavn                       Dato                           Køb\n"; ;
                     writer.WriteLine(salesfileHeadigns);
 
-                    if (listOfCostumerOrders == null)
+                    if (listOfCustomerOrders == null)
                     {
                         SalestatisticServices.CreateSalesFileDataGridview(dataGridView, startDate, endDate);
 
                         return;
                     }
-                    foreach (var item in listOfCostumerOrders)
+                    foreach (var item in listOfCustomerOrders)
                     {
                         writer.WriteLine(string.Format("{0}            {1}            {2}            {3}",
-                            item.CostumerID, item.CostumerName, item.OrderDate.Date, item.TotalPrice.ToString()));
+                            item.CustomerID, item.CustomerName, item.OrderDate.Date, item.TotalPrice.ToString()));
                     }
 
-                    decimal sumOfPrices = listOfCostumerOrders.Sum(x => x.TotalPrice);
+                    decimal sumOfPrices = listOfCustomerOrders.Sum(x => x.TotalPrice);
                     writer.WriteLine("\n                                                           I alt kr.         " + sumOfPrices);
 
                 }
@@ -86,7 +86,7 @@ namespace ButiksSystem.Services
         }
 
         /// <summary>
-        /// Prints all costumerOrders visible in datagridview in a file.
+        /// Prints all customerOrders visible in datagridview in a file.
         /// </summary>
         /// <param name="dataGridView"></param>
         /// <param name="startDate"></param>
@@ -99,7 +99,7 @@ namespace ButiksSystem.Services
                 System.IO.StreamWriter file = new StreamWriter("AlleSalg.txt");
                 try
                 {
-                    //The document starts up here, sets up main headings and information.
+                    //The document starts up here, sets up main headings and information. 
                     file.WriteLine("SALGSSTATISTIK 2023" + "              Fra dato: " + startDate.Date + "      Til Dato: " + endDate.Date);
                     file.WriteLine("Kundenummer   Kundenavn                       Dato                           Køb");
 

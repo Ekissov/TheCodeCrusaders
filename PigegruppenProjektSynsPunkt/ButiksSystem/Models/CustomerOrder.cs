@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace ButiksSystem.Models
 {
-    public class CostumerOrder
+    public class CustomerOrder
     {
         private int OrderID { get; set; }
         private int EmployeeID { get; set; }
         private string OrderLineID { get; set; }
-        public int CostumerID { get; set; }
-        public string CostumerName { get; set; }
+        public int CustomerID { get; set; }
+        public string CustomerName { get; set; }
         public DateTime OrderDate { get; set; }
         public decimal TotalPrice { get; set; }
         private DateTime DeliveryDate { get; set; }
         
 
-        public CostumerOrder(int costumerID, string costumerName, int orderID, int employeeID, string orderLineID, DateTime deliveryDate, DateTime orderDate, decimal totalPrice)
+        public CustomerOrder(int customerID, string customerName, int orderID, int employeeID, string orderLineID, DateTime deliveryDate, DateTime orderDate, decimal totalPrice)
         {
             OrderID = orderID;
             EmployeeID = employeeID;
@@ -26,21 +26,21 @@ namespace ButiksSystem.Models
             OrderDate = orderDate.Date;
             TotalPrice = totalPrice;
             DeliveryDate = deliveryDate.Date;
-            CostumerID = costumerID;
-            CostumerName = costumerName;
+            CustomerID = customerID;
+            CustomerName = customerName;
         }
 
-        public CostumerOrder( string costumerName, int costumerID, DateTime orderDate, decimal totalPrice)
+        public CustomerOrder( string customerName, int costumerID, DateTime orderDate, decimal totalPrice)
         {
             TotalPrice = totalPrice;
             OrderDate = orderDate.Date;
-            CostumerID = costumerID;
-            CostumerName = costumerName;
+            CustomerID = costumerID;
+            CustomerName = customerName;
         }
 
         public override string ToString()
         {
-            return $"{CostumerID}                {CostumerName}      {OrderDate}           {TotalPrice}";
+            return $"{CustomerID}                {CustomerName}      {OrderDate}           {TotalPrice}";
         }
     }
 }

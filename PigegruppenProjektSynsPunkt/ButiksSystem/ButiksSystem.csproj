@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\CostumerController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\UIcontroller.cs" />
     <Compile Include="Database\DummyDataSales.cs" />
@@ -56,9 +56,9 @@
     <Compile Include="HomePageForm.Designer.cs">
       <DependentUpon>HomePageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Costumer.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\CostumerOrder.cs" />
+    <Compile Include="Models\CustomerOrder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\CustomerDatabaseSQL.cs" />
@@ -73,7 +73,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Saanneeha_dk_db_databaseDataSet11.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Services\CostumerServices.cs" />
+    <Compile Include="Services\CustomerServices.cs" />
     <Compile Include="Services\ProductServices.cs" />
     <Compile Include="Services\SalestatisticServices.cs" />
     <Compile Include="UI\ICreateBookingForm.cs">
@@ -82,11 +82,11 @@
     <Compile Include="UI\ICreateBookingForm.Designer.cs">
       <DependentUpon>ICreateBookingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\CreateCostumerForm.cs">
+    <Compile Include="UI\CreateCustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\CreateCostumerForm.Designer.cs">
-      <DependentUpon>CreateCostumerForm.cs</DependentUpon>
+    <Compile Include="UI\CreateCustomerForm.Designer.cs">
+      <DependentUpon>CreateCustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ICreateOrderForm.cs">
       <SubType>Form</SubType>
@@ -106,11 +106,11 @@
     <Compile Include="UI\ICreateSaleForm.Designer.cs">
       <DependentUpon>ICreateSaleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\EditCostumerSearchForm.cs">
+    <Compile Include="UI\EditCustomerSearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\EditCostumerSearchForm.Designer.cs">
-      <DependentUpon>EditCostumerSearchForm.cs</DependentUpon>
+    <Compile Include="UI\EditCustomerSearchForm.Designer.cs">
+      <DependentUpon>EditCustomerSearchForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\EditProductSearchForm.cs">
       <SubType>Form</SubType>
@@ -157,8 +157,8 @@
     <EmbeddedResource Include="UI\ICreateBookingForm.resx">
       <DependentUpon>ICreateBookingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\CreateCostumerForm.resx">
-      <DependentUpon>CreateCostumerForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\CreateCustomerForm.resx">
+      <DependentUpon>CreateCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ICreateOrderForm.resx">
       <DependentUpon>ICreateOrderForm.cs</DependentUpon>
@@ -169,8 +169,8 @@
     <EmbeddedResource Include="UI\ICreateSaleForm.resx">
       <DependentUpon>ICreateSaleForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\EditCostumerSearchForm.resx">
-      <DependentUpon>EditCostumerSearchForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\EditCustomerSearchForm.resx">
+      <DependentUpon>EditCustomerSearchForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\EditProductSearchForm.resx">
       <DependentUpon>EditProductSearchForm.cs</DependentUpon>

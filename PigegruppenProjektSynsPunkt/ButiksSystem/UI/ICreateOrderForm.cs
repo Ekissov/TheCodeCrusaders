@@ -29,7 +29,7 @@ namespace ButiksSystem.UI
 
         private void btn_sendToCreateCustomer_Click(object sender, EventArgs e)
         {
-            CreateCostumerForm createCostumerForm = new CreateCostumerForm();
+            CreateCustomerForm createCostumerForm = new CreateCustomerForm();
             createCostumerForm.ShowDialog();
         }
 

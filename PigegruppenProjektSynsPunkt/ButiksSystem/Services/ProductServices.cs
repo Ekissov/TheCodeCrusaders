@@ -15,7 +15,7 @@ namespace ButiksSystem.Services
     public class ProductServices
     {
         /// <summary>
-        /// Method that links the CreateProduct method between service and UI
+        /// Method that links the CreateProduct method between service and UI 
         /// </summary>
         /// <param name="product"></param>
         public void CreateProduct(Models.Product product)

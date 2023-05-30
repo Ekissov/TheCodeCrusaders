@@ -13,13 +13,13 @@ using System.Diagnostics;
 
 namespace ButiksSystem.UI
 {
-    public partial class EditCostumerSearchForm : Form
+    public partial class EditCustomerSearchForm : Form
     {
-        public Models.Costumer Costumer { get; set; }
-        public string CostumerInput { get; set; }
-        public List<Costumer> AllCostumers { get; set; }
+        public Models.Customer Customer { get; set; }
+        public string CustomerInput { get; set; }
+        public List<Customer> AllCustomers { get; set; }
         public int CustomerID { get; set; }
-        public EditCostumerSearchForm()
+        public EditCustomerSearchForm()
 
         {
             InitializeComponent();
@@ -27,14 +27,14 @@ namespace ButiksSystem.UI
         }
 
         /// <summary>
-        /// Method to show all costumers in datagridview when the form is loaded. 
+        /// Method to show all customers in datagridview when the form is loaded.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void EditCostumerSearchForm_Load(object sender, EventArgs e)
+        private void EditCustomerSearchForm_Load(object sender, EventArgs e)
         {
             this.customerTableTableAdapter.Fill(this.saanneeha_dk_db_databaseDataSet.CustomerTable); //Connecting datagridview to database
-            CostumerController costumerController = new CostumerController();  //connecting to controller
+            CustomerController customerController = new CustomerController();  //connecting to controller
 
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace ButiksSystem.UI
         }
         private void txt_searchCustomerIDOrName_TextChanged(object sender, EventArgs e)
         {
-            CostumerInput = txt_searchCustomerIDOrName.Text;
+            CustomerInput = txt_searchCustomerIDOrName.Text;
 
         }
         /// <summary>
@@ -61,22 +61,22 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
 
 
-        private void btn_OKShowCostumer_Click(object sender, EventArgs e)
+        private void btn_OKShowCustomer_Click(object sender, EventArgs e)
         {
-            CostumerController costumerController = new CostumerController();
-            dgv_showCustomerInfo.DataSource = costumerController.CostumerBySearch(CostumerInput);
+            CustomerController customerController = new CustomerController();
+            dgv_showCustomerInfo.DataSource = customerController.CustomerBySearch(CustomerInput);
           
         }
 
         /// <summary>
-        /// Buttonclick event that takes the marked customer in the datagridview and shows all info in the textboxes. 
+        /// Buttonclick event that takes the marked customer in the datagridview and shows all info in the textboxes.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btn_showCustomerInfo_Click(object sender, EventArgs e)
         {
-            CostumerController costumerController = new CostumerController();
-            Costumer selectedCustomer = costumerController.GetSelectedCustomer(CustomerID);
+            CustomerController customerController = new CustomerController();
+            Customer selectedCustomer = customerController.GetSelectedCustomer(CustomerID);
 
 
             txt_changeCustomerFirstName.Text = selectedCustomer.FirstName;
@@ -86,7 +86,7 @@ namespace ButiksSystem.UI
             txt_changeCustomerPostalCode.Text = selectedCustomer.PostalCode.ToString();
             txt_changeCustomerCity.Text = selectedCustomer.City.ToString();
             txt_changeCustomerAddress.Text = selectedCustomer.Address.ToString();
-            txt_showCustomerIDFromSearch.Text = selectedCustomer.CostumerID.ToString();
+            txt_showCustomerIDFromSearch.Text = selectedCustomer.CustomerID.ToString();
 
         }
 
@@ -101,8 +101,8 @@ namespace ButiksSystem.UI
 
             if (result == DialogResult.OK)
             {
-                Controllers.CostumerController costumerController = new Controllers.CostumerController();
-                DeleteCostumer();
+                Controllers.CustomerController customerController = new Controllers.CustomerController();
+                DeleteCustomer();
                 this.Close();
             }
             else if (result == DialogResult.Cancel)
@@ -121,8 +121,8 @@ namespace ButiksSystem.UI
 
             if (result == DialogResult.OK)
             {
-                Controllers.CostumerController costumerController = new Controllers.CostumerController();
-                UpdateCostumer();
+                Controllers.CustomerController customerController = new Controllers.CustomerController();
+                UpdateCustomer();
                 this.Close();
             }
             else if (result == DialogResult.Cancel)
@@ -133,10 +133,10 @@ namespace ButiksSystem.UI
         /// <summary>
         /// Method that updates a customer. this is connected all the way to our repository where the CRUD logic lies and there it updates the customer in the database. 
         /// </summary>
-        private void UpdateCostumer()
+        private void UpdateCustomer()
         {
 
-            Models.Costumer costumer = new Models.Costumer(
+            Models.Customer customer = new Models.Customer(
 
                 txt_changeCustomerFirstName.Text,
                 txt_changeCustomerLastName.Text,
@@ -147,17 +147,17 @@ namespace ButiksSystem.UI
                 txt_changeCustomerAddress.Text,
                 int.Parse(txt_showCustomerIDFromSearch.Text));
 
-            CostumerController costumerController = new CostumerController();
-            costumerController.UpdateCostumer(costumer);
+            CustomerController customerController = new CustomerController();
+            customerController.UpdateCustomer(customer);
 
         }
         /// <summary>
         /// Method that deletes a customer. this is connected all the way to our repository where the CRUD logic lies and there it deletes the customer from the database. 
         /// </summary>
-        private void DeleteCostumer()
+        private void DeleteCustomer()
         {
-            int costumerID = (int.Parse(txt_showCustomerIDFromSearch.Text));
-            Costumer costumer = new Costumer(
+            int customerID = (int.Parse(txt_showCustomerIDFromSearch.Text));
+            Customer customer = new Customer(
                 txt_changeCustomerFirstName.Text,
                 txt_changeCustomerLastName.Text,
                 txt_changeCustomerPhoneNumber.Text,
@@ -165,12 +165,12 @@ namespace ButiksSystem.UI
                 int.Parse(txt_changeCustomerPostalCode.Text),
                 txt_changeCustomerCity.Text,
                 txt_changeCustomerAddress.Text,
-                int.Parse(txt_showCustomerIDFromSearch.Text));         
+                int.Parse(txt_showCustomerIDFromSearch.Text));
 
-            costumer.CostumerID = costumerID;
+            customer.CustomerID = customerID;
 
-            CostumerController costumerController = new CostumerController();
-            costumerController.DeleteCostumer(costumer);
+            CustomerController customerController = new CustomerController();
+            customerController.DeleteCustomer(customer);
         }
 
         /// <summary>
@@ -184,7 +184,7 @@ namespace ButiksSystem.UI
         }
 
         /// <summary>
-        /// Makes it possible to select a row in the datagridview saves the customer ID in the property CustomerID
+        /// Makes it possible to select a row in the datagridview saves the customer ID in the property CustomerID 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

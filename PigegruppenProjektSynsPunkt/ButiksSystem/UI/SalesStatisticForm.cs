@@ -20,7 +20,7 @@ namespace ButiksSystem.UI
         //Properties that is needed to store information
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public List<CostumerOrder> ListOfCostumerOrders { get; set; }
+        public List<CustomerOrder> ListOfCostumerOrders { get; set; }
 
 
         public SalesStatisticForm()
@@ -68,7 +68,7 @@ namespace ButiksSystem.UI
         private void button1_Click(object sender, EventArgs e)
         {
             UIController uIController = new UIController();
-            ListOfCostumerOrders = uIController.GetCostumerOrdersWithinGivenTime(StartDate, EndDate);
+            ListOfCostumerOrders = uIController.GetCustomerOrdersWithinGivenTime(StartDate, EndDate);
             dgv_showSalesStatisticsInDatagrid.DataSource = ListOfCostumerOrders;
         }
 

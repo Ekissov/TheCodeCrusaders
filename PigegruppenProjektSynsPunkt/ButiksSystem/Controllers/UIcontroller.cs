@@ -15,16 +15,16 @@ namespace ButiksSystem.Controllers
         //This class only has methods that calls the methods of SalesStatisticServices,
         //and sends the information to SalesStatisticForm in the UI
 
-        public List<CostumerOrder> GetCostumerOrdersWithinGivenTime(DateTime StartDate, DateTime EndDate)
+        public List<CustomerOrder> GetCustomerOrdersWithinGivenTime(DateTime StartDate, DateTime EndDate)
         {
             SalestatisticServices salestatisticServices = new SalestatisticServices();
-            return salestatisticServices.GetCostumerOrdersWithinGivenTime(StartDate, EndDate);
+            return salestatisticServices.GetCustomerOrdersWithinGivenTime(StartDate, EndDate);
         }
 
-        public void CreateSalesFile(List<CostumerOrder> listOfCostumerOrders, DateTime startDate, DateTime endDate, DataGridView dataGridView)
+        public void CreateSalesFile(List<CustomerOrder> listOfCustomerOrders, DateTime startDate, DateTime endDate, DataGridView dataGridView)
         {
             SalestatisticServices salestatisticServices = new SalestatisticServices();
-            salestatisticServices.CreateSalesFile(listOfCostumerOrders, startDate, endDate, dataGridView);
+            salestatisticServices.CreateSalesFile(listOfCustomerOrders, startDate, endDate, dataGridView);
         }
        
     }

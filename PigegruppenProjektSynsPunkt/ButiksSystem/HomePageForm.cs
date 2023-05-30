@@ -22,14 +22,14 @@ namespace ButiksSystem
 
         private void opretKundeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CreateCostumerForm createCostumerForm = new CreateCostumerForm();
-            createCostumerForm.ShowDialog();
+            CreateCustomerForm createCustomerForm = new CreateCustomerForm();
+            createCustomerForm.ShowDialog();
         }
 
         private void kundeinformationerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditCostumerSearchForm editCostumerSearch = new EditCostumerSearchForm();
-            editCostumerSearch.ShowDialog();
+            EditCustomerSearchForm editCustomerSearch = new EditCustomerSearchForm();
+            editCustomerSearch.ShowDialog();
         }
 
         private void opretVareToolStripMenuItem_Click(object sender, EventArgs e)
