@@ -11,14 +11,23 @@ namespace KundeApplication.Models
 
         public int ProductID { get; set; }
         public string ProductName { get; set; }
-        public string ProductColour { get; set; }
+        public string FrameColour { get; set; }
+        public string FrameFacon { get; set; }
+        public string FrameThickness { get; set; }
+        public string NosePads { get; set; }
+        public string FramePattern { get; set; }
         public int ProductPrice { get; set; }
+        
 
-        public Product(int productID, string productName, string productColour, int productPrice)
+        public Product(int productID, string productName, string frameColour, string frameFacon, string frameThickness, string nosePads, string framePattern, int productPrice)
         {
             this.ProductID = productID;
             this.ProductName = productName;
-            this.ProductColour = productColour;
+            this.FrameColour = frameColour;
+            this.FrameFacon = frameFacon;
+            this.FrameThickness = frameThickness;
+            this.NosePads = nosePads;
+            this.FramePattern = framePattern;
             this.ProductPrice = productPrice;
         }
     }
