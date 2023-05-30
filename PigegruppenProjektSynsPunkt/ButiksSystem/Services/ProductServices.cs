@@ -59,16 +59,16 @@ namespace ButiksSystem.Services
         /// </summary>
         /// <param name="customerInput"></param>
         /// <returns></returns>
-        public List<Product> ProductListBySearch(string customerInput)
+        public List<Product> ProductListBySearch(string userInput)
         {
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             List<Product> allProducts = productDatabaseSQL.GetAllProducts();
 
             int searchProductId;
-            bool isNumeric = int.TryParse(customerInput, out searchProductId);
+            bool isNumeric = int.TryParse(userInput, out searchProductId);
 
             var allProductsSearch = allProducts.Where(
-            x => x.ProductName.IndexOf(customerInput, StringComparison.OrdinalIgnoreCase) >= 0 ||
+            x => x.ProductName.IndexOf(userInput, StringComparison.OrdinalIgnoreCase) >= 0 ||
              (isNumeric && x.ProductID == searchProductId)).ToList();
 
             return allProductsSearch;
