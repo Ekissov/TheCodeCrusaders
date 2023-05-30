@@ -57,7 +57,8 @@ namespace ButiksSystem.UI
         }
 
         /// <summary>
-        /// 
+        /// This method makes it possible to select the values in the datagridview, 
+        /// and it converts the productID to an int, because in a datagridview, it becomes a string. 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -128,7 +129,7 @@ namespace ButiksSystem.UI
             }
             else if (result == DialogResult.Cancel)
             {
-                this.Close();
+
             }
         }
 
