@@ -25,8 +25,8 @@ namespace ButiksSystem.Repository
                 $"VALUES ('" +
                 $"{product.ProductName}', " +
                 $"{product.ProductPrice.ToString().Replace(',', '.')}, " +
-                $"{product.CategoryID.ToString()}, " +
-                $"{product.Quantity.ToString()})";
+                $"{product.CategoryID}, " +
+                $"{product.Quantity})";
 
 
             SqlCommand command = new SqlCommand(query, connection);
