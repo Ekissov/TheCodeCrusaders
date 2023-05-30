@@ -65,7 +65,7 @@ namespace ButiksSystem.UI
         {
             CustomerController customerController = new CustomerController();
             dgv_showCustomerInfo.DataSource = customerController.CustomerBySearch(CustomerInput);
-          
+
         }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace ButiksSystem.UI
             }
             else if (result == DialogResult.Cancel)
             {
-               
+
             }
         }
         /// <summary>
@@ -127,7 +127,7 @@ namespace ButiksSystem.UI
             }
             else if (result == DialogResult.Cancel)
             {
-                
+
             }
         }
         /// <summary>
@@ -190,7 +190,6 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void dgv_showCustomerInfo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             DataGridViewRow selectedRow = null;
 
             if (dgv_showCustomerInfo.SelectedRows.Count > 0)
