@@ -31,15 +31,9 @@ namespace ButiksSystem.UI
         /// <param name="e"></param>
         private void EditProductSearchForm_Load(object sender, EventArgs e)
         {
-
             this.productTableAdapter.Fill(this.saanneeha_dk_db_databaseDataSet1.Product);
-            //ProductController productController = new ProductController();
-            //List<Product> products = productController.GetAllProducts();
-            // dgv_showProductInfo.DataSource = products;
-
-            // ProductController productController = new ProductController();
-            // dgv_showProductInfo.DataSource = productController.GetAllProducts();
         }
+
         /// <summary>
         /// method that saves the userinput in the textbox in a varaiable
         /// </summary>
@@ -49,6 +43,7 @@ namespace ButiksSystem.UI
         {
             ProductIDInput = txt_searchProductIDOrName.Text;
         }
+
         /// <summary>
         /// clickevent that filter the datagridview info, so it only shows the info that matches the input
         /// </summary>
@@ -165,7 +160,7 @@ namespace ButiksSystem.UI
              decimal.Parse(txt_editProductPricePerItem.Text),
              int.Parse(txt_editProductGroupID.Text),
              int.Parse(txt_editQuantityInStorage.Text));
-           
+
             product.ProductID = ProductID;
 
             ProductController productController = new ProductController();

@@ -26,37 +26,24 @@ namespace ButiksSystem.Controllers
             productServices.CreateProduct(product);
         }
 
-        /*public static void PrintAllProducts()
-        {
-            ProductServices.PrintAllProducts();
-        }*/
-
         /// <summary>
         /// Method that links the GetAllProducts method between service and UI 
         /// </summary>
         /// <returns></returns>
         public List<Product> GetAllProducts()
         {
-
             ProductServices productServices = new ProductServices();
             productServices.GetAllProducts();
 
             return productServices.GetAllProducts();
-
         }
 
-        public List<Product> ProductListBySearch(string input) 
-        { 
+        public List<Product> ProductListBySearch(string input)
+        {
             ProductServices productServices = new ProductServices();
             return productServices.ProductListBySearch(input);
         }
-        
-        //Spørg Linda :P
-        public List<Product> ReadAllProductsToList()
-        {
-            var result = new List<Product>();
-            return result;
-        }
+
         /// <summary>
         /// Method that links the UpdateProduct method between service and UI
         /// </summary>
@@ -85,7 +72,7 @@ namespace ButiksSystem.Controllers
             productServices.PrintDataGridViewToFile(dataGridView);
         }
 
-       public Product GetSelectedProduct(int productID)
+        public Product GetSelectedProduct(int productID)
         {
             ProductServices productServices = new ProductServices();
             Product selectedProduct = productServices.GetSelectedProduct(productID);
