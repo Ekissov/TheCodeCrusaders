@@ -13,11 +13,11 @@ namespace KundeApplication.Repository
     {
         private static SqlConnection connection = new SqlConnection("Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9");
 
-        public List<> ReadAllProducts()
+        public List<Models.Product> ReadAllProducts()
         {
-            List<> allProducts = new Product();
+            List<Models.Product> allProducts = new List<Models.Product>();
 
-            string query =  $"SELECT ProductID, ProductName, Price, ProductColour FROM Product";
+            string query =  $"SELECT ProductID, ProductName, FrameColour, FrameFacon, FrameThickness, Nosepads, FramePattern, ProductPrice FROM Product";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
@@ -25,11 +25,15 @@ namespace KundeApplication.Repository
 
             while (reader.Read())
             {
-                Product product = new Product(
-                    (int)reader("ProductID"),
-                    reader("ProductName").ToString(),
-                    (int)reader("Price"),
-                    reader("ProductColour"));
+                Models.Product product = new Models.Product(
+                    (int)reader["ProductID"],
+                    reader["ProductName"].ToString(),                   
+                    reader["FrameColour"].ToString(),
+                    reader["FrameFacon"].ToString(),
+                    (int)reader["FrameThickness"],
+                    reader["NosePads"].ToString(),
+                    reader["FramePattern"].ToString(),
+                    (int)reader["Price"]);
 
                 allProducts.Add(product);
             }
@@ -38,5 +42,7 @@ namespace KundeApplication.Repository
 
             return allProducts;
         }
+
+
     }
 }
