@@ -31,33 +31,35 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePageForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton16 = new System.Windows.Forms.RadioButton();
-            this.radioButton15 = new System.Windows.Forms.RadioButton();
-            this.radioButton14 = new System.Windows.Forms.RadioButton();
-            this.radioButton13 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lb_Question1_Price = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.NextBt_6 = new System.Windows.Forms.Button();
+            this.RB_ThicknessTHICK = new System.Windows.Forms.RadioButton();
+            this.RB_ThicknessTHIN = new System.Windows.Forms.RadioButton();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.NextBt_5 = new System.Windows.Forms.Button();
+            this.RB_NosePadsYES = new System.Windows.Forms.RadioButton();
+            this.RB_NosePadsNO = new System.Windows.Forms.RadioButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.NextBt_4 = new System.Windows.Forms.Button();
+            this.RB_PatternNO = new System.Windows.Forms.RadioButton();
+            this.RB_PatternYES = new System.Windows.Forms.RadioButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.NextBt_3 = new System.Windows.Forms.Button();
+            this.RB_FaconSquare = new System.Windows.Forms.RadioButton();
+            this.RB_FaconRound = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.NextBt_2 = new System.Windows.Forms.Button();
+            this.RB_ColourBlack = new System.Windows.Forms.RadioButton();
+            this.RB_ColourRed = new System.Windows.Forms.RadioButton();
+            this.RB_ColourTransparent = new System.Windows.Forms.RadioButton();
+            this.RB_ColourBrown = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.RB_MaxPrice8000 = new System.Windows.Forms.RadioButton();
+            this.NextBt_1 = new System.Windows.Forms.Button();
+            this.RB_MaxPrice5000 = new System.Windows.Forms.RadioButton();
+            this.RB_MaxPrice1500 = new System.Windows.Forms.RadioButton();
+            this.RB_MaxPrice3000 = new System.Windows.Forms.RadioButton();
             this.Dgv_Frames = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.saanneeha_dk_db_databaseDataSet = new KundeApplication.Saanneeha_dk_db_databaseDataSet();
-            this.frameBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.frameTableAdapter = new KundeApplication.Saanneeha_dk_db_databaseDataSetTableAdapters.FrameTableAdapter();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.frameColourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,274 +68,350 @@
             this.nosePadsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.framePatternDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frameBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.saanneeha_dk_db_databaseDataSet = new KundeApplication.Saanneeha_dk_db_databaseDataSet();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.frameTableAdapter = new KundeApplication.Saanneeha_dk_db_databaseDataSetTableAdapters.FrameTableAdapter();
             this.groupBox1.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Frames)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saanneeha_dk_db_databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frameBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saanneeha_dk_db_databaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton16);
-            this.groupBox1.Controls.Add(this.radioButton15);
-            this.groupBox1.Controls.Add(this.radioButton14);
-            this.groupBox1.Controls.Add(this.radioButton13);
-            this.groupBox1.Controls.Add(this.radioButton12);
-            this.groupBox1.Controls.Add(this.radioButton11);
-            this.groupBox1.Controls.Add(this.radioButton10);
-            this.groupBox1.Controls.Add(this.radioButton9);
-            this.groupBox1.Controls.Add(this.radioButton8);
-            this.groupBox1.Controls.Add(this.radioButton7);
-            this.groupBox1.Controls.Add(this.radioButton6);
-            this.groupBox1.Controls.Add(this.radioButton5);
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.lb_Question1_Price);
+            this.groupBox1.Controls.Add(this.groupBox7);
+            this.groupBox1.Controls.Add(this.groupBox6);
+            this.groupBox1.Controls.Add(this.groupBox5);
+            this.groupBox1.Controls.Add(this.groupBox4);
+            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(343, 557);
+            this.groupBox1.Size = new System.Drawing.Size(343, 587);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Spørgsmål til din kommende brille!";
             // 
-            // radioButton16
+            // groupBox7
             // 
-            this.radioButton16.AutoSize = true;
-            this.radioButton16.Location = new System.Drawing.Point(151, 510);
-            this.radioButton16.Name = "radioButton16";
-            this.radioButton16.Size = new System.Drawing.Size(71, 24);
-            this.radioButton16.TabIndex = 21;
-            this.radioButton16.TabStop = true;
-            this.radioButton16.Text = "Tyndt";
-            this.radioButton16.UseVisualStyleBackColor = true;
+            this.groupBox7.Controls.Add(this.NextBt_6);
+            this.groupBox7.Controls.Add(this.RB_ThicknessTHICK);
+            this.groupBox7.Controls.Add(this.RB_ThicknessTHIN);
+            this.groupBox7.Location = new System.Drawing.Point(6, 524);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(337, 57);
+            this.groupBox7.TabIndex = 3;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "6. Skal stellet være tykt eller tyndt?";
             // 
-            // radioButton15
+            // NextBt_6
             // 
-            this.radioButton15.AutoSize = true;
-            this.radioButton15.Location = new System.Drawing.Point(20, 510);
-            this.radioButton15.Name = "radioButton15";
-            this.radioButton15.Size = new System.Drawing.Size(61, 24);
-            this.radioButton15.TabIndex = 20;
-            this.radioButton15.TabStop = true;
-            this.radioButton15.Text = "Tykt";
-            this.radioButton15.UseVisualStyleBackColor = true;
+            this.NextBt_6.Location = new System.Drawing.Point(271, 22);
+            this.NextBt_6.Name = "NextBt_6";
+            this.NextBt_6.Size = new System.Drawing.Size(66, 28);
+            this.NextBt_6.TabIndex = 20;
+            this.NextBt_6.Text = "OK";
+            this.NextBt_6.UseVisualStyleBackColor = true;
+            this.NextBt_6.Click += new System.EventHandler(this.NextBt_6_Click);
             // 
-            // radioButton14
+            // RB_ThicknessTHICK
             // 
-            this.radioButton14.AutoSize = true;
-            this.radioButton14.Location = new System.Drawing.Point(176, 437);
-            this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(157, 24);
-            this.radioButton14.TabIndex = 19;
-            this.radioButton14.TabStop = true;
-            this.radioButton14.Text = "Uden næsepuder";
-            this.radioButton14.UseVisualStyleBackColor = true;
+            this.RB_ThicknessTHICK.AutoSize = true;
+            this.RB_ThicknessTHICK.Location = new System.Drawing.Point(6, 26);
+            this.RB_ThicknessTHICK.Name = "RB_ThicknessTHICK";
+            this.RB_ThicknessTHICK.Size = new System.Drawing.Size(61, 24);
+            this.RB_ThicknessTHICK.TabIndex = 20;
+            this.RB_ThicknessTHICK.TabStop = true;
+            this.RB_ThicknessTHICK.Text = "Tykt";
+            this.RB_ThicknessTHICK.UseVisualStyleBackColor = true;
             // 
-            // radioButton13
+            // RB_ThicknessTHIN
             // 
-            this.radioButton13.AutoSize = true;
-            this.radioButton13.Location = new System.Drawing.Point(20, 437);
-            this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(150, 24);
-            this.radioButton13.TabIndex = 18;
-            this.radioButton13.TabStop = true;
-            this.radioButton13.Text = "Med næsepuder";
-            this.radioButton13.UseVisualStyleBackColor = true;
+            this.RB_ThicknessTHIN.AutoSize = true;
+            this.RB_ThicknessTHIN.Location = new System.Drawing.Point(123, 26);
+            this.RB_ThicknessTHIN.Name = "RB_ThicknessTHIN";
+            this.RB_ThicknessTHIN.Size = new System.Drawing.Size(71, 24);
+            this.RB_ThicknessTHIN.TabIndex = 21;
+            this.RB_ThicknessTHIN.TabStop = true;
+            this.RB_ThicknessTHIN.Text = "Tyndt";
+            this.RB_ThicknessTHIN.UseVisualStyleBackColor = true;
             // 
-            // radioButton12
+            // groupBox6
             // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(152, 360);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(128, 24);
-            this.radioButton12.TabIndex = 17;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "Intet mønster";
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.groupBox6.Controls.Add(this.NextBt_5);
+            this.groupBox6.Controls.Add(this.RB_NosePadsYES);
+            this.groupBox6.Controls.Add(this.RB_NosePadsNO);
+            this.groupBox6.Location = new System.Drawing.Point(6, 416);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(337, 102);
+            this.groupBox6.TabIndex = 3;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "5. Skal stellet have næsepuder?";
             // 
-            // radioButton11
+            // NextBt_5
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(20, 360);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(91, 24);
-            this.radioButton11.TabIndex = 16;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "Mønster";
-            this.radioButton11.UseVisualStyleBackColor = true;
+            this.NextBt_5.Location = new System.Drawing.Point(271, 44);
+            this.NextBt_5.Name = "NextBt_5";
+            this.NextBt_5.Size = new System.Drawing.Size(66, 28);
+            this.NextBt_5.TabIndex = 18;
+            this.NextBt_5.Text = "OK";
+            this.NextBt_5.UseVisualStyleBackColor = true;
+            this.NextBt_5.Click += new System.EventHandler(this.NextBt_5_Click);
             // 
-            // radioButton10
+            // RB_NosePadsYES
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(151, 277);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(95, 24);
-            this.radioButton10.TabIndex = 15;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Firkantet";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.RB_NosePadsYES.AutoSize = true;
+            this.RB_NosePadsYES.Location = new System.Drawing.Point(6, 35);
+            this.RB_NosePadsYES.Name = "RB_NosePadsYES";
+            this.RB_NosePadsYES.Size = new System.Drawing.Size(153, 24);
+            this.RB_NosePadsYES.TabIndex = 18;
+            this.RB_NosePadsYES.TabStop = true;
+            this.RB_NosePadsYES.Text = "Med Næsepuder";
+            this.RB_NosePadsYES.UseVisualStyleBackColor = true;
             // 
-            // radioButton9
+            // RB_NosePadsNO
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(20, 278);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(69, 24);
-            this.radioButton9.TabIndex = 14;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Rund";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.RB_NosePadsNO.AutoSize = true;
+            this.RB_NosePadsNO.Location = new System.Drawing.Point(6, 65);
+            this.RB_NosePadsNO.Name = "RB_NosePadsNO";
+            this.RB_NosePadsNO.Size = new System.Drawing.Size(160, 24);
+            this.RB_NosePadsNO.TabIndex = 19;
+            this.RB_NosePadsNO.TabStop = true;
+            this.RB_NosePadsNO.Text = "Uden Næsepuder";
+            this.RB_NosePadsNO.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // groupBox5
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(151, 211);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(66, 24);
-            this.radioButton8.TabIndex = 13;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Brun";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.groupBox5.Controls.Add(this.NextBt_4);
+            this.groupBox5.Controls.Add(this.RB_PatternNO);
+            this.groupBox5.Controls.Add(this.RB_PatternYES);
+            this.groupBox5.Location = new System.Drawing.Point(6, 310);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(337, 100);
+            this.groupBox5.TabIndex = 3;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "4. Hvordan har du det med mønstret stel?";
             // 
-            // radioButton7
+            // NextBt_4
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(20, 211);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(60, 24);
-            this.radioButton7.TabIndex = 12;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Rød";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.NextBt_4.Location = new System.Drawing.Point(271, 48);
+            this.NextBt_4.Name = "NextBt_4";
+            this.NextBt_4.Size = new System.Drawing.Size(66, 28);
+            this.NextBt_4.TabIndex = 16;
+            this.NextBt_4.Text = "OK";
+            this.NextBt_4.UseVisualStyleBackColor = true;
+            this.NextBt_4.Click += new System.EventHandler(this.NextBt_4_Click);
             // 
-            // radioButton6
+            // RB_PatternNO
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(152, 180);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(133, 24);
-            this.radioButton6.TabIndex = 11;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Gennemsigtig";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.RB_PatternNO.AutoSize = true;
+            this.RB_PatternNO.Location = new System.Drawing.Point(123, 48);
+            this.RB_PatternNO.Name = "RB_PatternNO";
+            this.RB_PatternNO.Size = new System.Drawing.Size(128, 24);
+            this.RB_PatternNO.TabIndex = 17;
+            this.RB_PatternNO.TabStop = true;
+            this.RB_PatternNO.Text = "Intet Mønster";
+            this.RB_PatternNO.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // RB_PatternYES
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(20, 180);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(61, 24);
-            this.radioButton5.TabIndex = 10;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Sort";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.RB_PatternYES.AutoSize = true;
+            this.RB_PatternYES.Location = new System.Drawing.Point(6, 48);
+            this.RB_PatternYES.Name = "RB_PatternYES";
+            this.RB_PatternYES.Size = new System.Drawing.Size(91, 24);
+            this.RB_PatternYES.TabIndex = 16;
+            this.RB_PatternYES.TabStop = true;
+            this.RB_PatternYES.Text = "Mønster";
+            this.RB_PatternYES.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // groupBox4
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(151, 110);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(95, 24);
-            this.radioButton4.TabIndex = 9;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "8000+ kr";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.groupBox4.Controls.Add(this.NextBt_3);
+            this.groupBox4.Controls.Add(this.RB_FaconSquare);
+            this.groupBox4.Controls.Add(this.RB_FaconRound);
+            this.groupBox4.Location = new System.Drawing.Point(6, 235);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(337, 69);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "3. Hvilken facon skal stellet have?";
             // 
-            // radioButton3
+            // NextBt_3
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(20, 110);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 24);
-            this.radioButton3.TabIndex = 8;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "5000 kr";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.NextBt_3.Location = new System.Drawing.Point(271, 26);
+            this.NextBt_3.Name = "NextBt_3";
+            this.NextBt_3.Size = new System.Drawing.Size(66, 28);
+            this.NextBt_3.TabIndex = 14;
+            this.NextBt_3.Text = "OK";
+            this.NextBt_3.UseVisualStyleBackColor = true;
+            this.NextBt_3.Click += new System.EventHandler(this.NextBt_3_Click);
             // 
-            // radioButton2
+            // RB_FaconSquare
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(151, 80);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 24);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "3000 kr";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RB_FaconSquare.AutoSize = true;
+            this.RB_FaconSquare.Location = new System.Drawing.Point(123, 26);
+            this.RB_FaconSquare.Name = "RB_FaconSquare";
+            this.RB_FaconSquare.Size = new System.Drawing.Size(95, 24);
+            this.RB_FaconSquare.TabIndex = 15;
+            this.RB_FaconSquare.TabStop = true;
+            this.RB_FaconSquare.Text = "Firkantet";
+            this.RB_FaconSquare.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // RB_FaconRound
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(20, 80);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 24);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "1500 kr";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RB_FaconRound.AutoSize = true;
+            this.RB_FaconRound.Location = new System.Drawing.Point(6, 26);
+            this.RB_FaconRound.Name = "RB_FaconRound";
+            this.RB_FaconRound.Size = new System.Drawing.Size(69, 24);
+            this.RB_FaconRound.TabIndex = 14;
+            this.RB_FaconRound.TabStop = true;
+            this.RB_FaconRound.Text = "Rund";
+            this.RB_FaconRound.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // groupBox3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 478);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "6. Skal stellet være tykt eller tyndt?";
+            this.groupBox3.Controls.Add(this.NextBt_2);
+            this.groupBox3.Controls.Add(this.RB_ColourBlack);
+            this.groupBox3.Controls.Add(this.RB_ColourRed);
+            this.groupBox3.Controls.Add(this.RB_ColourTransparent);
+            this.groupBox3.Controls.Add(this.RB_ColourBrown);
+            this.groupBox3.Location = new System.Drawing.Point(6, 137);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(337, 92);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "2. Hvilken farve skal dit brillestel være?";
             // 
-            // label5
+            // NextBt_2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 413);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(246, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "5. Skal brillen have næsepuder?";
+            this.NextBt_2.Location = new System.Drawing.Point(271, 45);
+            this.NextBt_2.Name = "NextBt_2";
+            this.NextBt_2.Size = new System.Drawing.Size(66, 26);
+            this.NextBt_2.TabIndex = 5;
+            this.NextBt_2.Text = "OK";
+            this.NextBt_2.UseVisualStyleBackColor = true;
+            this.NextBt_2.Click += new System.EventHandler(this.NextBt_2_Click);
             // 
-            // label4
+            // RB_ColourBlack
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 336);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(319, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "4. Hvordan har du det med mønstret stel?";
+            this.RB_ColourBlack.AutoSize = true;
+            this.RB_ColourBlack.Location = new System.Drawing.Point(6, 26);
+            this.RB_ColourBlack.Name = "RB_ColourBlack";
+            this.RB_ColourBlack.Size = new System.Drawing.Size(61, 24);
+            this.RB_ColourBlack.TabIndex = 10;
+            this.RB_ColourBlack.TabStop = true;
+            this.RB_ColourBlack.Text = "Sort";
+            this.RB_ColourBlack.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // RB_ColourRed
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 254);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(262, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "3. Hvilken facon skal stellet have?";
+            this.RB_ColourRed.AutoSize = true;
+            this.RB_ColourRed.Location = new System.Drawing.Point(6, 56);
+            this.RB_ColourRed.Name = "RB_ColourRed";
+            this.RB_ColourRed.Size = new System.Drawing.Size(60, 24);
+            this.RB_ColourRed.TabIndex = 12;
+            this.RB_ColourRed.TabStop = true;
+            this.RB_ColourRed.Text = "Rød";
+            this.RB_ColourRed.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // RB_ColourTransparent
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(301, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "2. Hvilken farve skal dit brillestel være?";
+            this.RB_ColourTransparent.AutoSize = true;
+            this.RB_ColourTransparent.Location = new System.Drawing.Point(123, 26);
+            this.RB_ColourTransparent.Name = "RB_ColourTransparent";
+            this.RB_ColourTransparent.Size = new System.Drawing.Size(133, 24);
+            this.RB_ColourTransparent.TabIndex = 11;
+            this.RB_ColourTransparent.TabStop = true;
+            this.RB_ColourTransparent.Text = "Gennemsigtig";
+            this.RB_ColourTransparent.UseVisualStyleBackColor = true;
             // 
-            // lb_Question1_Price
+            // RB_ColourBrown
             // 
-            this.lb_Question1_Price.AutoSize = true;
-            this.lb_Question1_Price.Location = new System.Drawing.Point(6, 57);
-            this.lb_Question1_Price.Name = "lb_Question1_Price";
-            this.lb_Question1_Price.Size = new System.Drawing.Size(278, 20);
-            this.lb_Question1_Price.TabIndex = 0;
-            this.lb_Question1_Price.Text = "1. Hvad er maksimal pris på et stel?";
+            this.RB_ColourBrown.AutoSize = true;
+            this.RB_ColourBrown.Location = new System.Drawing.Point(123, 56);
+            this.RB_ColourBrown.Name = "RB_ColourBrown";
+            this.RB_ColourBrown.Size = new System.Drawing.Size(66, 24);
+            this.RB_ColourBrown.TabIndex = 13;
+            this.RB_ColourBrown.TabStop = true;
+            this.RB_ColourBrown.Text = "Brun";
+            this.RB_ColourBrown.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.RB_MaxPrice8000);
+            this.groupBox2.Controls.Add(this.NextBt_1);
+            this.groupBox2.Controls.Add(this.RB_MaxPrice5000);
+            this.groupBox2.Controls.Add(this.RB_MaxPrice1500);
+            this.groupBox2.Controls.Add(this.RB_MaxPrice3000);
+            this.groupBox2.Location = new System.Drawing.Point(6, 35);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(337, 96);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "1. Hvad er maksimal pris på stel?";
+            // 
+            // RB_MaxPrice8000
+            // 
+            this.RB_MaxPrice8000.AutoSize = true;
+            this.RB_MaxPrice8000.Location = new System.Drawing.Point(123, 56);
+            this.RB_MaxPrice8000.Name = "RB_MaxPrice8000";
+            this.RB_MaxPrice8000.Size = new System.Drawing.Size(95, 24);
+            this.RB_MaxPrice8000.TabIndex = 9;
+            this.RB_MaxPrice8000.TabStop = true;
+            this.RB_MaxPrice8000.Text = "8000+ kr";
+            this.RB_MaxPrice8000.UseVisualStyleBackColor = true;
+            // 
+            // NextBt_1
+            // 
+            this.NextBt_1.Location = new System.Drawing.Point(271, 37);
+            this.NextBt_1.Name = "NextBt_1";
+            this.NextBt_1.Size = new System.Drawing.Size(66, 29);
+            this.NextBt_1.TabIndex = 4;
+            this.NextBt_1.Text = "OK";
+            this.NextBt_1.UseVisualStyleBackColor = true;
+            this.NextBt_1.Click += new System.EventHandler(this.NextBt_1_Click);
+            // 
+            // RB_MaxPrice5000
+            // 
+            this.RB_MaxPrice5000.AutoSize = true;
+            this.RB_MaxPrice5000.Location = new System.Drawing.Point(6, 56);
+            this.RB_MaxPrice5000.Name = "RB_MaxPrice5000";
+            this.RB_MaxPrice5000.Size = new System.Drawing.Size(85, 24);
+            this.RB_MaxPrice5000.TabIndex = 8;
+            this.RB_MaxPrice5000.TabStop = true;
+            this.RB_MaxPrice5000.Text = "5000 kr";
+            this.RB_MaxPrice5000.UseVisualStyleBackColor = true;
+            // 
+            // RB_MaxPrice1500
+            // 
+            this.RB_MaxPrice1500.AutoSize = true;
+            this.RB_MaxPrice1500.Location = new System.Drawing.Point(6, 26);
+            this.RB_MaxPrice1500.Name = "RB_MaxPrice1500";
+            this.RB_MaxPrice1500.Size = new System.Drawing.Size(85, 24);
+            this.RB_MaxPrice1500.TabIndex = 6;
+            this.RB_MaxPrice1500.TabStop = true;
+            this.RB_MaxPrice1500.Text = "1500 kr";
+            this.RB_MaxPrice1500.UseVisualStyleBackColor = true;
+            // 
+            // RB_MaxPrice3000
+            // 
+            this.RB_MaxPrice3000.AutoSize = true;
+            this.RB_MaxPrice3000.Location = new System.Drawing.Point(123, 26);
+            this.RB_MaxPrice3000.Name = "RB_MaxPrice3000";
+            this.RB_MaxPrice3000.Size = new System.Drawing.Size(85, 24);
+            this.RB_MaxPrice3000.TabIndex = 7;
+            this.RB_MaxPrice3000.TabStop = true;
+            this.RB_MaxPrice3000.Text = "3000 kr";
+            this.RB_MaxPrice3000.UseVisualStyleBackColor = true;
             // 
             // Dgv_Frames
             // 
@@ -357,29 +435,6 @@
             this.Dgv_Frames.TabIndex = 1;
             this.Dgv_Frames.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Frames_CellContentClick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(640, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(534, 314);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // saanneeha_dk_db_databaseDataSet
-            // 
-            this.saanneeha_dk_db_databaseDataSet.DataSetName = "Saanneeha_dk_db_databaseDataSet";
-            this.saanneeha_dk_db_databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // frameBindingSource
-            // 
-            this.frameBindingSource.DataMember = "Frame";
-            this.frameBindingSource.DataSource = this.saanneeha_dk_db_databaseDataSet;
-            // 
-            // frameTableAdapter
-            // 
-            this.frameTableAdapter.ClearBeforeFill = true;
-            // 
             // productIDDataGridViewTextBoxColumn
             // 
             this.productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
@@ -387,15 +442,15 @@
             this.productIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
             this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productIDDataGridViewTextBoxColumn.Width = 125;
+            this.productIDDataGridViewTextBoxColumn.Width = 75;
             // 
             // productNameDataGridViewTextBoxColumn
             // 
             this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
-            this.productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
+            this.productNameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.productNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            this.productNameDataGridViewTextBoxColumn.Width = 125;
+            this.productNameDataGridViewTextBoxColumn.Width = 80;
             // 
             // frameColourDataGridViewTextBoxColumn
             // 
@@ -411,15 +466,15 @@
             this.frameFaconDataGridViewTextBoxColumn.HeaderText = "FrameFacon";
             this.frameFaconDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.frameFaconDataGridViewTextBoxColumn.Name = "frameFaconDataGridViewTextBoxColumn";
-            this.frameFaconDataGridViewTextBoxColumn.Width = 125;
+            this.frameFaconDataGridViewTextBoxColumn.Width = 80;
             // 
             // frameThicknessDataGridViewTextBoxColumn
             // 
             this.frameThicknessDataGridViewTextBoxColumn.DataPropertyName = "FrameThickness";
-            this.frameThicknessDataGridViewTextBoxColumn.HeaderText = "FrameThickness";
+            this.frameThicknessDataGridViewTextBoxColumn.HeaderText = "Thickness";
             this.frameThicknessDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.frameThicknessDataGridViewTextBoxColumn.Name = "frameThicknessDataGridViewTextBoxColumn";
-            this.frameThicknessDataGridViewTextBoxColumn.Width = 125;
+            this.frameThicknessDataGridViewTextBoxColumn.Width = 75;
             // 
             // nosePadsDataGridViewTextBoxColumn
             // 
@@ -432,7 +487,7 @@
             // framePatternDataGridViewTextBoxColumn
             // 
             this.framePatternDataGridViewTextBoxColumn.DataPropertyName = "FramePattern";
-            this.framePatternDataGridViewTextBoxColumn.HeaderText = "FramePattern";
+            this.framePatternDataGridViewTextBoxColumn.HeaderText = "Pattern";
             this.framePatternDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.framePatternDataGridViewTextBoxColumn.Name = "framePatternDataGridViewTextBoxColumn";
             this.framePatternDataGridViewTextBoxColumn.Width = 125;
@@ -443,13 +498,36 @@
             this.productPriceDataGridViewTextBoxColumn.HeaderText = "ProductPrice";
             this.productPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.productPriceDataGridViewTextBoxColumn.Name = "productPriceDataGridViewTextBoxColumn";
-            this.productPriceDataGridViewTextBoxColumn.Width = 125;
+            this.productPriceDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // frameBindingSource
+            // 
+            this.frameBindingSource.DataMember = "Frame";
+            this.frameBindingSource.DataSource = this.saanneeha_dk_db_databaseDataSet;
+            // 
+            // saanneeha_dk_db_databaseDataSet
+            // 
+            this.saanneeha_dk_db_databaseDataSet.DataSetName = "Saanneeha_dk_db_databaseDataSet";
+            this.saanneeha_dk_db_databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(640, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(534, 314);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // frameTableAdapter
+            // 
+            this.frameTableAdapter.ClearBeforeFill = true;
             // 
             // HomePageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1418, 578);
+            this.ClientSize = new System.Drawing.Size(1418, 606);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Dgv_Frames);
             this.Controls.Add(this.groupBox1);
@@ -457,11 +535,22 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.HomePageForm_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Frames)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saanneeha_dk_db_databaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frameBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saanneeha_dk_db_databaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -469,29 +558,23 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lb_Question1_Price;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView Dgv_Frames;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton13;
-        private System.Windows.Forms.RadioButton radioButton12;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton16;
-        private System.Windows.Forms.RadioButton radioButton15;
-        private System.Windows.Forms.RadioButton radioButton14;
+        private System.Windows.Forms.RadioButton RB_ColourBrown;
+        private System.Windows.Forms.RadioButton RB_ColourRed;
+        private System.Windows.Forms.RadioButton RB_ColourTransparent;
+        private System.Windows.Forms.RadioButton RB_ColourBlack;
+        private System.Windows.Forms.RadioButton RB_MaxPrice8000;
+        private System.Windows.Forms.RadioButton RB_MaxPrice5000;
+        private System.Windows.Forms.RadioButton RB_MaxPrice3000;
+        private System.Windows.Forms.RadioButton RB_MaxPrice1500;
+        private System.Windows.Forms.RadioButton RB_NosePadsYES;
+        private System.Windows.Forms.RadioButton RB_PatternNO;
+        private System.Windows.Forms.RadioButton RB_PatternYES;
+        private System.Windows.Forms.RadioButton RB_FaconSquare;
+        private System.Windows.Forms.RadioButton RB_FaconRound;
+        private System.Windows.Forms.RadioButton RB_ThicknessTHIN;
+        private System.Windows.Forms.RadioButton RB_ThicknessTHICK;
+        private System.Windows.Forms.RadioButton RB_NosePadsNO;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Saanneeha_dk_db_databaseDataSet saanneeha_dk_db_databaseDataSet;
         private System.Windows.Forms.BindingSource frameBindingSource;
@@ -504,6 +587,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nosePadsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn framePatternDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button NextBt_3;
+        private System.Windows.Forms.Button NextBt_2;
+        private System.Windows.Forms.Button NextBt_1;
+        private System.Windows.Forms.Button NextBt_6;
+        private System.Windows.Forms.Button NextBt_5;
+        private System.Windows.Forms.Button NextBt_4;
     }
 }
 
