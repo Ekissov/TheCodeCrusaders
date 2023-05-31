@@ -153,7 +153,7 @@ namespace KundeApplication
                 case true when RB_NosePadsYES.Checked:
                     nosePad = "Med Næsepuder";
                     break;
-                case true when RB_PatternNO.Checked:
+                case true when RB_NosePadsNO.Checked: 
                     nosePad = "Uden Næsepuder";
                     break;
                 default:
@@ -176,7 +176,7 @@ namespace KundeApplication
                 case true when RB_ThicknessTHICK.Checked:
                     thickness = "Tyk";
                     break;
-                case true when RB_PatternNO.Checked:
+                case true when RB_ThicknessTHIN.Checked:
                     thickness = "Tyndt";
                     break;
                 default:
