@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KundeApplication.Models
 {
-    internal class Product
+    internal class Frame
     {
 
         public int ProductID { get; set; }
@@ -19,7 +19,7 @@ namespace KundeApplication.Models
         public int ProductPrice { get; set; }
         
 
-        public Product(int productID, string productName, string frameColour, string frameFacon, string frameThickness, string nosePads, string framePattern, int productPrice)
+        public Frame(int productID, string productName, string frameColour, string frameFacon, string frameThickness, string nosePads, string framePattern, int productPrice)
         {
             this.ProductID = productID;
             this.ProductName = productName;
