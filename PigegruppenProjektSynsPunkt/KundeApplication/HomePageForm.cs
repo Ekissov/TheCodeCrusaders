@@ -15,7 +15,8 @@ namespace KundeApplication
 {
     public partial class HomePageForm : Form
     {
-      
+        FrameServices frameServices = new FrameServices();
+
         public HomePageForm()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace KundeApplication
 
         private void NextBt_1_Click(object sender, EventArgs e)
         {
-            FrameServices frameServices = new FrameServices();
+           // FrameServices frameServices = new FrameServices();
             List<Frame> allframes = frameServices.ReadAllFrames();
             int maxPrice;
 
@@ -57,7 +58,7 @@ namespace KundeApplication
 
         private void NextBt_2_Click(object sender, EventArgs e)
         {
-            FrameServices frameServices = new FrameServices();
+           // FrameServices frameServices = new FrameServices();
             
             
             string choosenColour;
@@ -86,7 +87,7 @@ namespace KundeApplication
 
         private void NextBt_3_Click(object sender, EventArgs e)
         {
-            FrameServices frameServices = new FrameServices();
+           // FrameServices frameServices = new FrameServices();
             List<Frame> allframes = frameServices.ReadAllFrames();
             string facon;
 
@@ -108,7 +109,7 @@ namespace KundeApplication
 
         private void NextBt_4_Click(object sender, EventArgs e)
         {
-            FrameServices frameServices = new FrameServices();
+            //FrameServices frameServices = new FrameServices();
             List<Frame> allframes = frameServices.ReadAllFrames();
             string pattern;
 
@@ -130,7 +131,7 @@ namespace KundeApplication
 
         private void NextBt_5_Click(object sender, EventArgs e)
         {
-            FrameServices frameServices = new FrameServices();
+          //  FrameServices frameServices = new FrameServices();
             List<Frame> allframes = frameServices.ReadAllFrames();
             string nosePad;
 
@@ -153,7 +154,7 @@ namespace KundeApplication
 
         private void NextBt_6_Click(object sender, EventArgs e)
         {
-            FrameServices frameServices = new FrameServices();
+          //  FrameServices frameServices = new FrameServices();
             List<Frame> allframes = frameServices.ReadAllFrames();
             string thickness;
             switch (true)
