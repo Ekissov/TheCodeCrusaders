@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace KundeApplication.Services
 {
-    internal class FrameServices
+    public class FrameServices
     {
+
     }
 }
