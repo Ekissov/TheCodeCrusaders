@@ -15,13 +15,13 @@ namespace ButiksSystem.Repository
 
         //C
         /// <summary>
-        /// Recieves customer object from Services and creates a new costumer in the database.
+        /// Recieves customer object from Services and creates a new costumer in the database. CustomerTable
         /// </summary>
         /// <param name="costumer"></param>
         public void CreateCustomer(Models.Customer customer)
         {
 
-            string query = $"INSERT INTO CustomerTable (FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email) " +
+            string query = $"INSERT INTO Customer (FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email) " +
                 $"VALUES ('{customer.FirstName}'" +
                 $",'{customer.LastName}'," +
                 $"'{customer.PhoneNumber}'," +
@@ -45,7 +45,7 @@ namespace ButiksSystem.Repository
         public List<Customer> GetAllCustomers()
         {
             List<Customer> customerList = new List<Customer>();
-            string query = "SELECT FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email, CustomerID FROM CustomerTable";
+            string query = "SELECT FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email, CustomerID FROM Customer";
             
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
@@ -81,7 +81,7 @@ namespace ButiksSystem.Repository
         /// <returns></returns>
         public Customer GetSelectedCustomer(int customerID)
         {
-            string query = $"SELECT FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email, CustomerID FROM CustomerTable WHERE CustomerID = {customerID}";
+            string query = $"SELECT FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email, CustomerID FROM Customer WHERE CustomerID = {customerID}";
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
             SqlDataReader reader = command.ExecuteReader();  
@@ -113,7 +113,7 @@ namespace ButiksSystem.Repository
         /// <param name="customer"></param>
         public void UpdateCustomer(Models.Customer customer)
         {
-            string query = $"UPDATE CustomerTable SET " +
+            string query = $"UPDATE Customer SET " +
                 $"FirstName = '{customer.FirstName}', " +
                 $"LastName = '{customer.LastName}', " +
                 $"PhoneNumber = '{customer.PhoneNumber}', " +
@@ -139,7 +139,7 @@ namespace ButiksSystem.Repository
         public void DeleteCustomer(Models.Customer customer)
         {
 
-            string query = $"DELETE FROM CustomerTable WHERE CustomerID = '{customer.CustomerID}'";
+            string query = $"DELETE FROM Customer WHERE CustomerID = '{customer.CustomerID}'";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
