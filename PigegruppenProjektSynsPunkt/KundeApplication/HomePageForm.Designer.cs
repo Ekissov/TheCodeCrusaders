@@ -36,7 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Dgv_AllGlasses = new System.Windows.Forms.DataGridView();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -55,7 +55,7 @@
             this.radioButton16 = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_AllGlasses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -145,15 +145,16 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "6. Skal stellet være tykt eller tyndt?";
             // 
-            // dataGridView1
+            // Dgv_AllGlasses
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(361, 332);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(567, 237);
-            this.dataGridView1.TabIndex = 1;
+            this.Dgv_AllGlasses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_AllGlasses.Location = new System.Drawing.Point(361, 332);
+            this.Dgv_AllGlasses.Name = "Dgv_AllGlasses";
+            this.Dgv_AllGlasses.RowHeadersWidth = 51;
+            this.Dgv_AllGlasses.RowTemplate.Height = 24;
+            this.Dgv_AllGlasses.Size = new System.Drawing.Size(567, 237);
+            this.Dgv_AllGlasses.TabIndex = 1;
+            this.Dgv_AllGlasses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_AllGlasses_CellContentClick);
             // 
             // radioButton1
             // 
@@ -346,13 +347,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(935, 578);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Dgv_AllGlasses);
             this.Controls.Add(this.groupBox1);
             this.Name = "HomePageForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.HomePageForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_AllGlasses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -367,7 +369,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lb_Question1_Price;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Dgv_AllGlasses;
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton6;
