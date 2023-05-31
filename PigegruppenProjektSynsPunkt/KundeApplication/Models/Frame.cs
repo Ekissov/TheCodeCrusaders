@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KundeApplication.Models
 {
-    internal class Frame
+    public class Frame
     {
 
         public int ProductID { get; set; }

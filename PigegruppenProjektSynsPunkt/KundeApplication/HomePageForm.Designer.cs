@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePageForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton16 = new System.Windows.Forms.RadioButton();
@@ -52,11 +53,24 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lb_Question1_Price = new System.Windows.Forms.Label();
-            this.Dgv_AllGlasses = new System.Windows.Forms.DataGridView();
+            this.Dgv_Frames = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.saanneeha_dk_db_databaseDataSet = new KundeApplication.Saanneeha_dk_db_databaseDataSet();
+            this.frameBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.frameTableAdapter = new KundeApplication.Saanneeha_dk_db_databaseDataSetTableAdapters.FrameTableAdapter();
+            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frameColourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frameFaconDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frameThicknessDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nosePadsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.framePatternDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgv_AllGlasses)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Frames)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saanneeha_dk_db_databaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frameBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -321,41 +335,133 @@
             this.lb_Question1_Price.TabIndex = 0;
             this.lb_Question1_Price.Text = "1. Hvad er maksimal pris på et stel?";
             // 
-            // Dgv_AllGlasses
+            // Dgv_Frames
             // 
-            this.Dgv_AllGlasses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_AllGlasses.Location = new System.Drawing.Point(378, 332);
-            this.Dgv_AllGlasses.Name = "Dgv_AllGlasses";
-            this.Dgv_AllGlasses.RowHeadersWidth = 51;
-            this.Dgv_AllGlasses.RowTemplate.Height = 24;
-            this.Dgv_AllGlasses.Size = new System.Drawing.Size(534, 237);
-            this.Dgv_AllGlasses.TabIndex = 1;
-            this.Dgv_AllGlasses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_AllGlasses_CellContentClick);
+            this.Dgv_Frames.AutoGenerateColumns = false;
+            this.Dgv_Frames.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_Frames.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.productIDDataGridViewTextBoxColumn,
+            this.productNameDataGridViewTextBoxColumn,
+            this.frameColourDataGridViewTextBoxColumn,
+            this.frameFaconDataGridViewTextBoxColumn,
+            this.frameThicknessDataGridViewTextBoxColumn,
+            this.nosePadsDataGridViewTextBoxColumn,
+            this.framePatternDataGridViewTextBoxColumn,
+            this.productPriceDataGridViewTextBoxColumn});
+            this.Dgv_Frames.DataSource = this.frameBindingSource;
+            this.Dgv_Frames.Location = new System.Drawing.Point(378, 332);
+            this.Dgv_Frames.Name = "Dgv_Frames";
+            this.Dgv_Frames.RowHeadersWidth = 51;
+            this.Dgv_Frames.RowTemplate.Height = 24;
+            this.Dgv_Frames.Size = new System.Drawing.Size(1036, 237);
+            this.Dgv_Frames.TabIndex = 1;
+            this.Dgv_Frames.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Frames_CellContentClick);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(378, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(640, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(534, 314);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // saanneeha_dk_db_databaseDataSet
+            // 
+            this.saanneeha_dk_db_databaseDataSet.DataSetName = "Saanneeha_dk_db_databaseDataSet";
+            this.saanneeha_dk_db_databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // frameBindingSource
+            // 
+            this.frameBindingSource.DataMember = "Frame";
+            this.frameBindingSource.DataSource = this.saanneeha_dk_db_databaseDataSet;
+            // 
+            // frameTableAdapter
+            // 
+            this.frameTableAdapter.ClearBeforeFill = true;
+            // 
+            // productIDDataGridViewTextBoxColumn
+            // 
+            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
+            this.productIDDataGridViewTextBoxColumn.HeaderText = "ProductID";
+            this.productIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.productIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // productNameDataGridViewTextBoxColumn
+            // 
+            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
+            this.productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
+            this.productNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            this.productNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // frameColourDataGridViewTextBoxColumn
+            // 
+            this.frameColourDataGridViewTextBoxColumn.DataPropertyName = "FrameColour";
+            this.frameColourDataGridViewTextBoxColumn.HeaderText = "FrameColour";
+            this.frameColourDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.frameColourDataGridViewTextBoxColumn.Name = "frameColourDataGridViewTextBoxColumn";
+            this.frameColourDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // frameFaconDataGridViewTextBoxColumn
+            // 
+            this.frameFaconDataGridViewTextBoxColumn.DataPropertyName = "FrameFacon";
+            this.frameFaconDataGridViewTextBoxColumn.HeaderText = "FrameFacon";
+            this.frameFaconDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.frameFaconDataGridViewTextBoxColumn.Name = "frameFaconDataGridViewTextBoxColumn";
+            this.frameFaconDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // frameThicknessDataGridViewTextBoxColumn
+            // 
+            this.frameThicknessDataGridViewTextBoxColumn.DataPropertyName = "FrameThickness";
+            this.frameThicknessDataGridViewTextBoxColumn.HeaderText = "FrameThickness";
+            this.frameThicknessDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.frameThicknessDataGridViewTextBoxColumn.Name = "frameThicknessDataGridViewTextBoxColumn";
+            this.frameThicknessDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nosePadsDataGridViewTextBoxColumn
+            // 
+            this.nosePadsDataGridViewTextBoxColumn.DataPropertyName = "NosePads";
+            this.nosePadsDataGridViewTextBoxColumn.HeaderText = "NosePads";
+            this.nosePadsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nosePadsDataGridViewTextBoxColumn.Name = "nosePadsDataGridViewTextBoxColumn";
+            this.nosePadsDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // framePatternDataGridViewTextBoxColumn
+            // 
+            this.framePatternDataGridViewTextBoxColumn.DataPropertyName = "FramePattern";
+            this.framePatternDataGridViewTextBoxColumn.HeaderText = "FramePattern";
+            this.framePatternDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.framePatternDataGridViewTextBoxColumn.Name = "framePatternDataGridViewTextBoxColumn";
+            this.framePatternDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // productPriceDataGridViewTextBoxColumn
+            // 
+            this.productPriceDataGridViewTextBoxColumn.DataPropertyName = "ProductPrice";
+            this.productPriceDataGridViewTextBoxColumn.HeaderText = "ProductPrice";
+            this.productPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productPriceDataGridViewTextBoxColumn.Name = "productPriceDataGridViewTextBoxColumn";
+            this.productPriceDataGridViewTextBoxColumn.Width = 125;
+            // 
             // HomePageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 578);
+            this.ClientSize = new System.Drawing.Size(1418, 578);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Dgv_AllGlasses);
+            this.Controls.Add(this.Dgv_Frames);
             this.Controls.Add(this.groupBox1);
             this.Name = "HomePageForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.HomePageForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgv_AllGlasses)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Frames)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saanneeha_dk_db_databaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frameBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,7 +475,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lb_Question1_Price;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView Dgv_AllGlasses;
+        private System.Windows.Forms.DataGridView Dgv_Frames;
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton6;
@@ -387,6 +493,17 @@
         private System.Windows.Forms.RadioButton radioButton15;
         private System.Windows.Forms.RadioButton radioButton14;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Saanneeha_dk_db_databaseDataSet saanneeha_dk_db_databaseDataSet;
+        private System.Windows.Forms.BindingSource frameBindingSource;
+        private Saanneeha_dk_db_databaseDataSetTableAdapters.FrameTableAdapter frameTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn frameColourDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn frameFaconDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn frameThicknessDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nosePadsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn framePatternDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productPriceDataGridViewTextBoxColumn;
     }
 }
 
