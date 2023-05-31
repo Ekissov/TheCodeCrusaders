@@ -17,7 +17,7 @@ namespace KundeApplication.Repository
         {
             List<Models.Frame> allFrames = new List<Models.Frame>();
 
-            string query =  $"SELECT ProductID, ProductName, FrameColour, FrameFacon, FrameThickness, Nosepads, FramePattern, ProductPrice FROM Product";
+            string query =  $"SELECT ProductID, ProductName, FrameColour, FrameFacon, FrameThickness, Nosepads, FramePattern, ProductPrice FROM Frame";
 
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
@@ -33,7 +33,7 @@ namespace KundeApplication.Repository
                     reader["FrameThickness"].ToString(),
                     reader["NosePads"].ToString(),
                     reader["FramePattern"].ToString(),
-                    (int)reader["Price"]);
+                    (decimal)reader["ProductPrice"]);
 
                 allFrames.Add(product);
             }
