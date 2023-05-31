@@ -21,15 +21,18 @@ namespace KundeApplication
 
         private void HomePageForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'saanneeha_dk_db_databaseDataSet.Frame' table. You can move, or remove it, as needed.
+            this.frameTableAdapter.Fill(this.saanneeha_dk_db_databaseDataSet.Frame);
 
         }
 
-        private void Dgv_AllGlasses_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Dgv_Frames_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Controller controller = new Controller();
-            List<Product> allProducts = FrameServices.//ReadAllProducts
+            FrameServices frameServices = new FrameServices();
+            List<Frame> allframes = frameServices.ReadAllFrames();
 
-            Dgv_AllGlasses.Datasource = allProducts; //Dette er kun midlertidigt, tænker at det skal op og være direkte på databasen.
+
+
         }
     }
 }
