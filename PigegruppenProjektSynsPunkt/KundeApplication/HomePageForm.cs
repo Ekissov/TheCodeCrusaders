@@ -21,9 +21,12 @@ namespace KundeApplication
         public string Pattern { get; set; }
         public string NosePad { get; set; }
         public string Thickness { get; set; }
+       
         public HomePageForm()
         {
             InitializeComponent();
+
+
         }
 
         private void HomePageForm_Load(object sender, EventArgs e)
@@ -31,14 +34,12 @@ namespace KundeApplication
             this.frameTableAdapter.Fill(this.saanneeha_dk_db_databaseDataSet.Frame);
         }
 
-        private void Dgv_Frames_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            FrameServices frameServices = new FrameServices();
-            List<Frame> allframes = frameServices.ReadAllFrames();
-        }
+
 
         private void NextBt_1_Click(object sender, EventArgs e)
         {
+            FrameServices frameServices = new FrameServices();
+            List<Frame> allframes = frameServices.ReadAllFrames();
             int maxPrice;
 
             switch (true)
@@ -61,12 +62,14 @@ namespace KundeApplication
             }
             Price = maxPrice;
             
-            FrameServices frameServices = new FrameServices();
+          
             Dgv_Frames.DataSource = frameServices.GetFramesPrice(Price);
         }
 
         private void NextBt_2_Click(object sender, EventArgs e)
         {
+            FrameServices frameServices = new FrameServices();
+            List<Frame> allframes = frameServices.ReadAllFrames();
             string choosenColour;
 
             switch (true)
@@ -89,12 +92,14 @@ namespace KundeApplication
             }
             choosenColour = Colour;
 
-            FrameServices frameServices = new FrameServices();
+
             Dgv_Frames.DataSource = frameServices.GetFramesColour(Colour);
         }
 
         private void NextBt_3_Click(object sender, EventArgs e)
         {
+            FrameServices frameServices = new FrameServices();
+            List<Frame> allframes = frameServices.ReadAllFrames();
             string facon;
 
             switch (true)
@@ -111,12 +116,13 @@ namespace KundeApplication
             }
             facon = Facon;
 
-            FrameServices frameServices = new FrameServices();
             Dgv_Frames.DataSource = frameServices.GetFramesFacon(Facon);
         }
 
         private void NextBt_4_Click(object sender, EventArgs e)
         {
+            FrameServices frameServices = new FrameServices();
+            List<Frame> allframes = frameServices.ReadAllFrames();
             string pattern;
 
             switch (true)
@@ -133,12 +139,13 @@ namespace KundeApplication
             }
             pattern = Pattern;
 
-            FrameServices frameServices = new FrameServices();
             Dgv_Frames.DataSource = frameServices.GetFramesPattern(Pattern);
         }
 
         private void NextBt_5_Click(object sender, EventArgs e)
         {
+            FrameServices frameServices = new FrameServices();
+            List<Frame> allframes = frameServices.ReadAllFrames();
             string nosePad;
 
             switch (true)
@@ -156,12 +163,13 @@ namespace KundeApplication
             }
             nosePad = NosePad;
 
-            FrameServices frameServices = new FrameServices();
             Dgv_Frames.DataSource = frameServices.GetFramesNosePad(NosePad);
         }
 
         private void NextBt_6_Click(object sender, EventArgs e)
         {
+            FrameServices frameServices = new FrameServices();
+            List<Frame> allframes = frameServices.ReadAllFrames();
             string thickness;
             switch (true)
             {
@@ -177,7 +185,6 @@ namespace KundeApplication
             }
             thickness = Thickness;
 
-            FrameServices frameServices = new FrameServices();
             Dgv_Frames.DataSource = frameServices.GetFramesThickness(Thickness);
         }
     }

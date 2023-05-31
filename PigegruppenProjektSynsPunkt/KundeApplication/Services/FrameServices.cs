@@ -24,7 +24,7 @@ namespace KundeApplication.Services
         public List<Frame> GetFramesPrice(int priceMaxSelected) 
         {
             List<Frame> framesWithinprice = AllFrames.Where(x => x.ProductPrice <= priceMaxSelected).ToList();
-            framesWithinprice = AllFrames;
+            AllFrames = framesWithinprice;
             return framesWithinprice;
         }
 

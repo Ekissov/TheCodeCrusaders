@@ -433,7 +433,6 @@
             this.Dgv_Frames.RowTemplate.Height = 24;
             this.Dgv_Frames.Size = new System.Drawing.Size(1036, 237);
             this.Dgv_Frames.TabIndex = 1;
-            this.Dgv_Frames.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Frames_CellContentClick);
             // 
             // productIDDataGridViewTextBoxColumn
             // 
