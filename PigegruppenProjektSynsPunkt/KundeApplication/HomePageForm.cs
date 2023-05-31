@@ -87,7 +87,7 @@ namespace KundeApplication
                     choosenColour = "";
                     break;
             }
-            choosenColour = Colour;
+            Colour = choosenColour;
 
             FrameServices frameServices = new FrameServices();
             Dgv_Frames.DataSource = frameServices.GetFramesColour(Colour);
@@ -109,7 +109,7 @@ namespace KundeApplication
                     facon = "";
                     break;
             }
-            facon = Facon;
+            Facon = facon;
 
             FrameServices frameServices = new FrameServices();
             Dgv_Frames.DataSource = frameServices.GetFramesFacon(Facon);
@@ -131,7 +131,7 @@ namespace KundeApplication
                     pattern = "";
                     break;
             }
-            pattern = Pattern;
+            Pattern = pattern;
 
             FrameServices frameServices = new FrameServices();
             Dgv_Frames.DataSource = frameServices.GetFramesPattern(Pattern);
@@ -154,7 +154,7 @@ namespace KundeApplication
                     break;
 
             }
-            nosePad = NosePad;
+            NosePad = nosePad;
 
             FrameServices frameServices = new FrameServices();
             Dgv_Frames.DataSource = frameServices.GetFramesNosePad(NosePad);
@@ -175,7 +175,7 @@ namespace KundeApplication
                     thickness = "";
                     break;
             }
-            thickness = Thickness;
+            Thickness = thickness;
 
             FrameServices frameServices = new FrameServices();
             Dgv_Frames.DataSource = frameServices.GetFramesThickness(Thickness);
