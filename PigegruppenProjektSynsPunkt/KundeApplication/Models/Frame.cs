@@ -16,10 +16,10 @@ namespace KundeApplication.Models
         public string FrameThickness { get; set; }
         public string NosePads { get; set; }
         public string FramePattern { get; set; }
-        public int ProductPrice { get; set; }
+        public decimal ProductPrice { get; set; }
         
 
-        public Frame(int productID, string productName, string frameColour, string frameFacon, string frameThickness, string nosePads, string framePattern, int productPrice)
+        public Frame(int productID, string productName, string frameColour, string frameFacon, string frameThickness, string nosePads, string framePattern, decimal productPrice)
         {
             this.ProductID = productID;
             this.ProductName = productName;

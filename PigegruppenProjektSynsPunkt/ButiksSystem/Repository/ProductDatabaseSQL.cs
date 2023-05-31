@@ -15,7 +15,7 @@ namespace ButiksSystem.Repository
 
         //C
         /// <summary>
-        /// CRUD Method (C) this creates a product in the database. it recieves info from Service.Product
+        /// CRUD Method (C) this creates a product in the database. it recieves info from Service.Product.
         /// </summary>
         /// <param name="product"></param>
         public void CreateProduct(Product product)
