@@ -26,7 +26,7 @@ namespace KundeApplication
         private void Dgv_AllGlasses_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //Controller controller = new Controller();
-            List<Product> allProducts = controller.//ReadAllProducts
+            List<Frame> allProducts = controller.//ReadAllProducts
 
             Dgv_AllGlasses.Datasource = allProducts; //Dette er kun midlertidigt, tænker at det skal op og være direkte på databasen.
         }

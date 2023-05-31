@@ -13,9 +13,9 @@ namespace KundeApplication.Repository
     {
         private static SqlConnection connection = new SqlConnection("Data Source=mssql5.unoeuro.com; Initial Catalog =  saanneeha_dk_db_database; User ID = saanneeha_dk; Password = yx5chmEw6HtDg2efarF9");
 
-        public List<Models.Product> ReadAllProducts()
+        public List<Models.Frame> ReadAllProducts()
         {
-            List<Models.Product> allProducts = new List<Models.Product>();
+            List<Models.Frame> allProducts = new List<Models.Frame>();
 
             string query =  $"SELECT ProductID, ProductName, FrameColour, FrameFacon, FrameThickness, Nosepads, FramePattern, ProductPrice FROM Product";
 
@@ -25,7 +25,7 @@ namespace KundeApplication.Repository
 
             while (reader.Read())
             {
-                Models.Product product = new Models.Product(
+                Models.Frame product = new Models.Product(
                     (int)reader["ProductID"],
                     reader["ProductName"].ToString(),                   
                     reader["FrameColour"].ToString(),
