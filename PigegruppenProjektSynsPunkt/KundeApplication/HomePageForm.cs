@@ -15,13 +15,7 @@ namespace KundeApplication
 {
     public partial class HomePageForm : Form
     {
-        public int Price { get; set; }
-        public string Colour { get; set; }
-        public string Facon { get; set; }
-        public string Pattern { get; set; }
-        public string NosePad { get; set; }
-        public string Thickness { get; set; }
-       
+      
         public HomePageForm()
         {
             InitializeComponent();
@@ -60,16 +54,16 @@ namespace KundeApplication
                     maxPrice = 20000;
                     break;
             }
-            Price = maxPrice;
             
           
-            Dgv_Frames.DataSource = frameServices.GetFramesPrice(Price);
+            Dgv_Frames.DataSource = frameServices.GetFramesPrice(maxPrice);
         }
 
         private void NextBt_2_Click(object sender, EventArgs e)
         {
             FrameServices frameServices = new FrameServices();
             List<Frame> allframes = frameServices.ReadAllFrames();
+            
             string choosenColour;
 
             switch (true)
@@ -90,10 +84,8 @@ namespace KundeApplication
                     choosenColour = "";
                     break;
             }
-            Colour = choosenColour;
 
-
-            Dgv_Frames.DataSource = frameServices.GetFramesColour(Colour);
+            Dgv_Frames.DataSource = frameServices.GetFramesColour(choosenColour);
         }
 
         private void NextBt_3_Click(object sender, EventArgs e)
@@ -114,9 +106,8 @@ namespace KundeApplication
                     facon = "";
                     break;
             }
-            Facon = facon;
 
-            Dgv_Frames.DataSource = frameServices.GetFramesFacon(Facon);
+            Dgv_Frames.DataSource = frameServices.GetFramesFacon(facon);
         }
 
         private void NextBt_4_Click(object sender, EventArgs e)
@@ -137,9 +128,8 @@ namespace KundeApplication
                     pattern = "";
                     break;
             }
-            Pattern = pattern;
 
-            Dgv_Frames.DataSource = frameServices.GetFramesPattern(Pattern);
+            Dgv_Frames.DataSource = frameServices.GetFramesPattern(pattern);
         }
 
         private void NextBt_5_Click(object sender, EventArgs e)
@@ -161,9 +151,8 @@ namespace KundeApplication
                     break;
 
             }
-            NosePad = nosePad;
 
-            Dgv_Frames.DataSource = frameServices.GetFramesNosePad(NosePad);
+            Dgv_Frames.DataSource = frameServices.GetFramesNosePad(nosePad);
         }
 
         private void NextBt_6_Click(object sender, EventArgs e)
@@ -183,9 +172,8 @@ namespace KundeApplication
                     thickness = "";
                     break;
             }
-            Thickness = thickness;
 
-            Dgv_Frames.DataSource = frameServices.GetFramesThickness(Thickness);
+            Dgv_Frames.DataSource = frameServices.GetFramesThickness(thickness);
         }
     }
 }
