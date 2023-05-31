@@ -19,16 +19,12 @@ namespace KundeApplication
         public HomePageForm()
         {
             InitializeComponent();
-
-
         }
 
         private void HomePageForm_Load(object sender, EventArgs e)
         {
             this.frameTableAdapter.Fill(this.saanneeha_dk_db_databaseDataSet.Frame);
         }
-
-
 
         private void NextBt_1_Click(object sender, EventArgs e)
         {
@@ -62,7 +58,7 @@ namespace KundeApplication
         private void NextBt_2_Click(object sender, EventArgs e)
         {
             FrameServices frameServices = new FrameServices();
-            List<Frame> allframes = frameServices.ReadAllFrames();
+            
             
             string choosenColour;
 

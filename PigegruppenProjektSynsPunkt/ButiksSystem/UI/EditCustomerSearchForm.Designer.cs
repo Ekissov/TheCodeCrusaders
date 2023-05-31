@@ -61,9 +61,14 @@
             this.btn_OKShowCustomer = new System.Windows.Forms.Button();
             this.btn_homePageHelp = new System.Windows.Forms.Button();
             this.customerTableTableAdapter = new ButiksSystem.Saanneeha_dk_db_databaseDataSetTableAdapters.CustomerTableTableAdapter();
+            this.saanneeha_dk_db_databaseDataSet2 = new ButiksSystem.Saanneeha_dk_db_databaseDataSet2();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerTableAdapter = new ButiksSystem.Saanneeha_dk_db_databaseDataSet2TableAdapters.CustomerTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_showCustomerInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saanneeha_dk_db_databaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saanneeha_dk_db_databaseDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -95,7 +100,7 @@
             this.customerIDDataGridViewTextBoxColumn,
             this.firstNameDataGridViewTextBoxColumn,
             this.lastNameDataGridViewTextBoxColumn});
-            this.dgv_showCustomerInfo.DataSource = this.customerTableBindingSource;
+            this.dgv_showCustomerInfo.DataSource = this.customerBindingSource;
             this.dgv_showCustomerInfo.Location = new System.Drawing.Point(32, 141);
             this.dgv_showCustomerInfo.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_showCustomerInfo.Name = "dgv_showCustomerInfo";
@@ -380,6 +385,20 @@
             // 
             this.customerTableTableAdapter.ClearBeforeFill = true;
             // 
+            // saanneeha_dk_db_databaseDataSet2
+            // 
+            this.saanneeha_dk_db_databaseDataSet2.DataSetName = "Saanneeha_dk_db_databaseDataSet2";
+            this.saanneeha_dk_db_databaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.saanneeha_dk_db_databaseDataSet2;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
             // EditCustomerSearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -418,6 +437,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_showCustomerInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.saanneeha_dk_db_databaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saanneeha_dk_db_databaseDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -457,5 +478,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn customerIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private Saanneeha_dk_db_databaseDataSet2 saanneeha_dk_db_databaseDataSet2;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private Saanneeha_dk_db_databaseDataSet2TableAdapters.CustomerTableAdapter customerTableAdapter;
     }
 }
