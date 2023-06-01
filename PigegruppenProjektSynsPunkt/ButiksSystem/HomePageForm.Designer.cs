@@ -65,7 +65,6 @@
             this.alleVarerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opretBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aflysBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seBookingerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.forretningsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordrestatistikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -416,7 +415,6 @@
             // 
             this.bookingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opretBookingToolStripMenuItem,
-            this.aflysBookingToolStripMenuItem,
             this.seBookingerToolStripMenuItem});
             this.bookingToolStripMenuItem.Name = "bookingToolStripMenuItem";
             this.bookingToolStripMenuItem.Size = new System.Drawing.Size(107, 34);
@@ -425,16 +423,9 @@
             // opretBookingToolStripMenuItem
             // 
             this.opretBookingToolStripMenuItem.Name = "opretBookingToolStripMenuItem";
-            this.opretBookingToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
-            this.opretBookingToolStripMenuItem.Text = "Opret booking";
+            this.opretBookingToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
+            this.opretBookingToolStripMenuItem.Text = "Opret/Slet booking";
             this.opretBookingToolStripMenuItem.Click += new System.EventHandler(this.opretBookingToolStripMenuItem_Click);
-            // 
-            // aflysBookingToolStripMenuItem
-            // 
-            this.aflysBookingToolStripMenuItem.Name = "aflysBookingToolStripMenuItem";
-            this.aflysBookingToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
-            this.aflysBookingToolStripMenuItem.Text = "Aflys booking";
-            this.aflysBookingToolStripMenuItem.Click += new System.EventHandler(this.aflysBookingToolStripMenuItem_Click);
             // 
             // seBookingerToolStripMenuItem
             // 
@@ -473,6 +464,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomePageForm";
             this.Text = "Startside";
+            this.Load += new System.EventHandler(this.HomePageForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -521,7 +513,6 @@
         private System.Windows.Forms.ToolStripMenuItem vareinformationerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem opretBookingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aflysBookingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seBookingerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem forretningsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordrestatistikToolStripMenuItem;

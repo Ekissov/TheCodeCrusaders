@@ -56,12 +56,6 @@ namespace ButiksSystem
             createBookingForm.ShowDialog();
         }
 
-        private void aflysBookingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ICreateBookingForm createBookingForm1 = new ICreateBookingForm();
-            createBookingForm1.ShowDialog();
-        }
-
         private void seBookingerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ISeeAllBookingsForm seeAllBookingsForm = new ISeeAllBookingsForm();
@@ -111,6 +105,9 @@ namespace ButiksSystem
             showAllProductsForm.ShowDialog();
         }
 
-       
+        private void HomePageForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
