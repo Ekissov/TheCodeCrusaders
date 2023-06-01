@@ -1,4 +1,4 @@
-﻿ using ButiksSystem.Models;
+﻿using ButiksSystem.Models;
 using ButiksSystem.Repository;
 using ButiksSystem.UI;
 using System;
@@ -48,7 +48,6 @@ namespace ButiksSystem.Services
         /// <returns></returns>
         public List<Product> GetAllProducts()
         {
-
             ProductDatabaseSQL productDatabaseSQL = new ProductDatabaseSQL();
             productDatabaseSQL.GetAllProducts();
 
