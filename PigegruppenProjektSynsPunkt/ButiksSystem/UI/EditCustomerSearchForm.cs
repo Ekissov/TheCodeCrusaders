@@ -35,10 +35,8 @@ namespace ButiksSystem.UI
         {
             // TODO: This line of code loads data into the 'saanneeha_dk_db_databaseDataSet2.Customer' table. You can move, or remove it, as needed.
             this.customerTableAdapter.Fill(this.saanneeha_dk_db_databaseDataSet2.Customer);
-            this.customerTableTableAdapter.Fill(this.saanneeha_dk_db_databaseDataSet.CustomerTable); //Connecting datagridview to database
-            CustomerController customerController = new CustomerController();  //connecting to controller
-
         }
+
         /// <summary>
         /// adding value to the string variable. the value being the userinput. 
         /// </summary>

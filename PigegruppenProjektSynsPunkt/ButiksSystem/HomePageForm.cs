@@ -110,5 +110,7 @@ namespace ButiksSystem
             ShowAllProductsForm showAllProductsForm = new ShowAllProductsForm();
             showAllProductsForm.ShowDialog();
         }
+
+       
     }
 }
