@@ -18,7 +18,7 @@ namespace ButiksSystem.Repository
         /// Recieves customer object from Services and creates a new costumer in the database. CustomerTable
         /// </summary>
         /// <param name="costumer"></param>
-        public void CreateCustomer(Models.Customer customer)
+        public void CreateCustomer(Customer customer)
         {
 
             string query = $"INSERT INTO Customer (FirstName, LastName, PhoneNumber, PostalCode, City, CustomerAddress, Email) " +
