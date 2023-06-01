@@ -160,7 +160,7 @@ namespace KundeApplication
             switch (true)
             {
                 case true when RB_ThicknessTHICK.Checked:
-                    thickness = "Tyk";
+                    thickness = "Tykt";
                     break;
                 case true when RB_ThicknessTHIN.Checked:
                     thickness = "Tyndt";

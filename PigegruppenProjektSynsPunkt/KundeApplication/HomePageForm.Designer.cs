@@ -531,7 +531,6 @@
             this.Controls.Add(this.Dgv_Frames);
             this.Controls.Add(this.groupBox1);
             this.Name = "HomePageForm";
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.HomePageForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
